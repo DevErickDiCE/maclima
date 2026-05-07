@@ -267,7 +267,7 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[38%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
+        className="absolute inset-0 z-0 object-cover object-[18%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
@@ -276,12 +276,12 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[620px] max-w-7xl items-start px-4 pt-10 pb-12 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
+      <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative z-10 w-full max-w-[640px] lg:max-w-[680px]"
+          className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
           <div className="mb-3 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-3 py-1.5 text-xs font-bold text-[#850E88] shadow-sm backdrop-blur md:mb-4 md:px-4 md:py-2 md:text-sm">
             <Sparkles className="h-3.5 w-3.5 md:h-4 md:w-4" aria-hidden="true" />
@@ -306,7 +306,7 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-3 sm:mt-6 sm:flex-row">
+          <div className="mt-auto flex flex-col gap-3 pt-10 sm:mt-6 sm:flex-row sm:pt-0">
             <Link
               href="/consultoria-gratuita"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
