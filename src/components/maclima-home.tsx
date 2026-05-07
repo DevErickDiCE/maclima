@@ -275,26 +275,27 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[640px] max-w-7xl items-center px-4 py-12 sm:px-6 sm:py-14 lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
+      <div className="mx-auto flex min-h-[600px] max-w-7xl items-start px-4 pt-10 pb-12 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 w-full max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-4 py-2 text-sm font-bold text-[#850E88] shadow-sm backdrop-blur">
-            <Sparkles className="h-4 w-4" aria-hidden="true" />
-            Distribución, instalación y asesoramiento técnico
+          <div className="mb-3 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-3 py-1.5 text-xs font-bold text-[#850E88] shadow-sm backdrop-blur md:mb-4 md:px-4 md:py-2 md:text-sm">
+            <Sparkles className="h-3.5 w-3.5 md:h-4 md:w-4" aria-hidden="true" />
+            <span className="md:hidden">Distribución · instalación · asesoramiento</span>
+            <span className="hidden md:block">Distribución, instalación y asesoramiento técnico</span>
           </div>
-          <h1 className="max-w-[620px] text-[2.15rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[3.75rem]">
-            Aerotermia y fotovoltaica para ahorrar energía desde el primer día
+          <h1 className="max-w-[620px] text-[2rem] font-black leading-[1.08] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[3.75rem]">
+            <span className="block md:hidden">Aerotermia y fotovoltaica para ahorrar energía</span>
+            <span className="hidden md:block">Aerotermia y fotovoltaica para ahorrar energía desde el primer día</span>
           </h1>
-          <p className="mt-4 max-w-xl text-base leading-7 text-[#5F5A66] sm:text-lg sm:leading-8">
-            Distribuimos e instalamos soluciones de aerotermia y fotovoltaica en
-            Madrid para viviendas, negocios y profesionales del sector, con
-            asesoramiento técnico gratuito para elegir el sistema más eficiente.
+          <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">
+            <span className="block md:hidden">Soluciones de aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.</span>
+            <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia y fotovoltaica en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
             {heroSignals.map((signal) => (
               <span
                 key={signal}
@@ -304,23 +305,23 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row">
             <Link
               href="/consultoria-gratuita"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)]"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Solicitar consultoría gratuita
-              <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+              <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1 sm:h-5 sm:w-5" aria-hidden="true" />
             </Link>
             <Link
               href="/catalogo"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white/[0.84] px-6 py-3.5 text-[0.95rem] font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)]"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white/[0.84] px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Ver catálogo
-              <FileText className="h-5 w-5 transition duration-200 ease-out group-hover:-translate-y-0.5" aria-hidden="true" />
+              <FileText className="h-4 w-4 transition duration-200 ease-out group-hover:-translate-y-0.5 sm:h-5 sm:w-5" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 hidden flex-wrap gap-2 sm:flex">
             {heroTrustLine.map((item) => (
               <span
                 key={item}

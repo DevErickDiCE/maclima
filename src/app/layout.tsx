@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://maclima.vercel.app"),
   title:
     "Maclima Soluciones Energéticas | Aerotermia y fotovoltaica en Madrid",
   description:
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
       "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/whatsapp.png",
+        width: 1200,
+        height: 630,
+        alt: "Maclima Soluciones Energéticas",
+      },
+    ],
   },
 };
 
