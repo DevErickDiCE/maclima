@@ -19,28 +19,28 @@ export const metadata: Metadata = {
   description:
     "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
   openGraph: {
-    title:
-      "Maclima Soluciones Energéticas | Aerotermia y fotovoltaica en Madrid",
+    title: "Maclima Soluciones Energéticas",
     description:
-      "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
+      "Aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.",
+    url: "https://maclima.vercel.app",
+    siteName: "Maclima Soluciones Energéticas",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "https://maclima.vercel.app/whatsapp-og.png?v=3",
+        url: "https://maclima.vercel.app/whatsapp.png",
         width: 1200,
         height: 630,
-        alt: "Maclima Soluciones Energéticas",
+        alt: "Maclima Soluciones Energéticas - Aerotermia y fotovoltaica",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Maclima Soluciones Energéticas | Aerotermia y fotovoltaica en Madrid",
+    title: "Maclima Soluciones Energéticas",
     description:
-      "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
-    images: ["https://maclima.vercel.app/whatsapp-og.png?v=3"],
+      "Aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.",
+    images: ["https://maclima.vercel.app/whatsapp.png"],
   },
 };
 
