@@ -27,12 +27,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/whatsapp-og.png?v=2",
+        url: "https://maclima.vercel.app/whatsapp-og.png?v=3",
         width: 1200,
         height: 630,
         alt: "Maclima Soluciones Energéticas",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Maclima Soluciones Energéticas | Aerotermia y fotovoltaica en Madrid",
+    description:
+      "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
+    images: ["https://maclima.vercel.app/whatsapp-og.png?v=3"],
   },
 };
 
