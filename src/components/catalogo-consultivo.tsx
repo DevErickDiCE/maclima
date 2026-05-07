@@ -1,0 +1,1175 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  ChevronRight,
+  MessageCircle,
+  X,
+} from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { CONTACT_INFO } from "@/lib/contact-info";
+
+type CatalogVertical = "aerotermia" | "fotovoltaica";
+
+type ThumbnailType =
+  | "ben"
+  | "climer"
+  | "yekallor"
+  | "acs"
+  | "clima"
+  | "tank"
+  | "solar-thermal"
+  | "solar-panel"
+  | "inverter"
+  | "battery"
+  | "kit"
+  | "mount"
+  | "hybrid"
+  | "project";
+
+type CatalogProduct = {
+  id: string;
+  vertical: CatalogVertical;
+  brand: string;
+  name: string;
+  category: string;
+  image?: string;
+  thumbnailType: ThumbnailType;
+  shortDescription: string;
+  description: string;
+  tags: string[];
+  applications: string[];
+  features: string[];
+  compatibility: string[];
+  fit: string[];
+  hasFullPage?: boolean;
+  fullPageHref?: string;
+};
+
+const catalogNav = [
+  { label: "Todos", href: "#catalogo-todos" },
+  { label: "Aerotermia", href: "#aerotermia-catalogo" },
+  { label: "Fotovoltaica", href: "#fotovoltaica-catalogo" },
+  { label: "BEN Dual-Air", href: "#ben-dual-air-catalogo" },
+] as const;
+
+const aerothermalFilters = [
+  "Todas",
+  "BEN",
+  "Climer",
+  "Yekallor",
+  "ACS",
+  "Calefacción y refrigeración",
+  "Termoacumuladores",
+] as const;
+
+const photovoltaicFilters = [
+  "Todas",
+  "Paneles",
+  "Inversores",
+  "Baterías",
+  "Kits",
+  "Estructuras",
+] as const;
+
+const catalogProducts: CatalogProduct[] = [
+  {
+    id: "ben-dual-air",
+    vertical: "aerotermia",
+    brand: "BEN",
+    name: "BEN Dual-Air",
+    category: "Producto estrella",
+    image: "/imagen/BEN-Dual-AIR/ben-100-electric-format.webp",
+    thumbnailType: "ben",
+    shortDescription:
+      "Climatización, ventilación y ACS en una solución compacta.",
+    description:
+      "BEN Dual-Air integra calefacción, refrigeración, ventilación y agua caliente sanitaria en una unidad compacta para viviendas, apartamentos, obra nueva y reformas.",
+    tags: ["Aerotermia", "ACS", "Ventilación", "Vivienda"],
+    applications: ["Viviendas", "Apartamentos", "Obra nueva", "Reformas"],
+    features: [
+      "Calefacción y refrigeración",
+      "Agua caliente sanitaria",
+      "Ventilación integrada",
+      "Control remoto",
+    ],
+    compatibility: [
+      "Instalaciones interiores",
+      "Sistemas eléctricos",
+      "Proyectos de alta eficiencia",
+    ],
+    fit: [
+      "Viviendas con espacio técnico interior",
+      "Proyectos que buscan una solución compacta",
+      "Reformas donde se estudia una instalación eficiente",
+    ],
+    hasFullPage: true,
+    fullPageHref: "/catalogo/ben-dual-air",
+  },
+  {
+    id: "climer-ecoheat-acs",
+    vertical: "aerotermia",
+    brand: "Climer",
+    name: "Climer EcoHeat ACS",
+    category: "ACS",
+    thumbnailType: "acs",
+    shortDescription:
+      "Solución para producción eficiente de agua caliente sanitaria.",
+    description:
+      "Equipo orientado a la producción de agua caliente sanitaria con enfoque eficiente, pensado para estudiar su encaje según consumo, inmueble y configuración técnica.",
+    tags: ["ACS", "Aerotermia", "Vivienda"],
+    applications: ["Duchas", "Cocina", "Uso diario", "Vivienda"],
+    features: [
+      "Producción de ACS",
+      "Consumo eléctrico reducido",
+      "Formato técnico para vivienda o negocio",
+    ],
+    compatibility: ["Instalaciones de ACS", "Acumulación", "Reformas"],
+    fit: [
+      "Usuarios que quieren mejorar el ACS",
+      "Viviendas con consumo regular de agua caliente",
+      "Proyectos donde se valora sustituir sistemas tradicionales",
+    ],
+  },
+  {
+    id: "climer-calefaccion-refrigeracion",
+    vertical: "aerotermia",
+    brand: "Climer",
+    name: "Climer Calefacción y refrigeración",
+    category: "Calefacción y refrigeración",
+    thumbnailType: "clima",
+    shortDescription: "Sistema para confort térmico durante todo el año.",
+    description:
+      "Familia de soluciones para climatización eficiente, pensada para calefacción y refrigeración según el tipo de emisión, demanda y condiciones del inmueble.",
+    tags: ["Calefacción", "Refrigeración", "Bajo consumo"],
+    applications: ["Vivienda", "Negocio", "Reforma", "Obra nueva"],
+    features: [
+      "Confort térmico estable",
+      "Uso durante todo el año",
+      "Estudio según demanda térmica",
+    ],
+    compatibility: ["Fancoils", "Suelo radiante", "Radiadores de agua"],
+    fit: [
+      "Inmuebles con necesidades de frío y calor",
+      "Proyectos donde se busca confort estacional",
+      "Instalaciones que requieren estudio térmico previo",
+    ],
+  },
+  {
+    id: "climer-termoacumulador",
+    vertical: "aerotermia",
+    brand: "Climer",
+    name: "Climer Termoacumulador",
+    category: "Termoacumuladores",
+    thumbnailType: "tank",
+    shortDescription: "Acumulación para ACS y apoyo a instalaciones térmicas.",
+    description:
+      "Solución de acumulación para instalaciones térmicas donde es necesario almacenar agua caliente y dimensionar el sistema según uso real.",
+    tags: ["ACS", "Acumulación", "Instalación"],
+    applications: ["Viviendas", "Negocios", "Instalaciones técnicas"],
+    features: [
+      "Depósito de acumulación",
+      "Apoyo para ACS",
+      "Integración en sistemas térmicos",
+    ],
+    compatibility: ["Aerotermia", "ACS", "Calefacción"],
+    fit: [
+      "Proyectos con consumo de ACS concentrado",
+      "Instalaciones que necesitan almacenamiento",
+      "Sistemas donde conviene revisar capacidad y demanda",
+    ],
+  },
+  {
+    id: "yekallor-bomba-calor",
+    vertical: "aerotermia",
+    brand: "Yekallor",
+    name: "Yekallor Bomba de calor",
+    category: "Aerotermia",
+    thumbnailType: "yekallor",
+    shortDescription:
+      "Solución técnica para instalaciones de climatización eficiente.",
+    description:
+      "Bomba de calor para proyectos de aerotermia donde conviene estudiar demanda, emisores, ubicación y requisitos de instalación antes de recomendar configuración.",
+    tags: ["Aerotermia", "Calefacción", "Refrigeración"],
+    applications: ["Vivienda", "Negocio", "Profesionales"],
+    features: [
+      "Climatización eficiente",
+      "Aplicación técnica",
+      "Configuración según proyecto",
+    ],
+    compatibility: ["Fancoils", "Sistemas radiantes", "Instalación técnica"],
+    fit: [
+      "Instaladores y técnicos",
+      "Proyectos con demanda de climatización",
+      "Clientes que necesitan asesoramiento previo",
+    ],
+  },
+  {
+    id: "yekallor-acs",
+    vertical: "aerotermia",
+    brand: "Yekallor",
+    name: "Yekallor ACS",
+    category: "ACS",
+    thumbnailType: "acs",
+    shortDescription: "Equipos para generación de agua caliente sanitaria.",
+    description:
+      "Solución de ACS para valorar dentro de instalaciones de aerotermia, según perfil de consumo, espacio disponible y necesidades de agua caliente.",
+    tags: ["ACS", "Aerotermia", "Eficiencia"],
+    applications: ["Viviendas", "Comunidades", "Negocios"],
+    features: [
+      "Producción de ACS",
+      "Enfoque eficiente",
+      "Aplicación técnica flexible",
+    ],
+    compatibility: ["Acumulación", "Aerotermia", "Reformas"],
+    fit: [
+      "Instalaciones con demanda de agua caliente",
+      "Proyectos que requieren dimensionamiento",
+      "Profesionales que necesitan soporte técnico",
+    ],
+  },
+  {
+    id: "solar-termica",
+    vertical: "aerotermia",
+    brand: "Climer / genérico",
+    name: "Solar térmica",
+    category: "Solar térmica",
+    thumbnailType: "solar-thermal",
+    shortDescription: "Apoyo solar para producción de agua caliente sanitaria.",
+    description:
+      "Solución de apoyo energético para ACS que puede estudiarse como complemento según orientación, demanda y características del inmueble.",
+    tags: ["Solar térmica", "ACS", "Apoyo energético"],
+    applications: ["ACS", "Viviendas", "Negocios"],
+    features: [
+      "Apoyo a producción de agua caliente",
+      "Aprovechamiento solar térmico",
+      "Integración según instalación",
+    ],
+    compatibility: ["ACS", "Acumuladores", "Instalaciones térmicas"],
+    fit: [
+      "Proyectos con demanda de ACS",
+      "Inmuebles con superficie aprovechable",
+      "Instalaciones que buscan apoyo renovable",
+    ],
+  },
+  {
+    id: "panel-solar-fotovoltaico",
+    vertical: "fotovoltaica",
+    brand: "Equipamiento fotovoltaico",
+    name: "Paneles solares",
+    category: "Paneles solares",
+    image: "/fotovoltaica.png",
+    thumbnailType: "solar-panel",
+    shortDescription:
+      "Captación de energía solar para autoconsumo en vivienda, negocio o instalación profesional.",
+    description:
+      "Captación de energía solar para autoconsumo en vivienda, negocio o instalación profesional. Dimensionados según consumo, cubierta y objetivos del proyecto.",
+    tags: ["Paneles", "Autoconsumo", "Energía solar"],
+    applications: ["Viviendas", "Negocios", "Cubiertas", "Autoconsumo"],
+    features: [
+      "Captación solar",
+      "Aplicación en autoconsumo",
+      "Dimensionamiento a medida",
+    ],
+    compatibility: ["Inversores", "Baterías", "Estructuras para cubierta"],
+    fit: [
+      "Usuarios que quieren reducir consumo de red",
+      "Negocios con consumo diurno",
+      "Proyectos escalables con posible batería",
+    ],
+  },
+  {
+    id: "inversor-fotovoltaico",
+    vertical: "fotovoltaica",
+    brand: "Conversión energética",
+    name: "Inversores fotovoltaicos",
+    category: "Inversores",
+    thumbnailType: "inverter",
+    shortDescription:
+      "Conversión de energía solar en electricidad útil para la instalación.",
+    description:
+      "Conversión de energía solar en electricidad útil para la instalación. Selección según potencia, instalación y estrategia de autoconsumo.",
+    tags: ["Inversor", "Conversión", "Autoconsumo"],
+    applications: ["Viviendas", "Negocios", "Instalaciones solares"],
+    features: [
+      "Conversión energética",
+      "Gestión de producción",
+      "Integración en autoconsumo",
+    ],
+    compatibility: ["Paneles solares", "Baterías", "Monitorización"],
+    fit: [
+      "Instalaciones solares nuevas",
+      "Ampliaciones de autoconsumo",
+      "Proyectos que requieren control energético",
+    ],
+  },
+  {
+    id: "bateria-almacenamiento",
+    vertical: "fotovoltaica",
+    brand: "Acumulación energética",
+    name: "Baterías de almacenamiento",
+    category: "Baterías",
+    thumbnailType: "battery",
+    shortDescription: "Aprovechamiento de excedentes para utilizar la energía en otros momentos del día.",
+    description:
+      "Aprovechamiento de excedentes para utilizar la energía en otros momentos del día. Dimensionadas según hábitos de consumo y objetivos del proyecto.",
+    tags: ["Batería", "Acumulación", "Autoconsumo"],
+    applications: ["Viviendas", "Negocios", "Autoconsumo con excedentes"],
+    features: [
+      "Almacenamiento energético",
+      "Uso diferido de excedentes",
+      "Apoyo a instalaciones solares",
+    ],
+    compatibility: ["Paneles solares", "Inversores compatibles", "Gestión energética"],
+    fit: [
+      "Instalaciones con excedentes",
+      "Usuarios que consumen fuera de horas solares",
+      "Proyectos que buscan más independencia de red",
+    ],
+  },
+  {
+    id: "kit-autoconsumo",
+    vertical: "fotovoltaica",
+    brand: "Solución completa",
+    name: "Kits de autoconsumo",
+    category: "Kits",
+    thumbnailType: "kit",
+    shortDescription: "Conjunto de componentes adaptados al consumo, cubierta y objetivos de ahorro.",
+    description:
+      "Conjunto de componentes adaptados al consumo, cubierta y objetivos de ahorro. Configurado según potencia objetivo y posibilidades de ampliación.",
+    tags: ["Kit solar", "Autoconsumo", "Vivienda"],
+    applications: ["Viviendas", "Negocios", "Proyectos compactos"],
+    features: [
+      "Conjunto de componentes",
+      "Configuración a medida",
+      "Preparado para asesoramiento previo",
+    ],
+    compatibility: ["Paneles", "Inversores", "Estructuras"],
+    fit: [
+      "Usuarios que quieren una solución completa",
+      "Proyectos con necesidades claras de autoconsumo",
+      "Instalaciones que deben revisarse antes de propuesta",
+    ],
+  },
+  {
+    id: "estructura-cubierta",
+    vertical: "fotovoltaica",
+    brand: "Montaje e instalación",
+    name: "Estructuras para cubierta",
+    category: "Estructuras",
+    thumbnailType: "mount",
+    shortDescription: "Sistemas de soporte para diferentes tipos de superficie y orientación.",
+    description:
+      "Sistemas de soporte para diferentes tipos de superficie y orientación. Valorando inclinación, fijación y seguridad según cada proyecto.",
+    tags: ["Estructuras", "Cubierta", "Instalación"],
+    applications: ["Cubiertas inclinadas", "Cubiertas planas", "Negocios"],
+    features: [
+      "Montaje técnico",
+      "Adaptación a cubierta",
+      "Soporte para paneles solares",
+    ],
+    compatibility: ["Paneles solares", "Kits de autoconsumo", "Instalación profesional"],
+    fit: [
+      "Proyectos con cubierta disponible",
+      "Instalaciones que requieren revisión de soporte",
+      "Profesionales que necesitan solución de montaje",
+    ],
+  },
+  {
+    id: "solucion-hibrida",
+    vertical: "fotovoltaica",
+    brand: "Integración energética",
+    name: "Solución híbrida aerotermia + fotovoltaica",
+    category: "Solución combinada",
+    image: "/fotovoltaica.png",
+    thumbnailType: "hybrid",
+    shortDescription: "Combinación de climatización eficiente y autoconsumo eléctrico.",
+    description:
+      "Combinación de climatización eficiente y autoconsumo eléctrico. Integración consultiva para apoyar consumos eléctricos ligados a climatización y ACS según cada instalación.",
+    tags: ["Aerotermia", "Fotovoltaica", "Solución híbrida"],
+    applications: ["Viviendas", "Negocios", "Proyectos de eficiencia"],
+    features: [
+      "Integración entre verticales",
+      "Estudio de consumo e inmueble",
+      "Propuesta técnica personalizada",
+    ],
+    compatibility: ["Aerotermia", "Paneles solares", "Baterías opcionales"],
+    fit: [
+      "Usuarios que valoran una estrategia energética completa",
+      "Negocios con consumo eléctrico relevante",
+      "Proyectos que buscan confort y autoconsumo",
+    ],
+  },
+  {
+    id: "instalacion-medida",
+    vertical: "fotovoltaica",
+    brand: "Proyecto técnico",
+    name: "Instalación a medida",
+    category: "Proyecto",
+    thumbnailType: "project",
+    shortDescription:
+      "Dimensionamiento según consumo, inmueble e instalación existente.",
+    description:
+      "Dimensionamiento según consumo, inmueble e instalación existente. Servicio consultivo para estudiar espacio disponible y objetivos antes de recomendar una solución energética.",
+    tags: ["Proyecto", "Asesoramiento", "Instalación"],
+    applications: ["Viviendas", "Negocios", "Profesionales", "Comunidades"],
+    features: [
+      "Estudio previo",
+      "Recomendación técnica",
+      "Propuesta personalizada",
+    ],
+    compatibility: ["Aerotermia", "Fotovoltaica", "Soluciones combinadas"],
+    fit: [
+      "Usuarios que no saben qué solución elegir",
+      "Profesionales que necesitan soporte",
+      "Proyectos donde conviene comparar alternativas",
+    ],
+  },
+];
+
+const fadeUp = {
+  initial: { opacity: 1, y: 0 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-90px" },
+  transition: { duration: 0.55, ease: "easeOut" },
+} as const;
+
+export function CatalogoConsultivo() {
+  const [selectedProduct, setSelectedProduct] = useState<CatalogProduct | null>(
+    null
+  );
+  const [aerothermalFilter, setAerothermalFilter] = useState("Todas");
+  const [photovoltaicFilter, setPhotovoltaicFilter] = useState("Todas");
+
+  const benProduct = catalogProducts.find(
+    (product) => product.id === "ben-dual-air"
+  );
+  const aerothermalProducts = catalogProducts.filter(
+    (product) => product.vertical === "aerotermia"
+  );
+  const photovoltaicProducts = catalogProducts.filter(
+    (product) => product.vertical === "fotovoltaica"
+  );
+
+  const visibleAerothermalProducts = filterProducts(
+    aerothermalProducts,
+    aerothermalFilter
+  );
+  const visiblePhotovoltaicProducts = filterProducts(
+    photovoltaicProducts,
+    photovoltaicFilter
+  );
+
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#17111A]">
+      <SiteHeader />
+      <main id="catalogo-todos">
+        <CatalogHero />
+        <CatalogNav />
+        {benProduct ? (
+          <FeaturedBen product={benProduct} />
+        ) : null}
+        <CatalogSection
+          id="aerotermia-catalogo"
+          eyebrow="Catálogo de aerotermia"
+          title="Aerotermia"
+          text="Soluciones para climatización, ACS, acumulación y sistemas compatibles con viviendas, negocios y profesionales."
+          products={visibleAerothermalProducts}
+          filters={aerothermalFilters}
+          activeFilter={aerothermalFilter}
+          onFilterChange={setAerothermalFilter}
+          onInfo={setSelectedProduct}
+        />
+        <CatalogSection
+          id="fotovoltaica-catalogo"
+          eyebrow="Catálogo fotovoltaico"
+          title="Fotovoltaica"
+          text="Soluciones para autoconsumo, paneles solares, inversores, baterías, kits y estructuras adaptadas a cada instalación."
+          products={visiblePhotovoltaicProducts}
+          filters={photovoltaicFilters}
+          activeFilter={photovoltaicFilter}
+          onFilterChange={setPhotovoltaicFilter}
+          onInfo={setSelectedProduct}
+          solar
+        />
+        <CatalogFinalCta />
+      </main>
+      <SiteFooter />
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
+    </div>
+  );
+}
+
+function filterProducts(products: CatalogProduct[], filter: string) {
+  if (filter === "Todas") {
+    return products;
+  }
+
+  return products.filter((product) => {
+    const haystack = [
+      product.brand,
+      product.name,
+      product.category,
+      ...product.tags,
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    const needle = filter.toLowerCase();
+
+    if (needle === "paneles") return haystack.includes("panel");
+    if (needle === "baterías") return haystack.includes("bater");
+    if (needle === "kits") return haystack.includes("kit");
+    if (needle === "estructuras") return haystack.includes("estructura");
+    if (needle === "termoacumuladores") return haystack.includes("termo");
+
+    return haystack.includes(needle);
+  });
+}
+
+function CatalogHero() {
+  return (
+    <section
+      id="catalogo-todos"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-16 sm:py-20"
+    >
+      <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute right-[-12%] top-10 h-80 w-80 rounded-full bg-[#D9D9FF]/80 blur-3xl" />
+      <div className="absolute bottom-[-18%] left-[-10%] h-72 w-72 rounded-full bg-[#F2B84B]/14 blur-3xl" />
+
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:px-8">
+        <motion.div {...fadeUp}>
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
+            CATÁLOGO CONSULTIVO
+          </p>
+          <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-[#17111A] sm:text-5xl lg:text-6xl">
+            Catálogo consultivo de aerotermia y fotovoltaica
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5F5A66]">
+            Consulta las principales marcas, familias y soluciones energéticas
+            con las que trabaja Maclima. Cada producto requiere un estudio
+            previo para valorar compatibilidad, dimensionamiento e instalación
+            adecuada.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              href="/consultoria-gratuita"
+              className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+            >
+              Solicitar asesoramiento
+              <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="#aerotermia-catalogo"
+              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#850E88]/18 bg-white/80 px-6 py-4 text-base font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
+            >
+              Ver aerotermia
+            </Link>
+            <Link
+              href="#fotovoltaica-catalogo"
+              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#D99A2B]/22 bg-[#FFF2D8]/80 px-6 py-4 text-base font-bold text-[#9A5B12] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8]"
+            >
+              Ver fotovoltaica
+            </Link>
+          </div>
+        </motion.div>
+
+        <motion.aside
+          {...fadeUp}
+          className="rounded-[30px] border border-white/80 bg-white/82 p-5 shadow-[0_26px_80px_rgba(133,14,136,0.14)] backdrop-blur-xl sm:p-6"
+        >
+          <div className="rounded-[24px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-5">
+            <p className="text-sm font-black uppercase text-[#850E88]">
+              Enfoque Maclima
+            </p>
+            <p className="mt-3 text-xl font-black leading-tight text-[#17111A]">
+              No vendemos productos de forma automática.
+            </p>
+            <p className="mt-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+              Te ayudamos a elegir la solución adecuada según tu vivienda,
+              negocio o proyecto profesional.
+            </p>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+            {["Distribución", "Instalación", "Asesoramiento técnico"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-[#D9D9FF]/80 bg-white px-4 py-3 text-sm font-black text-[#17111A]"
+                >
+                  {item}
+                </div>
+              )
+            )}
+          </div>
+        </motion.aside>
+      </div>
+    </section>
+  );
+}
+
+function CatalogNav() {
+  return (
+    <nav className="sticky top-[76px] z-30 border-y border-[#D9D9FF]/70 bg-white/86 backdrop-blur-xl">
+      <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex min-w-max gap-2">
+          {catalogNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-full border border-[#D9D9FF] bg-white px-4 py-2 text-sm font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88]"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function FeaturedBen({
+  product,
+}: {
+  product: CatalogProduct;
+}) {
+  return (
+    <section
+      id="ben-dual-air-catalogo"
+      className="bg-white py-16 sm:py-20"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.article
+          {...fadeUp}
+          className="overflow-hidden rounded-[36px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_12%_12%,rgba(217,217,255,0.9),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] p-5 shadow-[0_30px_96px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9"
+        >
+          <div className="grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
+            <div className="relative min-h-[340px] overflow-hidden rounded-[32px] border border-white/80 bg-[#17111A] shadow-[0_28px_84px_rgba(23,17,26,0.16)] sm:min-h-[500px]">
+              <Image
+                src="/imagen/BEN-Dual-AIR/electric-bruin.webp"
+                alt="BEN Dual-Air sistema de aerotermia interior compacto"
+                fill
+                sizes="(min-width: 1024px) 52vw, 100vw"
+                className="object-cover object-[56%_center]"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,17,26,0)_0%,rgba(23,17,26,0.38)_100%)]" />
+              <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/90 px-3 py-2 text-xs font-black uppercase text-[#850E88] shadow-sm backdrop-blur">
+                Producto estrella
+              </span>
+            </div>
+
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
+                PRODUCTO ESTRELLA EN AEROTERMIA
+              </p>
+              <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+                BEN Dual-Air: aerotermia compacta para climatización,
+                ventilación y ACS
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#5F5A66]">
+                Sistema compacto de aerotermia interior para integrar
+                calefacción, refrigeración, ventilación y agua caliente
+                sanitaria en una única solución. Una opción avanzada para
+                proyectos donde se busca confort, eficiencia y control.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href={product.fullPageHref ?? "/catalogo/ben-dual-air"}
+                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-black text-white shadow-[0_16px_36px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                >
+                  Ver ficha completa
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/consultoria-gratuita"
+                  className="inline-flex min-h-13 items-center justify-center rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
+                >
+                  Solicitar asesoramiento sobre BEN
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.article>
+      </div>
+    </section>
+  );
+}
+
+function CatalogSection({
+  id,
+  eyebrow,
+  title,
+  text,
+  products,
+  filters,
+  activeFilter,
+  onFilterChange,
+  onInfo,
+  solar = false,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  text: string;
+  products: CatalogProduct[];
+  filters: readonly string[];
+  activeFilter: string;
+  onFilterChange: (filter: string) => void;
+  onInfo: (product: CatalogProduct) => void;
+  solar?: boolean;
+}) {
+  return (
+    <section
+      id={id}
+      className={`py-16 sm:py-20 ${
+        solar
+          ? "bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF8EE_45%,#EAEAFF_100%)]"
+          : "bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)]"
+      }`}
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          {...fadeUp}
+          className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
+        >
+          <div className="max-w-3xl">
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
+              {eyebrow}
+            </p>
+            <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+              {title}
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-[#5F5A66]">{text}</p>
+          </div>
+          <p className="rounded-full border border-[#D9D9FF]/80 bg-white px-4 py-2 text-xs font-black uppercase text-[#5F5A66] shadow-sm">
+            {products.length} soluciones visibles
+          </p>
+        </motion.div>
+
+        <div className="mt-7 overflow-x-auto pb-1">
+          <div className="flex min-w-max gap-2">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => onFilterChange(filter)}
+                className={`rounded-full border px-4 py-2 text-sm font-black transition duration-200 ease-out ${
+                  activeFilter === filter
+                    ? "border-[#850E88] bg-[#850E88] text-white shadow-[0_10px_24px_rgba(133,14,136,0.18)]"
+                    : solar
+                      ? "border-[#D99A2B]/18 bg-white text-[#9A5B12] hover:bg-[#FFF2D8]"
+                      : "border-[#D9D9FF] bg-white text-[#5F5A66] hover:bg-[#F8F7FF] hover:text-[#850E88]"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onInfo={() => onInfo(product)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductCard({
+  product,
+  onInfo,
+}: {
+  product: CatalogProduct;
+  onInfo: () => void;
+}) {
+  const solar = product.vertical === "fotovoltaica";
+
+  return (
+    <motion.article
+      {...fadeUp}
+      className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
+    >
+      <div
+        className={`relative h-52 overflow-hidden ${
+          solar
+            ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)]"
+            : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"
+        }`}
+      >
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
+            className={
+              product.id === "ben-dual-air"
+                ? "object-contain p-6"
+                : "object-cover"
+            }
+          />
+        ) : (
+          <CatalogVisual type={product.thumbnailType} label={product.brand} />
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col p-5">
+        <p className="text-xs font-black uppercase tracking-[0.12em] text-[#850E88]">
+          {product.brand}
+        </p>
+        <h3 className="mt-2 text-xl font-black leading-tight text-[#17111A]">
+          {product.name}
+        </h3>
+        <p className="mt-1 text-sm font-bold text-[#5F5A66]">
+          {product.category}
+        </p>
+        <p className="mt-4 text-sm leading-6 text-[#5F5A66]">
+          {product.shortDescription}
+        </p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {product.tags.map((tag) => (
+            <span
+              key={tag}
+              className={`rounded-full border px-2.5 py-1 text-xs font-bold ${
+                solar
+                  ? "border-[#D99A2B]/20 bg-[#FFF2D8] text-[#9A5B12]"
+                  : "border-[#D9D9FF]/80 bg-[#F8F7FF] text-[#4A4352]"
+              }`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={onInfo}
+          className="group/button mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)]"
+        >
+          Ver información
+          <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover/button:translate-x-1" />
+        </button>
+      </div>
+    </motion.article>
+  );
+}
+
+function CatalogVisual({
+  type,
+  label,
+}: {
+  type: ThumbnailType;
+  label?: string;
+}) {
+  return (
+    <div className="relative h-full w-full overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(242,184,75,0.22),transparent_30%),radial-gradient(circle_at_18%_78%,rgba(133,14,136,0.16),transparent_34%)]" />
+      {type === "climer" || type === "yekallor" ? (
+        <div className="absolute inset-6 flex items-center justify-center rounded-[28px] border border-white/80 bg-white/82 shadow-[0_18px_40px_rgba(23,17,26,0.08)] backdrop-blur">
+          <span className="text-xl font-black uppercase tracking-[0.12em] text-[#850E88]">
+            {label}
+          </span>
+        </div>
+      ) : null}
+
+      {type === "acs" || type === "tank" ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-32 w-20 rounded-[999px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
+          <div className="absolute h-3 w-3 rounded-full bg-[#850E88]/35" />
+        </div>
+      ) : null}
+
+      {type === "clima" ? (
+        <div className="absolute inset-8 rounded-[30px] border border-white/80 bg-white/78 p-6 shadow-[0_18px_44px_rgba(23,17,26,0.08)]">
+          <div className="h-10 rounded-full bg-[#F5F0FF]" />
+          <div className="mt-8 h-2 rounded-full bg-[#38BDF8]/45" />
+          <div className="mt-4 h-2 rounded-full bg-[#FB923C]/45" />
+        </div>
+      ) : null}
+
+      {type === "solar-thermal" || type === "solar-panel" ? (
+        <div className="absolute inset-8 rotate-[-4deg] rounded-[26px] border border-[#D99A2B]/24 bg-[linear-gradient(180deg,#F6F4FF_0%,#DDE6FF_100%)] p-4 shadow-[0_18px_44px_rgba(23,17,26,0.1)]">
+          <div className="grid h-full grid-cols-4 gap-2">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <span key={index} className="rounded-lg bg-[#7888AA]/45" />
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {type === "inverter" ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-32 w-24 rounded-[28px] border border-white/80 bg-white shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
+          <div className="absolute top-[43%] h-5 w-5 rounded-full bg-[#D99A2B]/70" />
+          <div className="absolute top-[56%] h-2 w-12 rounded-full bg-[#850E88]/18" />
+        </div>
+      ) : null}
+
+      {type === "battery" ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-32 w-24 rounded-[26px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF2D8_100%)] shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
+          <div className="absolute h-3 w-12 rounded-full bg-[linear-gradient(90deg,#850E88_0%,#F2B84B_100%)]" />
+          <div className="absolute mt-8 h-3 w-12 rounded-full bg-[#F2B84B]/35" />
+        </div>
+      ) : null}
+
+      {type === "kit" || type === "hybrid" ? (
+        <div className="absolute inset-8 grid grid-cols-2 gap-4">
+          <div className="rounded-[24px] border border-white/80 bg-white/86 shadow-[0_14px_34px_rgba(23,17,26,0.08)]" />
+          <div className="rounded-[24px] border border-[#D99A2B]/20 bg-[#FFF2D8]" />
+          <div className="col-span-2 rounded-[24px] border border-[#850E88]/14 bg-[#F5F0FF]" />
+        </div>
+      ) : null}
+
+      {type === "mount" ? (
+        <div className="absolute inset-10 rounded-[28px] border border-[#D99A2B]/18 bg-white/72 p-6 shadow-[0_18px_44px_rgba(23,17,26,0.08)]">
+          <div className="grid h-full grid-cols-3 gap-3">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <span
+                key={index}
+                className="rounded-lg border border-[#9A5B12]/20 bg-[#FFF2D8]"
+              />
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {type === "project" ? (
+        <div className="absolute inset-8 rounded-[28px] border border-white/80 bg-white/82 p-6 shadow-[0_18px_44px_rgba(23,17,26,0.08)]">
+          <div className="h-5 rounded-full bg-[#850E88]/16" />
+          <div className="mt-5 h-4 w-3/4 rounded-full bg-[#D99A2B]/20" />
+          <div className="mt-5 grid grid-cols-3 gap-3">
+            <span className="h-12 rounded-2xl bg-[#EAEAFF]" />
+            <span className="h-12 rounded-2xl bg-[#FFF2D8]" />
+            <span className="h-12 rounded-2xl bg-[#F8F7FF]" />
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ProductModal({
+  product,
+  onClose,
+}: {
+  product: CatalogProduct | null;
+  onClose: () => void;
+}) {
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (!product) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [product, onClose]);
+
+  if (!product) return null;
+
+  return (
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-[80] flex items-end justify-center bg-[#17111A]/64 p-0 backdrop-blur-sm sm:items-center sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="catalog-modal-title"
+    >
+      <motion.div
+        onClick={(event) => event.stopPropagation()}
+        initial={{ opacity: 0, y: 24, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className="relative max-h-[96vh] w-full max-w-6xl overflow-y-auto overflow-x-hidden rounded-t-[30px] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:max-h-[94vh] sm:rounded-[32px]"
+      >
+        <button
+          ref={closeButtonRef}
+          type="button"
+          onClick={onClose}
+          className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-2xl border border-[#D9D9FF] bg-white/90 text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:bg-[#F8F7FF]"
+          aria-label="Cerrar información"
+        >
+          <X className="h-5 w-5" />
+        </button>
+
+        <div className="grid lg:grid-cols-[0.42fr_0.58fr]">
+          <div className="relative min-h-[290px] bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)] sm:min-h-[420px] lg:min-h-full">
+            {product.image ? (
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className={
+                  product.id === "ben-dual-air"
+                    ? "object-contain p-8"
+                    : "object-cover"
+                }
+              />
+            ) : (
+              <CatalogVisual type={product.thumbnailType} label={product.brand} />
+            )}
+          </div>
+
+          <div className="p-6 sm:p-8 lg:p-10">
+            <p className="text-sm font-black uppercase tracking-[0.14em] text-[#850E88]">
+              {product.brand} · {product.category}
+            </p>
+            <h2
+              id="catalog-modal-title"
+              className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl"
+            >
+              {product.name}
+            </h2>
+            <p className="mt-5 text-base leading-7 text-[#5F5A66]">
+              {product.description}
+            </p>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+              <ModalInfoBlock title="Aplicaciones" items={product.applications} />
+              <ModalInfoBlock
+                title="Características principales"
+                items={product.features}
+              />
+              <ModalInfoBlock
+                title="Compatibilidades"
+                items={product.compatibility}
+              />
+              <ModalInfoBlock title="Para quién encaja" items={product.fit} />
+            </div>
+
+            <div className="mt-8 rounded-[24px] border border-[#D9D9FF]/80 bg-[#F8F7FF] p-5">
+              <h3 className="text-xl font-black text-[#17111A]">
+                ¿Quieres saber si esta solución encaja en tu proyecto?
+              </h3>
+              <p className="mt-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+                Analizamos tu vivienda, negocio o instalación profesional para
+                recomendarte la opción más adecuada.
+              </p>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/consultoria-gratuita"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-black text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                >
+                  Solicitar asesoramiento
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                {product.hasFullPage && product.fullPageHref ? (
+                  <Link
+                    href={product.fullPageHref}
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    Ver ficha completa
+                  </Link>
+                ) : null}
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#D9D9FF] bg-white px-5 py-3 text-sm font-black text-[#5F5A66] transition duration-200 ease-out hover:bg-[#F8F7FF]"
+                >
+                  Seguir viendo catálogo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+function ModalInfoBlock({
+  title,
+  items,
+}: {
+  title: string;
+  items: string[];
+}) {
+  return (
+    <div className="rounded-2xl border border-[#D9D9FF]/80 bg-white p-4">
+      <p className="text-sm font-black text-[#17111A]">{title}</p>
+      <ul className="mt-3 grid gap-2">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="text-sm font-medium leading-5 text-[#5F5A66]"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function CatalogFinalCta() {
+  return (
+    <section
+      id="cta-catalogo"
+      className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+    >
+      <motion.div
+        {...fadeUp}
+        className="mx-auto max-w-6xl overflow-hidden rounded-[34px] border border-white/20 bg-[radial-gradient(circle_at_82%_20%,rgba(217,217,255,0.24),transparent_28%),linear-gradient(135deg,#17111A_0%,#2A1830_70%,#850E88_100%)] p-6 text-white shadow-[0_30px_100px_rgba(23,17,26,0.22)] sm:p-8 lg:p-10"
+      >
+        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#D9D9FF]">
+              Asesoramiento técnico
+            </p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-4xl">
+              ¿No sabes qué solución encaja con tu proyecto?
+            </h2>
+            <p className="mt-5 max-w-3xl text-base font-semibold leading-7 text-[#D9D9FF]">
+              Analizamos tu consumo, tipo de inmueble, instalación existente y
+              objetivos de ahorro para recomendarte una solución adecuada antes
+              de preparar presupuesto o propuesta técnica.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link
+              href="/consultoria-gratuita"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
+            >
+              Solicitar consultoría gratuita
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+            <a
+              href={CONTACT_INFO.whatsappHref}
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-base font-black text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/15"
+            >
+              Contactar por WhatsApp
+              <MessageCircle className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}

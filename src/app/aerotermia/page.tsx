@@ -1,0 +1,65 @@
+import { FuturePage } from "@/components/future-page";
+import { ThermometerSun } from "lucide-react";
+
+const introCards = [
+  {
+    title: "Qué es",
+    text: "Una solución que aprovecha la energía del aire exterior para climatización y agua caliente sanitaria.",
+  },
+  {
+    title: "Dónde encaja",
+    text: "Viviendas, negocios, reformas y obra nueva que buscan eficiencia, confort y control.",
+  },
+  {
+    title: "Cómo trabajamos",
+    text: "Desde una lógica consultiva: estudio previo, recomendación técnica y propuesta adaptada.",
+  },
+] as const;
+
+export default function AerotermiaPage() {
+  return (
+    <FuturePage
+      eyebrow="Aerotermia"
+      title="Soluciones de aerotermia para confort, ACS y eficiencia"
+      description="Maclima plantea la aerotermia como una solución técnica completa para climatización, refrigeración y agua caliente sanitaria, con especial atención a la viabilidad real de cada instalación."
+      introCards={introCards}
+      roadmapTitle="Estructura de esta vertical"
+      roadmap={[
+        "Qué es la aerotermia y por qué puede encajar en tu proyecto",
+        "Beneficios de confort, eficiencia y control",
+        "Aplicaciones en vivienda, negocio, reforma y obra nueva",
+        "BEN Dual-Air como producto destacado sin perder enfoque consultivo",
+      ]}
+      primaryPanel={{
+        eyebrow: "Beneficios y aplicaciones",
+        title: "Una tecnología pensada para calefacción, refrigeración y ACS",
+        text: "La aerotermia permite trabajar el confort térmico desde un enfoque eficiente y renovable, tanto en entornos residenciales como en espacios de uso profesional.",
+        bullets: [
+          "Calefacción",
+          "Refrigeración",
+          "ACS",
+          "Viviendas y negocios",
+          "Reformas y obra nueva",
+        ],
+        cta: "Consultar solución de aerotermia",
+        href: "/consultoria-gratuita",
+      }}
+      secondaryPanel={{
+        eyebrow: "Producto destacado",
+        title: "BEN Dual-Air como solución compacta y avanzada",
+        text: "BEN Dual-Air se presenta como una opción destacada dentro del catálogo de aerotermia por su capacidad para integrar climatización, ventilación y ACS en una misma propuesta.",
+        bullets: [
+          "Climatización",
+          "Ventilación",
+          "Agua caliente sanitaria",
+          "Solución compacta",
+          "Enfoque técnico y consultivo",
+        ],
+        cta: "Ver catálogo consultivo",
+        href: "/catalogo",
+      }}
+      consultiveNote="No vendemos productos de forma automática. Analizamos cada caso para recomendar la solución de aerotermia adecuada según consumo, inmueble y objetivos del proyecto."
+      icon={ThermometerSun}
+    />
+  );
+}
