@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/whatsapp.png",
+        url: "/whatsapp-og.png?v=2",
         width: 1200,
         height: 630,
         alt: "Maclima Soluciones Energéticas",
