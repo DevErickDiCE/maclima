@@ -267,7 +267,7 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[5%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
+        className="absolute inset-0 z-0 object-cover object-[90%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
