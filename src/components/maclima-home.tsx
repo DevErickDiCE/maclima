@@ -267,15 +267,16 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[60%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
+        className="absolute inset-0 z-0 object-cover object-[38%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.38)_0%,rgba(234,234,255,0.06)_35%,rgba(23,17,26,0.10)_100%)]" />
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.18)_45%,transparent_70%)] md:hidden" />
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[600px] max-w-7xl items-start px-4 pt-10 pb-12 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
+      <div className="mx-auto flex min-h-[620px] max-w-7xl items-start px-4 pt-10 pb-12 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
@@ -291,7 +292,7 @@ function Hero() {
             <span className="block md:hidden">Aerotermia y fotovoltaica para ahorrar energía</span>
             <span className="hidden md:block">Aerotermia y fotovoltaica para ahorrar energía desde el primer día</span>
           </h1>
-          <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">
+          <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8">
             <span className="block md:hidden">Soluciones de aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia y fotovoltaica en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
@@ -305,7 +306,7 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:mt-6 sm:flex-row">
             <Link
               href="/consultoria-gratuita"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
