@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://maclima.vercel.app/whatsapp.png",
-        width: 1254,
-        height: 1254,
+        url: "https://maclima.vercel.app/og-preview.png",
+        width: 1200,
+        height: 630,
         alt: "Maclima Soluciones Energéticas - Aerotermia y fotovoltaica",
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Maclima Soluciones Energéticas",
     description:
       "Aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.",
-    images: ["https://maclima.vercel.app/whatsapp.png"],
+    images: ["https://maclima.vercel.app/og-preview.png"],
   },
 };
 
