@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://maclima.vercel.app/whatsapp.png",
-        width: 1200,
-        height: 630,
+        width: 1254,
+        height: 1254,
         alt: "Maclima Soluciones Energéticas - Aerotermia y fotovoltaica",
       },
     ],
