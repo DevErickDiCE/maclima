@@ -223,21 +223,21 @@ const geothermalCatalog = [
   },
   {
     name: "Sistemas de captación",
-    text: "Sondas y circuitos de captación adaptados al terreno e inmueble.",
+    text: "Sondas y circuitos adaptados al terreno e inmueble.",
     badge: "Captación",
     kind: "family" as const,
-    thumbType: "geo" as const,
+    thumbType: "clima" as const,
   },
   {
     name: "Geotermia para ACS",
     text: "Agua caliente sanitaria apoyada en energía geotérmica.",
     badge: "ACS",
     kind: "family" as const,
-    thumbType: "geo" as const,
+    thumbType: "tank" as const,
   },
   {
     name: "Estudio de viabilidad",
-    text: "Análisis técnico previo para valorar idoneidad del terreno.",
+    text: "Análisis técnico previo para valorar terreno, inmueble y proyecto.",
     badge: "Consultoría",
     kind: "family" as const,
     thumbType: "project" as const,
@@ -318,7 +318,7 @@ function Hero() {
 
       <div className="absolute right-[12%] top-[9%] z-10 hidden items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:flex">
         <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
-        <span className="text-[11px] font-medium tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
+        <span className="text-xs font-semibold tracking-[0.14em] text-[#5f0a63]">MACLIMA CALOR Y FRÍO S.L.</span>
       </div>
 
       <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
@@ -871,10 +871,10 @@ function FeaturedSolutions() {
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5F5A66]">
               BEN Dual-Air integra calefacción, refrigeración, ventilación y
-              agua caliente sanitaria en una solución compacta para viviendas,
-              apartamentos, obra nueva y reformas. Una opción avanzada para
-              proyectos que buscan confort, eficiencia y control en un único
-              sistema.
+              agua caliente sanitaria en una solución compacta de instalación
+              interior. Está pensada para pisos, viviendas unifamiliares, obra
+              nueva y reformas donde se busca confort, eficiencia y control sin
+              depender de una unidad exterior visible.
             </p>
             <Link
               href="/aerotermia"
@@ -914,20 +914,21 @@ function FeaturedSolutions() {
                 Todo eléctrico, compacto y preparado para viviendas modernas
               </p>
               <h3 className="mt-3 text-3xl font-black leading-tight text-[#17111A]">
-                Una unidad interior para integrar confort y control
+                Aerotermia interior sin unidad exterior
               </h3>
               <p className="mt-5 text-base leading-7 text-[#5F5A66]">
                 BEN Dual-Air es una bomba de calor interior que puede integrar
                 ventilación, calefacción, refrigeración y agua caliente sanitaria
-                en una unidad compacta. Puede funcionar como sistema eléctrico
-                completo o como apoyo híbrido junto a otros sistemas existentes,
-                según las necesidades de cada instalación.
+                en una unidad compacta. Su diseño permite resolver la instalación
+                sin unidad exterior, una ventaja importante en pisos, comunidades
+                o viviendas donde no se quiere ocupar fachada, terraza o cubierta.
               </p>
               <p className="mt-4 text-base font-semibold leading-7 text-[#17111A]">
-                Su diseño permite trabajar con aire de ventilación, aire exterior
-                o una combinación de ambos, lo que lo convierte en una solución
-                flexible para viviendas aisladas, apartamentos, reformas y
-                proyectos de alta eficiencia.
+                En condiciones adecuadas de instalación, el sistema puede montarse
+                en aproximadamente 3 horas, reduciendo tiempos de intervención y
+                molestias en la vivienda. En Maclima revisamos cada caso para
+                confirmar viabilidad, configuración y necesidades reales del
+                proyecto.
               </p>
 
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -936,7 +937,7 @@ function FeaturedSolutions() {
                     Formato
                   </p>
                   <p className="mt-2 text-sm font-bold text-[#17111A]">
-                    Instalación interior compacta
+                    Sin unidad exterior
                   </p>
                 </div>
                 <div className="rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] p-4">
@@ -944,10 +945,14 @@ function FeaturedSolutions() {
                     Enfoque
                   </p>
                   <p className="mt-2 text-sm font-bold text-[#17111A]">
-                    Confort, eficiencia y control
+                    Pisos y unifamiliares
                   </p>
                 </div>
               </div>
+              <p className="mt-2 text-[11px] leading-4 text-[#5F5A66]">
+                *Aproximadamente 3 horas según condiciones de instalación y
+                viabilidad técnica.
+              </p>
             </div>
           </div>
 
@@ -1023,38 +1028,37 @@ function FeaturedSolutions() {
 
 function ConsultiveCatalog() {
   return (
-    <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] py-16 sm:py-20">
+    <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionIntro
           eyebrow="Catálogo consultivo"
           title="Catálogo consultivo de soluciones energéticas"
-          text="Nuestro catálogo está pensado para ayudarte a conocer las principales soluciones energéticas en Madrid. Cada instalación requiere un estudio previo, por eso te asesoramos antes de recomendar un producto o preparar un presupuesto."
+          text="Consulta las principales soluciones energéticas con las que trabaja Maclima. Cada instalación requiere un estudio previo para valorar viabilidad, dimensionamiento e instalación adecuada."
         />
-        <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-[#850E88]/15 bg-white/[0.8] p-4 text-center text-sm font-semibold leading-6 text-[#5F5A66] shadow-sm backdrop-blur">
-          No vendemos productos de forma automática. Analizamos cada caso para
-          recomendar la solución adecuada.
+        <div className="mx-auto mt-5 max-w-2xl rounded-2xl border border-[#850E88]/12 bg-white/[0.8] px-4 py-3 text-center text-sm font-semibold leading-6 text-[#5F5A66] shadow-sm backdrop-blur">
+          No vendemos productos de forma automática. Analizamos cada caso antes de recomendar.
         </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
           <CatalogColumn
             icon={ThermometerSun}
             title="Aerotermia"
             items={aerothermalCatalog}
             href="/catalogo#aerotermia-catalogo"
-            cta="Ver catálogo completo"
+            cta="Ver catálogo de aerotermia"
           />
           <CatalogColumn
             icon={PanelTop}
             title="Fotovoltaica"
             items={photovoltaicCatalog}
             href="/catalogo#fotovoltaica-catalogo"
-            cta="Ver catálogo completo"
+            cta="Ver catálogo fotovoltaico"
           />
           <CatalogColumn
             icon={Layers}
             title="Geotermia"
             items={geothermalCatalog}
             href="/catalogo#geotermia-catalogo"
-            cta="Ver catálogo completo"
+            cta="Ver catálogo de geotermia"
           />
         </div>
       </div>
@@ -1480,44 +1484,42 @@ function CatalogColumn({
   return (
     <motion.article
       {...fadeUp}
-      className="rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_22px_70px_rgba(133,14,136,0.1)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(133,14,136,0.14)] sm:p-8"
+      className="flex flex-col rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_22px_70px_rgba(133,14,136,0.1)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(133,14,136,0.14)] sm:p-7"
     >
       <div className="flex items-center gap-4">
-        <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#850E88]">
-          <Icon className="h-6 w-6" aria-hidden="true" />
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#850E88]">
+          <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
-        <h3 className="text-2xl font-black text-[#17111A]">{title}</h3>
+        <h3 className="text-xl font-black text-[#17111A]">{title}</h3>
       </div>
-      <div className="mt-6 grid gap-3">
-        {items.map((item) => {
-          return (
-            <div
-              key={item.name}
-              className={`group flex items-center gap-4 rounded-[22px] border p-3.5 transition duration-200 ease-out ${
-                item.featured
-                  ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
-                  : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
-              }`}
-            >
-              <CatalogThumbnail item={item} />
-              <div className="min-w-0 flex-1">
-                <p className="text-sm font-black text-[#17111A] sm:text-[0.96rem]">
-                  {item.name}
-                </p>
-                <p className="mt-1 text-xs font-medium leading-5 text-[#5F5A66] sm:text-[0.82rem]">
-                  {item.text}
-                </p>
-              </div>
-              <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#850E88]">
-                <ChevronRight className="h-4 w-4" aria-hidden="true" />
-              </span>
+      <div className="mt-5 flex flex-1 flex-col gap-2.5">
+        {items.map((item) => (
+          <div
+            key={item.name}
+            className={`group flex min-h-[78px] items-center gap-3.5 rounded-[20px] border p-3 transition duration-200 ease-out sm:gap-4 sm:p-3.5 ${
+              item.featured
+                ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
+                : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
+            }`}
+          >
+            <CatalogThumbnail item={item} />
+            <div className="min-w-0 flex-1">
+              <p className="line-clamp-2 text-sm font-black leading-snug text-[#17111A]">
+                {item.name}
+              </p>
+              <p className="mt-1 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
+                {item.text}
+              </p>
             </div>
-          );
-        })}
+            <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#850E88]">
+              <ChevronRight className="h-4 w-4" aria-hidden="true" />
+            </span>
+          </div>
+        ))}
       </div>
       <Link
         href={href}
-        className="group mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white transition duration-200 ease-out hover:bg-[#6f0b72] hover:shadow-[0_18px_40px_rgba(133,14,136,0.22)]"
+        className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white transition duration-200 ease-out hover:bg-[#6f0b72] hover:shadow-[0_18px_40px_rgba(133,14,136,0.22)]"
       >
         {cta}
         <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1553,13 +1555,15 @@ function CatalogThumbnail({
   };
 }) {
   const styles =
-    item.kind === "brand"
-      ? "border-[#D9D9FF]/80 bg-[linear-gradient(135deg,#FFFFFF_0%,#F3EEFF_100%)] text-[#850E88]"
-      : item.kind === "family"
-        ? "border-[#D99A2B]/16 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)] text-[#9A5B12]"
-        : item.featured
-          ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F1FF_66%,#EAEAFF_100%)] text-[#850E88]"
-          : "border-[#D99A2B]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF5E2_100%)] text-[#9A5B12]";
+    item.thumbType === "geo"
+      ? "border-[#2F7D6D]/20 bg-[linear-gradient(135deg,#FFFFFF_0%,#E8F6F2_100%)] text-[#2F7D6D]"
+      : item.kind === "brand"
+        ? "border-[#D9D9FF]/80 bg-[linear-gradient(135deg,#FFFFFF_0%,#F3EEFF_100%)] text-[#850E88]"
+        : item.kind === "family"
+          ? "border-[#D99A2B]/16 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)] text-[#9A5B12]"
+          : item.featured
+            ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F1FF_66%,#EAEAFF_100%)] text-[#850E88]"
+            : "border-[#D99A2B]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF5E2_100%)] text-[#9A5B12]";
 
   return (
     <div
@@ -1607,10 +1611,10 @@ function CatalogMockup({
   if (type === "geo") {
     return (
       <div className="relative h-full w-full">
-        <div className="absolute inset-x-3 top-3 h-4 rounded-lg border border-[#10B981]/24 bg-[#ECFDF5]" />
-        <div className="absolute inset-x-5 top-9 h-3 rounded-lg border border-[#10B981]/18 bg-[#D1FAE5]" />
-        <div className="absolute inset-x-7 top-14 h-2.5 rounded-lg border border-[#10B981]/14 bg-[#A7F3D0]" />
-        <div className="absolute left-1/2 bottom-3 h-5 w-1 -translate-x-1/2 rounded-full bg-[#10B981]/50" />
+        <div className="absolute inset-x-3 top-3 h-4 rounded-lg border border-[#2F7D6D]/22 bg-[#E8F6F2]" />
+        <div className="absolute inset-x-5 top-9 h-3 rounded-lg border border-[#2F7D6D]/16 bg-[linear-gradient(90deg,#E8F6F2_0%,#EAEAFF_100%)]" />
+        <div className="absolute inset-x-7 top-14 h-2.5 rounded-lg border border-[#D9D9FF]/60 bg-[#EAEAFF]" />
+        <div className="absolute left-1/2 bottom-3 h-5 w-1 -translate-x-1/2 rounded-full bg-[#2F7D6D]/40" />
       </div>
     );
   }
