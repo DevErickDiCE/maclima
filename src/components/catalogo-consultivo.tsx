@@ -357,6 +357,7 @@ const catalogProducts: CatalogProduct[] = [
     name: "Yekallor Termoacumuladores",
     category: "Yekallor · Termoacumuladores",
     thumbnailType: "tank",
+    image: "/imagen/yekallor-termoacumuladores.webp",
     cardImageFit: "contain",
     cardImageBg: "white",
     modalImageFit: "contain",
