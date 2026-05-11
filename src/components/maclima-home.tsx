@@ -276,9 +276,9 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="absolute right-[8%] top-[22%] z-10 hidden items-center gap-2 rounded-full border border-[#D9D9FF] bg-white/70 px-4 py-2 shadow-sm backdrop-blur-md lg:flex">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#850E88]" aria-hidden="true" />
-        <span className="text-xs font-bold tracking-[0.18em] text-[#850E88]">MACLIMA CALOR Y FRÍO S.L.</span>
+      <div className="absolute right-[8%] top-[40%] z-10 hidden items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:flex">
+        <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
+        <span className="text-[11px] font-medium tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
       </div>
 
       <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
