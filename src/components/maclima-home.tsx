@@ -772,16 +772,16 @@ function GeothermalSection() {
   return (
     <section
       id="geotermia"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#F0FDF4_0%,#FFFFFF_48%,#F8F7FF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_42%,#EAEAFF_100%)] py-16 sm:py-20"
     >
-      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(16,185,129,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.06)_1px,transparent_1px)] [background-size:42px_42px]" />
-      <div className="absolute left-[-12%] top-12 h-72 w-72 rounded-full bg-[#10B981]/10 blur-3xl" />
-      <div className="absolute bottom-[-16%] right-[-12%] h-80 w-80 rounded-full bg-[#850E88]/08 blur-3xl" />
+      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="absolute left-[-12%] top-12 h-72 w-72 rounded-full bg-[#2F7D6D]/08 blur-3xl" />
+      <div className="absolute bottom-[-16%] right-[-12%] h-80 w-80 rounded-full bg-[#850E88]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
           <motion.div {...fadeUp}>
-            <p className="text-sm font-black uppercase text-[#059669]">
+            <p className="text-sm font-black uppercase text-[#2F7D6D]">
               Geotermia eficiente
             </p>
             <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
@@ -801,7 +801,7 @@ function GeothermalSection() {
             </p>
             <Link
               href="/contacto"
-              className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#059669] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(5,150,105,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#047857] hover:shadow-[0_24px_54px_rgba(5,150,105,0.28)] sm:w-auto"
+              className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
             >
               Solicitar asesoramiento en geotermia
               <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -810,13 +810,13 @@ function GeothermalSection() {
 
           <motion.article
             {...fadeUp}
-            className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#ECFDF5_34%,#EAEAFF_100%)] p-6 shadow-[0_30px_90px_rgba(16,185,129,0.14)] backdrop-blur-xl sm:p-8"
+            className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#E8F6F2_22%,#EAEAFF_100%)] p-6 shadow-[0_30px_90px_rgba(133,14,136,0.12)] backdrop-blur-xl sm:p-8"
           >
-            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#10B981,transparent)]" />
-            <div className="absolute right-[-42px] top-[-42px] h-40 w-40 rounded-full bg-[#10B981]/16 blur-3xl" />
-            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#850E88]/08 blur-3xl" />
+            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#2F7D6D,transparent)]" />
+            <div className="absolute right-[-42px] top-[-42px] h-40 w-40 rounded-full bg-[#2F7D6D]/10 blur-3xl" />
+            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#850E88]/10 blur-3xl" />
             <div className="relative">
-              <p className="inline-flex rounded-full border border-[#059669]/15 bg-white/[0.72] px-3 py-2 text-xs font-black uppercase tracking-wide text-[#059669] shadow-sm backdrop-blur">
+              <p className="inline-flex rounded-full border border-[#2F7D6D]/18 bg-white/[0.72] px-3 py-2 text-xs font-black uppercase tracking-wide text-[#2F7D6D] shadow-sm backdrop-blur">
                 ENERGÍA DEL TERRENO
               </p>
               <h3 className="mt-3 text-xl font-black leading-tight text-[#17111A]">
@@ -828,7 +828,21 @@ function GeothermalSection() {
                 las condiciones exteriores.
               </p>
 
-              <div className="mt-6 grid gap-3">
+              <div className="relative mt-5 min-h-[148px] overflow-hidden rounded-[22px] border border-[#D6EFE8] bg-[linear-gradient(135deg,#FFFFFF_0%,#E8F6F2_55%,#EAEAFF_100%)] shadow-[0_10px_28px_rgba(23,17,26,0.07)]">
+                <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(47,125,109,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(47,125,109,0.09)_1px,transparent_1px)] [background-size:22px_22px]" />
+                <div className="relative flex min-h-[148px] items-center justify-center">
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D6EFE8] bg-white shadow-sm">
+                      <Layers className="h-7 w-7 text-[#2F7D6D]" aria-hidden="true" />
+                    </span>
+                    <span className="text-xs font-semibold text-[#9C97A5]">
+                      Imagen de instalación — próximamente
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 grid gap-2.5">
                 {[
                   "Temperatura estable del terreno",
                   "Alta eficiencia energética",
@@ -839,15 +853,15 @@ function GeothermalSection() {
                 ].map((benefit) => (
                   <div
                     key={benefit}
-                    className="flex items-center gap-3 rounded-2xl border border-[#10B981]/15 bg-white/70 px-4 py-2.5 text-sm font-bold text-[#17111A]"
+                    className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/60 bg-white/70 px-4 py-2 text-sm font-bold text-[#17111A]"
                   >
-                    <Check className="h-4 w-4 shrink-0 text-[#059669]" aria-hidden="true" />
+                    <Check className="h-4 w-4 shrink-0 text-[#2F7D6D]" aria-hidden="true" />
                     {benefit}
                   </div>
                 ))}
               </div>
 
-              <div className="mt-5 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+              <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
                 Requiere estudio previo de viabilidad según terreno e inmueble.
                 No todas las instalaciones son viables sin análisis técnico.
               </div>
