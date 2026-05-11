@@ -9,6 +9,7 @@ export const siteNavItems = [
   { label: "Inicio", href: "/" },
   { label: "Aerotermia", href: "/#aerotermia" },
   { label: "Fotovoltaica", href: "/#fotovoltaica" },
+  { label: "Geotermia", href: "/#geotermia" },
   { label: "Catálogo", href: "/catalogo" },
   { label: "Consultoría gratuita", href: "/contacto" },
   { label: "Contacto", href: "/contacto" },
@@ -115,8 +116,8 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-6 text-[#D9D9FF]">
-            Distribución, instalación y asesoramiento técnico en aerotermia y
-            fotovoltaica para cliente final, negocio y profesional del sector.
+            Distribución, instalación y asesoramiento técnico en aerotermia,
+            fotovoltaica y geotermia para cliente final, negocio y profesional del sector.
           </p>
           <p className="mt-4 max-w-md text-xs leading-5 text-[#D9D9FF]">
             Maclima Soluciones Energéticas es el nombre comercial de MACLIMA

@@ -26,7 +26,8 @@ const fadeUp = {
 const supportPoints = [
   "Aerotermia para climatización, ACS y confort térmico",
   "Fotovoltaica para autoconsumo y menor dependencia de red",
-  "Soluciones combinadas según viabilidad",
+  "Geotermia para proyectos con viabilidad técnica confirmada",
+  "Soluciones combinadas según consumo, terreno y objetivos",
   "Soporte para viviendas, negocios y profesionales del sector",
 ] as const;
 
@@ -48,7 +49,9 @@ const processSteps = [
 const projectTypes = [
   "Aerotermia",
   "Fotovoltaica",
+  "Geotermia",
   "Aerotermia + fotovoltaica",
+  "Solución energética combinada",
   "Catálogo / producto concreto",
   "Profesional del sector",
   "Otro",
@@ -80,8 +83,8 @@ export function ContactoPage() {
                 </h1>
                 <p className="mt-5 max-w-3xl text-lg leading-8 text-[#5F5A66]">
                   Cuéntanos qué necesitas y te orientamos entre aerotermia,
-                  fotovoltaica o una solución combinada según tu vivienda,
-                  negocio o instalación profesional.
+                  fotovoltaica, geotermia o una solución combinada según tu
+                  vivienda, negocio o instalación profesional.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link

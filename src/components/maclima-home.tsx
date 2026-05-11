@@ -14,6 +14,7 @@ import {
   Gauge,
   Home,
   HousePlug,
+  Layers,
   Leaf,
   LucideIcon,
   MessageCircle,
@@ -42,6 +43,7 @@ const heroTrustLine = [
 const heroSignals = [
   "Aerotermia",
   "Fotovoltaica",
+  "Geotermia",
   "Asesoramiento técnico",
 ] as const;
 
@@ -57,6 +59,13 @@ const photovoltaicBenefits = [
   "Ahorro en factura",
   "Baterías",
   "Menor dependencia",
+] as const;
+
+const geothermalBenefits = [
+  "Alta eficiencia",
+  "Climatización",
+  "ACS",
+  "Energía renovable",
 ] as const;
 
 const aerothermalAdvantages = [
@@ -205,6 +214,37 @@ const photovoltaicCatalog = [
   },
 ] as const;
 
+const geothermalCatalog = [
+  {
+    name: "Bombas de calor geotérmicas",
+    text: "Climatización eficiente aprovechando la temperatura del subsuelo.",
+    badge: "Alta eficiencia",
+    kind: "family" as const,
+    thumbType: "geo" as const,
+  },
+  {
+    name: "Sistemas de captación",
+    text: "Sondas y circuitos de captación adaptados al terreno e inmueble.",
+    badge: "Captación",
+    kind: "family" as const,
+    thumbType: "geo" as const,
+  },
+  {
+    name: "Geotermia para ACS",
+    text: "Agua caliente sanitaria apoyada en energía geotérmica.",
+    badge: "ACS",
+    kind: "family" as const,
+    thumbType: "geo" as const,
+  },
+  {
+    name: "Estudio de viabilidad",
+    text: "Análisis técnico previo para valorar idoneidad del terreno.",
+    badge: "Consultoría",
+    kind: "family" as const,
+    thumbType: "project" as const,
+  },
+] as const;
+
 const consultingSteps = [
   {
     title: "Nos cuentas tu caso",
@@ -216,7 +256,7 @@ const consultingSteps = [
   },
   {
     title: "Recomendamos solución",
-    description: "Aerotermia, fotovoltaica o combinación según viabilidad.",
+    description: "Aerotermia, fotovoltaica, geotermia o combinación según viabilidad.",
   },
   {
     title: "Preparamos propuesta",
@@ -230,7 +270,7 @@ const trustItems = [
   { title: "Catálogo especializado", icon: FileText },
   { title: "Instalación profesional", icon: ShieldCheck },
   { title: "Ahorro y eficiencia", icon: Zap },
-  { title: "Aerotermia + Fotovoltaica", icon: HousePlug },
+  { title: "Aerotermia · Fotovoltaica · Geotermia", icon: HousePlug },
 ] as const;
 
 const fadeUp = {
@@ -249,6 +289,7 @@ export function MaclimaHome() {
         <Verticals />
         <AerothermalEfficiency />
         <PhotovoltaicIntelligence />
+        <GeothermalSection />
         <FeaturedSolutions />
         <ConsultiveCatalog />
         <FreeConsulting />
@@ -294,12 +335,12 @@ function Hero() {
             <span className="hidden md:block">Distribución, instalación y asesoramiento técnico</span>
           </div>
           <h1 className="max-w-[620px] text-[2rem] font-black leading-[1.08] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[3.75rem]">
-            <span className="block md:hidden">Aerotermia y fotovoltaica para ahorrar energía</span>
-            <span className="hidden md:block">Aerotermia y fotovoltaica para ahorrar energía desde el primer día</span>
+            <span className="block md:hidden">Aerotermia, solar y geotermia para ahorrar energía</span>
+            <span className="hidden md:block">Aerotermia, fotovoltaica y geotermia para ahorrar energía</span>
           </h1>
           <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8">
-            <span className="block md:hidden">Soluciones de aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.</span>
-            <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia y fotovoltaica en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
+            <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
+            <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
           <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
             {heroSignals.map((signal) => (
@@ -359,17 +400,16 @@ function Verticals() {
             SOLUCIONES PRINCIPALES
           </p>
           <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
-            Dos tecnologías, un mismo objetivo: ahorrar energía
+            Tres tecnologías, un mismo objetivo: ahorrar energía
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#5F5A66]">
-            Combinamos aerotermia y fotovoltaica para mejorar el confort,
-            reducir el consumo y adaptar cada instalación a viviendas, negocios
-            o proyectos profesionales.
+            Integramos aerotermia, fotovoltaica y geotermia para mejorar el
+            confort, reducir el consumo y adaptar cada instalación a viviendas,
+            negocios o proyectos profesionales.
           </p>
         </motion.div>
 
-        <div className="relative mt-10 grid gap-5 lg:grid-cols-2 lg:gap-6">
-          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-24 -translate-x-1/2 bg-[linear-gradient(90deg,transparent,#850E88,transparent)] lg:block" />
+        <div className="mt-10 grid gap-5 lg:grid-cols-3 lg:gap-6">
           <SolutionCard
             icon={ThermometerSun}
             title="Aerotermia"
@@ -390,6 +430,16 @@ function Verticals() {
             cta="Explorar fotovoltaica"
             tone="solar"
           />
+          <SolutionCard
+            icon={Layers}
+            title="Geotermia"
+            subtitle="Energía del terreno"
+            text="Climatización eficiente aprovechando la temperatura estable del terreno para calefacción, refrigeración y ACS."
+            benefits={geothermalBenefits}
+            href="#geotermia"
+            cta="Explorar geotermia"
+            tone="geo"
+          />
         </div>
 
         <motion.div
@@ -400,11 +450,12 @@ function Verticals() {
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.16em] text-[#D9D9FF]">
-                Aerotermia + Fotovoltaica
+                Solución energética combinada
               </p>
               <p className="mt-1 max-w-2xl text-base font-semibold leading-7 text-white/90">
-                Una combinación eficiente para climatización, ACS y autoconsumo
-                eléctrico.
+                Podemos estudiar la combinación de aerotermia, fotovoltaica y
+                geotermia según las condiciones del inmueble, consumo y
+                objetivos de ahorro.
               </p>
             </div>
             <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/10 text-[#D9D9FF]">
@@ -718,6 +769,97 @@ function PhotovoltaicIntelligence() {
   );
 }
 
+function GeothermalSection() {
+  return (
+    <section
+      id="geotermia"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#F0FDF4_0%,#FFFFFF_48%,#F8F7FF_100%)] py-16 sm:py-20"
+    >
+      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(16,185,129,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.06)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="absolute left-[-12%] top-12 h-72 w-72 rounded-full bg-[#10B981]/10 blur-3xl" />
+      <div className="absolute bottom-[-16%] right-[-12%] h-80 w-80 rounded-full bg-[#850E88]/08 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+          <motion.div {...fadeUp}>
+            <p className="text-sm font-black uppercase text-[#059669]">
+              Geotermia eficiente
+            </p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+              Energía estable del terreno para climatizar tu vivienda o negocio
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F5A66]">
+              La geotermia aprovecha la temperatura constante del subsuelo para
+              apoyar sistemas de calefacción, refrigeración y agua caliente
+              sanitaria con un alto nivel de eficiencia. Es una solución
+              especialmente interesante en proyectos donde se busca estabilidad,
+              confort y menor dependencia energética.
+            </p>
+            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[#17111A]">
+              En Maclima estudiamos la viabilidad de cada instalación para
+              valorar si la geotermia encaja con el terreno, el inmueble y los
+              objetivos del proyecto.
+            </p>
+            <Link
+              href="/contacto"
+              className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#059669] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(5,150,105,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#047857] hover:shadow-[0_24px_54px_rgba(5,150,105,0.28)] sm:w-auto"
+            >
+              Solicitar asesoramiento en geotermia
+              <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+          </motion.div>
+
+          <motion.article
+            {...fadeUp}
+            className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#ECFDF5_34%,#EAEAFF_100%)] p-6 shadow-[0_30px_90px_rgba(16,185,129,0.14)] backdrop-blur-xl sm:p-8"
+          >
+            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#10B981,transparent)]" />
+            <div className="absolute right-[-42px] top-[-42px] h-40 w-40 rounded-full bg-[#10B981]/16 blur-3xl" />
+            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#850E88]/08 blur-3xl" />
+            <div className="relative">
+              <p className="inline-flex rounded-full border border-[#059669]/15 bg-white/[0.72] px-3 py-2 text-xs font-black uppercase tracking-wide text-[#059669] shadow-sm backdrop-blur">
+                ENERGÍA DEL TERRENO
+              </p>
+              <h3 className="mt-3 text-xl font-black leading-tight text-[#17111A]">
+                Temperatura constante del subsuelo
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[#5F5A66]">
+                A partir de cierta profundidad, el terreno mantiene una
+                temperatura estable durante todo el año, independientemente de
+                las condiciones exteriores.
+              </p>
+
+              <div className="mt-6 grid gap-3">
+                {[
+                  "Temperatura estable del terreno",
+                  "Alta eficiencia energética",
+                  "Calefacción y refrigeración",
+                  "Agua caliente sanitaria",
+                  "Menor dependencia exterior",
+                  "Solución para proyectos exigentes",
+                ].map((benefit) => (
+                  <div
+                    key={benefit}
+                    className="flex items-center gap-3 rounded-2xl border border-[#10B981]/15 bg-white/70 px-4 py-2.5 text-sm font-bold text-[#17111A]"
+                  >
+                    <Check className="h-4 w-4 shrink-0 text-[#059669]" aria-hidden="true" />
+                    {benefit}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+                Requiere estudio previo de viabilidad según terreno e inmueble.
+                No todas las instalaciones son viables sin análisis técnico.
+              </div>
+            </div>
+          </motion.article>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FeaturedSolutions() {
   return (
     <section id="ben-dual-air-destacado" className="bg-white py-16 sm:py-20">
@@ -899,7 +1041,7 @@ function ConsultiveCatalog() {
           No vendemos productos de forma automática. Analizamos cada caso para
           recomendar la solución adecuada.
         </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           <CatalogColumn
             icon={ThermometerSun}
             title="Aerotermia"
@@ -912,6 +1054,13 @@ function ConsultiveCatalog() {
             title="Fotovoltaica"
             items={photovoltaicCatalog}
             href="/catalogo#fotovoltaica-catalogo"
+            cta="Ver catálogo completo"
+          />
+          <CatalogColumn
+            icon={Layers}
+            title="Geotermia"
+            items={geothermalCatalog}
+            href="/catalogo#geotermia-catalogo"
             cta="Ver catálogo completo"
           />
         </div>
@@ -932,7 +1081,7 @@ function FreeConsulting() {
             Consulta gratuita para elegir la solución adecuada
           </h2>
           <p className="mt-3 max-w-xl text-base leading-7 text-[#5F5A66]">
-            Analizamos tu vivienda, negocio o proyecto profesional para orientarte entre aerotermia, fotovoltaica o una solución combinada.
+            Analizamos tu vivienda, negocio o proyecto profesional para orientarte entre aerotermia, fotovoltaica, geotermia o una solución combinada.
           </p>
           <p className="mt-3 max-w-xl text-sm font-semibold leading-6 text-[#17111A]">
             El objetivo no es venderte un producto concreto, sino recomendarte la opción más eficiente y razonable según tu caso.
@@ -1019,7 +1168,7 @@ function FinalCta() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#F8F7FF]">
             Habla con Maclima y recibe orientación personalizada para tu proyecto
-            de aerotermia o fotovoltaica.
+            energético: aerotermia, fotovoltaica o geotermia.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
@@ -1203,24 +1352,32 @@ function SolutionCard({
   benefits: readonly string[];
   href: string;
   cta: string;
-  tone: "aero" | "solar";
+  tone: "aero" | "solar" | "geo";
 }) {
-  const isSolar = tone === "solar";
-  const cardAccent = isSolar
-    ? {
-        glow: "bg-[#F2B84B]/18",
-        iconShell: "border-[#D99A2B]/28 bg-[#FFF2D8]",
-        icon: "text-[#9A5B12]",
-        chip: "border-[#D99A2B]/24 bg-[#FFF2D8]",
-        line: "from-transparent via-[#D99A2B] to-transparent",
-      }
-    : {
-        glow: "bg-[#D9D9FF]/70",
-        iconShell: "border-[#D9D9FF] bg-[#EAEAFF]",
-        icon: "text-[#850E88]",
-        chip: "border-[#D9D9FF]/80 bg-[#F8F7FF]",
-        line: "from-transparent via-[#850E88] to-transparent",
-      };
+  const cardAccent =
+    tone === "solar"
+      ? {
+          glow: "bg-[#F2B84B]/18",
+          iconShell: "border-[#D99A2B]/28 bg-[#FFF2D8]",
+          icon: "text-[#9A5B12]",
+          chip: "border-[#D99A2B]/24 bg-[#FFF2D8]",
+          line: "from-transparent via-[#D99A2B] to-transparent",
+        }
+      : tone === "geo"
+        ? {
+            glow: "bg-[#10B981]/14",
+            iconShell: "border-[#10B981]/24 bg-[#ECFDF5]",
+            icon: "text-[#059669]",
+            chip: "border-[#10B981]/20 bg-[#ECFDF5]",
+            line: "from-transparent via-[#10B981] to-transparent",
+          }
+        : {
+            glow: "bg-[#D9D9FF]/70",
+            iconShell: "border-[#D9D9FF] bg-[#EAEAFF]",
+            icon: "text-[#850E88]",
+            chip: "border-[#D9D9FF]/80 bg-[#F8F7FF]",
+            line: "from-transparent via-[#850E88] to-transparent",
+          };
 
   return (
     <motion.article
@@ -1321,7 +1478,8 @@ function CatalogColumn({
       | "kit"
       | "mount"
       | "hybrid"
-      | "project";
+      | "project"
+      | "geo";
   }[];
   href: string;
   cta: string;
@@ -1397,7 +1555,8 @@ function CatalogThumbnail({
       | "kit"
       | "mount"
       | "hybrid"
-      | "project";
+      | "project"
+      | "geo";
   };
 }) {
   const styles =
@@ -1448,9 +1607,20 @@ function CatalogMockup({
     | "kit"
     | "mount"
     | "hybrid"
-    | "project";
+    | "project"
+    | "geo";
   label?: string;
 }) {
+  if (type === "geo") {
+    return (
+      <div className="relative h-full w-full">
+        <div className="absolute inset-x-3 top-3 h-4 rounded-lg border border-[#10B981]/24 bg-[#ECFDF5]" />
+        <div className="absolute inset-x-5 top-9 h-3 rounded-lg border border-[#10B981]/18 bg-[#D1FAE5]" />
+        <div className="absolute inset-x-7 top-14 h-2.5 rounded-lg border border-[#10B981]/14 bg-[#A7F3D0]" />
+        <div className="absolute left-1/2 bottom-3 h-5 w-1 -translate-x-1/2 rounded-full bg-[#10B981]/50" />
+      </div>
+    );
+  }
   if (type === "acs" || type === "tank") {
     return (
       <div className="relative h-full w-full">

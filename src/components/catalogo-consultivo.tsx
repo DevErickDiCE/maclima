@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { CONTACT_INFO } from "@/lib/contact-info";
 
-type CatalogVertical = "aerotermia" | "fotovoltaica";
+type CatalogVertical = "aerotermia" | "fotovoltaica" | "geotermia";
 
 type ThumbnailType =
   | "ben"
@@ -29,7 +29,8 @@ type ThumbnailType =
   | "kit"
   | "mount"
   | "hybrid"
-  | "project";
+  | "project"
+  | "geo";
 
 type CatalogProduct = {
   id: string;
@@ -54,6 +55,7 @@ const catalogNav = [
   { label: "Todos", href: "#catalogo-todos" },
   { label: "Aerotermia", href: "#aerotermia-catalogo" },
   { label: "Fotovoltaica", href: "#fotovoltaica-catalogo" },
+  { label: "Geotermia", href: "#geotermia-catalogo" },
   { label: "BEN Dual-Air", href: "#ben-dual-air-catalogo" },
 ] as const;
 
@@ -74,6 +76,15 @@ const photovoltaicFilters = [
   "Baterías",
   "Kits",
   "Estructuras",
+] as const;
+
+const geothermalFilters = [
+  "Todas",
+  "Climatización",
+  "Captación",
+  "ACS",
+  "Consultoría",
+  "Combinada",
 ] as const;
 
 const catalogProducts: CatalogProduct[] = [
@@ -429,6 +440,131 @@ const catalogProducts: CatalogProduct[] = [
       "Proyectos donde conviene comparar alternativas",
     ],
   },
+  {
+    id: "bomba-calor-geotermica",
+    vertical: "geotermia",
+    brand: "Geotermia",
+    name: "Bomba de calor geotérmica",
+    category: "Climatización geotérmica",
+    thumbnailType: "geo",
+    shortDescription:
+      "Climatización eficiente aprovechando la temperatura estable del subsuelo.",
+    description:
+      "Sistema de climatización que utiliza la temperatura constante del terreno como fuente energética para calefacción, refrigeración y apoyo al ACS. Requiere estudio previo de viabilidad geotérmica según terreno e inmueble.",
+    tags: ["Geotermia", "Climatización", "Alta eficiencia"],
+    applications: ["Viviendas", "Negocios", "Obra nueva", "Proyectos exigentes"],
+    features: [
+      "Calefacción y refrigeración",
+      "Temperatura estable del terreno",
+      "Según viabilidad técnica",
+    ],
+    compatibility: ["Suelo radiante", "Fancoils", "ACS", "Sondas geotérmicas"],
+    fit: [
+      "Proyectos con estudio técnico previo confirmado",
+      "Inmuebles con terreno disponible para captación",
+      "Instalaciones que buscan alta eficiencia y estabilidad",
+    ],
+  },
+  {
+    id: "captacion-geotermica",
+    vertical: "geotermia",
+    brand: "Geotermia",
+    name: "Sistemas de captación geotérmica",
+    category: "Captación",
+    thumbnailType: "geo",
+    shortDescription:
+      "Sondas y circuitos de captación adaptados al terreno e inmueble.",
+    description:
+      "Sistemas de captación del calor del subsuelo mediante sondas verticales u horizontales. La elección del sistema depende del terreno disponible, la geología local y las necesidades energéticas del proyecto.",
+    tags: ["Geotermia", "Captación", "Sondas"],
+    applications: ["Viviendas unifamiliares", "Negocios", "Proyectos con terreno"],
+    features: [
+      "Sondas verticales u horizontales",
+      "Según terreno e inmueble",
+      "Adaptado al proyecto",
+    ],
+    compatibility: ["Bombas de calor geotérmicas", "Climatización", "ACS"],
+    fit: [
+      "Proyectos con espacio de captación disponible",
+      "Instalaciones que requieren estudio geológico previo",
+      "Usuarios que buscan independencia energética a largo plazo",
+    ],
+  },
+  {
+    id: "geotermia-acs",
+    vertical: "geotermia",
+    brand: "Geotermia",
+    name: "Geotermia para ACS",
+    category: "ACS geotérmica",
+    thumbnailType: "geo",
+    shortDescription:
+      "Producción de agua caliente sanitaria apoyada en energía geotérmica.",
+    description:
+      "Aprovechamiento de la energía geotérmica para apoyar o gestionar la producción de agua caliente sanitaria. Solución interesante en proyectos donde se busca reducir la dependencia de sistemas convencionales según viabilidad del terreno.",
+    tags: ["Geotermia", "ACS", "Energía renovable"],
+    applications: ["Viviendas", "Negocios", "Comunidades"],
+    features: [
+      "Producción de ACS",
+      "Energía del subsuelo",
+      "Según viabilidad técnica",
+    ],
+    compatibility: ["Sistemas geotérmicos", "Acumulación", "Climatización"],
+    fit: [
+      "Proyectos con demanda de ACS y geotermia viable",
+      "Instalaciones que buscan confort y eficiencia",
+      "Estudios donde se valora la independencia energética",
+    ],
+  },
+  {
+    id: "estudio-viabilidad-geotermica",
+    vertical: "geotermia",
+    brand: "Consultoría técnica",
+    name: "Estudio de viabilidad geotérmica",
+    category: "Consultoría",
+    thumbnailType: "project",
+    shortDescription:
+      "Análisis técnico previo para valorar si la geotermia encaja con el proyecto.",
+    description:
+      "Evaluación técnica del terreno, el inmueble y las necesidades energéticas para determinar la viabilidad de un sistema geotérmico. Es el primer paso antes de dimensionar cualquier instalación geotérmica.",
+    tags: ["Geotermia", "Estudio", "Viabilidad"],
+    applications: ["Viviendas", "Negocios", "Proyectos exigentes", "Obra nueva"],
+    features: [
+      "Análisis de viabilidad",
+      "Evaluación del terreno",
+      "Orientación técnica previa",
+    ],
+    compatibility: ["Geotermia", "Aerotermia", "Soluciones combinadas"],
+    fit: [
+      "Proyectos que quieren evaluar la geotermia como opción",
+      "Inmuebles con terreno disponible y demanda energética relevante",
+      "Usuarios que buscan orientación técnica antes de decidir",
+    ],
+  },
+  {
+    id: "solucion-combinada-geo-foto",
+    vertical: "geotermia",
+    brand: "Integración energética",
+    name: "Geotermia + fotovoltaica",
+    category: "Solución combinada",
+    thumbnailType: "project",
+    shortDescription:
+      "Integración de geotermia y energía solar para mayor eficiencia y menor dependencia de red.",
+    description:
+      "Combinación de un sistema geotérmico con producción fotovoltaica para reducir el consumo eléctrico de la bomba de calor. Una solución avanzada para proyectos que buscan máxima eficiencia energética. Requiere estudio previo de ambas verticales.",
+    tags: ["Geotermia", "Fotovoltaica", "Solución combinada"],
+    applications: ["Viviendas", "Negocios", "Proyectos de alta eficiencia"],
+    features: [
+      "Integración geotermia + solar",
+      "Estudio de consumo e inmueble",
+      "Propuesta técnica personalizada",
+    ],
+    compatibility: ["Geotermia", "Paneles solares", "Baterías opcionales"],
+    fit: [
+      "Proyectos con alta demanda y terreno disponible",
+      "Usuarios que buscan independencia energética máxima",
+      "Instalaciones donde se valora la estrategia energética completa",
+    ],
+  },
 ];
 
 const fadeUp = {
@@ -444,6 +580,7 @@ export function CatalogoConsultivo() {
   );
   const [aerothermalFilter, setAerothermalFilter] = useState("Todas");
   const [photovoltaicFilter, setPhotovoltaicFilter] = useState("Todas");
+  const [geothermalFilter, setGeothermalFilter] = useState("Todas");
 
   const benProduct = catalogProducts.find(
     (product) => product.id === "ben-dual-air"
@@ -454,6 +591,9 @@ export function CatalogoConsultivo() {
   const photovoltaicProducts = catalogProducts.filter(
     (product) => product.vertical === "fotovoltaica"
   );
+  const geothermalProducts = catalogProducts.filter(
+    (product) => product.vertical === "geotermia"
+  );
 
   const visibleAerothermalProducts = filterProducts(
     aerothermalProducts,
@@ -462,6 +602,10 @@ export function CatalogoConsultivo() {
   const visiblePhotovoltaicProducts = filterProducts(
     photovoltaicProducts,
     photovoltaicFilter
+  );
+  const visibleGeothermalProducts = filterProducts(
+    geothermalProducts,
+    geothermalFilter
   );
 
   return (
@@ -495,6 +639,18 @@ export function CatalogoConsultivo() {
           onFilterChange={setPhotovoltaicFilter}
           onInfo={setSelectedProduct}
           solar
+        />
+        <CatalogSection
+          id="geotermia-catalogo"
+          eyebrow="Catálogo de geotermia"
+          title="Geotermia"
+          text="Soluciones consultivas para proyectos que estudian la viabilidad de la geotermia como fuente energética. Cada instalación requiere análisis previo del terreno, el inmueble y las necesidades del proyecto."
+          products={visibleGeothermalProducts}
+          filters={geothermalFilters}
+          activeFilter={geothermalFilter}
+          onFilterChange={setGeothermalFilter}
+          onInfo={setSelectedProduct}
+          geo
         />
         <CatalogFinalCta />
       </main>
@@ -550,7 +706,7 @@ function CatalogHero() {
             CATÁLOGO CONSULTIVO
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-[#17111A] sm:text-5xl lg:text-6xl">
-            Catálogo consultivo de aerotermia y fotovoltaica
+            Catálogo consultivo de aerotermia, fotovoltaica y geotermia
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5F5A66]">
             Consulta las principales marcas, familias y soluciones energéticas
@@ -577,6 +733,12 @@ function CatalogHero() {
               className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#D99A2B]/22 bg-[#FFF2D8]/80 px-6 py-4 text-base font-bold text-[#9A5B12] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8]"
             >
               Ver fotovoltaica
+            </Link>
+            <Link
+              href="#geotermia-catalogo"
+              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#10B981]/22 bg-[#ECFDF5]/80 px-6 py-4 text-base font-bold text-[#065F46] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#ECFDF5]"
+            >
+              Ver geotermia
             </Link>
           </div>
         </motion.div>
@@ -713,6 +875,7 @@ function CatalogSection({
   onFilterChange,
   onInfo,
   solar = false,
+  geo = false,
 }: {
   id: string;
   eyebrow: string;
@@ -724,16 +887,16 @@ function CatalogSection({
   onFilterChange: (filter: string) => void;
   onInfo: (product: CatalogProduct) => void;
   solar?: boolean;
+  geo?: boolean;
 }) {
+  const bg = geo
+    ? "bg-[linear-gradient(180deg,#FFFFFF_0%,#ECFDF5_45%,#F0FDF4_100%)]"
+    : solar
+      ? "bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF8EE_45%,#EAEAFF_100%)]"
+      : "bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)]";
+
   return (
-    <section
-      id={id}
-      className={`py-16 sm:py-20 ${
-        solar
-          ? "bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF8EE_45%,#EAEAFF_100%)]"
-          : "bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)]"
-      }`}
-    >
+    <section id={id} className={`py-16 sm:py-20 ${bg}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
@@ -763,9 +926,11 @@ function CatalogSection({
                 className={`rounded-full border px-4 py-2 text-sm font-black transition duration-200 ease-out ${
                   activeFilter === filter
                     ? "border-[#850E88] bg-[#850E88] text-white shadow-[0_10px_24px_rgba(133,14,136,0.18)]"
-                    : solar
-                      ? "border-[#D99A2B]/18 bg-white text-[#9A5B12] hover:bg-[#FFF2D8]"
-                      : "border-[#D9D9FF] bg-white text-[#5F5A66] hover:bg-[#F8F7FF] hover:text-[#850E88]"
+                    : geo
+                      ? "border-[#10B981]/20 bg-white text-[#065F46] hover:bg-[#ECFDF5]"
+                      : solar
+                        ? "border-[#D99A2B]/18 bg-white text-[#9A5B12] hover:bg-[#FFF2D8]"
+                        : "border-[#D9D9FF] bg-white text-[#5F5A66] hover:bg-[#F8F7FF] hover:text-[#850E88]"
                 }`}
               >
                 {filter}
@@ -796,6 +961,7 @@ function ProductCard({
   onInfo: () => void;
 }) {
   const solar = product.vertical === "fotovoltaica";
+  const geo = product.vertical === "geotermia";
 
   return (
     <motion.article
@@ -804,9 +970,11 @@ function ProductCard({
     >
       <div
         className={`relative h-52 overflow-hidden ${
-          solar
-            ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)]"
-            : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"
+          geo
+            ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#ECFDF5_100%)]"
+            : solar
+              ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)]"
+              : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"
         }`}
       >
         {product.image ? (
@@ -844,9 +1012,11 @@ function ProductCard({
             <span
               key={tag}
               className={`rounded-full border px-2.5 py-1 text-xs font-bold ${
-                solar
-                  ? "border-[#D99A2B]/20 bg-[#FFF2D8] text-[#9A5B12]"
-                  : "border-[#D9D9FF]/80 bg-[#F8F7FF] text-[#4A4352]"
+                geo
+                  ? "border-[#10B981]/20 bg-[#ECFDF5] text-[#065F46]"
+                  : solar
+                    ? "border-[#D99A2B]/20 bg-[#FFF2D8] text-[#9A5B12]"
+                    : "border-[#D9D9FF]/80 bg-[#F8F7FF] text-[#4A4352]"
               }`}
             >
               {tag}
@@ -876,6 +1046,22 @@ function CatalogVisual({
   return (
     <div className="relative h-full w-full overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(242,184,75,0.22),transparent_30%),radial-gradient(circle_at_18%_78%,rgba(133,14,136,0.16),transparent_34%)]" />
+
+      {type === "geo" ? (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 px-6">
+          {[
+            { w: "w-full", color: "bg-[#ECFDF5]", border: "border-[#10B981]/30" },
+            { w: "w-4/5", color: "bg-[#D1FAE5]", border: "border-[#10B981]/22" },
+            { w: "w-3/5", color: "bg-[#A7F3D0]", border: "border-[#10B981]/18" },
+          ].map((layer, i) => (
+            <div
+              key={i}
+              className={`h-8 rounded-xl border ${layer.color} ${layer.border} ${layer.w}`}
+            />
+          ))}
+          <div className="mt-1 h-4 w-1.5 rounded-full bg-[#10B981]/60" />
+        </div>
+      ) : null}
       {type === "climer" || type === "yekallor" ? (
         <div className="absolute inset-6 flex items-center justify-center rounded-[28px] border border-white/80 bg-white/82 shadow-[0_18px_40px_rgba(23,17,26,0.08)] backdrop-blur">
           <span className="text-xl font-black uppercase tracking-[0.12em] text-[#850E88]">

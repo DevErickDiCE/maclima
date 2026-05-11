@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://maclima.vercel.app"),
   title:
-    "Maclima Soluciones Energéticas | Aerotermia y fotovoltaica en Madrid",
+    "Maclima Soluciones Energéticas | Aerotermia, fotovoltaica y geotermia en Madrid",
   description:
-    "Distribución, instalación y asesoramiento técnico en aerotermia y fotovoltaica para viviendas, negocios y profesionales del sector.",
+    "Distribución, instalación y asesoramiento técnico en aerotermia, fotovoltaica y geotermia para viviendas, negocios y profesionales del sector.",
   openGraph: {
     title: "Maclima Soluciones Energéticas",
     description:
-      "Aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.",
+      "Aerotermia, fotovoltaica y geotermia en Madrid con asesoramiento técnico gratuito.",
     url: "https://maclima.vercel.app",
     siteName: "Maclima Soluciones Energéticas",
     locale: "es_ES",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "https://maclima.vercel.app/og-preview.png",
         width: 1200,
         height: 630,
-        alt: "Maclima Soluciones Energéticas - Aerotermia y fotovoltaica",
+        alt: "Maclima Soluciones Energéticas - Aerotermia, fotovoltaica y geotermia",
       },
     ],
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Maclima Soluciones Energéticas",
     description:
-      "Aerotermia y fotovoltaica en Madrid con asesoramiento técnico gratuito.",
+      "Aerotermia, fotovoltaica y geotermia en Madrid con asesoramiento técnico gratuito.",
     images: ["https://maclima.vercel.app/og-preview.png"],
   },
 };
