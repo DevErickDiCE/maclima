@@ -28,23 +28,15 @@ export const metadata: Metadata = {
 const heroBenefits = [
   {
     label: "Sin unidad exterior",
-    desc: "Instalación interior sin equipos visibles en fachada o terraza.",
+    desc: "Sin equipos visibles en fachada o terraza.",
   },
   {
-    label: "Ideal para pisos",
-    desc: "Para viviendas donde el espacio exterior es limitado.",
+    label: "Ideal para pisos y unifamiliares",
+    desc: "Pensado para viviendas con espacio exterior limitado.",
   },
   {
-    label: "Viviendas unifamiliares",
-    desc: "Obra nueva, reformas y proyectos de alta eficiencia.",
-  },
-  {
-    label: "Climatización + ACS",
-    desc: "Calefacción, refrigeración y agua caliente en un sistema compacto.",
-  },
-  {
-    label: "Instalación rápida",
-    desc: "En condiciones adecuadas, aprox. 3 horas.",
+    label: "Instalación aprox. 3 h",
+    desc: "En condiciones adecuadas.",
     note: true,
   },
 ] as const;
@@ -130,15 +122,15 @@ export default function BenDualAirPage() {
             </Link>
 
             <article className="mt-6 overflow-hidden rounded-[34px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_10%_12%,rgba(217,217,255,0.8),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_52%,#EAEAFF_100%)] p-5 shadow-[0_28px_88px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9">
-              <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+              <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
 
-                <div className="relative min-h-[340px] overflow-hidden rounded-[28px] border border-white/80 bg-[#17111A] shadow-[0_28px_84px_rgba(23,17,26,0.18)] sm:min-h-[500px] lg:min-h-[580px]">
+                <div className="relative min-h-[300px] overflow-hidden rounded-[28px] border border-white/80 bg-[#17111A] shadow-[0_28px_84px_rgba(23,17,26,0.18)] sm:min-h-[420px] lg:min-h-[440px]">
                   <Image
                     src="/imagen/BEN-Dual-AIR/electric-bruin.webp"
                     alt="BEN Dual-Air sistema de aerotermia interior compacto instalado en vivienda"
                     fill
                     priority
-                    sizes="(min-width: 1024px) 54vw, 100vw"
+                    sizes="(min-width: 1024px) 44vw, 100vw"
                     className="object-cover object-[56%_center]"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,17,26,0)_0%,rgba(23,17,26,0.34)_100%)]" />
@@ -151,63 +143,53 @@ export default function BenDualAirPage() {
                   <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
                     PRODUCTO ESTRELLA EN AEROTERMIA
                   </p>
-                  <h1 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl lg:text-[2.75rem]">
+                  <h1 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl lg:text-[2.5rem]">
                     BEN Dual-Air: aerotermia interior sin unidad exterior
                   </h1>
-                  <p className="mt-4 text-lg leading-8 text-[#5F5A66]">
+                  <p className="mt-4 text-base leading-7 text-[#5F5A66]">
                     Climatización, ventilación y agua caliente sanitaria en una
                     solución compacta para pisos, viviendas unifamiliares, obra
                     nueva y reformas.
                   </p>
-                  <p className="mt-4 text-base leading-7 text-[#5F5A66]">
+                  <p className="mt-3 text-sm leading-6 text-[#5F5A66]">
                     BEN Dual-Air es una bomba de calor interior que puede
-                    integrar calefacción, refrigeración, ventilación y ACS en
-                    una unidad compacta. Su diseño permite resolver la
-                    instalación sin unidad exterior visible, una ventaja
-                    importante cuando no se quiere ocupar fachada, terraza o
-                    cubierta.
+                    integrar calefacción, refrigeración, ventilación y ACS sin
+                    unidad exterior visible, una ventaja importante cuando no se
+                    quiere ocupar fachada, terraza o cubierta.
                   </p>
 
-                  <div className="mt-6 grid gap-2 sm:grid-cols-2">
+                  <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-3">
                     {heroBenefits.map((b) => (
                       <div
                         key={b.label}
-                        className="flex items-start gap-3 rounded-2xl border border-[#D9D9FF]/75 bg-white/88 px-4 py-3 shadow-sm"
+                        className="rounded-2xl border border-[#D9D9FF]/75 bg-white/90 px-3 py-3 text-center shadow-sm"
                       >
-                        <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAEAFF] text-[#850E88]">
-                          <Check className="h-4 w-4" aria-hidden="true" />
+                        <span className="mx-auto mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#EAEAFF] text-[#850E88]">
+                          <Check className="h-3.5 w-3.5" aria-hidden="true" />
                         </span>
-                        <div>
-                          <p className="text-sm font-bold text-[#17111A]">
-                            {b.label}
-                            {"note" in b && b.note ? (
-                              <span className="ml-1 text-[10px] font-semibold text-[#9C97A5]">*</span>
-                            ) : null}
-                          </p>
-                          <p className="mt-0.5 text-xs font-medium leading-5 text-[#5F5A66]">
-                            {b.desc}
-                          </p>
-                        </div>
+                        <p className="text-xs font-bold leading-snug text-[#17111A]">
+                          {b.label}
+                          {"note" in b && b.note ? (
+                            <span className="ml-0.5 text-[9px] font-semibold text-[#9C97A5]">*</span>
+                          ) : null}
+                        </p>
+                        <p className="mt-1 text-[11px] font-medium leading-4 text-[#5F5A66]">
+                          {b.desc}
+                        </p>
                       </div>
                     ))}
                   </div>
-                  <p className="mt-2 text-xs font-semibold text-[#9C97A5]">
+                  <p className="mt-2 text-[11px] font-semibold text-[#9C97A5]">
                     * Según condiciones de instalación y viabilidad técnica.
                   </p>
 
-                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-6">
                     <Link
                       href="/contacto"
-                      className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                      className="group inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
                     >
                       Solicitar asesoramiento sobre BEN Dual-Air
                       <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
-                    </Link>
-                    <Link
-                      href="/catalogo#aerotermia-catalogo"
-                      className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#850E88]/20 bg-white/[0.84] px-5 py-4 text-base font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
-                    >
-                      Ver catálogo de aerotermia
                     </Link>
                   </div>
                 </div>
