@@ -1484,19 +1484,19 @@ function CatalogColumn({
   return (
     <motion.article
       {...fadeUp}
-      className="flex flex-col rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_22px_70px_rgba(133,14,136,0.1)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(133,14,136,0.14)] sm:p-7"
+      className="flex h-full flex-col rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_22px_70px_rgba(133,14,136,0.1)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(133,14,136,0.14)] sm:p-7"
     >
-      <div className="flex items-center gap-4">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#850E88]">
+      <div className="flex min-h-[52px] items-center gap-3.5">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#850E88]">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
         <h3 className="text-xl font-black text-[#17111A]">{title}</h3>
       </div>
-      <div className="mt-5 flex flex-1 flex-col gap-2.5">
+      <div className="mt-5 flex flex-1 flex-col gap-2">
         {items.map((item) => (
           <div
             key={item.name}
-            className={`group flex min-h-[78px] items-center gap-3.5 rounded-[20px] border p-3 transition duration-200 ease-out sm:gap-4 sm:p-3.5 ${
+            className={`group flex flex-1 items-center gap-3 rounded-[18px] border p-3 transition duration-200 ease-out sm:gap-3.5 sm:p-3.5 ${
               item.featured
                 ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
                 : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
@@ -1504,10 +1504,10 @@ function CatalogColumn({
           >
             <CatalogThumbnail item={item} />
             <div className="min-w-0 flex-1">
-              <p className="line-clamp-2 text-sm font-black leading-snug text-[#17111A]">
+              <p className="line-clamp-1 text-sm font-black leading-snug text-[#17111A]">
                 {item.name}
               </p>
-              <p className="mt-1 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
+              <p className="mt-0.5 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
                 {item.text}
               </p>
             </div>
