@@ -276,7 +276,7 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="absolute right-[8%] top-[40%] z-10 hidden items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:flex">
+      <div className="absolute right-[12%] top-[9%] z-10 hidden items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:flex">
         <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
         <span className="text-[11px] font-medium tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
       </div>
@@ -337,6 +337,10 @@ function Hero() {
                 {item}
               </span>
             ))}
+          </div>
+          <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:hidden">
+            <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
+            <span className="text-[11px] font-medium tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
           </div>
         </motion.div>
       </div>
