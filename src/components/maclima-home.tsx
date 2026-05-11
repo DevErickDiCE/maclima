@@ -772,45 +772,45 @@ function GeothermalSection() {
   return (
     <section
       id="geotermia"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_42%,#EAEAFF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-16 sm:py-20"
     >
-      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
-      <div className="absolute left-[-12%] top-12 h-72 w-72 rounded-full bg-[#2F7D6D]/08 blur-3xl" />
-      <div className="absolute bottom-[-16%] right-[-12%] h-80 w-80 rounded-full bg-[#850E88]/10 blur-3xl" />
+      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="absolute right-[-8%] top-[-4%] h-[55%] w-[42%] rounded-full bg-[#2F7D6D]/10 blur-3xl" />
+      <div className="absolute bottom-[-10%] left-[-8%] h-64 w-64 rounded-full bg-[#850E88]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr]">
-          <motion.div {...fadeUp}>
-            <p className="text-sm font-black uppercase text-[#2F7D6D]">
-              Geotermia eficiente
-            </p>
-            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
-              Energía estable del terreno para climatizar tu vivienda o negocio
-            </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F5A66]">
-              La geotermia aprovecha la temperatura constante del subsuelo para
-              apoyar sistemas de calefacción, refrigeración y agua caliente
-              sanitaria con un alto nivel de eficiencia.
-            </p>
-            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[#17111A]">
-              En Maclima estudiamos la viabilidad de cada instalación para
-              valorar si la geotermia encaja con el terreno, el inmueble y los
-              objetivos del proyecto.
-            </p>
-            <Link
-              href="/contacto"
-              className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
-            >
-              Solicitar asesoramiento en geotermia
-              <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
-            </Link>
-          </motion.div>
+        <motion.div
+          {...fadeUp}
+          className="overflow-hidden rounded-[36px] border border-[#D6EFE8]/50 bg-[radial-gradient(circle_at_76%_18%,rgba(47,125,109,0.10),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F0F9F6_26%,#EAEAFF_100%)] p-5 shadow-[0_32px_100px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9"
+        >
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-[#2F7D6D]">
+                Geotermia eficiente
+              </p>
+              <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+                Energía estable del terreno para climatizar tu vivienda o negocio
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F5A66]">
+                La geotermia aprovecha la temperatura constante del subsuelo para
+                apoyar sistemas de calefacción, refrigeración y agua caliente
+                sanitaria con un alto nivel de eficiencia.
+              </p>
+              <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[#17111A]">
+                En Maclima estudiamos la viabilidad de cada instalación para
+                valorar si la geotermia encaja con el terreno, el inmueble y los
+                objetivos del proyecto.
+              </p>
+              <Link
+                href="/contacto"
+                className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
+              >
+                Solicitar asesoramiento en geotermia
+                <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            </div>
 
-          <motion.article
-            {...fadeUp}
-            className="overflow-hidden rounded-[30px] border border-[#D9D9FF]/80 bg-white shadow-[0_30px_90px_rgba(133,14,136,0.12)]"
-          >
-            <div className="relative min-h-[260px] sm:min-h-[320px] lg:min-h-[360px]">
+            <div className="relative min-h-[320px] overflow-hidden rounded-[28px] shadow-[0_28px_84px_rgba(23,17,26,0.22)] sm:min-h-[400px] lg:min-h-[500px]">
               <Image
                 src="/geotermia.png"
                 alt="Sistema de geotermia con vivienda moderna, tubos enterrados y equipos técnicos"
@@ -818,38 +818,36 @@ function GeothermalSection() {
                 sizes="(min-width: 1024px) 44vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(255,255,255,0.12)_100%)]" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/60 bg-white/90 px-3 py-1.5 text-xs font-black uppercase text-[#2F7D6D] shadow-sm backdrop-blur">
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,30,25,0.06)_0%,transparent_28%,rgba(15,30,25,0.72)_100%)]" />
+              <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/15 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white backdrop-blur-sm">
                 Geotermia
               </span>
-            </div>
-
-            <div className="p-5 sm:p-6">
-              <h3 className="text-lg font-black leading-tight text-[#17111A]">
-                Temperatura constante del subsuelo
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-[#5F5A66]">
-                A partir de cierta profundidad, el terreno mantiene una
-                temperatura más estable durante todo el año, independientemente
-                de las condiciones exteriores.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Alta eficiencia", "Climatización", "ACS", "Estudio previo"].map((chip) => (
-                  <span
-                    key={chip}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-[#F8F7FF] px-3 py-1.5 text-xs font-bold text-[#4A4352]"
-                  >
-                    <Check className="h-3 w-3 text-[#2F7D6D]" aria-hidden="true" />
-                    {chip}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
-                Requiere estudio previo de viabilidad según terreno e inmueble.
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                <h3 className="text-base font-black text-white sm:text-lg">
+                  Temperatura estable del subsuelo
+                </h3>
+                <p className="mt-1 text-sm font-semibold leading-5 text-white/75">
+                  Aprovecha la estabilidad térmica del terreno para mejorar la
+                  eficiencia del sistema.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["Alta eficiencia", "Climatización", "ACS"].map((chip) => (
+                    <span
+                      key={chip}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm"
+                    >
+                      <Check className="h-3 w-3 text-[#A8D5C8]" aria-hidden="true" />
+                      {chip}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs font-semibold text-white/45">
+                  Requiere estudio previo según terreno e inmueble.
+                </p>
               </div>
             </div>
-          </motion.article>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
