@@ -779,7 +779,7 @@ function GeothermalSection() {
       <div className="absolute bottom-[-16%] right-[-12%] h-80 w-80 rounded-full bg-[#850E88]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr]">
           <motion.div {...fadeUp}>
             <p className="text-sm font-black uppercase text-[#2F7D6D]">
               Geotermia eficiente
@@ -790,9 +790,7 @@ function GeothermalSection() {
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F5A66]">
               La geotermia aprovecha la temperatura constante del subsuelo para
               apoyar sistemas de calefacción, refrigeración y agua caliente
-              sanitaria con un alto nivel de eficiencia. Es una solución
-              especialmente interesante en proyectos donde se busca estabilidad,
-              confort y menor dependencia energética.
+              sanitaria con un alto nivel de eficiencia.
             </p>
             <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[#17111A]">
               En Maclima estudiamos la viabilidad de cada instalación para
@@ -810,60 +808,44 @@ function GeothermalSection() {
 
           <motion.article
             {...fadeUp}
-            className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#E8F6F2_22%,#EAEAFF_100%)] p-6 shadow-[0_30px_90px_rgba(133,14,136,0.12)] backdrop-blur-xl sm:p-8"
+            className="overflow-hidden rounded-[30px] border border-[#D9D9FF]/80 bg-white shadow-[0_30px_90px_rgba(133,14,136,0.12)]"
           >
-            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#2F7D6D,transparent)]" />
-            <div className="absolute right-[-42px] top-[-42px] h-40 w-40 rounded-full bg-[#2F7D6D]/10 blur-3xl" />
-            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#850E88]/10 blur-3xl" />
-            <div className="relative">
-              <p className="inline-flex rounded-full border border-[#2F7D6D]/18 bg-white/[0.72] px-3 py-2 text-xs font-black uppercase tracking-wide text-[#2F7D6D] shadow-sm backdrop-blur">
-                ENERGÍA DEL TERRENO
-              </p>
-              <h3 className="mt-3 text-xl font-black leading-tight text-[#17111A]">
+            <div className="relative min-h-[260px] sm:min-h-[320px] lg:min-h-[360px]">
+              <Image
+                src="/geotermia.png"
+                alt="Sistema de geotermia con vivienda moderna, tubos enterrados y equipos técnicos"
+                fill
+                sizes="(min-width: 1024px) 44vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(255,255,255,0.12)_100%)]" />
+              <span className="absolute left-4 top-4 rounded-full border border-white/60 bg-white/90 px-3 py-1.5 text-xs font-black uppercase text-[#2F7D6D] shadow-sm backdrop-blur">
+                Geotermia
+              </span>
+            </div>
+
+            <div className="p-5 sm:p-6">
+              <h3 className="text-lg font-black leading-tight text-[#17111A]">
                 Temperatura constante del subsuelo
               </h3>
-              <p className="mt-3 text-sm leading-6 text-[#5F5A66]">
+              <p className="mt-2 text-sm leading-6 text-[#5F5A66]">
                 A partir de cierta profundidad, el terreno mantiene una
-                temperatura estable durante todo el año, independientemente de
-                las condiciones exteriores.
+                temperatura más estable durante todo el año, independientemente
+                de las condiciones exteriores.
               </p>
-
-              <div className="relative mt-5 min-h-[148px] overflow-hidden rounded-[22px] border border-[#D6EFE8] bg-[linear-gradient(135deg,#FFFFFF_0%,#E8F6F2_55%,#EAEAFF_100%)] shadow-[0_10px_28px_rgba(23,17,26,0.07)]">
-                <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(47,125,109,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(47,125,109,0.09)_1px,transparent_1px)] [background-size:22px_22px]" />
-                <div className="relative flex min-h-[148px] items-center justify-center">
-                  <div className="flex flex-col items-center gap-3 text-center">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D6EFE8] bg-white shadow-sm">
-                      <Layers className="h-7 w-7 text-[#2F7D6D]" aria-hidden="true" />
-                    </span>
-                    <span className="text-xs font-semibold text-[#9C97A5]">
-                      Imagen de instalación — próximamente
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-5 grid gap-2.5">
-                {[
-                  "Temperatura estable del terreno",
-                  "Alta eficiencia energética",
-                  "Calefacción y refrigeración",
-                  "Agua caliente sanitaria",
-                  "Menor dependencia exterior",
-                  "Solución para proyectos exigentes",
-                ].map((benefit) => (
-                  <div
-                    key={benefit}
-                    className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/60 bg-white/70 px-4 py-2 text-sm font-bold text-[#17111A]"
+              <div className="mt-4 flex flex-wrap gap-2">
+                {["Alta eficiencia", "Climatización", "ACS", "Estudio previo"].map((chip) => (
+                  <span
+                    key={chip}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-[#F8F7FF] px-3 py-1.5 text-xs font-bold text-[#4A4352]"
                   >
-                    <Check className="h-4 w-4 shrink-0 text-[#2F7D6D]" aria-hidden="true" />
-                    {benefit}
-                  </div>
+                    <Check className="h-3 w-3 text-[#2F7D6D]" aria-hidden="true" />
+                    {chip}
+                  </span>
                 ))}
               </div>
-
               <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
                 Requiere estudio previo de viabilidad según terreno e inmueble.
-                No todas las instalaciones son viables sin análisis técnico.
               </div>
             </div>
           </motion.article>
