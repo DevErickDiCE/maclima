@@ -40,6 +40,8 @@ type CatalogProduct = {
   category: string;
   image?: string;
   thumbnailType: ThumbnailType;
+  cardImageFit?: "contain" | "cover";
+  modalImageFit?: "contain" | "cover";
   shortDescription: string;
   description: string;
   tags: string[];
@@ -96,6 +98,8 @@ const catalogProducts: CatalogProduct[] = [
     category: "Producto estrella",
     image: "/imagen/BEN-Dual-AIR/ben-100-electric-format.webp",
     thumbnailType: "ben",
+    cardImageFit: "cover",
+    modalImageFit: "cover",
     shortDescription:
       "Climatización, ventilación y ACS en una solución compacta.",
     description:
@@ -128,7 +132,9 @@ const catalogProducts: CatalogProduct[] = [
     name: "Climer EcoHeat ACS",
     category: "Climer · ACS",
     thumbnailType: "acs",
-    image: "/imagen/acs-climer.png",
+    image: "/imagen/climer-ecoheat-acs.webp",
+    cardImageFit: "contain",
+    modalImageFit: "contain",
     shortDescription:
       "Equipo de bomba de calor para producción eficiente de agua caliente sanitaria.",
     description:
@@ -170,7 +176,9 @@ const catalogProducts: CatalogProduct[] = [
     name: "Climer Calefacción y refrigeración",
     category: "Climer · Calefacción y refrigeración",
     thumbnailType: "clima",
-    image: "/imagen/ai20pro.png",
+    image: "/imagen/climer-ai20pro.webp",
+    cardImageFit: "contain",
+    modalImageFit: "contain",
     shortDescription: "Sistema de bomba de calor aerotérmica para calefacción y refrigeración.",
     description:
       "Sistema de bomba de calor aerotérmica para aplicaciones domésticas y comerciales, preparado para calefacción y refrigeración según la demanda térmica del inmueble. Gracias a su compresor Inverter, ajusta la potencia en cada momento para mejorar el rendimiento y adaptarse a diferentes condiciones climáticas.",
@@ -1016,7 +1024,7 @@ function ProductCard({
       className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
     >
       <div
-        className={`relative h-52 overflow-hidden ${
+        className={`relative h-56 overflow-hidden ${
           geo
             ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#ECFDF5_100%)]"
             : solar
@@ -1031,9 +1039,9 @@ function ProductCard({
             fill
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
             className={
-              product.id === "ben-dual-air"
-                ? "object-contain p-6"
-                : "object-cover"
+              product.cardImageFit === "contain"
+                ? "object-contain p-3"
+                : "object-cover object-center"
             }
           />
         ) : (
@@ -1252,19 +1260,23 @@ function ProductModal({
         </button>
 
         <div className="grid lg:grid-cols-[0.42fr_0.58fr]">
-          <div className="relative min-h-[290px] bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)] sm:min-h-[420px] lg:min-h-full">
+          <div className="relative flex min-h-[260px] items-center justify-center bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)] p-5 sm:min-h-[360px] sm:p-7 lg:min-h-full lg:p-9">
             {product.image ? (
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className={
-                  product.id === "ben-dual-air"
-                    ? "object-contain p-8"
-                    : "object-cover"
-                }
-              />
+              <>
+                <div className="absolute inset-0 animate-pulse bg-[#EAEAFF]/60" />
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  loading="eager"
+                  className={
+                    product.modalImageFit === "contain"
+                      ? "object-contain p-2 sm:p-3"
+                      : "object-cover object-center"
+                  }
+                />
+              </>
             ) : (
               <CatalogVisual type={product.thumbnailType} label={product.brand} />
             )}
