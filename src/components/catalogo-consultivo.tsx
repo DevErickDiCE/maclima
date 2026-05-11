@@ -41,6 +41,7 @@ type CatalogProduct = {
   image?: string;
   thumbnailType: ThumbnailType;
   cardImageFit?: "contain" | "cover";
+  cardImageBg?: string;
   modalImageFit?: "contain" | "cover";
   shortDescription: string;
   description: string;
@@ -178,6 +179,7 @@ const catalogProducts: CatalogProduct[] = [
     thumbnailType: "clima",
     image: "/imagen/climer-ai20pro.webp",
     cardImageFit: "contain",
+    cardImageBg: "white",
     modalImageFit: "contain",
     shortDescription: "Sistema de bomba de calor aerotérmica para calefacción y refrigeración.",
     description:
@@ -217,96 +219,175 @@ const catalogProducts: CatalogProduct[] = [
     vertical: "aerotermia",
     brand: "Climer",
     name: "Climer Termoacumulador",
-    category: "Termoacumuladores",
+    category: "Climer · Termoacumuladores",
     thumbnailType: "tank",
-    shortDescription: "Acumulación para ACS y apoyo a instalaciones térmicas.",
+    image: "/imagen/climer-termoacumulador.webp",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Gama de termoacumuladores para ACS y apoyo a calefacción con diferentes capacidades.",
     description:
-      "Solución de acumulación para instalaciones térmicas donde es necesario almacenar agua caliente y dimensionar el sistema según uso real.",
-    tags: ["ACS", "Acumulación", "Instalación"],
-    applications: ["Viviendas", "Negocios", "Instalaciones técnicas"],
-    features: [
-      "Depósito de acumulación",
-      "Apoyo para ACS",
-      "Integración en sistemas térmicos",
+      "Gama de termoacumuladores Climer para instalaciones donde se necesita almacenar agua caliente con estabilidad, buena capacidad y bajo mantenimiento. Una solución pensada para ACS y apoyo a calefacción, con depósitos de diferentes capacidades y posibilidad de integración con otras tecnologías.",
+    tags: ["ACS", "Acumulación", "Calefacción"],
+    applications: [
+      "Viviendas",
+      "Negocios",
+      "Instalaciones técnicas",
+      "ACS",
+      "Calefacción",
+      "Proyectos con demanda de acumulación",
     ],
-    compatibility: ["Aerotermia", "ACS", "Calefacción"],
+    features: [
+      "Capacidades desde 200 L hasta 2.000 L",
+      "Fabricados en acero inoxidable",
+      "Alta vida útil",
+      "Bajo mantenimiento",
+      "Instalación interior o exterior",
+      "Hibridable con otras tecnologías",
+      "Depósitos para ACS y calefacción",
+    ],
+    compatibility: [
+      "ACS",
+      "Calefacción",
+      "Aerotermia",
+      "Instalaciones híbridas",
+      "Sistemas con bomba de calor",
+      "Proyectos con acumulación térmica",
+    ],
     fit: [
-      "Proyectos con consumo de ACS concentrado",
-      "Instalaciones que necesitan almacenamiento",
-      "Sistemas donde conviene revisar capacidad y demanda",
+      "Instalaciones que necesitan acumular agua caliente sanitaria o apoyar sistemas de calefacción",
+      "Proyectos con demanda de capacidad donde conviene estudiar dimensionamiento",
+      "Instalaciones que buscan depósitos fiables compatibles con otras tecnologías",
     ],
   },
   {
     id: "yekallor-bomba-calor",
     vertical: "aerotermia",
     brand: "Yekallor",
-    name: "Yekallor Bomba de calor",
-    category: "Aerotermia",
+    name: "Yekallor Monobloco Inverter R290",
+    category: "Yekallor · Aerotermia",
     thumbnailType: "yekallor",
+    image: "/imagen/yekallor-monobloco-r290.webp",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
     shortDescription:
-      "Solución técnica para instalaciones de climatización eficiente.",
+      "Bomba de calor monobloc inverter R290 para calefacción, ACS y sistemas de climatización eficientes.",
     description:
-      "Bomba de calor para proyectos de aerotermia donde conviene estudiar demanda, emisores, ubicación y requisitos de instalación antes de recomendar configuración.",
-    tags: ["Aerotermia", "Calefacción", "Refrigeración"],
-    applications: ["Vivienda", "Negocio", "Profesionales"],
-    features: [
-      "Climatización eficiente",
-      "Aplicación técnica",
-      "Configuración según proyecto",
+      "Bomba de calor monobloc inverter R290 para proyectos de aerotermia en viviendas, negocios e instalaciones técnicas. Está diseñada para trabajar en exterior y aportar calefacción, apoyo a agua caliente sanitaria y confort térmico con una solución eficiente y adaptable según la demanda del inmueble.",
+    tags: ["Aerotermia", "R290", "Alta temperatura", "Calefacción", "ACS"],
+    applications: [
+      "Vivienda",
+      "Negocio",
+      "Obra nueva",
+      "Reforma",
+      "Calefacción central",
+      "Proyectos con demanda térmica alta",
     ],
-    compatibility: ["Fancoils", "Sistemas radiantes", "Instalación técnica"],
+    features: [
+      "Tecnología monobloc inverter",
+      "Refrigerante R290",
+      "Alta temperatura hasta 75 ºC",
+      "Compatible con Wi-Fi",
+      "Modelos 2.AT9 / 2.AT12 / 3.AT16",
+      "Componentes Wilo y GMCC",
+      "Solución de baja energía",
+      "Diseñada para instalación exterior",
+    ],
+    compatibility: [
+      "Suelo radiante",
+      "Radiadores",
+      "Fancoils",
+      "ACS según configuración",
+      "Instalaciones con fotovoltaica",
+      "Sistemas de calefacción central",
+    ],
     fit: [
-      "Instaladores y técnicos",
-      "Proyectos con demanda de climatización",
-      "Clientes que necesitan asesoramiento previo",
+      "Proyectos donde se busca sustituir o complementar sistemas tradicionales de calefacción",
+      "Viviendas, reformas o instalaciones con radiadores, suelo radiante o necesidades de agua caliente sanitaria",
+      "Instalaciones que buscan una bomba de calor exterior eficiente y adaptable según demanda",
     ],
   },
   {
     id: "yekallor-acs",
     vertical: "aerotermia",
     brand: "Yekallor",
-    name: "Yekallor ACS",
-    category: "ACS",
+    name: "Yekallor BC AQS",
+    category: "Yekallor · ACS",
     thumbnailType: "acs",
-    shortDescription: "Equipos para generación de agua caliente sanitaria.",
+    image: "/imagen/yekallor-bc-aqs.webp",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Bomba de calor para ACS con modelos BC 100, 200, 300 y 500, refrigerante R290 y acumulación eficiente.",
     description:
-      "Solución de ACS para valorar dentro de instalaciones de aerotermia, según perfil de consumo, espacio disponible y necesidades de agua caliente.",
-    tags: ["ACS", "Aerotermia", "Eficiencia"],
-    applications: ["Viviendas", "Comunidades", "Negocios"],
-    features: [
-      "Producción de ACS",
-      "Enfoque eficiente",
-      "Aplicación técnica flexible",
+      "Bomba de calor para producción de agua caliente sanitaria, pensada para viviendas, comunidades, negocios e instalaciones con consumo regular de ACS. Permite estudiar diferentes capacidades según demanda, espacio disponible y configuración técnica.",
+    tags: ["ACS", "R290", "Acumulación", "Bajo consumo", "Anti-legionela"],
+    applications: [
+      "Viviendas",
+      "Comunidades",
+      "Negocios",
+      "Instalaciones técnicas",
     ],
-    compatibility: ["Acumulación", "Aerotermia", "Reformas"],
+    features: [
+      "Modelos BC 100 / 200 / 300 / 500",
+      "Refrigerante R290",
+      "Acumulador inoxidable dúplex 2205",
+      "Producción hasta 60 ºC",
+    ],
+    compatibility: [
+      "ACS",
+      "Aerotermia",
+      "Apoyo eléctrico / boost",
+      "Paneles solares según configuración",
+    ],
     fit: [
-      "Instalaciones con demanda de agua caliente",
-      "Proyectos que requieren dimensionamiento",
-      "Profesionales que necesitan soporte técnico",
+      "Consumo regular de ACS",
+      "Sustitución de sistemas tradicionales",
+      "Proyectos con acumulación",
+      "Instalaciones con estudio previo",
     ],
   },
   {
-    id: "solar-termica",
+    id: "yekallor-depositos-acumulacion",
     vertical: "aerotermia",
-    brand: "Climer / genérico",
-    name: "Solar térmica",
-    category: "Solar térmica",
-    thumbnailType: "solar-thermal",
-    shortDescription: "Apoyo solar para producción de agua caliente sanitaria.",
+    brand: "Yekallor",
+    name: "Yekallor Depósitos de acumulación e inercia",
+    category: "Yekallor · Acumulación",
+    thumbnailType: "tank",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Depósitos para almacenar energía térmica en forma de agua caliente o fría, mejorando la estabilidad y eficiencia de la instalación.",
     description:
-      "Solución de apoyo energético para ACS que puede estudiarse como complemento según orientación, demanda y características del inmueble.",
-    tags: ["Solar térmica", "ACS", "Apoyo energético"],
-    applications: ["ACS", "Viviendas", "Negocios"],
-    features: [
-      "Apoyo a producción de agua caliente",
-      "Aprovechamiento solar térmico",
-      "Integración según instalación",
+      "Depósitos técnicos diseñados para almacenar energía térmica de forma temporal, en agua caliente o fría, y ayudar a estabilizar instalaciones de aerotermia, calefacción, refrigeración o ACS. Su dimensionamiento debe estudiarse según la fuente de calor, el consumo y el tipo de instalación.",
+    tags: ["Acumulación", "Inercia", "Aerotermia", "ACS"],
+    applications: [
+      "Aerotermia",
+      "ACS",
+      "Calefacción",
+      "Refrigeración",
     ],
-    compatibility: ["ACS", "Acumuladores", "Instalaciones térmicas"],
+    features: [
+      "Depósitos de inercia y acumulación",
+      "Modelos DPI 200L / 300L / TI 50L / 100L",
+      "Almacenamiento de agua caliente o fría",
+      "Mejora la estabilidad del sistema",
+    ],
+    compatibility: [
+      "Bombas de calor",
+      "Calderas",
+      "Recuperadores de calor",
+      "Instalaciones híbridas",
+    ],
     fit: [
-      "Proyectos con demanda de ACS",
-      "Inmuebles con superficie aprovechable",
-      "Instalaciones que buscan apoyo renovable",
+      "Instalaciones con demanda variable",
+      "Proyectos con acumulación térmica",
+      "Sistemas que requieren estabilidad",
+      "Instalaciones con estudio técnico previo",
     ],
   },
   {
@@ -1025,11 +1106,13 @@ function ProductCard({
     >
       <div
         className={`relative h-56 overflow-hidden ${
-          geo
-            ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#ECFDF5_100%)]"
-            : solar
-              ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)]"
-              : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"
+          product.cardImageBg === "white"
+            ? "bg-white"
+            : geo
+              ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#ECFDF5_100%)]"
+              : solar
+                ? "bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)]"
+                : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"
         }`}
       >
         {product.image ? (
@@ -1040,7 +1123,7 @@ function ProductCard({
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
             className={
               product.cardImageFit === "contain"
-                ? "object-contain p-3"
+                ? "object-contain p-1"
                 : "object-cover object-center"
             }
           />
@@ -1247,7 +1330,7 @@ function ProductModal({
         initial={{ opacity: 0, y: 24, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="relative max-h-[96vh] w-full max-w-6xl overflow-y-auto overflow-x-hidden rounded-t-[30px] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:max-h-[94vh] sm:rounded-[32px]"
+        className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto overflow-x-hidden rounded-t-[30px] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:max-h-[86vh] sm:rounded-[32px]"
       >
         <button
           ref={closeButtonRef}
@@ -1260,10 +1343,10 @@ function ProductModal({
         </button>
 
         <div className="grid lg:grid-cols-[0.42fr_0.58fr]">
-          <div className="relative flex min-h-[260px] items-center justify-center bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)] p-5 sm:min-h-[360px] sm:p-7 lg:min-h-full lg:p-9">
+          <div className={`relative flex min-h-[220px] items-center justify-center p-4 sm:min-h-[300px] sm:p-6 lg:min-h-full lg:p-8 ${product.cardImageBg === "white" ? "bg-white" : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"}`}>
             {product.image ? (
               <>
-                <div className="absolute inset-0 animate-pulse bg-[#EAEAFF]/60" />
+                <div className={`absolute inset-0 animate-pulse ${product.cardImageBg === "white" ? "bg-gray-100/60" : "bg-[#EAEAFF]/60"}`} />
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -1272,7 +1355,7 @@ function ProductModal({
                   loading="eager"
                   className={
                     product.modalImageFit === "contain"
-                      ? "object-contain p-2 sm:p-3"
+                      ? "object-contain p-1"
                       : "object-cover object-center"
                   }
                 />
@@ -1282,21 +1365,21 @@ function ProductModal({
             )}
           </div>
 
-          <div className="p-6 sm:p-8 lg:p-10">
-            <p className="text-sm font-black uppercase tracking-[0.14em] text-[#850E88]">
-              {product.brand} · {product.category}
+          <div className="p-4 sm:p-6 lg:p-7">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+              {product.category}
             </p>
             <h2
               id="catalog-modal-title"
-              className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl"
+              className="mt-1.5 text-xl font-black leading-tight text-[#17111A] sm:text-2xl"
             >
               {product.name}
             </h2>
-            <p className="mt-5 text-base leading-7 text-[#5F5A66]">
+            <p className="mt-2 text-sm leading-[1.4rem] text-[#5F5A66]">
               {product.description}
             </p>
 
-            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
               <ModalInfoBlock title="Aplicaciones" items={product.applications} />
               <ModalInfoBlock
                 title="Características principales"
@@ -1307,40 +1390,6 @@ function ProductModal({
                 items={product.compatibility}
               />
               <ModalInfoBlock title="Para quién encaja" items={product.fit} />
-            </div>
-
-            <div className="mt-8 rounded-[24px] border border-[#D9D9FF]/80 bg-[#F8F7FF] p-5">
-              <h3 className="text-xl font-black text-[#17111A]">
-                ¿Quieres saber si esta solución encaja en tu proyecto?
-              </h3>
-              <p className="mt-3 text-sm font-semibold leading-6 text-[#5F5A66]">
-                Analizamos tu vivienda, negocio o instalación profesional para
-                recomendarte la opción más adecuada.
-              </p>
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/consultoria-gratuita"
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-black text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
-                >
-                  Solicitar asesoramiento
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                {product.hasFullPage && product.fullPageHref ? (
-                  <Link
-                    href={product.fullPageHref}
-                    className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
-                  >
-                    Ver ficha completa
-                  </Link>
-                ) : null}
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="inline-flex min-h-12 items-center justify-center rounded-xl border border-[#D9D9FF] bg-white px-5 py-3 text-sm font-black text-[#5F5A66] transition duration-200 ease-out hover:bg-[#F8F7FF]"
-                >
-                  Seguir viendo catálogo
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -1357,13 +1406,13 @@ function ModalInfoBlock({
   items: string[];
 }) {
   return (
-    <div className="rounded-2xl border border-[#D9D9FF]/80 bg-white p-4">
-      <p className="text-sm font-black text-[#17111A]">{title}</p>
-      <ul className="mt-3 grid gap-2">
+    <div className="rounded-xl border border-[#D9D9FF]/60 bg-white p-2.5">
+      <p className="text-[11px] font-black uppercase tracking-wide text-[#17111A]">{title}</p>
+      <ul className="mt-1.5 grid gap-0.5">
         {items.map((item) => (
           <li
             key={item}
-            className="text-sm font-medium leading-5 text-[#5F5A66]"
+            className="text-[11px] font-medium leading-5 text-[#5F5A66]"
           >
             {item}
           </li>
