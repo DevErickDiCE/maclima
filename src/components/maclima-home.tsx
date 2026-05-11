@@ -351,10 +351,17 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+            <Link
+              href="/contacto"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
+            >
+              Solicitar consultoría gratuita
+              <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1 sm:h-5 sm:w-5" aria-hidden="true" />
+            </Link>
             <Link
               href="/catalogo"
-              className="group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/30 bg-white/90 px-7 py-3 text-sm font-bold text-[#850E88] shadow-[0_6px_20px_rgba(133,14,136,0.10)] backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:border-[#850E88]/40 hover:shadow-[0_14px_36px_rgba(133,14,136,0.14)] sm:min-h-[52px] sm:w-auto sm:px-8 sm:py-3.5 sm:text-[0.95rem]"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white/[0.84] px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Ver catálogo
               <FileText className="h-4 w-4 transition duration-200 ease-out group-hover:-translate-y-0.5 sm:h-5 sm:w-5" aria-hidden="true" />
