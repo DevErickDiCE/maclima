@@ -126,24 +126,41 @@ const catalogProducts: CatalogProduct[] = [
     vertical: "aerotermia",
     brand: "Climer",
     name: "Climer EcoHeat ACS",
-    category: "ACS",
+    category: "Climer · ACS",
     thumbnailType: "acs",
+    image: "/imagen/acs-climer.png",
     shortDescription:
-      "Solución para producción eficiente de agua caliente sanitaria.",
+      "Equipo de bomba de calor para producción eficiente de agua caliente sanitaria.",
     description:
-      "Equipo orientado a la producción de agua caliente sanitaria con enfoque eficiente, pensado para estudiar su encaje según consumo, inmueble y configuración técnica.",
+      "Equipo de bomba de calor para producción de agua caliente sanitaria, pensado para mejorar la eficiencia energética en viviendas, negocios o instalaciones con consumo regular de ACS. La gama EcoHeat trabaja con tecnología de alta eficiencia y permite producir agua caliente sanitaria hasta 55–60 ºC según configuración.",
     tags: ["ACS", "Aerotermia", "Vivienda"],
-    applications: ["Duchas", "Cocina", "Uso diario", "Vivienda"],
-    features: [
-      "Producción de ACS",
-      "Consumo eléctrico reducido",
-      "Formato técnico para vivienda o negocio",
+    applications: [
+      "Duchas",
+      "Cocina",
+      "Viviendas",
+      "Negocios",
+      "Reformas",
+      "Instalaciones con consumo diario de agua caliente",
     ],
-    compatibility: ["Instalaciones de ACS", "Acumulación", "Reformas"],
+    features: [
+      "Producción eficiente de ACS",
+      "Capacidades desde 100 L hasta 500 L",
+      "ACS hasta 60 ºC según configuración",
+      "Instalación mural o de suelo",
+      "Concepto Plug & Play",
+      "Compatible con instalación fotovoltaica",
+    ],
+    compatibility: [
+      "Instalaciones de ACS",
+      "Acumulación",
+      "Reformas",
+      "Autoconsumo fotovoltaico",
+      "Sustitución de sistemas tradicionales",
+    ],
     fit: [
-      "Usuarios que quieren mejorar el ACS",
-      "Viviendas con consumo regular de agua caliente",
-      "Proyectos donde se valora sustituir sistemas tradicionales",
+      "Viviendas, locales o instalaciones que quieren mejorar la producción de agua caliente sanitaria",
+      "Proyectos que buscan reducir la dependencia de sistemas tradicionales",
+      "Instalaciones donde se valora una solución eficiente, compacta y compatible con autoconsumo fotovoltaico",
     ],
   },
   {
@@ -151,23 +168,40 @@ const catalogProducts: CatalogProduct[] = [
     vertical: "aerotermia",
     brand: "Climer",
     name: "Climer Calefacción y refrigeración",
-    category: "Calefacción y refrigeración",
+    category: "Climer · Calefacción y refrigeración",
     thumbnailType: "clima",
-    shortDescription: "Sistema para confort térmico durante todo el año.",
+    image: "/imagen/ai20pro.png",
+    shortDescription: "Sistema de bomba de calor aerotérmica para calefacción y refrigeración.",
     description:
-      "Familia de soluciones para climatización eficiente, pensada para calefacción y refrigeración según el tipo de emisión, demanda y condiciones del inmueble.",
+      "Sistema de bomba de calor aerotérmica para aplicaciones domésticas y comerciales, preparado para calefacción y refrigeración según la demanda térmica del inmueble. Gracias a su compresor Inverter, ajusta la potencia en cada momento para mejorar el rendimiento y adaptarse a diferentes condiciones climáticas.",
     tags: ["Calefacción", "Refrigeración", "Bajo consumo"],
-    applications: ["Vivienda", "Negocio", "Reforma", "Obra nueva"],
-    features: [
-      "Confort térmico estable",
-      "Uso durante todo el año",
-      "Estudio según demanda térmica",
+    applications: [
+      "Vivienda",
+      "Negocio",
+      "Reforma",
+      "Obra nueva",
+      "Instalaciones con necesidad de frío y calor",
+      "Proyectos con demanda térmica variable",
     ],
-    compatibility: ["Fancoils", "Suelo radiante", "Radiadores de agua"],
+    features: [
+      "Calefacción y refrigeración",
+      "Sistema Inverter",
+      "Programación con curva climática integrada",
+      "Instalación rápida y sencilla",
+      "Solo requiere conexiones hidráulicas",
+      "Temperatura de impulsión hasta 70 ºC",
+      "Preparado para climas fríos y cálidos",
+    ],
+    compatibility: [
+      "Fancoils",
+      "Suelo radiante",
+      "Radiadores de agua",
+      "Sistemas hidráulicos existentes, según estudio técnico",
+    ],
     fit: [
-      "Inmuebles con necesidades de frío y calor",
-      "Proyectos donde se busca confort estacional",
-      "Instalaciones que requieren estudio térmico previo",
+      "Inmuebles que necesitan una solución de climatización eficiente durante todo el año",
+      "Proyectos que buscan calefacción y refrigeración con un sistema adaptable a la demanda real",
+      "Instalaciones preparadas para trabajar en distintos climas",
     ],
   },
   {
@@ -694,7 +728,7 @@ function CatalogHero() {
   return (
     <section
       id="catalogo-todos"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-12 sm:py-16"
     >
       <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute right-[-12%] top-10 h-80 w-80 rounded-full bg-[#D9D9FF]/80 blur-3xl" />
@@ -705,41 +739,46 @@ function CatalogHero() {
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
             CATÁLOGO CONSULTIVO
           </p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-[#17111A] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-black leading-[1.08] text-[#17111A] sm:text-4xl lg:text-5xl">
             Catálogo consultivo de aerotermia, fotovoltaica y geotermia
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5F5A66]">
-            Consulta las principales marcas, familias y soluciones energéticas
-            con las que trabaja Maclima. Cada producto requiere un estudio
-            previo para valorar compatibilidad, dimensionamiento e instalación
-            adecuada.
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#5F5A66]">
+            Consulta las principales familias y soluciones energéticas con las
+            que trabaja Maclima. Analizamos cada caso para valorar
+            compatibilidad, dimensionamiento e instalación antes de recomendar
+            una solución.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-7 flex flex-col gap-3">
             <Link
               href="/consultoria-gratuita"
-              className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+              className="group inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
             >
               Solicitar asesoramiento
-              <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" />
             </Link>
-            <Link
-              href="#aerotermia-catalogo"
-              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#850E88]/18 bg-white/80 px-6 py-4 text-base font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
-            >
-              Ver aerotermia
-            </Link>
-            <Link
-              href="#fotovoltaica-catalogo"
-              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#D99A2B]/22 bg-[#FFF2D8]/80 px-6 py-4 text-base font-bold text-[#9A5B12] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8]"
-            >
-              Ver fotovoltaica
-            </Link>
-            <Link
-              href="#geotermia-catalogo"
-              className="inline-flex min-h-14 items-center justify-center rounded-xl border border-[#10B981]/22 bg-[#ECFDF5]/80 px-6 py-4 text-base font-bold text-[#065F46] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#ECFDF5]"
-            >
-              Ver geotermia
-            </Link>
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#9C97A5]">
+                Explorar:
+              </span>
+              <Link
+                href="#aerotermia-catalogo"
+                className="inline-flex items-center rounded-full border border-[#D9D9FF] bg-[#EAEAFF] px-4 py-2 text-sm font-bold text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/30 hover:bg-white"
+              >
+                Aerotermia
+              </Link>
+              <Link
+                href="#fotovoltaica-catalogo"
+                className="inline-flex items-center rounded-full border border-[#D99A2B]/24 bg-[#FFF2D8] px-4 py-2 text-sm font-bold text-[#9A5B12] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF8EE]"
+              >
+                Fotovoltaica
+              </Link>
+              <Link
+                href="#geotermia-catalogo"
+                className="inline-flex items-center rounded-full border border-[#2F7D6D]/22 bg-[#E8F6F2] px-4 py-2 text-sm font-bold text-[#2F7D6D] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#D6EFE8]"
+              >
+                Geotermia
+              </Link>
+            </div>
           </div>
         </motion.div>
 
@@ -747,29 +786,37 @@ function CatalogHero() {
           {...fadeUp}
           className="rounded-[30px] border border-white/80 bg-white/82 p-5 shadow-[0_26px_80px_rgba(133,14,136,0.14)] backdrop-blur-xl sm:p-6"
         >
-          <div className="rounded-[24px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-5">
-            <p className="text-sm font-black uppercase text-[#850E88]">
-              Enfoque Maclima
+          <div className="rounded-[22px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-5">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+              ENFOQUE MACLIMA
             </p>
-            <p className="mt-3 text-xl font-black leading-tight text-[#17111A]">
+            <p className="mt-2.5 text-lg font-black leading-snug text-[#17111A]">
               No vendemos productos de forma automática.
             </p>
-            <p className="mt-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+            <p className="mt-2.5 text-sm font-semibold leading-6 text-[#5F5A66]">
               Te ayudamos a elegir la solución adecuada según tu vivienda,
               negocio o proyecto profesional.
             </p>
           </div>
-          <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-            {["Distribución", "Instalación", "Asesoramiento técnico"].map(
-              (item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-[#D9D9FF]/80 bg-white px-4 py-3 text-sm font-black text-[#17111A]"
-                >
-                  {item}
+          <div className="mt-3.5 grid gap-2 lg:grid-cols-1">
+            {[
+              { label: "Distribución", desc: "Marcas y equipos seleccionados" },
+              { label: "Instalación", desc: "Equipos propios para cada proyecto" },
+              { label: "Asesoramiento técnico", desc: "Antes de presupuestar o proponer" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/80 bg-white px-4 py-3 shadow-sm"
+              >
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#EAEAFF] text-[#850E88]">
+                  <ChevronRight className="h-3.5 w-3.5" />
+                </span>
+                <div>
+                  <p className="text-sm font-black text-[#17111A]">{item.label}</p>
+                  <p className="text-[11px] font-medium text-[#5F5A66]">{item.desc}</p>
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </motion.aside>
       </div>
