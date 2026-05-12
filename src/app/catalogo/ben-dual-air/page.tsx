@@ -20,9 +20,28 @@ import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { CONTACT_INFO } from "@/lib/contact-info";
 
 export const metadata: Metadata = {
-  title: "BEN Dual-Air | Aerotermia interior sin unidad exterior | Maclima",
+  title: "BEN Dual-Air — Aerotermia interior sin unidad exterior",
   description:
-    "BEN Dual-Air es una solución de aerotermia interior compacta para climatización, ventilación y ACS, ideal para pisos, viviendas unifamiliares, obra nueva y reformas.",
+    "BEN Dual-Air es una solución de aerotermia interior compacta para climatización, ventilación y ACS, ideal para pisos, viviendas unifamiliares, obra nueva y reformas sin unidad exterior visible.",
+  alternates: {
+    canonical: "/catalogo/ben-dual-air",
+  },
+  openGraph: {
+    title: "BEN Dual-Air — Aerotermia interior sin unidad exterior | Maclima",
+    description:
+      "Climatización, ventilación y ACS en una solución compacta sin unidad exterior. Ideal para pisos, viviendas unifamiliares, obra nueva y reformas.",
+    url: "/catalogo/ben-dual-air",
+    locale: "es_ES",
+    type: "website",
+    images: [
+      {
+        url: "/imagen/BEN-Dual-AIR/ben-100-electric-format.webp",
+        width: 800,
+        height: 800,
+        alt: "BEN Dual-Air — Sistema de aerotermia interior compacto",
+      },
+    ],
+  },
 };
 
 const heroBenefits = [

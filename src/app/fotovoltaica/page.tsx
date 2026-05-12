@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import { FuturePage } from "@/components/future-page";
 import { PanelTop } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Fotovoltaica en Madrid — Autoconsumo solar para viviendas y negocios",
+  description:
+    "Instalaciones fotovoltaicas para autoconsumo con paneles solares, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid para viviendas, negocios y profesionales.",
+  alternates: {
+    canonical: "/fotovoltaica",
+  },
+  openGraph: {
+    title: "Fotovoltaica en Madrid — Autoconsumo solar | Maclima",
+    description:
+      "Instalaciones fotovoltaicas para autoconsumo con paneles solares, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid.",
+    url: "/fotovoltaica",
+    locale: "es_ES",
+    type: "website",
+    images: [{ url: "/og-preview.png", width: 1200, height: 630, alt: "Fotovoltaica — Maclima Soluciones Energéticas" }],
+  },
+};
 
 const introCards = [
   {

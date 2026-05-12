@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import { FuturePage } from "@/components/future-page";
 import { ThermometerSun } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Aerotermia en Madrid — Climatización, calefacción y ACS",
+  description:
+    "Soluciones de aerotermia para viviendas, negocios, reformas y obra nueva. Instalación y asesoramiento técnico en Madrid. Consulta gratuita antes de presupuestar.",
+  alternates: {
+    canonical: "/aerotermia",
+  },
+  openGraph: {
+    title: "Aerotermia en Madrid — Climatización, calefacción y ACS | Maclima",
+    description:
+      "Soluciones de aerotermia para viviendas, negocios, reformas y obra nueva. Instalación y asesoramiento técnico en Madrid.",
+    url: "/aerotermia",
+    locale: "es_ES",
+    type: "website",
+    images: [{ url: "/og-preview.png", width: 1200, height: 630, alt: "Aerotermia — Maclima Soluciones Energéticas" }],
+  },
+};
 
 const introCards = [
   {
