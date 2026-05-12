@@ -83,6 +83,7 @@ const photovoltaicFilters = [
   "Estructuras",
   "Optimizadores",
   "Protecciones",
+  "Cargadores VE",
 ] as const;
 
 const geothermalFilters = [
@@ -970,6 +971,51 @@ const catalogProducts: CatalogProduct[] = [
       "Proyectos que requieren protección DC compacta",
       "Viviendas y negocios con autoconsumo fotovoltaico",
       "Proyectos donde se necesita cuadro ya cableado con MC4",
+    ],
+  },
+  {
+    id: "solax-cargador-ve-g2-x1-72kw",
+    vertical: "fotovoltaica",
+    brand: "SolaX Power",
+    name: "Cargador VE SolaX G2 X1 7.2kW",
+    category: "Fotovoltaica · Cargador VE",
+    image: "/imagen/solax_evcharger_g2_a-optimized.webp",
+    thumbnailType: "inverter",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Cargador monofásico de hasta 7,2kW con manguera integrada, pensado para viviendas con autoconsumo solar y carga inteligente de vehículo eléctrico.",
+    description:
+      "El cargador VE SolaX G2 X1 7.2kW es una solución monofásica para carga de vehículo eléctrico en viviendas con autoconsumo fotovoltaico. Permite cargar el vehículo de forma inteligente, aprovechar mejor el excedente solar y controlar la carga desde la app SolaX Cloud.",
+    tags: ["Cargadores VE", "7.2kW", "Monofásico", "SolaX", "Autoconsumo"],
+    applications: [
+      "Viviendas con autoconsumo solar",
+      "Garajes privados",
+      "Carga de vehículo eléctrico",
+      "Instalaciones monofásicas",
+      "Usuarios con excedente solar",
+    ],
+    features: [
+      "Hasta 7,2kW monofásico",
+      "Manguera integrada",
+      "Priorización del excedente fotovoltaico",
+      "Control desde app SolaX Cloud",
+      "Carga programada",
+      "Instalación mural compacta",
+    ],
+    compatibility: [
+      "Sistemas fotovoltaicos",
+      "Inversores híbridos SolaX",
+      "Instalaciones monofásicas",
+      "Autoconsumo residencial",
+      "Gestión energética doméstica",
+    ],
+    fit: [
+      "Usuarios con vehículo eléctrico y autoconsumo solar",
+      "Viviendas que quieren cargar con excedente fotovoltaico",
+      "Proyectos que buscan reducir dependencia de la red",
+      "Instalaciones compatibles con SolaX según configuración técnica",
     ],
   },
   {
