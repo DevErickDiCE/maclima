@@ -390,7 +390,7 @@ function Hero() {
 
 function Verticals() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F9F7FF_54%,#FFFFFF_100%)] py-16 sm:py-20">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F9F7FF_54%,#FFFFFF_100%)] py-12 sm:py-20">
       <div className="absolute left-[-12%] top-16 h-72 w-72 rounded-full bg-[#EAEAFF] blur-3xl" />
       <div className="absolute bottom-6 right-[-10%] h-64 w-64 rounded-full bg-[#F2B84B]/14 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -408,7 +408,7 @@ function Verticals() {
           </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3 lg:gap-6">
           <SolutionCard
             icon={ThermometerSun}
             title="Aerotermia"
@@ -471,14 +471,14 @@ function AerothermalEfficiency() {
   return (
     <section
       id="aerotermia"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_42%,#EAEAFF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_42%,#EAEAFF_100%)] py-12 sm:py-20"
     >
       <div className="absolute inset-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="absolute right-[-14%] top-10 h-72 w-72 rounded-full bg-[#D9D9FF] blur-3xl" />
       <div className="absolute bottom-[-18%] left-[-10%] h-80 w-80 rounded-full bg-[#850E88]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+        <div className="grid items-center gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-8">
           <motion.div {...fadeUp}>
             <p className="text-sm font-black uppercase text-[#850E88]">
               Aerotermia eficiente
@@ -617,7 +617,7 @@ function AerothermalEfficiency() {
           </motion.article>
         </div>
 
-        <motion.div {...fadeUp} className="mt-14">
+        <motion.div {...fadeUp} className="mt-10 sm:mt-14">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
             <h3 className="text-2xl font-black text-[#17111A] sm:text-3xl">
@@ -662,7 +662,7 @@ function PhotovoltaicIntelligence() {
   return (
     <section
       id="fotovoltaica"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-12 sm:py-20"
     >
       <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute left-[-12%] top-12 h-80 w-80 rounded-full bg-[#F2B84B]/18 blur-3xl" />
@@ -673,7 +673,7 @@ function PhotovoltaicIntelligence() {
           {...fadeUp}
           className="overflow-hidden rounded-[36px] border border-white/80 bg-[radial-gradient(circle_at_74%_18%,rgba(242,184,75,0.2),transparent_26%),linear-gradient(135deg,#FFFFFF_0%,#FFF8EE_38%,#EAEAFF_100%)] p-5 shadow-[0_32px_100px_rgba(133,14,136,0.16)] sm:p-7 lg:p-9"
         >
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.08fr)] lg:items-center">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.08fr)] lg:items-center lg:gap-8">
             <div>
               <p className="text-sm font-black uppercase text-[#850E88]">
                 FOTOVOLTAICA INTELIGENTE
@@ -772,7 +772,7 @@ function GeothermalSection() {
   return (
     <section
       id="geotermia"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-12 sm:py-20"
     >
       <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="absolute right-[-8%] top-[-4%] h-[55%] w-[42%] rounded-full bg-[#2F7D6D]/10 blur-3xl" />
@@ -783,7 +783,7 @@ function GeothermalSection() {
           {...fadeUp}
           className="overflow-hidden rounded-[36px] border border-[#D6EFE8]/50 bg-[radial-gradient(circle_at_76%_18%,rgba(47,125,109,0.10),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F0F9F6_26%,#EAEAFF_100%)] p-5 shadow-[0_32px_100px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9"
         >
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-8">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.16em] text-[#2F7D6D]">
                 Geotermia eficiente
@@ -855,7 +855,7 @@ function GeothermalSection() {
 
 function FeaturedSolutions() {
   return (
-    <section id="ben-dual-air-destacado" className="bg-white py-16 sm:py-20">
+    <section id="ben-dual-air-destacado" className="bg-white py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
@@ -885,7 +885,7 @@ function FeaturedSolutions() {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(380px,0.94fr)] lg:items-stretch">
+          <div className="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-[minmax(0,1.06fr)_minmax(380px,0.94fr)] lg:items-stretch lg:gap-8">
             <div className="relative min-h-[360px] overflow-hidden rounded-[32px] border border-white/80 bg-[#17111A] shadow-[0_28px_84px_rgba(23,17,26,0.16)] sm:min-h-[520px]">
               <Image
                 src="/imagen/BEN-Dual-AIR/electric-bruin.webp"
@@ -1028,7 +1028,7 @@ function FeaturedSolutions() {
 
 function ConsultiveCatalog() {
   return (
-    <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] py-20 sm:py-24">
+    <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] py-14 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionIntro
           eyebrow="Catálogo consultivo"
@@ -1134,7 +1134,7 @@ function FreeConsulting() {
 
 function TrustBlock() {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="bg-white py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionIntro
           eyebrow="Confianza técnica"
@@ -1153,7 +1153,7 @@ function TrustBlock() {
 
 function FinalCta() {
   return (
-    <section className="bg-[linear-gradient(135deg,#7D0E80_0%,#6F0B72_42%,#D9D9FF_100%)] py-18 sm:py-22">
+    <section className="bg-[linear-gradient(135deg,#7D0E80_0%,#6F0B72_42%,#D9D9FF_100%)] py-14 sm:py-22">
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
@@ -1379,37 +1379,37 @@ function SolutionCard({
   return (
     <motion.article
       {...fadeUp}
-      className="group relative flex min-h-full flex-col overflow-hidden rounded-[30px] border border-[#D9D9FF]/90 bg-white p-6 shadow-[0_22px_70px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)] sm:p-8"
+      className="group relative flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/90 bg-white p-5 shadow-[0_22px_70px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)] sm:rounded-[30px] sm:p-7 lg:p-8"
     >
       <div className={`absolute inset-x-8 top-0 h-px bg-gradient-to-r ${cardAccent.line} opacity-70`} />
       <div className={`absolute right-[-22px] top-8 h-32 w-32 rounded-full ${cardAccent.glow} blur-2xl transition duration-300 ease-out group-hover:scale-110`} />
       <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-[#EAEAFF]/55 blur-3xl" />
       <div className="flex items-start justify-between gap-4">
         <div>
-          <span className={`relative flex h-16 w-16 items-center justify-center rounded-[22px] border ${cardAccent.iconShell} transition duration-200 ease-out group-hover:shadow-[0_14px_34px_rgba(23,17,26,0.1)]`}>
-            <Icon className={`h-8 w-8 transition duration-200 ease-out group-hover:scale-105 ${cardAccent.icon}`} aria-hidden="true" />
+          <span className={`relative flex h-12 w-12 items-center justify-center rounded-2xl border sm:h-16 sm:w-16 sm:rounded-[22px] ${cardAccent.iconShell} transition duration-200 ease-out group-hover:shadow-[0_14px_34px_rgba(23,17,26,0.1)]`}>
+            <Icon className={`h-6 w-6 transition duration-200 ease-out group-hover:scale-105 sm:h-8 sm:w-8 ${cardAccent.icon}`} aria-hidden="true" />
           </span>
-          <p className="mt-6 text-sm font-black uppercase tracking-[0.14em] text-[#850E88]">
+          <p className="mt-4 text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:mt-6 sm:text-sm">
             {subtitle}
           </p>
-          <h3 className="mt-2 text-3xl font-black text-[#17111A]">{title}</h3>
+          <h3 className="mt-2 text-2xl font-black text-[#17111A] sm:text-3xl">{title}</h3>
         </div>
       </div>
-      <p className="mt-4 max-w-xl text-base leading-7 text-[#5F5A66]">{text}</p>
-      <div className="mt-6 flex flex-wrap gap-2">
-        {benefits.map((benefit) => (
+      <p className="mt-3 max-w-xl text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">{text}</p>
+      <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-6 sm:gap-2">
+        {benefits.slice(0, 3).map((benefit) => (
           <span
             key={benefit}
-            className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-bold text-[#17111A] ${cardAccent.chip}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-bold text-[#17111A] sm:gap-2 sm:px-3 sm:py-2 sm:text-sm ${cardAccent.chip}`}
           >
-            <Check className="h-4 w-4 text-[#850E88]" aria-hidden="true" />
+            <Check className="h-3 w-3 text-[#850E88] sm:h-4 sm:w-4" aria-hidden="true" />
             {benefit}
           </span>
         ))}
       </div>
       <Link
         href={href}
-        className="relative mt-auto inline-flex w-fit items-center gap-2 pt-7 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:text-[#6f0b72]"
+        className="relative mt-auto inline-flex w-fit items-center gap-2 pt-5 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:text-[#6f0b72] sm:pt-7"
       >
         {cta}
         <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1429,7 +1429,7 @@ function BenFeatureBandCard({
 }) {
   return (
     <article className="group rounded-[30px] bg-[linear-gradient(135deg,#850E88_0%,#D9D9FF_52%,#F8F7FF_100%)] p-px transition duration-200 ease-out hover:-translate-y-0.5">
-      <div className="flex min-h-[285px] flex-col items-center justify-center rounded-[29px] bg-white px-6 py-8 text-center transition duration-200 ease-out group-hover:bg-[linear-gradient(180deg,#FFFFFF_0%,#FBFAFF_100%)] md:min-h-[320px]">
+      <div className="flex min-h-[220px] flex-col items-center justify-center rounded-[29px] bg-white px-5 py-6 text-center transition duration-200 ease-out group-hover:bg-[linear-gradient(180deg,#FFFFFF_0%,#FBFAFF_100%)] sm:min-h-[260px] sm:px-6 sm:py-8 md:min-h-[320px]">
         <Icon
           className="h-16 w-16 stroke-[1.5] text-[#850E88] transition duration-200 ease-out group-hover:-translate-y-1"
           aria-hidden="true"
