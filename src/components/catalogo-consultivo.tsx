@@ -1388,7 +1388,7 @@ function ProductCard({
       className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
     >
       <div
-        className={`relative h-44 overflow-hidden sm:h-56 ${
+        className={`relative h-52 overflow-hidden sm:h-56 ${
           product.cardImageBg === "white"
             ? "bg-white"
             : geo
@@ -1406,7 +1406,7 @@ function ProductCard({
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
             className={
               product.cardImageFit === "contain"
-                ? "object-contain p-2"
+                ? "object-contain p-1 sm:p-2"
                 : "object-cover object-center"
             }
           />

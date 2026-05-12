@@ -145,7 +145,8 @@ const benBullets = [
 const aerothermalCatalog = [
   {
     name: "BEN Dual-Air",
-    text: "Climatización, ventilación y ACS en una solución compacta.",
+    text: "Aerotermia interior sin unidad exterior.",
+    href: "/catalogo/ben-dual-air",
     imageSrc: "/imagen/BEN-Dual-AIR/ben-100-electric-format.webp",
     badge: "Producto estrella",
     featured: true,
@@ -153,91 +154,138 @@ const aerothermalCatalog = [
     thumbType: "ben",
   },
   {
-    name: "Climer / Yekallor",
-    text: "Marcas y soluciones técnicas para instalaciones de aerotermia.",
-    badge: "Marca",
-    kind: "brand",
-    thumbLabel: "MARCAS",
-    thumbType: "brand",
-  },
-  {
-    name: "ACS y termoacumuladores",
-    text: "Agua caliente sanitaria, acumulación y apoyo térmico.",
+    name: "Climer EcoHeat ACS",
+    text: "Bomba de calor para agua caliente sanitaria.",
+    href: "/catalogo#aerotermia-catalogo",
+    imageSrc: "/imagen/climer-ecoheat-acs.webp",
     badge: "ACS",
-    kind: "family",
-    thumbLabel: "ACS",
+    kind: "product",
     thumbType: "acs",
   },
   {
-    name: "Calefacción y refrigeración",
-    text: "Confort térmico eficiente durante todo el año.",
-    badge: "Familia",
-    kind: "family",
-    thumbLabel: "CLIMA",
+    name: "Climer Calefacción y refrigeración",
+    text: "Bomba de calor para climatización eficiente.",
+    href: "/catalogo#aerotermia-catalogo",
+    imageSrc: "/imagen/climer-ai20pro.webp",
+    badge: "Climatización",
+    kind: "product",
+    thumbType: "clima",
+  },
+  {
+    name: "Elnur Gabarron Thermira Monobloc",
+    text: "Aerotermia monobloc aire-agua para calefacción, refrigeración y ACS.",
+    href: "/catalogo#aerotermia-catalogo",
+    imageSrc: "/imagen/thermira-monobloc.jpg",
+    badge: "Monobloc",
+    kind: "product",
     thumbType: "clima",
   },
 ] as const;
 
 const photovoltaicCatalog = [
   {
-    name: "Paneles solares",
-    text: "Captación de energía solar para vivienda o negocio.",
-    imageSrc: "/fotovoltaica.png",
-    badge: "Autoconsumo",
+    name: "Módulo Hanersun 720W",
+    text: "Panel TOPCon bifacial de alta potencia.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/hanersun_132cell_720w.webp",
+    badge: "Panel",
     kind: "product",
     thumbType: "solar-panel",
   },
   {
-    name: "Inversores",
-    text: "Conversión de energía solar en electricidad útil.",
-    badge: "Conversión",
+    name: "Inversor Deye 12kW",
+    text: "Inversor híbrido para autoconsumo y baterías.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/SG01LP1-EU-optimized.webp",
+    badge: "Híbrido",
     kind: "product",
-    thumbLabel: "INVERSOR",
     thumbType: "inverter",
   },
   {
-    name: "Baterías",
-    text: "Aprovechamiento de excedentes energéticos.",
-    badge: "Solución clave",
+    name: "Optimizador Tigo TS4-X-O",
+    text: "Optimización, monitorización y apagado rápido.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/Tigo_TS4-X-O-optimized.webp",
+    badge: "Optimización",
     kind: "product",
-    thumbLabel: "BATERÍA",
+    thumbType: "inverter",
+  },
+  {
+    name: "Batería SolaX T-BAT-SYS-LV D53",
+    text: "Almacenamiento residencial de baja tensión.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/solax_T-BAT-SYS-LV-D53-.webp",
+    badge: "Batería",
+    kind: "product",
     thumbType: "battery",
   },
   {
-    name: "Kits e instalaciones a medida",
-    text: "Soluciones completas y dimensionadas según el proyecto.",
-    badge: "Proyecto",
-    kind: "family",
-    thumbLabel: "KIT",
-    thumbType: "kit",
+    name: "APsystems APbattery 6.5 kWh",
+    text: "Batería LiFePO4 para sistemas fotovoltaicos.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/apsystems_apbattery.webp",
+    badge: "Batería",
+    kind: "product",
+    thumbType: "battery",
+  },
+  {
+    name: "Cargador VE SolaX G2 X1 7.2kW",
+    text: "Carga inteligente para vehículo eléctrico.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/solax_evcharger_g2_a-optimized.webp",
+    badge: "Cargador VE",
+    kind: "product",
+    thumbType: "inverter",
+  },
+  {
+    name: "Estructura coplanar Salvateja",
+    text: "Sistema de montaje para cubierta de teja.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/estructura_coplanar_salvateja_ennova-optimized.webp",
+    badge: "Estructura",
+    kind: "product",
+    thumbType: "mount",
+  },
+  {
+    name: "Cuadro protecciones DC",
+    text: "Protección eléctrica para instalaciones fotovoltaicas.",
+    href: "/catalogo#fotovoltaica-catalogo",
+    imageSrc: "/imagen/protecciones_DC_2st_16a-optimized.webp",
+    badge: "Protección",
+    kind: "product",
+    thumbType: "inverter",
   },
 ] as const;
 
 const geothermalCatalog = [
   {
     name: "Bombas de calor geotérmicas",
-    text: "Climatización eficiente aprovechando la temperatura del subsuelo.",
+    text: "Climatización eficiente aprovechando el subsuelo.",
+    href: "/catalogo#geotermia-catalogo",
     badge: "Alta eficiencia",
     kind: "family" as const,
     thumbType: "geo" as const,
   },
   {
     name: "Sistemas de captación",
-    text: "Sondas y circuitos adaptados al terreno e inmueble.",
+    text: "Circuitos adaptados al terreno e inmueble.",
+    href: "/catalogo#geotermia-catalogo",
     badge: "Captación",
     kind: "family" as const,
     thumbType: "clima" as const,
   },
   {
     name: "Geotermia para ACS",
-    text: "Agua caliente sanitaria apoyada en energía geotérmica.",
+    text: "Apoyo para agua caliente sanitaria.",
+    href: "/catalogo#geotermia-catalogo",
     badge: "ACS",
     kind: "family" as const,
     thumbType: "tank" as const,
   },
   {
     name: "Estudio de viabilidad",
-    text: "Análisis técnico previo para valorar terreno, inmueble y proyecto.",
+    text: "Análisis técnico previo del terreno y proyecto.",
+    href: "/catalogo#geotermia-catalogo",
     badge: "Consultoría",
     kind: "family" as const,
     thumbType: "project" as const,
@@ -1033,7 +1081,7 @@ function ConsultiveCatalog() {
         <SectionIntro
           eyebrow="Catálogo consultivo"
           title="Catálogo consultivo de soluciones energéticas"
-          text="Consulta las principales soluciones energéticas con las que trabaja Maclima. Cada instalación requiere un estudio previo para valorar viabilidad, dimensionamiento e instalación adecuada."
+          text="Consulta algunas de las soluciones con las que trabaja Maclima en aerotermia, fotovoltaica y geotermia. El catálogo es orientativo: cada instalación se estudia antes de recomendar un equipo, combinación de sistemas o propuesta técnica."
         />
         <div className="mx-auto mt-5 max-w-2xl rounded-2xl border border-[#850E88]/12 bg-white/[0.8] px-4 py-3 text-center text-sm font-semibold leading-6 text-[#5F5A66] shadow-sm backdrop-blur">
           No vendemos productos de forma automática. Analizamos cada caso antes de recomendar.
@@ -1052,6 +1100,7 @@ function ConsultiveCatalog() {
             items={photovoltaicCatalog}
             href="/catalogo#fotovoltaica-catalogo"
             cta="Ver catálogo fotovoltaico"
+            moreItemsNote="Y otras soluciones de soporte, estructura y protección."
           />
           <CatalogColumn
             icon={Layers}
@@ -1451,12 +1500,14 @@ function CatalogColumn({
   items,
   href,
   cta,
+  moreItemsNote,
 }: {
   icon: LucideIcon;
   title: string;
   items: readonly {
     name: string;
     text: string;
+    href?: string;
     badge: string;
     featured?: boolean;
     kind: "product" | "brand" | "family";
@@ -1480,7 +1531,10 @@ function CatalogColumn({
   }[];
   href: string;
   cta: string;
+  moreItemsNote?: string;
 }) {
+  const visibleItems = items.slice(0, 4);
+
   return (
     <motion.article
       {...fadeUp}
@@ -1493,30 +1547,15 @@ function CatalogColumn({
         <h3 className="text-xl font-black text-[#17111A]">{title}</h3>
       </div>
       <div className="mt-5 flex flex-1 flex-col gap-2">
-        {items.map((item) => (
-          <div
-            key={item.name}
-            className={`group flex flex-1 items-center gap-3 rounded-[18px] border p-3 transition duration-200 ease-out sm:gap-3.5 sm:p-3.5 ${
-              item.featured
-                ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
-                : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
-            }`}
-          >
-            <CatalogThumbnail item={item} />
-            <div className="min-w-0 flex-1">
-              <p className="line-clamp-1 text-sm font-black leading-snug text-[#17111A]">
-                {item.name}
-              </p>
-              <p className="mt-0.5 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
-                {item.text}
-              </p>
-            </div>
-            <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#850E88]">
-              <ChevronRight className="h-4 w-4" aria-hidden="true" />
-            </span>
-          </div>
+        {visibleItems.map((item) => (
+          <CatalogPreviewItem key={item.name} item={item} />
         ))}
       </div>
+      {moreItemsNote ? (
+        <p className="mt-3 rounded-xl border border-[#D9D9FF]/70 bg-[#F8F7FF] px-3 py-2 text-center text-xs font-semibold leading-5 text-[#5F5A66]">
+          {moreItemsNote}
+        </p>
+      ) : null}
       <Link
         href={href}
         className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white transition duration-200 ease-out hover:bg-[#6f0b72] hover:shadow-[0_18px_40px_rgba(133,14,136,0.22)]"
@@ -1526,6 +1565,69 @@ function CatalogColumn({
       </Link>
     </motion.article>
   );
+}
+
+function CatalogPreviewItem({
+  item,
+}: {
+  item: {
+    name: string;
+    text: string;
+    href?: string;
+    badge: string;
+    featured?: boolean;
+    kind: "product" | "brand" | "family";
+    imageSrc?: string;
+    thumbLabel?: string;
+    thumbType:
+      | "ben"
+      | "brand"
+      | "acs"
+      | "clima"
+      | "solar-thermal"
+      | "tank"
+      | "solar-panel"
+      | "inverter"
+      | "battery"
+      | "kit"
+      | "mount"
+      | "hybrid"
+      | "project"
+      | "geo";
+  };
+}) {
+  const className = `group flex flex-1 items-center gap-3 rounded-[18px] border p-3 text-left transition duration-200 ease-out sm:gap-3.5 sm:p-3.5 ${
+    item.featured
+      ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
+      : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
+  }`;
+
+  const content = (
+    <>
+      <CatalogThumbnail item={item} />
+      <div className="min-w-0 flex-1">
+        <p className="line-clamp-2 text-sm font-black leading-snug text-[#17111A]">
+          {item.name}
+        </p>
+        <p className="mt-0.5 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
+          {item.text}
+        </p>
+      </div>
+      <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#850E88]">
+        <ChevronRight className="h-4 w-4" aria-hidden="true" />
+      </span>
+    </>
+  );
+
+  if (item.href) {
+    return (
+      <Link href={item.href} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }
 
 function CatalogThumbnail({
@@ -1575,7 +1677,12 @@ function CatalogThumbnail({
           alt={item.name}
           fill
           sizes="72px"
-          className={item.featured ? "object-contain p-2" : "object-cover"}
+          unoptimized
+          className={
+            item.thumbType === "ben"
+              ? "object-cover"
+              : "object-contain p-1.5 drop-shadow-[0_6px_10px_rgba(23,17,26,0.12)]"
+          }
         />
       ) : item.thumbType === "brand" ? (
         <span className="px-2 text-center text-[0.62rem] font-black uppercase leading-tight tracking-[0.08em] sm:text-[0.68rem]">

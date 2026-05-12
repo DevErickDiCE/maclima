@@ -168,6 +168,19 @@ export function SiteFooter() {
         </div>
 
       </div>
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 sm:px-6 lg:px-8">
+        <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center text-xs font-medium leading-5 text-[#D9D9FF]/70 sm:justify-start">
+          <span>Desarrollado por</span>
+          <a
+            href="https://www.potenciasoluciones.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap text-[#D9D9FF]/90 underline decoration-white/20 underline-offset-4 transition duration-200 ease-out hover:text-white hover:decoration-white/60"
+          >
+            PotencIA Soluciones
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
