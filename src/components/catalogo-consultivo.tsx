@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Check,
   ChevronRight,
   MessageCircle,
   X,
@@ -1069,25 +1070,24 @@ function CatalogHero() {
   return (
     <section
       id="catalogo-todos"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-12 sm:py-16"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-10 sm:py-16"
     >
       <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute right-[-12%] top-10 h-80 w-80 rounded-full bg-[#D9D9FF]/80 blur-3xl" />
       <div className="absolute bottom-[-18%] left-[-10%] h-72 w-72 rounded-full bg-[#F2B84B]/14 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:px-8">
         <motion.div {...fadeUp}>
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#850E88] sm:text-sm sm:tracking-[0.18em]">
             CATÁLOGO CONSULTIVO
           </p>
-          <h1 className="mt-3 max-w-3xl text-3xl font-black leading-[1.08] text-[#17111A] sm:text-4xl lg:text-5xl">
-            Catálogo consultivo de aerotermia, fotovoltaica y geotermia
+          <h1 className="mt-3 max-w-3xl text-[1.65rem] font-black leading-[1.1] text-[#17111A] sm:text-4xl lg:text-5xl">
+            Catálogo consultivo de soluciones energéticas
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[#5F5A66]">
-            Consulta las principales familias y soluciones energéticas con las
-            que trabaja Maclima. Analizamos cada caso para valorar
-            compatibilidad, dimensionamiento e instalación antes de recomendar
-            una solución.
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#5F5A66] sm:mt-5 sm:text-base sm:leading-7">
+            Consulta las principales soluciones con las que trabaja Maclima.
+            Tras analizar cada caso, recomendamos la opción más adecuada según
+            consumo, inmueble y viabilidad técnica.
           </p>
           <div className="mt-7 flex flex-col gap-3">
             <Link
@@ -1125,21 +1125,31 @@ function CatalogHero() {
 
         <motion.aside
           {...fadeUp}
-          className="rounded-[30px] border border-white/80 bg-white/82 p-5 shadow-[0_26px_80px_rgba(133,14,136,0.14)] backdrop-blur-xl sm:p-6"
+          className="rounded-[22px] border border-white/80 bg-white/82 p-4 shadow-[0_20px_60px_rgba(133,14,136,0.10)] backdrop-blur-xl sm:rounded-[30px] sm:p-6 sm:shadow-[0_26px_80px_rgba(133,14,136,0.14)]"
         >
-          <div className="rounded-[22px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-5">
-            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+          <div className="rounded-[18px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-4 sm:rounded-[22px] sm:p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-xs sm:tracking-[0.14em]">
               ENFOQUE MACLIMA
             </p>
-            <p className="mt-2.5 text-lg font-black leading-snug text-[#17111A]">
+            <p className="mt-2 text-base font-black leading-snug text-[#17111A] sm:mt-2.5 sm:text-lg">
               No vendemos productos de forma automática.
             </p>
-            <p className="mt-2.5 text-sm font-semibold leading-6 text-[#5F5A66]">
-              Te ayudamos a elegir la solución adecuada según tu vivienda,
-              negocio o proyecto profesional.
+            <p className="mt-1.5 text-xs font-semibold leading-5 text-[#5F5A66] sm:mt-2.5 sm:text-sm sm:leading-6">
+              Analizamos cada caso antes de recomendar una solución.
             </p>
           </div>
-          <div className="mt-3.5 grid gap-2 lg:grid-cols-1">
+          <div className="mt-3 flex flex-wrap gap-1.5 sm:hidden">
+            {["Distribución", "Instalación", "Asesoramiento técnico"].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-white px-2.5 py-1 text-[11px] font-bold text-[#17111A] shadow-sm"
+              >
+                <Check className="h-3 w-3 text-[#850E88]" aria-hidden="true" />
+                {item}
+              </span>
+            ))}
+          </div>
+          <div className="mt-3.5 hidden gap-2 sm:grid lg:grid-cols-1">
             {[
               { label: "Distribución", desc: "Marcas y equipos seleccionados" },
               { label: "Instalación", desc: "Equipos propios para cada proyecto" },
@@ -1168,13 +1178,13 @@ function CatalogHero() {
 function CatalogNav() {
   return (
     <nav className="sticky top-[76px] z-30 border-y border-[#D9D9FF]/70 bg-white/86 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex min-w-max gap-2">
+      <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
+        <div className="flex min-w-max gap-1.5 sm:gap-2">
           {catalogNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full border border-[#D9D9FF] bg-white px-4 py-2 text-sm font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88]"
+              className="whitespace-nowrap rounded-full border border-[#D9D9FF] bg-white px-3 py-1.5 text-xs font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88] sm:px-4 sm:py-2 sm:text-sm"
             >
               {item.label}
             </Link>
@@ -1193,15 +1203,15 @@ function FeaturedBen({
   return (
     <section
       id="ben-dual-air-catalogo"
-      className="bg-white py-16 sm:py-20"
+      className="bg-white py-10 sm:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.article
           {...fadeUp}
-          className="overflow-hidden rounded-[36px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_12%_12%,rgba(217,217,255,0.9),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] p-5 shadow-[0_30px_96px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_12%_12%,rgba(217,217,255,0.9),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] p-4 shadow-[0_30px_96px_rgba(133,14,136,0.13)] sm:rounded-[36px] sm:p-7 lg:p-9"
         >
-          <div className="grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
-            <div className="relative min-h-[340px] overflow-hidden rounded-[32px] border border-white/80 bg-[#17111A] shadow-[0_28px_84px_rgba(23,17,26,0.16)] sm:min-h-[500px]">
+          <div className="grid gap-5 sm:gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
+            <div className="relative min-h-[240px] overflow-hidden rounded-[20px] border border-white/80 bg-[#17111A] shadow-[0_22px_64px_rgba(23,17,26,0.14)] sm:min-h-[500px] sm:rounded-[32px] sm:shadow-[0_28px_84px_rgba(23,17,26,0.16)]">
               <Image
                 src="/imagen/BEN-Dual-AIR/electric-bruin.webp"
                 alt="BEN Dual-Air sistema de aerotermia interior compacto"
@@ -1210,26 +1220,25 @@ function FeaturedBen({
                 className="object-cover object-[56%_center]"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,17,26,0)_0%,rgba(23,17,26,0.38)_100%)]" />
-              <span className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/90 px-3 py-2 text-xs font-black uppercase text-[#850E88] shadow-sm backdrop-blur">
+              <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-white/90 px-2.5 py-1.5 text-[10px] font-black uppercase text-[#850E88] shadow-sm backdrop-blur sm:left-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
                 Producto estrella
               </span>
             </div>
 
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
+              <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:text-sm sm:tracking-[0.16em]">
                 PRODUCTO ESTRELLA EN AEROTERMIA
               </p>
-              <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+              <h2 className="mt-2 text-2xl font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
                 BEN Dual-Air: aerotermia compacta para climatización,
                 ventilación y ACS
               </h2>
-              <p className="mt-5 text-lg leading-8 text-[#5F5A66]">
+              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
                 Sistema compacto de aerotermia interior para integrar
-                calefacción, refrigeración, ventilación y agua caliente
-                sanitaria en una única solución. Una opción avanzada para
-                proyectos donde se busca confort, eficiencia y control.
+                calefacción, refrigeración, ventilación y ACS en una única
+                solución.
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-row">
                 <Link
                   href={product.fullPageHref ?? "/catalogo/ben-dual-air"}
                   className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-black text-white shadow-[0_16px_36px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
@@ -1284,34 +1293,34 @@ function CatalogSection({
       : "bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)]";
 
   return (
-    <section id={id} className={`py-16 sm:py-20 ${bg}`}>
+    <section id={id} className={`py-10 sm:py-20 ${bg}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
-          className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
+          className="flex flex-col gap-3 sm:gap-5 lg:flex-row lg:items-end lg:justify-between"
         >
           <div className="max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:text-sm sm:tracking-[0.16em]">
               {eyebrow}
             </p>
-            <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-4 text-lg leading-8 text-[#5F5A66]">{text}</p>
+            <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">{text}</p>
           </div>
-          <p className="rounded-full border border-[#D9D9FF]/80 bg-white px-4 py-2 text-xs font-black uppercase text-[#5F5A66] shadow-sm">
+          <p className="self-start rounded-full border border-[#D9D9FF]/80 bg-white px-3 py-1.5 text-[10px] font-black uppercase text-[#5F5A66] shadow-sm sm:self-auto sm:px-4 sm:py-2 sm:text-xs">
             {products.length} soluciones visibles
           </p>
         </motion.div>
 
-        <div className="mt-7 overflow-x-auto pb-1">
-          <div className="flex min-w-max gap-2">
+        <div className="mt-5 -mx-4 overflow-x-auto pb-1 sm:mx-0 sm:mt-7">
+          <div className="flex min-w-max gap-2 px-4 sm:px-0">
             {filters.map((filter) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => onFilterChange(filter)}
-                className={`rounded-full border px-4 py-2 text-sm font-black transition duration-200 ease-out ${
+                className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-black transition duration-200 ease-out sm:px-4 sm:py-2 sm:text-sm ${
                   activeFilter === filter
                     ? "border-[#850E88] bg-[#850E88] text-white shadow-[0_10px_24px_rgba(133,14,136,0.18)]"
                     : geo
@@ -1327,7 +1336,7 @@ function CatalogSection({
           </div>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -1339,18 +1348,21 @@ function CatalogSection({
 
         <motion.div
           {...fadeUp}
-          className="mt-10 rounded-[24px] border border-[#D9D9FF]/70 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_100%)] px-6 py-5 shadow-sm sm:px-8 sm:py-6"
+          className="mt-8 rounded-[20px] border border-[#D9D9FF]/70 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_100%)] px-4 py-4 shadow-sm sm:mt-10 sm:rounded-[24px] sm:px-8 sm:py-6"
         >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-6">
-            <span className="inline-flex shrink-0 self-start rounded-full border border-[#850E88]/15 bg-white px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] shadow-sm">
+          <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-6">
+            <span className="inline-flex shrink-0 self-start rounded-full border border-[#850E88]/15 bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.10em] text-[#850E88] shadow-sm sm:px-3 sm:py-1.5 sm:text-[11px] sm:tracking-[0.12em]">
               Catálogo orientativo
             </span>
             <div>
-              <p className="text-sm font-bold leading-6 text-[#17111A]">
-                Las soluciones mostradas sirven como referencia para conocer el alcance de los sistemas con los que trabaja Maclima.
+              <p className="text-xs font-bold leading-5 text-[#17111A] sm:text-sm sm:leading-6">
+                Las soluciones mostradas sirven como referencia del alcance de
+                los sistemas con los que trabaja Maclima.
               </p>
-              <p className="mt-1.5 text-sm leading-6 text-[#5F5A66]">
-                La elección final no se realiza de forma automática. Tras una consulta previa, analizamos las características de cada vivienda, negocio o instalación y recomendamos la opción que mejor se adapta a sus necesidades reales de eficiencia, confort y viabilidad técnica.
+              <p className="mt-1 text-xs leading-5 text-[#5F5A66] sm:mt-1.5 sm:text-sm sm:leading-6">
+                Tras una consulta previa, analizamos cada caso y recomendamos
+                la opción más adecuada según necesidades reales de eficiencia,
+                confort y viabilidad técnica.
               </p>
             </div>
           </div>
@@ -1376,7 +1388,7 @@ function ProductCard({
       className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
     >
       <div
-        className={`relative h-56 overflow-hidden ${
+        className={`relative h-44 overflow-hidden sm:h-56 ${
           product.cardImageBg === "white"
             ? "bg-white"
             : geo
@@ -1394,7 +1406,7 @@ function ProductCard({
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
             className={
               product.cardImageFit === "contain"
-                ? "object-contain p-1"
+                ? "object-contain p-2"
                 : "object-cover object-center"
             }
           />
@@ -1403,24 +1415,24 @@ function ProductCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-5">
-        <p className="text-xs font-black uppercase tracking-[0.12em] text-[#850E88]">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <p className="text-[11px] font-black uppercase tracking-[0.10em] text-[#850E88] sm:text-xs sm:tracking-[0.12em]">
           {product.brand}
         </p>
-        <h3 className="mt-2 text-xl font-black leading-tight text-[#17111A]">
+        <h3 className="mt-1.5 line-clamp-2 text-base font-black leading-tight text-[#17111A] sm:mt-2 sm:text-xl">
           {product.name}
         </h3>
-        <p className="mt-1 text-sm font-bold text-[#5F5A66]">
+        <p className="mt-1 text-xs font-bold text-[#5F5A66] sm:text-sm">
           {product.category}
         </p>
-        <p className="mt-4 text-sm leading-6 text-[#5F5A66]">
+        <p className="mt-3 line-clamp-2 text-xs leading-5 text-[#5F5A66] sm:mt-4 sm:text-sm sm:leading-6 sm:line-clamp-none">
           {product.shortDescription}
         </p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {product.tags.map((tag) => (
+        <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
+          {product.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className={`rounded-full border px-2.5 py-1 text-xs font-bold ${
+              className={`rounded-full border px-2 py-0.5 text-[10px] font-bold sm:px-2.5 sm:py-1 sm:text-xs ${
                 geo
                   ? "border-[#10B981]/20 bg-[#ECFDF5] text-[#065F46]"
                   : solar
@@ -1431,11 +1443,27 @@ function ProductCard({
               {tag}
             </span>
           ))}
+          <span className="hidden sm:contents">
+            {product.tags.slice(3).map((tag) => (
+              <span
+                key={tag}
+                className={`rounded-full border px-2.5 py-1 text-xs font-bold ${
+                  geo
+                    ? "border-[#10B981]/20 bg-[#ECFDF5] text-[#065F46]"
+                    : solar
+                      ? "border-[#D99A2B]/20 bg-[#FFF2D8] text-[#9A5B12]"
+                      : "border-[#D9D9FF]/80 bg-[#F8F7FF] text-[#4A4352]"
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </span>
         </div>
         <button
           type="button"
           onClick={onInfo}
-          className="group/button mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)]"
+          className="group/button mt-4 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-4 py-2.5 text-xs font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)] sm:mt-auto sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm"
         >
           Ver información
           <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover/button:translate-x-1" />
@@ -1601,20 +1629,20 @@ function ProductModal({
         initial={{ opacity: 0, y: 24, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto overflow-x-hidden rounded-t-[30px] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:max-h-[86vh] sm:rounded-[32px]"
+        className="relative max-h-[96dvh] w-full max-w-5xl overflow-y-auto overflow-x-hidden rounded-t-[24px] bg-white shadow-[0_30px_100px_rgba(0,0,0,0.28)] sm:max-h-[86vh] sm:rounded-[32px]"
       >
         <button
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-2xl border border-[#D9D9FF] bg-white/90 text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:bg-[#F8F7FF]"
+          className="fixed right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-[#D9D9FF] bg-white text-[#850E88] shadow-md transition duration-200 ease-out hover:bg-[#F8F7FF] sm:absolute sm:h-11 sm:w-11 sm:rounded-2xl sm:bg-white/90 sm:shadow-sm sm:backdrop-blur"
           aria-label="Cerrar información"
         >
           <X className="h-5 w-5" />
         </button>
 
         <div className="grid lg:grid-cols-[0.42fr_0.58fr]">
-          <div className={`relative flex min-h-[220px] items-center justify-center p-4 sm:min-h-[300px] sm:p-6 lg:min-h-full lg:p-8 ${product.cardImageBg === "white" ? "bg-white" : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"}`}>
+          <div className={`relative flex min-h-[180px] items-center justify-center p-3 sm:min-h-[300px] sm:p-6 lg:min-h-full lg:p-8 ${product.cardImageBg === "white" ? "bg-white" : "bg-[linear-gradient(135deg,#FFFFFF_0%,#EAEAFF_100%)]"}`}>
             {product.image ? (
               <>
                 <div className={`absolute inset-0 animate-pulse ${product.cardImageBg === "white" ? "bg-gray-100/60" : "bg-[#EAEAFF]/60"}`} />
@@ -1636,13 +1664,13 @@ function ProductModal({
             )}
           </div>
 
-          <div className="p-4 sm:p-6 lg:p-7">
-            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+          <div className="p-4 pb-6 sm:p-6 lg:p-7">
+            <p className="pr-12 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:pr-0 sm:text-xs sm:tracking-[0.14em]">
               {product.category}
             </p>
             <h2
               id="catalog-modal-title"
-              className="mt-1.5 text-xl font-black leading-tight text-[#17111A] sm:text-2xl"
+              className="mt-1.5 pr-12 text-lg font-black leading-tight text-[#17111A] sm:pr-0 sm:text-2xl"
             >
               {product.name}
             </h2>
@@ -1697,24 +1725,23 @@ function CatalogFinalCta() {
   return (
     <section
       id="cta-catalogo"
-      className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      className="bg-white px-4 py-12 sm:px-6 sm:py-20 lg:px-8"
     >
       <motion.div
         {...fadeUp}
-        className="mx-auto max-w-6xl overflow-hidden rounded-[34px] border border-white/20 bg-[radial-gradient(circle_at_82%_20%,rgba(217,217,255,0.24),transparent_28%),linear-gradient(135deg,#17111A_0%,#2A1830_70%,#850E88_100%)] p-6 text-white shadow-[0_30px_100px_rgba(23,17,26,0.22)] sm:p-8 lg:p-10"
+        className="mx-auto max-w-6xl overflow-hidden rounded-[26px] border border-white/20 bg-[radial-gradient(circle_at_82%_20%,rgba(217,217,255,0.24),transparent_28%),linear-gradient(135deg,#17111A_0%,#2A1830_70%,#850E88_100%)] p-5 text-white shadow-[0_30px_100px_rgba(23,17,26,0.22)] sm:rounded-[34px] sm:p-8 lg:p-10"
       >
-        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#D9D9FF]">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#D9D9FF] sm:text-sm sm:tracking-[0.16em]">
               Asesoramiento técnico
             </p>
-            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-4xl">
+            <h2 className="mt-2 max-w-3xl text-2xl font-black leading-tight sm:mt-3 sm:text-4xl">
               ¿No sabes qué solución encaja con tu proyecto?
             </h2>
-            <p className="mt-5 max-w-3xl text-base font-semibold leading-7 text-[#D9D9FF]">
-              Analizamos tu consumo, tipo de inmueble, instalación existente y
-              objetivos de ahorro para recomendarte una solución adecuada antes
-              de preparar presupuesto o propuesta técnica.
+            <p className="mt-3 max-w-3xl text-sm font-semibold leading-6 text-[#D9D9FF] sm:mt-5 sm:text-base sm:leading-7">
+              Analizamos tu consumo, inmueble e instalación existente para
+              recomendarte una solución antes de preparar presupuesto.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
