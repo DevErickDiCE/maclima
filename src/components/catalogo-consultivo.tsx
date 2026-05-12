@@ -81,6 +81,7 @@ const photovoltaicFilters = [
   "Baterías",
   "Kits",
   "Estructuras",
+  "Optimizadores",
 ] as const;
 
 const geothermalFilters = [
@@ -552,6 +553,52 @@ const catalogProducts: CatalogProduct[] = [
       "Cubiertas donde se quiere reducir el número de módulos",
       "Clientes que priorizan potencia y eficiencia",
       "Instaladores que trabajan en proyectos de alta rentabilidad",
+    ],
+  },
+  {
+    id: "tigo-ts4-x-o-800w",
+    vertical: "fotovoltaica",
+    brand: "TIGO",
+    name: "Tigo TS4-X-O 800W",
+    category: "Fotovoltaica · Optimizador",
+    image: "/imagen/Tigo_TS4-X-O-optimized.webp",
+    thumbnailType: "inverter",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Optimizador MLPE para módulos de alta potencia, con monitorización, seguridad y apagado rápido a nivel de módulo.",
+    description:
+      "Optimizador MLPE para instalaciones fotovoltaicas modernas, diseñado para trabajar con módulos de alta potencia y alta corriente. Ayuda a mejorar el rendimiento del sistema, reducir pérdidas por sombras o desajustes y añadir monitorización y apagado rápido a nivel de módulo.",
+    tags: ["Optimizadores", "800W", "Apagado rápido", "Monitorización"],
+    applications: [
+      "Autoconsumo residencial",
+      "Instalaciones comerciales",
+      "Cubiertas con sombras parciales",
+      "Sistemas con módulos de alta potencia",
+      "Proyectos que requieren seguridad adicional",
+    ],
+    features: [
+      "Hasta 800W de potencia",
+      "Corriente máxima 20A",
+      "Optimización individual por módulo",
+      "Monitorización del rendimiento",
+      "Apagado rápido certificado",
+      "Protección exterior IP68",
+      "Rango de temperatura -40 ºC a +85 ºC",
+    ],
+    compatibility: [
+      "Módulos fotovoltaicos actuales",
+      "Inversores de múltiples marcas",
+      "Tigo Access Point",
+      "Cloud Connect Advanced",
+      "Sistemas con apagado rápido",
+    ],
+    fit: [
+      "Proyectos donde se quiere maximizar cada módulo",
+      "Instalaciones con sombras, suciedad o desajustes",
+      "Clientes que quieren monitorización avanzada",
+      "Instalaciones que requieren apagado rápido y mayor seguridad",
     ],
   },
   {
