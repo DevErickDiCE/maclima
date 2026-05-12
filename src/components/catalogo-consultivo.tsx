@@ -486,32 +486,6 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "panel-solar-fotovoltaico",
-    vertical: "fotovoltaica",
-    brand: "Equipamiento fotovoltaico",
-    name: "Paneles solares",
-    category: "Paneles solares",
-    image: "/fotovoltaica.png",
-    thumbnailType: "solar-panel",
-    shortDescription:
-      "Captación de energía solar para autoconsumo en vivienda, negocio o instalación profesional.",
-    description:
-      "Captación de energía solar para autoconsumo en vivienda, negocio o instalación profesional. Dimensionados según consumo, cubierta y objetivos del proyecto.",
-    tags: ["Paneles", "Autoconsumo", "Energía solar"],
-    applications: ["Viviendas", "Negocios", "Cubiertas", "Autoconsumo"],
-    features: [
-      "Captación solar",
-      "Aplicación en autoconsumo",
-      "Dimensionamiento a medida",
-    ],
-    compatibility: ["Inversores", "Baterías", "Estructuras para cubierta"],
-    fit: [
-      "Usuarios que quieren reducir consumo de red",
-      "Negocios con consumo diurno",
-      "Proyectos escalables con posible batería",
-    ],
-  },
-  {
     id: "hanersun-hn21n-66ht-720w",
     vertical: "fotovoltaica",
     brand: "HANERSUN",
@@ -604,31 +578,6 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "inversor-fotovoltaico",
-    vertical: "fotovoltaica",
-    brand: "Conversión energética",
-    name: "Inversores fotovoltaicos",
-    category: "Inversores",
-    thumbnailType: "inverter",
-    shortDescription:
-      "Conversión de energía solar en electricidad útil para la instalación.",
-    description:
-      "Conversión de energía solar en electricidad útil para la instalación. Selección según potencia, instalación y estrategia de autoconsumo.",
-    tags: ["Inversor", "Conversión", "Autoconsumo"],
-    applications: ["Viviendas", "Negocios", "Instalaciones solares"],
-    features: [
-      "Conversión energética",
-      "Gestión de producción",
-      "Integración en autoconsumo",
-    ],
-    compatibility: ["Paneles solares", "Baterías", "Monitorización"],
-    fit: [
-      "Instalaciones solares nuevas",
-      "Ampliaciones de autoconsumo",
-      "Proyectos que requieren control energético",
-    ],
-  },
-  {
     id: "deye-sun-12k-sg02lp1",
     vertical: "fotovoltaica",
     brand: "DEYE",
@@ -672,30 +621,6 @@ const catalogProducts: CatalogProduct[] = [
       "Viviendas que buscan reducir dependencia de la red",
       "Instalaciones con necesidad de backup eléctrico",
       "Proyectos que requieren potencia elevada y escalabilidad",
-    ],
-  },
-  {
-    id: "bateria-almacenamiento",
-    vertical: "fotovoltaica",
-    brand: "Acumulación energética",
-    name: "Baterías de almacenamiento",
-    category: "Baterías",
-    thumbnailType: "battery",
-    shortDescription: "Aprovechamiento de excedentes para utilizar la energía en otros momentos del día.",
-    description:
-      "Aprovechamiento de excedentes para utilizar la energía en otros momentos del día. Dimensionadas según hábitos de consumo y objetivos del proyecto.",
-    tags: ["Batería", "Acumulación", "Autoconsumo"],
-    applications: ["Viviendas", "Negocios", "Autoconsumo con excedentes"],
-    features: [
-      "Almacenamiento energético",
-      "Uso diferido de excedentes",
-      "Apoyo a instalaciones solares",
-    ],
-    compatibility: ["Paneles solares", "Inversores compatibles", "Gestión energética"],
-    fit: [
-      "Instalaciones con excedentes",
-      "Usuarios que consumen fuera de horas solares",
-      "Proyectos que buscan más independencia de red",
     ],
   },
   {
@@ -787,54 +712,6 @@ const catalogProducts: CatalogProduct[] = [
       "Viviendas con instalación fotovoltaica existente o prevista",
       "Proyectos donde se quiere reducir consumo de red",
       "Instalaciones que requieren compatibilidad con inversores SolaX LV",
-    ],
-  },
-  {
-    id: "kit-autoconsumo",
-    vertical: "fotovoltaica",
-    brand: "Solución completa",
-    name: "Kits de autoconsumo",
-    category: "Kits",
-    thumbnailType: "kit",
-    shortDescription: "Conjunto de componentes adaptados al consumo, cubierta y objetivos de ahorro.",
-    description:
-      "Conjunto de componentes adaptados al consumo, cubierta y objetivos de ahorro. Configurado según potencia objetivo y posibilidades de ampliación.",
-    tags: ["Kit solar", "Autoconsumo", "Vivienda"],
-    applications: ["Viviendas", "Negocios", "Proyectos compactos"],
-    features: [
-      "Conjunto de componentes",
-      "Configuración a medida",
-      "Preparado para asesoramiento previo",
-    ],
-    compatibility: ["Paneles", "Inversores", "Estructuras"],
-    fit: [
-      "Usuarios que quieren una solución completa",
-      "Proyectos con necesidades claras de autoconsumo",
-      "Instalaciones que deben revisarse antes de propuesta",
-    ],
-  },
-  {
-    id: "estructura-cubierta",
-    vertical: "fotovoltaica",
-    brand: "Montaje e instalación",
-    name: "Estructuras para cubierta",
-    category: "Estructuras",
-    thumbnailType: "mount",
-    shortDescription: "Sistemas de soporte para diferentes tipos de superficie y orientación.",
-    description:
-      "Sistemas de soporte para diferentes tipos de superficie y orientación. Valorando inclinación, fijación y seguridad según cada proyecto.",
-    tags: ["Estructuras", "Cubierta", "Instalación"],
-    applications: ["Cubiertas inclinadas", "Cubiertas planas", "Negocios"],
-    features: [
-      "Montaje técnico",
-      "Adaptación a cubierta",
-      "Soporte para paneles solares",
-    ],
-    compatibility: ["Paneles solares", "Kits de autoconsumo", "Instalación profesional"],
-    fit: [
-      "Proyectos con cubierta disponible",
-      "Instalaciones que requieren revisión de soporte",
-      "Profesionales que necesitan solución de montaje",
     ],
   },
   {
@@ -1061,181 +938,6 @@ const catalogProducts: CatalogProduct[] = [
       "Instalaciones que quieren aprovechar excedentes solares",
       "Proyectos que buscan respaldo energético y optimización horaria",
       "Instalaciones que requieren estudio técnico previo de consumo",
-    ],
-  },
-  {
-    id: "solucion-hibrida",
-    vertical: "fotovoltaica",
-    brand: "Integración energética",
-    name: "Solución híbrida aerotermia + fotovoltaica",
-    category: "Solución combinada",
-    image: "/fotovoltaica.png",
-    thumbnailType: "hybrid",
-    shortDescription: "Combinación de climatización eficiente y autoconsumo eléctrico.",
-    description:
-      "Combinación de climatización eficiente y autoconsumo eléctrico. Integración consultiva para apoyar consumos eléctricos ligados a climatización y ACS según cada instalación.",
-    tags: ["Aerotermia", "Fotovoltaica", "Solución híbrida"],
-    applications: ["Viviendas", "Negocios", "Proyectos de eficiencia"],
-    features: [
-      "Integración entre verticales",
-      "Estudio de consumo e inmueble",
-      "Propuesta técnica personalizada",
-    ],
-    compatibility: ["Aerotermia", "Paneles solares", "Baterías opcionales"],
-    fit: [
-      "Usuarios que valoran una estrategia energética completa",
-      "Negocios con consumo eléctrico relevante",
-      "Proyectos que buscan confort y autoconsumo",
-    ],
-  },
-  {
-    id: "instalacion-medida",
-    vertical: "fotovoltaica",
-    brand: "Proyecto técnico",
-    name: "Instalación a medida",
-    category: "Proyecto",
-    thumbnailType: "project",
-    shortDescription:
-      "Dimensionamiento según consumo, inmueble e instalación existente.",
-    description:
-      "Dimensionamiento según consumo, inmueble e instalación existente. Servicio consultivo para estudiar espacio disponible y objetivos antes de recomendar una solución energética.",
-    tags: ["Proyecto", "Asesoramiento", "Instalación"],
-    applications: ["Viviendas", "Negocios", "Profesionales", "Comunidades"],
-    features: [
-      "Estudio previo",
-      "Recomendación técnica",
-      "Propuesta personalizada",
-    ],
-    compatibility: ["Aerotermia", "Fotovoltaica", "Soluciones combinadas"],
-    fit: [
-      "Usuarios que no saben qué solución elegir",
-      "Profesionales que necesitan soporte",
-      "Proyectos donde conviene comparar alternativas",
-    ],
-  },
-  {
-    id: "bomba-calor-geotermica",
-    vertical: "geotermia",
-    brand: "Geotermia",
-    name: "Bomba de calor geotérmica",
-    category: "Climatización geotérmica",
-    thumbnailType: "geo",
-    shortDescription:
-      "Climatización eficiente aprovechando la temperatura estable del subsuelo.",
-    description:
-      "Sistema de climatización que utiliza la temperatura constante del terreno como fuente energética para calefacción, refrigeración y apoyo al ACS. Requiere estudio previo de viabilidad geotérmica según terreno e inmueble.",
-    tags: ["Geotermia", "Climatización", "Alta eficiencia"],
-    applications: ["Viviendas", "Negocios", "Obra nueva", "Proyectos exigentes"],
-    features: [
-      "Calefacción y refrigeración",
-      "Temperatura estable del terreno",
-      "Según viabilidad técnica",
-    ],
-    compatibility: ["Suelo radiante", "Fancoils", "ACS", "Sondas geotérmicas"],
-    fit: [
-      "Proyectos con estudio técnico previo confirmado",
-      "Inmuebles con terreno disponible para captación",
-      "Instalaciones que buscan alta eficiencia y estabilidad",
-    ],
-  },
-  {
-    id: "captacion-geotermica",
-    vertical: "geotermia",
-    brand: "Geotermia",
-    name: "Sistemas de captación geotérmica",
-    category: "Captación",
-    thumbnailType: "geo",
-    shortDescription:
-      "Sondas y circuitos de captación adaptados al terreno e inmueble.",
-    description:
-      "Sistemas de captación del calor del subsuelo mediante sondas verticales u horizontales. La elección del sistema depende del terreno disponible, la geología local y las necesidades energéticas del proyecto.",
-    tags: ["Geotermia", "Captación", "Sondas"],
-    applications: ["Viviendas unifamiliares", "Negocios", "Proyectos con terreno"],
-    features: [
-      "Sondas verticales u horizontales",
-      "Según terreno e inmueble",
-      "Adaptado al proyecto",
-    ],
-    compatibility: ["Bombas de calor geotérmicas", "Climatización", "ACS"],
-    fit: [
-      "Proyectos con espacio de captación disponible",
-      "Instalaciones que requieren estudio geológico previo",
-      "Usuarios que buscan independencia energética a largo plazo",
-    ],
-  },
-  {
-    id: "geotermia-acs",
-    vertical: "geotermia",
-    brand: "Geotermia",
-    name: "Geotermia para ACS",
-    category: "ACS geotérmica",
-    thumbnailType: "geo",
-    shortDescription:
-      "Producción de agua caliente sanitaria apoyada en energía geotérmica.",
-    description:
-      "Aprovechamiento de la energía geotérmica para apoyar o gestionar la producción de agua caliente sanitaria. Solución interesante en proyectos donde se busca reducir la dependencia de sistemas convencionales según viabilidad del terreno.",
-    tags: ["Geotermia", "ACS", "Energía renovable"],
-    applications: ["Viviendas", "Negocios", "Comunidades"],
-    features: [
-      "Producción de ACS",
-      "Energía del subsuelo",
-      "Según viabilidad técnica",
-    ],
-    compatibility: ["Sistemas geotérmicos", "Acumulación", "Climatización"],
-    fit: [
-      "Proyectos con demanda de ACS y geotermia viable",
-      "Instalaciones que buscan confort y eficiencia",
-      "Estudios donde se valora la independencia energética",
-    ],
-  },
-  {
-    id: "estudio-viabilidad-geotermica",
-    vertical: "geotermia",
-    brand: "Consultoría técnica",
-    name: "Estudio de viabilidad geotérmica",
-    category: "Consultoría",
-    thumbnailType: "project",
-    shortDescription:
-      "Análisis técnico previo para valorar si la geotermia encaja con el proyecto.",
-    description:
-      "Evaluación técnica del terreno, el inmueble y las necesidades energéticas para determinar la viabilidad de un sistema geotérmico. Es el primer paso antes de dimensionar cualquier instalación geotérmica.",
-    tags: ["Geotermia", "Estudio", "Viabilidad"],
-    applications: ["Viviendas", "Negocios", "Proyectos exigentes", "Obra nueva"],
-    features: [
-      "Análisis de viabilidad",
-      "Evaluación del terreno",
-      "Orientación técnica previa",
-    ],
-    compatibility: ["Geotermia", "Aerotermia", "Soluciones combinadas"],
-    fit: [
-      "Proyectos que quieren evaluar la geotermia como opción",
-      "Inmuebles con terreno disponible y demanda energética relevante",
-      "Usuarios que buscan orientación técnica antes de decidir",
-    ],
-  },
-  {
-    id: "solucion-combinada-geo-foto",
-    vertical: "geotermia",
-    brand: "Integración energética",
-    name: "Geotermia + fotovoltaica",
-    category: "Solución combinada",
-    thumbnailType: "project",
-    shortDescription:
-      "Integración de geotermia y energía solar para mayor eficiencia y menor dependencia de red.",
-    description:
-      "Combinación de un sistema geotérmico con producción fotovoltaica para reducir el consumo eléctrico de la bomba de calor. Una solución avanzada para proyectos que buscan máxima eficiencia energética. Requiere estudio previo de ambas verticales.",
-    tags: ["Geotermia", "Fotovoltaica", "Solución combinada"],
-    applications: ["Viviendas", "Negocios", "Proyectos de alta eficiencia"],
-    features: [
-      "Integración geotermia + solar",
-      "Estudio de consumo e inmueble",
-      "Propuesta técnica personalizada",
-    ],
-    compatibility: ["Geotermia", "Paneles solares", "Baterías opcionales"],
-    fit: [
-      "Proyectos con alta demanda y terreno disponible",
-      "Usuarios que buscan independencia energética máxima",
-      "Instalaciones donde se valora la estrategia energética completa",
     ],
   },
 ];
