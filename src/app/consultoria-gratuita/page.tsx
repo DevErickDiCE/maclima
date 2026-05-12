@@ -272,35 +272,65 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── Proceso ─────────────────────────────────────────── */}
-        <section className="bg-white py-16 sm:py-20">
+        <section className="bg-white py-14 sm:py-18">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div {...fadeUp} className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
-                PROCESO
-              </p>
-              <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
-                Cómo funciona el proceso
-              </h2>
-            </motion.div>
+            <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {processSteps.map((step) => (
-                <motion.div
-                  key={step.n}
-                  {...fadeUp}
-                  className="group rounded-[26px] border border-[#D9D9FF]/70 bg-[#F8F7FF] p-6 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_44px_rgba(133,14,136,0.08)]"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#850E88] text-sm font-black text-white shadow-[0_8px_18px_rgba(133,14,136,0.22)]">
-                    {step.n}
-                  </span>
-                  <h3 className="mt-4 text-base font-black leading-snug text-[#17111A]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-[#5F5A66]">
-                    {step.text}
-                  </p>
-                </motion.div>
-              ))}
+              <motion.div {...fadeUp}>
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
+                  PROCESO
+                </p>
+                <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+                  Cómo funciona la consultoría
+                </h2>
+                <p className="mt-3 text-sm font-semibold italic leading-6 text-[#850E88]/70">
+                  Un proceso simple, pero con criterio técnico: primero
+                  entendemos el caso, después valoramos alternativas y
+                  finalmente orientamos la decisión.
+                </p>
+                <p className="mt-4 text-base leading-7 text-[#5F5A66]">
+                  Antes de recomendar una solución, analizamos tu caso paso a
+                  paso para valorar consumo, inmueble, viabilidad técnica,
+                  trámites y la opción energética más adecuada.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Sin compromiso", "Orientación técnica", "Propuesta personalizada"].map((h) => (
+                    <span
+                      key={h}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-[#F8F7FF] px-3 py-1.5 text-xs font-bold text-[#17111A]"
+                    >
+                      <Check className="h-3 w-3 text-[#850E88]" aria-hidden="true" />
+                      {h}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div {...fadeUp}>
+                {processSteps.map((step, i) => (
+                  <div key={step.n} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#850E88] text-sm font-black text-white shadow-[0_8px_18px_rgba(133,14,136,0.22)]">
+                        {step.n}
+                      </span>
+                      {i < processSteps.length - 1 && (
+                        <div className="mt-1 w-px flex-1 bg-gradient-to-b from-[#850E88]/25 to-[#D9D9FF]/40" />
+                      )}
+                    </div>
+                    <div className={`flex-1 ${i < processSteps.length - 1 ? "pb-4" : ""}`}>
+                      <div className="rounded-[20px] border border-[#D9D9FF]/70 bg-[#F8F7FF] px-5 py-4">
+                        <p className="text-sm font-black leading-snug text-[#17111A]">
+                          {step.title}
+                        </p>
+                        <p className="mt-1.5 text-sm leading-6 text-[#5F5A66]">
+                          {step.text}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+
             </div>
           </div>
         </section>
