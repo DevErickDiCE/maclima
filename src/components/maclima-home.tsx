@@ -341,6 +341,10 @@ function Hero() {
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
+          <div className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:hidden">
+            <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
+            <span className="text-[11px] font-bold tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
+          </div>
           <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
             {heroSignals.map((signal) => (
               <span
@@ -351,7 +355,7 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+          <div className="mt-auto flex flex-col gap-3 pt-8 sm:mt-8 sm:flex-row sm:pt-0">
             <Link
               href="/contacto"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
@@ -377,10 +381,6 @@ function Hero() {
                 {item}
               </span>
             ))}
-          </div>
-          <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:hidden">
-            <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
-            <span className="text-[11px] font-medium tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
           </div>
         </motion.div>
       </div>
