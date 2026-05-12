@@ -1336,6 +1336,25 @@ function CatalogSection({
             />
           ))}
         </div>
+
+        <motion.div
+          {...fadeUp}
+          className="mt-10 rounded-[24px] border border-[#D9D9FF]/70 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_100%)] px-6 py-5 shadow-sm sm:px-8 sm:py-6"
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-6">
+            <span className="inline-flex shrink-0 self-start rounded-full border border-[#850E88]/15 bg-white px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] shadow-sm">
+              Catálogo orientativo
+            </span>
+            <div>
+              <p className="text-sm font-bold leading-6 text-[#17111A]">
+                Las soluciones mostradas sirven como referencia para conocer el alcance de los sistemas con los que trabaja Maclima.
+              </p>
+              <p className="mt-1.5 text-sm leading-6 text-[#5F5A66]">
+                La elección final no se realiza de forma automática. Tras una consulta previa, analizamos las características de cada vivienda, negocio o instalación y recomendamos la opción que mejor se adapta a sus necesidades reales de eficiencia, confort y viabilidad técnica.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
