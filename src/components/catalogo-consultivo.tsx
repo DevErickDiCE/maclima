@@ -82,6 +82,7 @@ const photovoltaicFilters = [
   "Kits",
   "Estructuras",
   "Optimizadores",
+  "Protecciones",
 ] as const;
 
 const geothermalFilters = [
@@ -878,6 +879,52 @@ const catalogProducts: CatalogProduct[] = [
       "Proyectos que buscan aprovechar la cubierta existente",
       "Instalaciones que requieren una estructura discreta e integrada",
       "Casos donde debe estudiarse previamente la cubierta y el anclaje",
+    ],
+  },
+  {
+    id: "toscano-cuadros-eco-dc",
+    vertical: "fotovoltaica",
+    brand: "Toscano",
+    name: "Cuadros ECO-DC",
+    category: "Fotovoltaica · Protección DC",
+    image: "/imagen/toscano_dc2-2_m16_v600-a-optimized.webp",
+    thumbnailType: "inverter",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Cuadros de protección para corriente continua en instalaciones fotovoltaicas, con seccionamiento y protección del generador solar.",
+    description:
+      "Los cuadros ECO-DC de Toscano están diseñados para proteger y seccionar la parte de corriente continua de una instalación fotovoltaica. Incorporan protección del generador solar frente a sobretensiones, sobreintensidades y maniobras de corte en el lado DC.",
+    tags: ["Protecciones", "Cuadro DC", "Fotovoltaica", "Seguridad", "IP65"],
+    applications: [
+      "Instalaciones fotovoltaicas",
+      "Autoconsumo residencial",
+      "Autoconsumo industrial",
+      "Campos solares con varios strings",
+      "Protección del generador fotovoltaico",
+    ],
+    features: [
+      "Protección en corriente continua",
+      "Seccionamiento del lado DC",
+      "Protección contra sobretensiones",
+      "Protección frente a sobreintensidades",
+      "Preparados para strings fotovoltaicos",
+      "Hasta 1000 VDC según configuración",
+      "Grado de protección IP65",
+    ],
+    compatibility: [
+      "Módulos solares fotovoltaicos",
+      "Strings fotovoltaicos",
+      "Inversores solares",
+      "Instalaciones de corriente continua",
+      "Sistemas de autoconsumo",
+    ],
+    fit: [
+      "Instalaciones que requieren protección y seccionamiento DC",
+      "Proyectos con varios strings fotovoltaicos",
+      "Sistemas donde se busca mayor seguridad en el lado DC",
+      "Proyectos que deben dimensionarse según corriente, tensión y configuración",
     ],
   },
   {
