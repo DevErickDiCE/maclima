@@ -197,75 +197,73 @@ export default function ConsultoriaGratuitaPage() {
       <main>
 
         {/* ── Hero ────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_52%,#EAEAFF_100%)] py-14 sm:py-18">
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_52%,#EAEAFF_100%)] py-14 sm:py-16">
           <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
           <div className="absolute right-[-10%] top-10 h-72 w-72 rounded-full bg-[#D9D9FF]/80 blur-3xl" />
-          <div className="absolute bottom-[-16%] left-[-8%] h-64 w-64 rounded-full bg-[#F2B84B]/12 blur-3xl" />
+          <div className="absolute bottom-[-16%] left-[-8%] h-64 w-64 rounded-full bg-[#F2B84B]/10 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.78fr] lg:items-center lg:px-8">
+          <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-8">
             <motion.div {...fadeUp}>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#850E88]/15 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#850E88] shadow-sm backdrop-blur">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                 Consultoría gratuita
               </span>
-              <h1 className="mt-4 max-w-3xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl lg:text-5xl">
-                Consultoría energética gratuita para elegir la solución adecuada
+              <h1 className="mt-4 max-w-2xl text-3xl font-black leading-tight text-[#17111A] sm:text-4xl lg:text-[2.75rem]">
+                Elige tu solución energética con criterio técnico
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F5A66]">
                 Analizamos tu vivienda, negocio o instalación para valorar qué
                 sistema encaja mejor: aerotermia, fotovoltaica, geotermia, ACS,
-                almacenamiento o una combinación de soluciones.
+                almacenamiento o una solución combinada.
               </p>
-              <p className="mt-4 max-w-2xl text-base font-semibold leading-7 text-[#17111A]">
-                Antes de recomendar un equipo o preparar una propuesta,
-                estudiamos el consumo, el inmueble, las necesidades reales, la
-                viabilidad técnica y los trámites necesarios.
+              <p className="mt-3 text-sm font-semibold leading-6 text-[#5F5A66]">
+                Primero estudiamos tu caso. Después te orientamos sobre la opción
+                más adecuada.
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#formulario"
-                  className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                  className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
                 >
                   Solicitar consultoría
-                  <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+                  <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
                 </a>
                 <a
                   href={CONTACT_INFO.whatsappHref}
-                  className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl border border-[#850E88]/18 bg-white/85 px-6 py-4 text-base font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
+                  className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-xl border border-[#850E88]/18 bg-white/85 px-6 py-3.5 text-[0.95rem] font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white"
                 >
                   Contactar por WhatsApp
-                  <MessageCircle className="h-5 w-5 transition duration-200 ease-out group-hover:scale-105" aria-hidden="true" />
+                  <MessageCircle className="h-4 w-4 transition duration-200 ease-out group-hover:scale-105" aria-hidden="true" />
                 </a>
               </div>
+              <p className="mt-4 text-xs font-semibold text-[#9C97A5]">
+                Sin compromiso · Orientación técnica · Propuesta personalizada
+              </p>
             </motion.div>
 
             <motion.aside
               {...fadeUp}
-              className="rounded-[30px] border border-white/80 bg-white/85 p-6 shadow-[0_26px_80px_rgba(133,14,136,0.14)] backdrop-blur-xl"
+              className="hidden rounded-[28px] border border-[#D9D9FF]/70 bg-white/90 p-6 shadow-[0_22px_64px_rgba(133,14,136,0.10)] backdrop-blur-xl lg:block"
             >
-              <div className="rounded-[22px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-5">
-                <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
-                  Qué revisamos en la primera consulta
-                </p>
-              </div>
+              <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+                Proceso consultivo
+              </p>
               <div className="mt-4 grid gap-2.5">
                 {[
-                  "Tipo de inmueble o instalación",
-                  "Consumo y necesidades energéticas",
-                  "Espacio disponible y condiciones técnicas",
-                  "Posibles soluciones y siguiente paso",
+                  { n: "1", label: "Analizamos tu caso" },
+                  { n: "2", label: "Comparamos soluciones" },
+                  { n: "3", label: "Recomendamos el siguiente paso" },
                 ].map((item) => (
                   <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/70 bg-white px-4 py-3 text-sm font-semibold text-[#17111A]"
+                    key={item.n}
+                    className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/60 bg-[#F8F7FF] px-4 py-3"
                   >
-                    <Check className="h-4 w-4 shrink-0 text-[#850E88]" aria-hidden="true" />
-                    {item}
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#850E88] text-xs font-black text-white">
+                      {item.n}
+                    </span>
+                    <span className="text-sm font-bold text-[#17111A]">{item.label}</span>
                   </div>
                 ))}
-              </div>
-              <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-3 text-sm font-semibold leading-6 text-[#5F5A66]">
-                La primera consulta es gratuita y no genera ningún compromiso.
               </div>
             </motion.aside>
           </div>
