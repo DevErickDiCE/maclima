@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
 Sitemap: https://maclimasolucionesenergeticas.com/sitemap.xml

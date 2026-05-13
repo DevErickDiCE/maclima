@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "/catalogo",
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/whatsapp.png?v=2", width: 800, height: 800, alt: "Catálogo Maclima — Aerotermia, fotovoltaica y geotermia", type: "image/png" }],
+    images: [{ url: "/whatsapp.png", width: 800, height: 800, alt: "Catálogo Maclima — Aerotermia, fotovoltaica y geotermia", type: "image/png" }],
   },
 };
 
