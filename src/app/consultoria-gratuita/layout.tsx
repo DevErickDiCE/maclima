@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "/consultoria-gratuita",
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/whatsapp.png", width: 1254, height: 1254, alt: "Consultoría gratuita — Maclima" }],
+    images: [{ url: "/whatsapp.png?v=2", width: 800, height: 800, alt: "Consultoría gratuita — Maclima", type: "image/png" }],
   },
 };
 

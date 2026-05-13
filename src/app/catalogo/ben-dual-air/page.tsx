@@ -35,10 +35,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/whatsapp.png",
-        width: 1254,
-        height: 1254,
+        url: "/whatsapp.png?v=2",
+        width: 800,
+        height: 800,
         alt: "BEN Dual-Air — Sistema de aerotermia interior compacto",
+        type: "image/png",
       },
     ],
   },
