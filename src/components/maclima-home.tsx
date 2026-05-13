@@ -358,7 +358,7 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[95%_center] md:object-[56%_center] lg:object-[52%_center] xl:object-[48%_center]"
+        className="absolute inset-0 z-0 object-cover object-[95%_center] md:object-[56%_center] lg:object-[54%_center] xl:object-[52%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
@@ -372,23 +372,23 @@ function Hero() {
         <span className="text-xs font-semibold tracking-[0.14em] text-[#5f0a63]">MACLIMA CALOR Y FRÍO S.L.</span>
       </div>
 
-      <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[740px] lg:px-8 lg:py-16 xl:min-h-[780px]">
+      <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-3 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-3 py-1.5 text-xs font-bold text-[#850E88] shadow-sm backdrop-blur md:mb-4 md:px-4 md:py-2 md:text-sm">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-3 py-1.5 text-xs font-bold text-[#850E88] shadow-sm backdrop-blur md:mb-4 md:px-4 md:py-2 md:text-sm lg:mb-3">
             <Sparkles className="h-3.5 w-3.5 md:h-4 md:w-4" aria-hidden="true" />
             <span className="md:hidden">Distribución · instalación · asesoramiento</span>
             <span className="hidden md:block">Distribución, instalación y asesoramiento técnico</span>
           </div>
-          <h1 className="max-w-[620px] text-[2rem] font-black leading-[1.08] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[3.75rem]">
+          <h1 className="max-w-[620px] text-[2rem] font-black leading-[1.08] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
             <span className="block md:hidden">Aerotermia, solar y geotermia para ahorrar energía</span>
             <span className="hidden md:block">Aerotermia, fotovoltaica y geotermia para ahorrar energía</span>
           </h1>
-          <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8">
+          <p className="mt-3 max-w-xl text-[0.9375rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-3 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
@@ -396,17 +396,17 @@ function Hero() {
             <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
             <span className="text-[11px] font-bold tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
           </div>
-          <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
+          <div className="mt-4 hidden flex-wrap gap-2 sm:flex lg:mt-3">
             {heroSignals.map((signal) => (
               <span
                 key={signal}
-                className="rounded-lg border border-[#850E88]/15 bg-white/[0.72] px-3 py-2 text-sm font-bold text-[#17111A] backdrop-blur"
+                className="rounded-lg border border-[#850E88]/15 bg-white/[0.72] px-3 py-2 text-sm font-bold text-[#17111A] backdrop-blur lg:py-1.5"
               >
                 {signal}
               </span>
             ))}
           </div>
-          <div className="mt-auto flex flex-col gap-3 pt-8 sm:mt-8 sm:flex-row sm:pt-0">
+          <div className="mt-auto flex flex-col gap-3 pt-8 sm:mt-7 sm:flex-row sm:pt-0 lg:mt-6">
             <Link
               href="/contacto"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
@@ -422,11 +422,11 @@ function Hero() {
               <FileText className="h-4 w-4 transition duration-200 ease-out group-hover:-translate-y-0.5 sm:h-5 sm:w-5" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-5 hidden flex-wrap gap-2 sm:flex">
+          <div className="mt-5 hidden flex-wrap gap-2 sm:flex lg:mt-4">
             {heroTrustLine.map((item) => (
               <span
                 key={item}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/[0.45] px-3 py-1.5 text-sm font-semibold text-[#17111A] backdrop-blur-sm"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/[0.45] px-3 py-1.5 text-sm font-semibold text-[#17111A] backdrop-blur-sm lg:py-1"
               >
                 <Check className="h-3.5 w-3.5 text-[#850E88]" aria-hidden="true" />
                 {item}
