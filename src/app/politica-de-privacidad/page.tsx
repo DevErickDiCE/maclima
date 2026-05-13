@@ -32,7 +32,7 @@ const sections = [
     title: "Responsable del tratamiento",
     paragraphs: [
       `El responsable del tratamiento de los datos personales recabados a traves de esta web es ${LEGAL_COMPANY.holder}, nombre comercial ${LEGAL_COMPANY.brand}.`,
-      `Antes de cerrar esta politica con datos definitivos conviene completar los siguientes campos: domicilio social ${LEGAL_COMPANY.address}, CIF o NIF ${LEGAL_COMPANY.taxId}, email ${LEGAL_COMPANY.email} y telefono ${LEGAL_COMPANY.phone}.`,
+      `Datos de contacto del responsable: domicilio social en ${LEGAL_COMPANY.address}, CIF ${LEGAL_COMPANY.taxId}, email ${LEGAL_COMPANY.email} y telefono ${LEGAL_COMPANY.phone}.`,
     ],
   },
   {

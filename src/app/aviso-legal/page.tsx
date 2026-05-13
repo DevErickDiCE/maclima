@@ -28,7 +28,7 @@ const sections = [
     paragraphs: [
       `El presente sitio web corresponde a ${LEGAL_COMPANY.holder}, que opera comercialmente como ${LEGAL_COMPANY.brand}.`,
       `La actividad principal de la empresa es ${LEGAL_COMPANY.activity} El ambito de actuacion indicado en esta web se centra en ${LEGAL_COMPANY.scope}`,
-      `Los datos identificativos pendientes de completar antes del cierre legal definitivo de la web son: domicilio social ${LEGAL_COMPANY.address}, CIF o NIF ${LEGAL_COMPANY.taxId}, email ${LEGAL_COMPANY.email} y telefono ${LEGAL_COMPANY.phone}.`,
+      `Datos identificativos: domicilio social en ${LEGAL_COMPANY.address}, CIF ${LEGAL_COMPANY.taxId}, email ${LEGAL_COMPANY.email} y telefono ${LEGAL_COMPANY.phone}.`,
     ],
   },
   {

@@ -188,7 +188,7 @@ export function ContactoPage() {
                     </a>
                     <div className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/70 bg-white px-4 py-3">
                       <MapPin className="h-4 w-4 text-[#850E88]" aria-hidden="true" />
-                      <span>Zona: Madrid y alrededores</span>
+                      <span>C/ CobaÑera 2 7 1 B, 28450 Collado Mediano, Madrid</span>
                     </div>
                   </div>
                 </div>

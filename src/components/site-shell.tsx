@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Mail, Menu, MessageCircle, Phone, Sparkles, X } from "lucide-react";
 import { useState } from "react";
 import { CONTACT_INFO } from "@/lib/contact-info";
+import { LEGAL_COMPANY } from "@/lib/legal-content";
 
 export const siteNavItems = [
   { label: "Inicio", href: "/" },
@@ -126,8 +127,14 @@ export function SiteFooter() {
             fotovoltaica y geotermia para cliente final, negocio y profesional del sector.
           </p>
           <p className="mt-4 max-w-md text-xs leading-5 text-[#D9D9FF]">
-            Maclima Soluciones Energéticas es el nombre comercial de MACLIMA
-            CALOR Y FRÍO S.L.
+            Maclima Soluciones Energéticas es el nombre comercial de {LEGAL_COMPANY.holder}
+          </p>
+          <p className="mt-3 max-w-md text-xs leading-5 text-[#D9D9FF]/80">
+            CIF: {LEGAL_COMPANY.taxId}<br />
+            {LEGAL_COMPANY.address}<br />
+            Tel: {CONTACT_INFO.phone}<br />
+            Email: {CONTACT_INFO.email}<br />
+            WhatsApp: {CONTACT_INFO.whatsapp}
           </p>
         </div>
 
