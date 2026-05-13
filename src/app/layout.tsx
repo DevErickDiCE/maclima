@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-preview.png",
-        width: 1200,
-        height: 630,
+        url: "/whatsapp.png",
+        width: 1254,
+        height: 1254,
         alt: "Maclima Soluciones Energéticas — Aerotermia, fotovoltaica y geotermia en Madrid",
       },
     ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Maclima Soluciones Energéticas",
     description:
       "Aerotermia, fotovoltaica y geotermia en Madrid con asesoramiento técnico gratuito.",
-    images: ["/og-preview.png"],
+    images: ["/whatsapp.png"],
   },
   robots: {
     index: true,

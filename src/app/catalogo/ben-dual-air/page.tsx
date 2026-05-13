@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/imagen/BEN-Dual-AIR/ben-100-electric-format.webp",
-        width: 800,
-        height: 800,
+        url: "/whatsapp.png",
+        width: 1254,
+        height: 1254,
         alt: "BEN Dual-Air — Sistema de aerotermia interior compacto",
       },
     ],

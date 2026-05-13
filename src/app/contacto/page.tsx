@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "/contacto",
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/og-preview.png", width: 1200, height: 630, alt: "Contacto — Maclima Soluciones Energéticas" }],
+    images: [{ url: "/whatsapp.png", width: 1254, height: 1254, alt: "Contacto — Maclima Soluciones Energéticas" }],
   },
 };
 
