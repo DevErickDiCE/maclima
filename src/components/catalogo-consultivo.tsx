@@ -947,7 +947,11 @@ const catalogProducts: CatalogProduct[] = [
     brand: "Geotermia",
     name: "Bomba de calor geotérmica premium",
     category: "Geotermia · Climatización y ACS",
+    image: "/imagen/S1155.png",
     thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
     shortDescription:
       "Sistema geotérmico de alta eficiencia para calefacción, refrigeración y agua caliente sanitaria, pensado para viviendas con estudio técnico previo.",
     description:
@@ -992,7 +996,11 @@ const catalogProducts: CatalogProduct[] = [
     brand: "Geotermia",
     name: "Bomba de calor geotérmica inverter",
     category: "Geotermia · Alto rendimiento",
+    image: "/imagen/f1355.png",
     thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
     shortDescription:
       "Sistema geotérmico inverter para climatización eficiente, ACS y confort estable en viviendas con alta demanda energética.",
     description:
@@ -1037,7 +1045,11 @@ const catalogProducts: CatalogProduct[] = [
     brand: "Geotermia",
     name: "Bomba de calor geotérmica compacta",
     category: "Geotermia · Solución compacta",
+    image: "/imagen/geo-bomba-calor.png",
     thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
     shortDescription:
       "Sistema geotérmico compacto con tecnología inverter, pensado para calefacción, refrigeración y ACS en viviendas con necesidades eficientes.",
     description:
