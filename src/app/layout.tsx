@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SITE_URL } from "@/lib/site-config";
+import { DEFAULT_OG_IMAGE, OG_IMAGE_URL, SITE_URL } from "@/lib/site-config";
 import { CONTACT_INFO } from "@/lib/contact-info";
 import "./globals.css";
 
@@ -24,32 +24,24 @@ export const metadata: Metadata = {
   description:
     "Distribución, instalación y asesoramiento técnico en aerotermia, fotovoltaica y geotermia para viviendas, negocios y profesionales del sector en Madrid.",
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
   openGraph: {
     title: "Maclima Soluciones Energéticas",
     description:
-      "Aerotermia, fotovoltaica y geotermia en Madrid con asesoramiento técnico gratuito.",
+      "Soluciones de aerotermia, fotovoltaica, geotermia y climatización eficiente.",
     url: SITE_URL,
     siteName: "Maclima Soluciones Energéticas",
     locale: "es_ES",
     type: "website",
-    images: [
-      {
-        url: "/whatsapp.png",
-        width: 800,
-        height: 800,
-        alt: "Maclima Soluciones Energéticas — Aerotermia, fotovoltaica y geotermia en Madrid",
-        type: "image/png",
-      },
-    ],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Maclima Soluciones Energéticas",
     description:
-      "Aerotermia, fotovoltaica y geotermia en Madrid con asesoramiento técnico gratuito.",
-    images: ["/whatsapp.png"],
+      "Soluciones de aerotermia, fotovoltaica, geotermia y climatización eficiente.",
+    images: [OG_IMAGE_URL],
   },
   robots: {
     index: true,

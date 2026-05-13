@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import { ContactoPage } from "@/components/contacto-page";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contacto — Asesoramiento en aerotermia, fotovoltaica y geotermia",
   description:
     "Contacta con Maclima para asesoramiento técnico gratuito en aerotermia, fotovoltaica y geotermia. Respondemos por teléfono, WhatsApp o formulario.",
   alternates: {
-    canonical: "/contacto",
+    canonical: `${SITE_URL}/contacto`,
   },
   openGraph: {
     title: "Contacto | Maclima Soluciones Energéticas",
     description:
       "Contacta con Maclima para asesoramiento técnico gratuito en aerotermia, fotovoltaica y geotermia. Respondemos por teléfono, WhatsApp o formulario.",
-    url: "/contacto",
+    url: `${SITE_URL}/contacto`,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/whatsapp.png", width: 800, height: 800, alt: "Contacto — Maclima Soluciones Energéticas", type: "image/png" }],
+    images: [{ ...DEFAULT_OG_IMAGE, alt: "Contacto — Maclima Soluciones Energéticas" }],
   },
 };
 

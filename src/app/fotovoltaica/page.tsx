@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FuturePage } from "@/components/future-page";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 import { PanelTop } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -7,16 +8,16 @@ export const metadata: Metadata = {
   description:
     "Instalaciones fotovoltaicas para autoconsumo con paneles solares, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid para viviendas, negocios y profesionales.",
   alternates: {
-    canonical: "/fotovoltaica",
+    canonical: `${SITE_URL}/fotovoltaica`,
   },
   openGraph: {
     title: "Fotovoltaica en Madrid — Autoconsumo solar | Maclima",
     description:
       "Instalaciones fotovoltaicas para autoconsumo con paneles solares, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid.",
-    url: "/fotovoltaica",
+    url: `${SITE_URL}/fotovoltaica`,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/whatsapp.png", width: 800, height: 800, alt: "Fotovoltaica — Maclima Soluciones Energéticas", type: "image/png" }],
+    images: [{ ...DEFAULT_OG_IMAGE, alt: "Fotovoltaica — Maclima Soluciones Energéticas" }],
   },
 };
 

@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import { CatalogoConsultivo } from "@/components/catalogo-consultivo";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Catálogo consultivo — Aerotermia, fotovoltaica y geotermia",
   description:
     "Consulta el catálogo de soluciones de aerotermia, fotovoltaica y geotermia de Maclima. Cada instalación se estudia antes de recomendar el equipo más adecuado.",
   alternates: {
-    canonical: "/catalogo",
+    canonical: `${SITE_URL}/catalogo`,
   },
   openGraph: {
     title: "Catálogo consultivo — Aerotermia, fotovoltaica y geotermia | Maclima",
     description:
       "Consulta el catálogo de soluciones de aerotermia, fotovoltaica y geotermia de Maclima. Cada instalación se estudia antes de recomendar el equipo más adecuado.",
-    url: "/catalogo",
+    url: `${SITE_URL}/catalogo`,
     locale: "es_ES",
     type: "website",
-    images: [{ url: "/whatsapp.png", width: 800, height: 800, alt: "Catálogo Maclima — Aerotermia, fotovoltaica y geotermia", type: "image/png" }],
+    images: [{ ...DEFAULT_OG_IMAGE, alt: "Catálogo Maclima — Aerotermia, fotovoltaica y geotermia" }],
   },
 };
 
