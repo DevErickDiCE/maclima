@@ -189,7 +189,42 @@ const normas = [
 ] as const;
 
 export default function ConsultoriaGratuitaPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [form, setForm] = useState({
+    nombre: "",
+    telefono: "",
+    tipo: projectTypes[0],
+    mensaje: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          origen: "Página de consultoría gratuita",
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Error al enviar");
+      }
+      setStatus("success");
+      setForm({ nombre: "", telefono: "", tipo: projectTypes[0], mensaje: "" });
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[#17111A]">
@@ -615,25 +650,29 @@ export default function ConsultoriaGratuitaPage() {
                 </p>
                 <form
                   className="mt-6 grid gap-4"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSubmitted(true);
-                  }}
+                  onSubmit={handleSubmit}
                 >
                   <div className="grid gap-4 sm:grid-cols-2">
                     <label className="grid gap-1.5 text-xs font-black uppercase tracking-[0.10em] text-[#850E88]">
                       Nombre
                       <input
+                        name="nombre"
                         type="text"
                         placeholder="Tu nombre"
+                        value={form.nombre}
+                        onChange={handleChange}
+                        required
                         className="min-h-12 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-sm font-medium text-[#17111A] outline-none transition duration-200 focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
                       />
                     </label>
                     <label className="grid gap-1.5 text-xs font-black uppercase tracking-[0.10em] text-[#850E88]">
                       Teléfono
                       <input
+                        name="telefono"
                         type="tel"
                         placeholder="Tu teléfono"
+                        value={form.telefono}
+                        onChange={handleChange}
                         className="min-h-12 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-sm font-medium text-[#17111A] outline-none transition duration-200 focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
                       />
                     </label>
@@ -641,7 +680,12 @@ export default function ConsultoriaGratuitaPage() {
 
                   <label className="grid gap-1.5 text-xs font-black uppercase tracking-[0.10em] text-[#850E88]">
                     Tipo de proyecto
-                    <select className="min-h-12 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-sm font-medium text-[#17111A] outline-none transition duration-200 focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]">
+                    <select
+                      name="tipo"
+                      value={form.tipo}
+                      onChange={handleChange}
+                      className="min-h-12 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-sm font-medium text-[#17111A] outline-none transition duration-200 focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+                    >
                       {projectTypes.map((t) => (
                         <option key={t}>{t}</option>
                       ))}
@@ -651,31 +695,39 @@ export default function ConsultoriaGratuitaPage() {
                   <label className="grid gap-1.5 text-xs font-black uppercase tracking-[0.10em] text-[#850E88]">
                     Mensaje (opcional)
                     <textarea
+                      name="mensaje"
                       rows={4}
                       placeholder="Cuéntanos brevemente tu proyecto o duda"
+                      value={form.mensaje}
+                      onChange={handleChange}
                       className="rounded-2xl border border-[#D9D9FF] bg-white px-4 py-3 text-sm font-medium text-[#17111A] outline-none transition duration-200 placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
                     />
                   </label>
 
                   <button
                     type="submit"
-                    className="group mt-1 inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                    disabled={status === "submitting"}
+                    className="group mt-1 inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Enviar solicitud
+                    {status === "submitting" ? "Enviando..." : "Enviar solicitud"}
                     <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
                   </button>
                 </form>
 
                 <div
                   className={`mt-4 rounded-2xl border px-4 py-3 text-sm font-semibold leading-6 transition duration-200 ${
-                    submitted
-                      ? "border-[#850E88]/18 bg-[#F8F2FF] text-[#5F5A66]"
-                      : "border-[#D9D9FF]/70 bg-[#F8F7FF] text-[#7A7483]"
+                    status === "success"
+                      ? "border-green-200 bg-green-50 text-green-800"
+                      : status === "error"
+                        ? "border-red-200 bg-red-50 text-red-800"
+                        : "border-[#D9D9FF]/70 bg-[#F8F7FF] text-[#7A7483]"
                   }`}
                 >
-                  {submitted
-                    ? "Solicitud recibida. Te contactaremos para revisar tu caso y orientarte sobre el siguiente paso."
-                    : "También puedes contactarnos directamente por WhatsApp para una respuesta más rápida."}
+                  {status === "success"
+                    ? "Consulta enviada correctamente. Te contactaremos lo antes posible."
+                    : status === "error"
+                      ? "No se pudo enviar el formulario. También puedes escribirnos por WhatsApp."
+                      : "También puedes contactarnos directamente por WhatsApp para una respuesta más rápida."}
                 </div>
               </motion.div>
             </div>
