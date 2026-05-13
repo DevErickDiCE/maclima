@@ -15,6 +15,12 @@ export const siteNavItems = [
   { label: "Contacto", href: "/contacto" },
 ] as const;
 
+export const legalNavItems = [
+  { label: "Aviso legal", href: "/aviso-legal" },
+  { label: "Politica de privacidad", href: "/politica-de-privacidad" },
+  { label: "Politica de cookies", href: "/politica-de-cookies" },
+] as const;
+
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -102,7 +108,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="bg-[#17111A] py-14 text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.95fr_0.9fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#850E88] text-white">
@@ -129,6 +135,21 @@ export function SiteFooter() {
           <p className="font-black text-white">Enlaces</p>
           <nav className="mt-4 grid gap-3 text-sm font-semibold text-[#D9D9FF]">
             {siteNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div>
+          <p className="font-black text-white">Legal</p>
+          <nav className="mt-4 grid gap-3 text-sm font-semibold text-[#D9D9FF]">
+            {legalNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
