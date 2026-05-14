@@ -50,6 +50,8 @@ export default function AerotermiaPage() {
         "Aplicaciones en vivienda, negocio, reforma y obra nueva",
         "BEN Dual-Air como producto destacado sin perder enfoque consultivo",
       ]}
+      heroCtaLabel="Solicitar asesoramiento en aerotermia"
+      heroHref="/consultoria-gratuita?tipo=Aerotermia#formulario"
       primaryPanel={{
         eyebrow: "Beneficios y aplicaciones",
         title: "Una tecnología pensada para calefacción, refrigeración y ACS",
@@ -61,8 +63,8 @@ export default function AerotermiaPage() {
           "Viviendas y negocios",
           "Reformas y obra nueva",
         ],
-        cta: "Consultar solución de aerotermia",
-        href: "/consultoria-gratuita",
+        cta: "Solicitar asesoramiento en aerotermia",
+        href: "/consultoria-gratuita?tipo=Aerotermia#formulario",
       }}
       secondaryPanel={{
         eyebrow: "Producto destacado",
@@ -75,8 +77,8 @@ export default function AerotermiaPage() {
           "Solución compacta",
           "Enfoque técnico y consultivo",
         ],
-        cta: "Ver catálogo consultivo",
-        href: "/catalogo",
+        cta: "Ver catálogo de aerotermia",
+        href: "/catalogo#aerotermia-catalogo",
       }}
       consultiveNote="No vendemos productos de forma automática. Analizamos cada caso para recomendar la solución de aerotermia adecuada según consumo, inmueble y objetivos del proyecto."
       icon={ThermometerSun}

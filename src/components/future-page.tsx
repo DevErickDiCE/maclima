@@ -34,6 +34,8 @@ type FuturePageProps = {
   primaryPanel: DetailPanel;
   secondaryPanel: DetailPanel;
   consultiveNote: string;
+  heroCtaLabel?: string;
+  heroHref?: string;
   supportLabel?: string;
   supportHref?: string;
   icon: LucideIcon;
@@ -49,6 +51,8 @@ export function FuturePage({
   primaryPanel,
   secondaryPanel,
   consultiveNote,
+  heroCtaLabel = "Solicitar consultoría",
+  heroHref = "/consultoria-gratuita#formulario",
   supportLabel = "Contactar por WhatsApp",
   supportHref = CONTACT_INFO.whatsappHref,
   icon: Icon,
@@ -81,10 +85,10 @@ export function FuturePage({
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
-                    href="/consultoria-gratuita"
+                    href={heroHref}
                     className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.26)] transition hover:bg-[#6f0b72]"
                   >
-                    Solicitar consultoría
+                    {heroCtaLabel}
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                   <a

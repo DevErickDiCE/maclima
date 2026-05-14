@@ -805,7 +805,7 @@ function PhotovoltaicIntelligence() {
                 </p>
               </div>
               <Link
-                href="/consultoria-gratuita"
+                href="/consultoria-gratuita#formulario"
                 className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#850E88] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8] sm:w-auto"
               >
                 Consultar solución combinada
@@ -1055,7 +1055,7 @@ function FeaturedSolutions() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/consultoria-gratuita"
+                  href="/consultoria-gratuita#formulario"
                   className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#850E88] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF7FF]"
                 >
                   Solicitar asesoramiento
@@ -1136,7 +1136,7 @@ function FreeConsulting() {
             El objetivo no es venderte un producto concreto, sino recomendarte la opción más eficiente y razonable según tu caso.
           </p>
           <Link
-            href="/consultoria-gratuita"
+            href="/consultoria-gratuita#formulario"
             className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(133,14,136,0.26)] transition hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
           >
             Solicitar consultoría gratuita
@@ -1221,7 +1221,7 @@ function FinalCta() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
-              href="/consultoria-gratuita"
+              href="/consultoria-gratuita#formulario"
               className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-bold text-[#850E88] shadow-[0_18px_44px_rgba(23,17,26,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_24px_48px_rgba(23,17,26,0.24)]"
             >
               Solicitar consultoría

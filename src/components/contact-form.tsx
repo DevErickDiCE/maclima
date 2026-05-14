@@ -9,6 +9,7 @@ type ContactFormProps = {
   eyebrow?: string;
   title?: string | null;
   textareaRows?: number;
+  defaultTipo?: string;
 };
 
 export function ContactForm({
@@ -17,13 +18,19 @@ export function ContactForm({
   eyebrow = "Formulario de contacto",
   title = "Solicitud preparada para cliente final y profesional",
   textareaRows = 5,
+  defaultTipo,
 }: ContactFormProps) {
+  const resolvedTipo =
+    defaultTipo && (projectTypes as readonly string[]).includes(defaultTipo)
+      ? defaultTipo
+      : projectTypes[0];
+
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
     email: "",
-    tipo: projectTypes[0],
+    tipo: resolvedTipo,
     mensaje: "",
   });
 

@@ -50,6 +50,8 @@ export default function FotovoltaicaPage() {
         "Componentes principales del catálogo consultivo",
         "Aerotermia + fotovoltaica como solución combinada",
       ]}
+      heroCtaLabel="Solicitar asesoramiento fotovoltaico"
+      heroHref="/consultoria-gratuita?tipo=Fotovoltaica#formulario"
       primaryPanel={{
         eyebrow: "Catálogo fotovoltaico",
         title: "Paneles, inversores, baterías y kits para instalaciones a medida",
@@ -61,8 +63,8 @@ export default function FotovoltaicaPage() {
           "Kits de autoconsumo",
           "Estructuras para cubierta",
         ],
-        cta: "Consultar solución fotovoltaica",
-        href: "/consultoria-gratuita",
+        cta: "Solicitar asesoramiento fotovoltaico",
+        href: "/consultoria-gratuita?tipo=Fotovoltaica#formulario",
       }}
       secondaryPanel={{
         eyebrow: "Beneficios",
@@ -75,8 +77,8 @@ export default function FotovoltaicaPage() {
           "Escalabilidad",
           "Integración con aerotermia",
         ],
-        cta: "Ver catálogo consultivo",
-        href: "/catalogo",
+        cta: "Ver catálogo fotovoltaico",
+        href: "/catalogo#fotovoltaica-catalogo",
       }}
       consultiveNote="No vendemos productos de forma automática. Analizamos cada caso para recomendar la solución fotovoltaica adecuada según consumo, cubierta disponible y objetivos de ahorro."
       icon={PanelTop}
