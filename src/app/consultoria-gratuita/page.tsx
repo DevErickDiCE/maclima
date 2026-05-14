@@ -724,9 +724,9 @@ export default function ConsultoriaGratuitaPage() {
                   }`}
                 >
                   {status === "success"
-                    ? "Consulta enviada correctamente. Te contactaremos lo antes posible."
+                    ? "Solicitud enviada correctamente. Te contactaremos lo antes posible."
                     : status === "error"
-                      ? "No se pudo enviar el formulario. También puedes escribirnos por WhatsApp."
+                      ? "No se ha podido enviar el formulario. Puedes escribirnos directamente por WhatsApp."
                       : "También puedes contactarnos directamente por WhatsApp para una respuesta más rápida."}
                 </div>
               </motion.div>
