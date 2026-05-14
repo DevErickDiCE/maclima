@@ -48,14 +48,14 @@ const heroSignals = [
 
 const aerothermalBenefits = [
   "Calefacción",
-  "Refrigeración",
   "ACS",
+  "Refrigeración",
   "Bajo consumo",
 ] as const;
 
 const photovoltaicBenefits = [
   "Autoconsumo",
-  "Ahorro en factura",
+  "Ahorro",
   "Baterías",
   "Menor dependencia",
 ] as const;
@@ -285,14 +285,6 @@ const geothermalCatalog = [
     kind: "product" as const,
     thumbType: "geo" as const,
   },
-  {
-    name: "Estudio de viabilidad",
-    text: "Análisis técnico previo del terreno y proyecto.",
-    href: "/catalogo#geotermia-catalogo",
-    badge: "Consultoría",
-    kind: "family" as const,
-    thumbType: "project" as const,
-  },
 ] as const;
 
 const consultingSteps = [
@@ -408,7 +400,7 @@ function Hero() {
           </div>
           <div className="mt-auto flex flex-col gap-3 pt-8 sm:mt-7 sm:flex-row sm:pt-0 lg:mt-6">
             <Link
-              href="/contacto"
+              href="/consultoria-gratuita#formulario"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Solicitar consultoría gratuita
@@ -494,7 +486,7 @@ function Verticals() {
 
         <motion.div
           {...fadeUp}
-          className="relative mx-auto mt-6 max-w-4xl overflow-hidden rounded-[28px] border border-[#850E88]/15 bg-[#17111A] px-5 py-5 text-white shadow-[0_24px_70px_rgba(23,17,26,0.16)] sm:px-7"
+          className="relative mt-6 overflow-hidden rounded-[28px] border border-[#850E88]/15 bg-[#17111A] px-5 py-5 text-white shadow-[0_24px_70px_rgba(23,17,26,0.16)] sm:px-7"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(217,217,255,0.24),transparent_34%),radial-gradient(circle_at_80%_50%,rgba(242,184,75,0.18),transparent_30%)]" />
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -550,7 +542,7 @@ function AerothermalEfficiency() {
               y objetivos de ahorro.
             </p>
             <Link
-              href="/aerotermia"
+              href="/consultoria-gratuita?tipo=Aerotermia#formulario"
               className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
             >
               Solicitar asesoramiento en aerotermia
@@ -744,7 +736,7 @@ function PhotovoltaicIntelligence() {
                 adaptada a tu proyecto.
               </p>
               <Link
-                href="/fotovoltaica"
+                href="/consultoria-gratuita?tipo=Fotovoltaica#formulario"
                 className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
               >
                 Solicitar asesoramiento fotovoltaico
@@ -853,7 +845,7 @@ function GeothermalSection() {
                 objetivos del proyecto.
               </p>
               <Link
-                href="/contacto"
+                href="/consultoria-gratuita?tipo=Geotermia#formulario"
                 className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
               >
                 Solicitar asesoramiento en geotermia
@@ -928,7 +920,7 @@ function FeaturedSolutions() {
               depender de una unidad exterior visible.
             </p>
             <Link
-              href="/aerotermia"
+              href="/consultoria-gratuita?tipo=Aerotermia#formulario"
               className="group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:w-auto"
             >
               Solicitar asesoramiento sobre BEN Dual-Air
@@ -1062,10 +1054,10 @@ function FeaturedSolutions() {
                   <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
                 <Link
-                  href="/aerotermia"
+                  href="/catalogo#aerotermia-catalogo"
                   className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-black text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/15"
                 >
-                  Ver soluciones de aerotermia
+                  Ver catálogo de aerotermia
                   <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
               </div>
@@ -1448,13 +1440,13 @@ function SolutionCard({
         </div>
       </div>
       <p className="mt-3 max-w-xl text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">{text}</p>
-      <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-6 sm:gap-2">
-        {benefits.slice(0, 3).map((benefit) => (
+      <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
+        {benefits.slice(0, 2).map((benefit) => (
           <span
             key={benefit}
-            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs font-bold text-[#17111A] sm:gap-2 sm:px-3 sm:py-2 sm:text-sm ${cardAccent.chip}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold text-[#17111A] ${cardAccent.chip}`}
           >
-            <Check className="h-3 w-3 text-[#850E88] sm:h-4 sm:w-4" aria-hidden="true" />
+            <Check className="h-3 w-3 shrink-0 text-[#850E88]" aria-hidden="true" />
             {benefit}
           </span>
         ))}
