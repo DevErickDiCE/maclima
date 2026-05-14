@@ -1127,22 +1127,36 @@ function FreeConsulting() {
           <p className="mt-3 max-w-xl text-sm font-semibold leading-6 text-[#17111A]">
             El objetivo no es venderte un producto concreto, sino recomendarte la opción más eficiente y razonable según tu caso.
           </p>
-          <Link
-            href="/consultoria-gratuita#formulario"
-            className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(133,14,136,0.26)] transition hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
-          >
-            Solicitar consultoría gratuita
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              href="/consultoria-gratuita#formulario"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+            >
+              Solicitar consultoría gratuita
+              <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+            <a
+              href={CONTACT_INFO.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FAF4FF] hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)]"
+            >
+              Contactar por WhatsApp
+              <MessageCircle className="h-4 w-4 transition duration-200 ease-out group-hover:scale-105" aria-hidden="true" />
+            </a>
+          </div>
         </motion.div>
 
         <motion.div
           {...fadeUp}
           className="rounded-2xl border border-[#D9D9FF] bg-[#EAEAFF] p-4 shadow-[0_16px_48px_rgba(133,14,136,0.10)] sm:p-5"
         >
-          <div className="grid gap-2">
+          <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+            Así funciona la consulta
+          </p>
+          <div className="mt-3 grid gap-2">
             {consultingSteps.map((step, index) => (
-              <div key={step.title} className="group flex items-center gap-3 rounded-xl border border-white/70 bg-white p-3 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]">
+              <div key={step.title} className="flex items-center gap-3 rounded-xl border border-white/70 bg-white p-3 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#850E88] text-xs font-black text-white shadow-[0_8px_18px_rgba(133,14,136,0.16)]">
                   {index + 1}
                 </span>
@@ -1154,21 +1168,6 @@ function FreeConsulting() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="mt-3 rounded-xl border border-[#850E88]/15 bg-white p-4 shadow-[0_10px_28px_rgba(23,17,26,0.05)]">
-            <div className="grid gap-3 sm:grid-cols-2">
-              <ContactField label="Nombre" />
-              <ContactField label="Teléfono" />
-              <ContactField label="Tipo de proyecto" wide />
-              <ContactField label="Mensaje opcional" wide tall />
-            </div>
-            <Link
-              href="/contacto"
-              className="group mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#850E88]/20 bg-white px-4 py-2.5 text-sm font-bold text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#EAEAFF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.08)]"
-            >
-              Continuar en contacto
-              <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
-            </Link>
           </div>
         </motion.div>
       </div>
@@ -1847,29 +1846,3 @@ function TrustCard({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
   );
 }
 
-function ContactField({
-  label,
-  wide = false,
-  tall = false,
-}: {
-  label: string;
-  wide?: boolean;
-  tall?: boolean;
-}) {
-  return (
-    <div className={wide ? "sm:col-span-2" : undefined}>
-      <label className="text-[11px] font-black uppercase tracking-wide text-[#850E88]">{label}</label>
-      {tall ? (
-        <textarea
-          className="mt-1.5 min-h-[72px] w-full rounded-lg border border-[#D9D9FF] bg-[#F8F7FF] px-3 py-2 text-sm text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#8D8696] hover:border-[#C8B8D7] focus:border-[#850E88] focus:bg-white focus:shadow-[0_0_0_3px_rgba(133,14,136,0.08)]"
-          placeholder="Cuéntanos brevemente tu proyecto"
-        />
-      ) : (
-        <input
-          className="mt-1.5 h-10 w-full rounded-lg border border-[#D9D9FF] bg-[#F8F7FF] px-3 text-sm text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#8D8696] hover:border-[#C8B8D7] focus:border-[#850E88] focus:bg-white focus:shadow-[0_0_0_3px_rgba(133,14,136,0.08)]"
-          placeholder={label}
-        />
-      )}
-    </div>
-  );
-}
