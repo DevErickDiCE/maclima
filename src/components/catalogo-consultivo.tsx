@@ -1524,25 +1524,25 @@ const aeroBrandStyle: Record<
   { topBar: string; badgeBg: string; badgeBorder: string; badgeText: string }
 > = {
   BEN: {
-    topBar: "bg-[#850E88]",
+    topBar: "bg-[#850E88]/60",
     badgeBg: "bg-[#FCF0FC]",
     badgeBorder: "border-[#850E88]/30",
     badgeText: "text-[#850E88]",
   },
   Climer: {
-    topBar: "bg-[#6D28D9]",
+    topBar: "bg-[#6D28D9]/60",
     badgeBg: "bg-[#F0EBFF]",
     badgeBorder: "border-[#6D28D9]/30",
     badgeText: "text-[#6D28D9]",
   },
   Yekallor: {
-    topBar: "bg-[#4F46E5]",
+    topBar: "bg-[#4F46E5]/60",
     badgeBg: "bg-[#EEEEFF]",
     badgeBorder: "border-[#4F46E5]/30",
     badgeText: "text-[#4338CA]",
   },
   "ELNUR GABARRON": {
-    topBar: "bg-[#7C3AED]",
+    topBar: "bg-[#7C3AED]/60",
     badgeBg: "bg-[#F3EEFF]",
     badgeBorder: "border-[#7C3AED]/30",
     badgeText: "text-[#6B21A8]",
@@ -1550,7 +1550,7 @@ const aeroBrandStyle: Record<
 };
 
 const aeroBrandDefault = {
-  topBar: "bg-[#850E88]",
+  topBar: "bg-[#850E88]/60",
   badgeBg: "bg-[#FCF0FC]",
   badgeBorder: "border-[#850E88]/30",
   badgeText: "text-[#850E88]",
@@ -1576,7 +1576,7 @@ function ProductCard({
       className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
     >
       {aero && brandStyle && (
-        <div className={`h-[3px] w-full ${brandStyle.topBar}`} aria-hidden="true" />
+        <div className={`h-[2px] w-full ${brandStyle.topBar}`} aria-hidden="true" />
       )}
       <div
         className={`relative h-52 overflow-hidden sm:h-56 ${
