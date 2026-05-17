@@ -24,7 +24,6 @@ import {
   Smartphone,
   Droplets,
   Snowflake,
-  Sparkles,
   Sun,
   ThermometerSun,
   Users,
@@ -359,11 +358,6 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="absolute right-[12%] top-[9%] z-10 hidden items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:flex">
-        <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
-        <span className="text-xs font-semibold tracking-[0.14em] text-[#5f0a63]">MACLIMA CALOR Y FRÍO S.L.</span>
-      </div>
-
       <div className="mx-auto flex min-h-[640px] max-w-7xl items-stretch px-4 pt-10 pb-10 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
@@ -371,10 +365,17 @@ function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-3 inline-flex items-center gap-2 rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-3 py-1.5 text-xs font-bold text-[#850E88] shadow-sm backdrop-blur md:mb-4 md:px-4 md:py-2 md:text-sm lg:mb-3">
-            <Sparkles className="h-3.5 w-3.5 md:h-4 md:w-4" aria-hidden="true" />
-            <span className="md:hidden">Distribución · instalación · asesoramiento</span>
-            <span className="hidden md:block">Distribución, instalación y asesoramiento técnico</span>
+          <div className="mb-2.5 sm:mb-3 md:mb-4">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
+              <span className="text-[0.82rem] font-extrabold uppercase leading-none tracking-[0.10em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
+                MACLIMA CALOR Y FRÍO S.L.
+              </span>
+            </div>
+            <p className="mt-1 text-[0.72rem] font-medium leading-snug text-[#3D2E42] sm:mt-1.5 sm:text-[0.82rem] md:text-[0.86rem]">
+              Distribución · instalación · asesoramiento técnico
+            </p>
+            <span className="mt-1.5 block h-[2px] w-10 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-12" aria-hidden="true" />
           </div>
           <h1 className="max-w-[620px] text-[2rem] font-black leading-[1.08] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
             <span className="block md:hidden">Aerotermia, solar y geotermia para ahorrar energía</span>
@@ -384,10 +385,6 @@ function Hero() {
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
-          <div className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full border border-[#D9D9FF]/50 bg-white/45 px-3 py-1 backdrop-blur-sm lg:hidden">
-            <span className="h-1 w-1 rounded-full bg-[#850E88]/60" aria-hidden="true" />
-            <span className="text-[11px] font-bold tracking-[0.10em] text-[#3D2E42]">MACLIMA CALOR Y FRÍO S.L.</span>
-          </div>
           <div className="mt-4 hidden flex-wrap gap-2 sm:flex lg:mt-3">
             {heroSignals.map((signal) => (
               <span
