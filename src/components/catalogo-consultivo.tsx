@@ -1324,14 +1324,14 @@ function CatalogHero() {
 
 function CatalogNav() {
   return (
-    <nav className="sticky top-[76px] z-30 border-y border-[#D9D9FF]/70 bg-white/86 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
+    <nav className="sticky top-[61px] z-30 border-y border-[#D9D9FF]/70 bg-white/86 backdrop-blur-xl sm:top-[76px]">
+      <div className="no-scrollbar mx-auto max-w-7xl overflow-x-auto px-4 py-2 sm:px-6 sm:py-3 lg:px-8">
         <div className="flex min-w-max gap-1.5 sm:gap-2">
           {catalogNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap rounded-full border border-[#D9D9FF] bg-white px-3 py-1.5 text-xs font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88] sm:px-4 sm:py-2 sm:text-sm"
+              className="whitespace-nowrap rounded-full border border-[#D9D9FF] bg-white px-3 py-1.5 text-[11px] font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88] sm:px-4 sm:py-2 sm:text-sm"
             >
               {item.label}
             </Link>
@@ -1460,7 +1460,7 @@ function CatalogSection({
           </p>
         </motion.div>
 
-        <div className="mt-5 -mx-4 overflow-x-auto pb-1 sm:mx-0 sm:mt-7">
+        <div className="no-scrollbar mt-5 -mx-4 overflow-x-auto pb-1 sm:mx-0 sm:mt-7">
           <div className="flex min-w-max gap-2 px-4 sm:px-0">
             {filters.map((filter) => (
               <button
@@ -1483,7 +1483,7 @@ function CatalogSection({
           </div>
         </div>
 
-        <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-5 grid gap-3.5 sm:mt-8 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -1576,10 +1576,10 @@ function ProductCard({
       className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
     >
       {aero && brandStyle && (
-        <div className={`h-[2px] w-full ${brandStyle.topBar}`} aria-hidden="true" />
+        <div className={`h-[3px] w-full ${brandStyle.topBar} sm:h-[2px]`} aria-hidden="true" />
       )}
       <div
-        className={`relative h-52 overflow-hidden sm:h-56 ${
+        className={`relative h-[205px] overflow-hidden sm:h-56 ${
           product.cardImageBg === "white"
             ? "bg-white"
             : geo
@@ -1597,7 +1597,7 @@ function ProductCard({
             sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
             className={
               product.cardImageFit === "contain"
-                ? "object-contain p-1 sm:p-2"
+                ? "object-contain p-0.5 sm:p-2"
                 : "object-cover object-center"
             }
           />
@@ -1606,10 +1606,10 @@ function ProductCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-4 sm:p-5">
+      <div className="flex flex-1 flex-col p-3.5 sm:p-5">
         {aero && brandStyle ? (
           <span
-            className={`inline-flex w-fit items-center rounded-full border px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-[0.10em] sm:px-3 sm:py-1 sm:text-[11px] sm:tracking-[0.12em] ${brandStyle.badgeBg} ${brandStyle.badgeBorder} ${brandStyle.badgeText}`}
+            className={`inline-flex w-fit items-center rounded-full border px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-[0.10em] shadow-sm sm:px-3 sm:py-1 sm:text-[11px] sm:tracking-[0.12em] ${brandStyle.badgeBg} ${brandStyle.badgeBorder} ${brandStyle.badgeText}`}
           >
             {product.brand}
           </span>
@@ -1618,17 +1618,17 @@ function ProductCard({
             {product.brand}
           </p>
         )}
-        <h3 className="mt-1.5 line-clamp-2 text-base font-black leading-tight text-[#17111A] sm:mt-2 sm:text-xl">
+        <h3 className="mt-1.5 line-clamp-2 text-[0.98rem] font-black leading-tight text-[#17111A] sm:mt-2 sm:text-xl">
           {product.name}
         </h3>
         <p className="mt-1 text-xs font-bold text-[#5F5A66] sm:text-sm">
           {product.category}
         </p>
-        <p className="mt-3 line-clamp-2 text-xs leading-5 text-[#5F5A66] sm:mt-4 sm:text-sm sm:leading-6 sm:line-clamp-none">
+        <p className="mt-2.5 line-clamp-2 text-xs leading-5 text-[#5F5A66] sm:mt-4 sm:text-sm sm:leading-6 sm:line-clamp-none">
           {product.shortDescription}
         </p>
-        <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
-          {product.tags.slice(0, 3).map((tag) => (
+        <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
+          {product.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
               className={`rounded-full border px-2 py-0.5 text-[10px] font-bold sm:px-2.5 sm:py-1 sm:text-xs ${
@@ -1643,7 +1643,7 @@ function ProductCard({
             </span>
           ))}
           <span className="hidden sm:contents">
-            {product.tags.slice(3).map((tag) => (
+            {product.tags.slice(2).map((tag) => (
               <span
                 key={tag}
                 className={`rounded-full border px-2.5 py-1 text-xs font-bold ${
@@ -1662,7 +1662,7 @@ function ProductCard({
         <button
           type="button"
           onClick={onInfo}
-          className="group/button mt-4 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-4 py-2.5 text-xs font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)] sm:mt-auto sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm"
+          className="group/button mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-4 py-2.5 text-xs font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)] sm:mt-auto sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm"
         >
           Ver información
           <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover/button:translate-x-1" />

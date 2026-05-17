@@ -52,6 +52,8 @@ export default function FotovoltaicaPage() {
       ]}
       heroCtaLabel="Solicitar asesoramiento fotovoltaico"
       heroHref="/consultoria-gratuita?tipo=Fotovoltaica#formulario"
+      heroImageSrc="/fotovoltaica.png"
+      heroImageAlt="Sistema fotovoltaico con paneles, inversor y batería"
       primaryPanel={{
         eyebrow: "Catálogo fotovoltaico",
         title: "Paneles, inversores, baterías y kits para instalaciones a medida",

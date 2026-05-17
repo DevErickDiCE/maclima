@@ -64,19 +64,19 @@ export function ContactForm({
   };
 
   return (
-    <div className="rounded-[30px] border border-[#D9D9FF]/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)] p-6 shadow-[0_26px_80px_rgba(133,14,136,0.14)] sm:p-8">
-      <p className="text-sm font-black uppercase tracking-[0.16em] text-[#850E88]">
+    <div className="rounded-[24px] border border-[#D9D9FF]/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_100%)] p-4 shadow-[0_20px_60px_rgba(133,14,136,0.11)] sm:rounded-[30px] sm:p-8 sm:shadow-[0_26px_80px_rgba(133,14,136,0.14)]">
+      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#850E88] sm:text-sm">
         {eyebrow}
       </p>
       {title ? (
-        <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A]">
+        <h2 className="mt-2.5 text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-3xl">
           {title}
         </h2>
       ) : null}
 
-      <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#850E88]">
+      <form className="mt-4 grid gap-3.5 sm:mt-6 sm:gap-4" onSubmit={handleSubmit}>
+        <div className="grid gap-3.5 sm:grid-cols-2 sm:gap-4">
+          <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-sm">
             Nombre
             <input
               name="nombre"
@@ -85,10 +85,10 @@ export function ContactForm({
               value={form.nombre}
               onChange={handleChange}
               required
-              className="min-h-14 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+              className="min-h-13 rounded-xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)] sm:min-h-14 sm:rounded-2xl"
             />
           </label>
-          <label className="grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#850E88]">
+          <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-sm">
             Teléfono
             <input
               name="telefono"
@@ -96,12 +96,12 @@ export function ContactForm({
               placeholder="Tu teléfono"
               value={form.telefono}
               onChange={handleChange}
-              className="min-h-14 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+              className="min-h-13 rounded-xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)] sm:min-h-14 sm:rounded-2xl"
             />
           </label>
         </div>
 
-        <label className="grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#850E88]">
+        <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-sm">
           Email
           <input
             name="email"
@@ -109,17 +109,17 @@ export function ContactForm({
             placeholder="Tu email"
             value={form.email}
             onChange={handleChange}
-            className="min-h-14 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+            className="min-h-13 rounded-xl border border-[#D9D9FF] bg-white px-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)] sm:min-h-14 sm:rounded-2xl"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#850E88]">
+        <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-sm">
           Tipo de proyecto
           <select
             name="tipo"
             value={form.tipo}
             onChange={handleChange}
-            className="min-h-14 rounded-2xl border border-[#D9D9FF] bg-white px-4 text-base font-semibold text-[#17111A] outline-none transition duration-200 ease-out focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+            className="min-h-13 rounded-xl border border-[#D9D9FF] bg-white px-4 text-base font-semibold text-[#17111A] outline-none transition duration-200 ease-out focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)] sm:min-h-14 sm:rounded-2xl"
           >
             {projectTypes.map((type) => (
               <option key={type}>{type}</option>
@@ -127,7 +127,7 @@ export function ContactForm({
           </select>
         </label>
 
-        <label className="grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#850E88]">
+        <label className="grid gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-sm">
           Mensaje
           <textarea
             name="mensaje"
@@ -135,14 +135,14 @@ export function ContactForm({
             placeholder="Cuéntanos brevemente tu proyecto"
             value={form.mensaje}
             onChange={handleChange}
-            className="rounded-2xl border border-[#D9D9FF] bg-white px-4 py-4 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)]"
+            className="rounded-xl border border-[#D9D9FF] bg-white px-4 py-3.5 text-base font-medium text-[#17111A] outline-none transition duration-200 ease-out placeholder:text-[#9C97A5] focus:border-[#850E88]/30 focus:shadow-[0_0_0_4px_rgba(133,14,136,0.08)] sm:rounded-2xl sm:py-4"
           />
         </label>
 
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="group mt-2 inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-4 text-base font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] disabled:opacity-70 disabled:cursor-not-allowed"
+          className="group mt-1 inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_16px_38px_rgba(133,14,136,0.22)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] disabled:cursor-not-allowed disabled:opacity-70 sm:mt-2 sm:min-h-14 sm:py-4 sm:text-base sm:shadow-[0_18px_44px_rgba(133,14,136,0.24)]"
         >
           {status === "submitting" ? "Enviando..." : "Enviar solicitud"}
           <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -150,7 +150,7 @@ export function ContactForm({
       </form>
 
       <div
-        className={`mt-4 rounded-2xl border px-4 py-3 text-sm font-semibold transition duration-200 ease-out ${
+        className={`mt-3 rounded-2xl border px-4 py-3 text-xs font-semibold leading-5 transition duration-200 ease-out sm:mt-4 sm:text-sm ${
           status === "success"
             ? "border-green-200 bg-green-50 text-green-800"
             : status === "error"

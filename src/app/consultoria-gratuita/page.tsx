@@ -181,12 +181,12 @@ export default function ConsultoriaGratuitaPage() {
       <main>
 
         {/* ── 1. HERO ─────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] pt-10 pb-12 sm:pt-12 sm:pb-14 lg:pt-16 lg:pb-20">
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] pt-8 pb-10 sm:pt-12 sm:pb-14 lg:pt-16 lg:pb-20">
           <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(133,14,136,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.07)_1px,transparent_1px)] [background-size:46px_46px]" />
           <div className="absolute right-[-12%] top-[-14%] h-[520px] w-[520px] rounded-full bg-[#D9D9FF]/55 blur-3xl" />
           <div className="absolute bottom-[-24%] left-[-8%] h-80 w-80 rounded-full bg-[#F2B84B]/10 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1.3fr] lg:gap-8 lg:px-8">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[1.1fr_1.3fr] lg:gap-8 lg:px-8">
 
             {/* Columna izquierda */}
             <motion.div {...fadeUp}>
@@ -194,17 +194,17 @@ export default function ConsultoriaGratuitaPage() {
                 <Sparkles className="h-3 w-3" aria-hidden="true" />
                 Consultoría gratuita
               </span>
-              <h1 className="mt-4 text-[1.8rem] font-black leading-[1.08] tracking-[-0.01em] text-[#17111A] sm:text-[2.15rem] lg:text-[2.25rem]">
+              <h1 className="mt-3 text-[1.72rem] font-black leading-[1.08] tracking-[-0.01em] text-[#17111A] sm:mt-4 sm:text-[2.15rem] lg:text-[2.25rem]">
                 Elige la solución energética adecuada para tu vivienda, negocio o instalación
               </h1>
-              <p className="mt-5 text-[15px] leading-[1.7] text-[#5F5A66]">
+              <p className="mt-3.5 text-[14px] leading-[1.6] text-[#5F5A66] sm:mt-5 sm:text-[15px] sm:leading-[1.7]">
                 En Maclima estudiamos tu caso antes de recomendar una solución.
                 Analizamos el tipo de inmueble, consumo, espacio disponible,
                 instalación existente y objetivos de ahorro para valorar si encaja
                 mejor aerotermia, fotovoltaica, geotermia, ACS, almacenamiento o
                 una solución combinada.
               </p>
-              <div className="mt-4 flex items-start gap-2.5">
+              <div className="mt-3 flex items-start gap-2.5 sm:mt-4">
                 <span className="mt-2 h-0.5 w-6 shrink-0 rounded-full bg-[#850E88]" />
                 <p className="text-sm font-bold leading-6 text-[#17111A]">
                   No partimos de un producto. Partimos de tu necesidad real.
@@ -212,7 +212,7 @@ export default function ConsultoriaGratuitaPage() {
               </div>
 
               {/* Beneficios sutiles */}
-              <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] font-medium text-[#5F5A66]">
+              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] font-medium text-[#5F5A66] sm:mt-4 sm:gap-x-4">
                 {heroBenefits.map((b) => (
                   <span key={b} className="inline-flex items-center gap-1.5">
                     <Check className="h-2.5 w-2.5 shrink-0 text-[#850E88]" aria-hidden="true" />
@@ -221,7 +221,7 @@ export default function ConsultoriaGratuitaPage() {
                 ))}
               </div>
 
-              <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+              <div className="mt-4 flex flex-col gap-2.5 sm:mt-5 sm:flex-row sm:flex-wrap">
                 <a
                   href="#formulario"
                   className="group inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3.5 text-[0.9rem] font-bold text-white shadow-[0_20px_48px_rgba(133,14,136,0.32)] ring-1 ring-[#850E88]/40 transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
@@ -243,11 +243,11 @@ export default function ConsultoriaGratuitaPage() {
             </motion.div>
 
             {/* Columna derecha: imagen */}
-            <motion.div {...fadeUp} className="relative pb-10 sm:pb-12 lg:pb-12">
+            <motion.div {...fadeUp} className="relative pb-8 sm:pb-12 lg:pb-12">
               {/* Glow suave detrás */}
               <div className="pointer-events-none absolute -inset-x-6 -inset-y-8 -z-10 rounded-[48px] bg-[radial-gradient(ellipse_at_55%_50%,rgba(133,14,136,0.16),transparent_65%)] blur-2xl" />
 
-              <div className="relative overflow-hidden rounded-[26px] ring-1 ring-[#D9D9FF]/50 shadow-[0_44px_120px_rgba(23,17,26,0.22)] sm:rounded-[32px]">
+              <div className="relative overflow-hidden rounded-[22px] ring-1 ring-[#D9D9FF]/50 shadow-[0_30px_84px_rgba(23,17,26,0.18)] sm:rounded-[32px] sm:shadow-[0_44px_120px_rgba(23,17,26,0.22)]">
                 <Image
                   src="/consulta.webp"
                   alt="Consultoría energética profesional — Maclima analiza cada proyecto antes de recomendar una solución"
@@ -286,28 +286,28 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 2. QUÉ REVISAMOS ────────────────────────────────── */}
-        <section className="bg-white py-14 sm:py-16">
+        <section className="bg-white py-10 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeUp} className="max-w-3xl">
               <p className="text-[10.5px] font-black uppercase tracking-[0.20em] text-[#850E88]">
                 Primera consulta
               </p>
-              <h2 className="mt-2 text-2xl font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
+              <h2 className="mt-2 text-[1.45rem] font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
                 Qué revisamos en la primera consulta
               </h2>
-              <p className="mt-3 text-[15px] leading-[1.7] text-[#5F5A66]">
+              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:text-[15px] sm:leading-[1.7]">
                 La primera consulta nos sirve para entender el punto de partida
                 del proyecto y evitar recomendaciones genéricas. Con esa información
                 podemos orientar mejor la solución, detectar limitaciones técnicas
                 y definir el siguiente paso.
               </p>
             </motion.div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4">
+            <div className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-4">
               {reviewItems.map((item) => (
                 <motion.div
                   key={item.n}
                   {...fadeUp}
-                  className="group flex gap-4 rounded-[20px] border border-[#D9D9FF]/60 bg-white p-5 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/25 hover:shadow-[0_18px_48px_rgba(133,14,136,0.08)]"
+                  className="group flex gap-3 rounded-[18px] border border-[#D9D9FF]/60 bg-white p-4 transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/25 hover:shadow-[0_18px_48px_rgba(133,14,136,0.08)] sm:gap-4 sm:rounded-[20px] sm:p-5"
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F8F7FF] text-[11px] font-black tracking-wider text-[#850E88] ring-1 ring-[#850E88]/15 transition duration-200 group-hover:bg-[#850E88] group-hover:text-white group-hover:ring-[#850E88]">
                     {item.n.toString().padStart(2, "0")}
@@ -323,17 +323,17 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 3. CÓMO FUNCIONA ────────────────────────────────── */}
-        <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF9FF_100%)] py-14 sm:py-16">
+        <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF9FF_100%)] py-10 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-14">
               <motion.div {...fadeUp}>
                 <p className="text-[10.5px] font-black uppercase tracking-[0.20em] text-[#850E88]">
                   Proceso
                 </p>
-                <h2 className="mt-2 text-2xl font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
+                <h2 className="mt-2 text-[1.45rem] font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
                   Cómo funciona la consultoría
                 </h2>
-                <p className="mt-3 text-[15px] leading-[1.7] text-[#5F5A66]">
+                <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:text-[15px] sm:leading-[1.7]">
                   El proceso es sencillo: primero entendemos tu caso, después
                   revisamos las alternativas posibles y finalmente te indicamos
                   qué solución merece la pena estudiar con más detalle.
@@ -360,7 +360,7 @@ export default function ConsultoriaGratuitaPage() {
                       )}
                     </div>
                     <div className={`flex-1 ${i < processSteps.length - 1 ? "pb-2.5" : ""}`}>
-                      <div className="rounded-[16px] border border-[#D9D9FF]/55 bg-white px-4 py-3 shadow-[0_4px_18px_rgba(23,17,26,0.04)] transition duration-200 hover:border-[#850E88]/20 hover:shadow-[0_10px_28px_rgba(133,14,136,0.08)]">
+                      <div className="rounded-[15px] border border-[#D9D9FF]/55 bg-white px-3.5 py-3 shadow-[0_4px_18px_rgba(23,17,26,0.04)] transition duration-200 hover:border-[#850E88]/20 hover:shadow-[0_10px_28px_rgba(133,14,136,0.08)] sm:px-4">
                         <p className="text-[14.5px] font-black leading-snug text-[#17111A]">{step.title}</p>
                         <p className="mt-1 text-[13px] leading-[1.6] text-[#5F5A66]">{step.text}</p>
                       </div>
@@ -375,7 +375,7 @@ export default function ConsultoriaGratuitaPage() {
         {/* ── 4. FORMULARIO ───────────────────────────────────── */}
         <section
           id="formulario"
-          className="bg-[linear-gradient(180deg,#EAEAFF_0%,#F8F7FF_100%)] py-14 sm:py-16"
+          className="bg-[linear-gradient(180deg,#EAEAFF_0%,#F8F7FF_100%)] py-10 sm:py-16"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-12">
@@ -383,10 +383,10 @@ export default function ConsultoriaGratuitaPage() {
                 <p className="text-[10.5px] font-black uppercase tracking-[0.20em] text-[#850E88]">
                   Solicitud
                 </p>
-                <h2 className="mt-2 text-2xl font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
+                <h2 className="mt-2 text-[1.45rem] font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
                   Cuéntanos tu caso y te orientamos
                 </h2>
-                <p className="mt-4 text-[15px] leading-[1.7] text-[#5F5A66]">
+                <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-[15px] sm:leading-[1.7]">
                   Déjanos tus datos y cuéntanos brevemente qué necesitas.
                   Revisaremos tu caso y te contactaremos para orientarte sobre
                   la solución más adecuada antes de preparar ninguna propuesta.
@@ -397,7 +397,7 @@ export default function ConsultoriaGratuitaPage() {
                     La primera consulta es orientativa y gratuita.
                   </p>
                 </div>
-                <div className="mt-6 grid gap-2">
+                <div className="mt-4 grid gap-2 sm:mt-6">
                   <a
                     href={CONTACT_INFO.whatsappHref}
                     className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/60 bg-white px-4 py-3 text-sm font-semibold text-[#17111A] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/25 hover:shadow-sm"
@@ -435,30 +435,30 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 5. SOLUCIONES QUE PODEMOS VALORAR ──────────────── */}
-        <section className="bg-white py-14 sm:py-16">
+        <section className="bg-white py-10 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeUp} className="max-w-3xl">
               <p className="text-[10.5px] font-black uppercase tracking-[0.20em] text-[#850E88]">
                 Soluciones
               </p>
-              <h2 className="mt-2 text-2xl font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
+              <h2 className="mt-2 text-[1.45rem] font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
                 Soluciones que podemos valorar en tu caso
               </h2>
-              <p className="mt-3 text-[15px] leading-[1.7] text-[#5F5A66]">
+              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:text-[15px] sm:leading-[1.7]">
                 No todas las soluciones encajan en todos los proyectos. La
                 consultoría sirve para decidir con criterio técnico qué sistema
                 puede aportar más eficiencia, ahorro y viabilidad.
               </p>
             </motion.div>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            <div className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {solutions.map(({ icon: Icon, title, text }, i) => {
                 const featured = i < 3;
                 return (
                   <motion.div
                     key={title}
                     {...fadeUp}
-                    className={`group relative flex gap-4 rounded-[20px] border p-5 transition duration-200 ease-out hover:-translate-y-0.5 ${
+                    className={`group relative flex gap-3 rounded-[18px] border p-4 transition duration-200 ease-out hover:-translate-y-0.5 sm:gap-4 sm:rounded-[20px] sm:p-5 ${
                       featured
                         ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_100%)] shadow-[0_14px_44px_rgba(133,14,136,0.07)] hover:border-[#850E88]/35 hover:shadow-[0_22px_56px_rgba(133,14,136,0.14)]"
                         : "border-[#D9D9FF]/55 bg-white hover:border-[#850E88]/20 hover:shadow-[0_16px_42px_rgba(133,14,136,0.08)]"
@@ -485,28 +485,28 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 6. TAMBIÉN PODEMOS REVISAR ──────────────────────── */}
-        <section className="bg-[linear-gradient(180deg,#FAF9FF_0%,#EAEAFF_100%)] py-14 sm:py-16">
+        <section className="bg-[linear-gradient(180deg,#FAF9FF_0%,#EAEAFF_100%)] py-10 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeUp} className="max-w-3xl">
               <p className="text-[10.5px] font-black uppercase tracking-[0.20em] text-[#850E88]">
                 Alcance
               </p>
-              <h2 className="mt-2 text-2xl font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
+              <h2 className="mt-2 text-[1.45rem] font-black leading-[1.15] tracking-[-0.01em] text-[#17111A] sm:text-[1.85rem]">
                 También podemos revisar ayudas, trámites y viabilidad
               </h2>
-              <p className="mt-3 text-[15px] leading-[1.7] text-[#5F5A66]">
+              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:text-[15px] sm:leading-[1.7]">
                 Además de la solución técnica, valoramos si el proyecto puede
                 beneficiarse de trámites, incentivos o requisitos administrativos
                 asociados, siempre según municipio, normativa vigente y
                 características de la instalación.
               </p>
             </motion.div>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3 sm:gap-4">
+            <div className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
               {supportAreas.map(({ icon: Icon, title, text }) => (
                 <motion.div
                   key={title}
                   {...fadeUp}
-                  className="group rounded-[20px] border border-[#D9D9FF]/55 bg-white p-5 shadow-[0_12px_36px_rgba(133,14,136,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/25 hover:shadow-[0_18px_48px_rgba(133,14,136,0.12)]"
+                  className="group rounded-[18px] border border-[#D9D9FF]/55 bg-white p-4 shadow-[0_10px_30px_rgba(133,14,136,0.05)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/25 hover:shadow-[0_18px_48px_rgba(133,14,136,0.12)] sm:rounded-[20px] sm:p-5 sm:shadow-[0_12px_36px_rgba(133,14,136,0.05)]"
                 >
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F8F7FF] text-[#850E88] ring-1 ring-[#850E88]/12 transition duration-200 group-hover:bg-[#850E88] group-hover:text-white group-hover:ring-[#850E88]">
                     <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
@@ -520,7 +520,7 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 7. NORMATIVA ────────────────────────────────────── */}
-        <section className="bg-white py-12 sm:py-14">
+        <section className="bg-white py-9 sm:py-14">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <motion.div {...fadeUp}>
               <div className="mb-6 max-w-3xl">
@@ -537,7 +537,7 @@ export default function ConsultoriaGratuitaPage() {
                   documental y administrativa cuando sea necesario.
                 </p>
               </div>
-              <div className="rounded-[24px] border border-[#D9D9FF]/55 bg-[linear-gradient(180deg,#FFFFFF_0%,#FBFAFF_100%)] p-5 shadow-[0_12px_36px_rgba(23,17,26,0.04)] sm:p-7">
+              <div className="rounded-[20px] border border-[#D9D9FF]/55 bg-[linear-gradient(180deg,#FFFFFF_0%,#FBFAFF_100%)] p-4 shadow-[0_10px_30px_rgba(23,17,26,0.04)] sm:rounded-[24px] sm:p-7 sm:shadow-[0_12px_36px_rgba(23,17,26,0.04)]">
                 <div className="flex items-center gap-3 border-b border-[#D9D9FF]/60 pb-4">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F8F7FF] text-[#850E88] ring-1 ring-[#850E88]/12">
                     <ClipboardList className="h-4 w-4" aria-hidden="true" />
@@ -570,11 +570,11 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── 8. CATÁLOGO ORIENTATIVO ─────────────────────────── */}
-        <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF9FF_100%)] py-10 sm:py-14">
+        <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FAF9FF_100%)] py-8 sm:py-14">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <motion.div
               {...fadeUp}
-              className="rounded-[24px] border border-[#D9D9FF]/55 bg-[linear-gradient(135deg,#FFFFFF_0%,#FBFAFF_100%)] p-6 shadow-[0_14px_44px_rgba(133,14,136,0.07)] sm:p-8 lg:p-9"
+              className="rounded-[20px] border border-[#D9D9FF]/55 bg-[linear-gradient(135deg,#FFFFFF_0%,#FBFAFF_100%)] p-4 shadow-[0_12px_34px_rgba(133,14,136,0.06)] sm:rounded-[24px] sm:p-8 sm:shadow-[0_14px_44px_rgba(133,14,136,0.07)] lg:p-9"
             >
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
                 <div className="max-w-2xl">
@@ -611,9 +611,9 @@ export default function ConsultoriaGratuitaPage() {
         </section>
 
         {/* ── CTA FINAL ───────────────────────────────────────── */}
-        <section className="bg-[#0F0A14] py-14 sm:py-18">
+        <section className="bg-[#0F0A14] py-10 sm:py-18">
           <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div className="relative overflow-hidden rounded-[28px] border border-white/8 bg-[linear-gradient(135deg,#1C1320_0%,#2A1830_48%,#6f0b72_100%)] px-6 py-12 text-center shadow-[0_36px_96px_rgba(133,14,136,0.32)] sm:px-12 sm:py-16 sm:rounded-[36px]">
+            <div className="relative overflow-hidden rounded-[24px] border border-white/8 bg-[linear-gradient(135deg,#1C1320_0%,#2A1830_48%,#6f0b72_100%)] px-5 py-9 text-center shadow-[0_28px_72px_rgba(133,14,136,0.26)] sm:rounded-[36px] sm:px-12 sm:py-16 sm:shadow-[0_36px_96px_rgba(133,14,136,0.32)]">
               <div className="pointer-events-none absolute right-[-12%] top-[-30%] h-80 w-80 rounded-full bg-[#D9D9FF]/15 blur-3xl" />
               <div className="pointer-events-none absolute bottom-[-35%] left-[-10%] h-72 w-72 rounded-full bg-[#850E88]/40 blur-3xl" />
               <div className="pointer-events-none absolute inset-x-12 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.85),transparent)]" />

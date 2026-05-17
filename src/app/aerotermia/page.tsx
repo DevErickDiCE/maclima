@@ -52,6 +52,8 @@ export default function AerotermiaPage() {
       ]}
       heroCtaLabel="Solicitar asesoramiento en aerotermia"
       heroHref="/consultoria-gratuita?tipo=Aerotermia#formulario"
+      heroImageSrc="/imagen/thermira-monobloc.jpg"
+      heroImageAlt="Equipo de aerotermia monobloc para climatización eficiente"
       primaryPanel={{
         eyebrow: "Beneficios y aplicaciones",
         title: "Una tecnología pensada para calefacción, refrigeración y ACS",

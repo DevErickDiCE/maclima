@@ -20,9 +20,24 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 ::selection {
   background: #d9d9ff;
   color: #850e88;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 88px;
+  }
 }
