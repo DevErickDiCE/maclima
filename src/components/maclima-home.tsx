@@ -132,6 +132,24 @@ const photovoltaicHighlights = [
   },
 ] as const;
 
+const bessFeatures = [
+  {
+    title: "Almacenamiento con baterías",
+    text: "Guarda excedentes para usarlos cuando los necesites.",
+    icon: BatteryCharging,
+  },
+  {
+    title: "Integración con fotovoltaica",
+    text: "Compatible con instalaciones solares nuevas o existentes.",
+    icon: Sun,
+  },
+  {
+    title: "Optimización y continuidad",
+    text: "Ayuda a reducir dependencia de red y mejorar continuidad operativa.",
+    icon: ShieldCheck,
+  },
+] as const;
+
 
 const benBullets = [
   "Calefacción y refrigeración",
@@ -330,6 +348,7 @@ export function MaclimaHome() {
         <Verticals />
         <AerothermalEfficiency />
         <PhotovoltaicIntelligence />
+        <EnergyStorage />
         <GeothermalSection />
         <FeaturedSolutions />
         <ConsultiveCatalog />
@@ -800,6 +819,153 @@ function PhotovoltaicIntelligence() {
                 Consultar solución combinada
                 <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
               </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function EnergyStorage() {
+  return (
+    <section
+      id="bess"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#F8F7FF_0%,#FFFFFF_55%,#EAEAFF_100%)] py-12 sm:py-16"
+    >
+      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute right-[-10%] top-12 h-80 w-80 rounded-full bg-[#850E88]/12 blur-3xl" />
+      <div className="absolute left-[-12%] bottom-[-14%] h-80 w-80 rounded-full bg-[#F2B84B]/12 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          {...fadeUp}
+          className="overflow-hidden rounded-[36px] border border-white/80 bg-[radial-gradient(circle_at_76%_18%,rgba(133,14,136,0.12),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] p-5 shadow-[0_30px_96px_rgba(133,14,136,0.13)] sm:p-7 lg:p-9"
+        >
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start lg:gap-x-8 lg:gap-y-8">
+            <div className="lg:col-start-1 lg:row-start-1">
+              <p className="text-sm font-black uppercase tracking-[0.14em] text-[#850E88]">
+                Almacenamiento energético
+              </p>
+              <h2 className="mt-3 text-3xl font-black leading-tight text-[#17111A] sm:text-4xl">
+                BESS y baterías para aprovechar mejor tu energía
+              </h2>
+              <p className="mt-4 text-base leading-7 text-[#5F5A66] sm:text-lg sm:leading-8">
+                Los sistemas de almacenamiento energético permiten guardar
+                excedentes, optimizar el consumo y mejorar la continuidad
+                operativa en viviendas, negocios y proyectos profesionales.
+              </p>
+              <p className="mt-4 text-sm font-semibold leading-6 text-[#17111A] sm:text-base sm:leading-7">
+                En Maclima estudiamos cada caso para valorar si una solución BESS
+                encaja con la instalación fotovoltaica, el perfil de consumo, la
+                potencia contratada y los objetivos de ahorro.
+              </p>
+              <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href="/consultoria-gratuita#formulario"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
+                >
+                  Solicitar consultoría sobre BESS
+                  <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1 sm:h-5 sm:w-5" aria-hidden="true" />
+                </Link>
+                <Link
+                  href="/catalogo#fotovoltaica-catalogo"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
+                >
+                  Ver catálogo fotovoltaico
+                  <FileText className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative lg:col-span-2 lg:col-start-1 lg:row-start-2">
+              <div className="absolute -inset-6 rounded-[40px] bg-[#850E88]/10 blur-3xl" aria-hidden="true" />
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[28px] border border-white/80 shadow-[0_30px_90px_rgba(23,17,26,0.16)] sm:rounded-[32px] lg:aspect-[16/9] xl:aspect-[16/8]">
+                <Image
+                  src="/bess.png"
+                  alt="Sistema BESS con paneles solares y baterías integrados en una vivienda con conexiones energéticas"
+                  fill
+                  sizes="(min-width: 1024px) 90vw, 100vw"
+                  className="object-cover object-[center_72%]"
+                />
+                <div className="absolute left-3 top-3 max-w-[88%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:left-6 sm:top-6 sm:max-w-md sm:px-4 sm:py-3">
+                  <p className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#850E88] sm:text-[11px]">
+                    <BatteryCharging className="h-3.5 w-3.5" aria-hidden="true" />
+                    BESS · Fotovoltaica · Autoconsumo
+                  </p>
+                  <p className="mt-1 text-xs font-semibold leading-5 text-[#17111A] sm:text-sm sm:leading-6">
+                    Almacenamiento, optimización y continuidad operativa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-start-2 lg:row-start-1">
+              <div className="h-full rounded-[24px] border border-[#D9D9FF]/80 bg-white/85 p-5 shadow-[0_18px_44px_rgba(133,14,136,0.08)] backdrop-blur sm:p-6">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+                  Qué valoramos
+                </p>
+                <motion.ul {...fadeUp} className="mt-3 grid gap-2.5">
+                  {bessFeatures.map((item) => (
+                    <li
+                      key={item.title}
+                      className="flex items-start gap-3 rounded-2xl border border-[#D9D9FF]/70 bg-white px-3.5 py-3"
+                    >
+                      <span
+                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F8F7FF] text-[#850E88]"
+                        aria-hidden="true"
+                      >
+                        <item.icon className="h-4 w-4" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-black leading-5 text-[#17111A]">
+                          {item.title}
+                        </p>
+                        <p className="mt-0.5 text-xs leading-5 text-[#5F5A66]">
+                          {item.text}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </motion.ul>
+              </div>
+            </div>
+
+            <div className="lg:col-start-1 lg:row-start-3">
+              <div className="h-full rounded-[20px] border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-4 sm:px-5 sm:py-5">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+                  Ayudas y subvenciones
+                </p>
+                <p className="mt-2 text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">
+                  También revisamos{" "}
+                  <span className="font-bold text-[#17111A]">
+                    posibles ayudas, subvenciones o incentivos
+                  </span>{" "}
+                  disponibles según ubicación, tipo de instalación y normativa
+                  vigente.
+                </p>
+              </div>
+            </div>
+
+            <div className="lg:col-start-2 lg:row-start-3">
+              <div className="h-full rounded-[20px] border border-[#D9D9FF] bg-white/85 px-4 py-4 backdrop-blur sm:px-5 sm:py-5">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+                  Marcas con las que trabajamos
+                </p>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full border border-[#850E88]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#850E88]">
+                    Reaseen
+                  </span>
+                  <span className="inline-flex items-center rounded-full border border-[#850E88]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#850E88]">
+                    Goodyear
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-5 text-[#5F5A66]">
+                  Trabajamos con soluciones fotovoltaicas y paneles de marcas
+                  como Reaseen y Goodyear, valorando siempre la opción más
+                  adecuada para cada proyecto.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
