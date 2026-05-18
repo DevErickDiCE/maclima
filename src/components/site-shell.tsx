@@ -32,11 +32,11 @@ export function SiteHeader() {
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#850E88] text-white shadow-[0_10px_26px_rgba(133,14,136,0.22)] sm:h-11 sm:w-11 sm:shadow-[0_12px_32px_rgba(133,14,136,0.25)]">
             <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
           </span>
-          <span className="min-w-0 leading-tight">
+          <span className="min-w-0 flex-1 leading-tight">
             <span className="block text-[0.95rem] font-bold text-[#17111A] sm:text-lg">
               Maclima
             </span>
-            <span className="block max-w-[8.6rem] text-[0.64rem] font-semibold uppercase leading-tight text-[#850E88] sm:max-w-none sm:text-xs">
+            <span className="block whitespace-nowrap text-[0.58rem] font-semibold uppercase leading-tight tracking-[0.01em] text-[#850E88] sm:max-w-none sm:text-xs sm:tracking-normal">
               Soluciones Energéticas
             </span>
           </span>

@@ -387,7 +387,7 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[520px] max-w-7xl items-end px-4 py-7 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
+      <div className="mx-auto flex min-h-[500px] max-w-7xl items-end px-4 py-6 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
@@ -397,24 +397,24 @@ function Hero() {
           <div className="mb-2 sm:mb-3 md:mb-4">
             <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
-              <span className="text-[0.68rem] font-extrabold uppercase leading-none tracking-[0.10em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
+              <span className="text-[0.66rem] font-extrabold uppercase leading-none tracking-[0.09em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
                 MACLIMA CALOR Y FRÍO S.L.
               </span>
             </div>
-            <p className="mt-1 text-[0.7rem] font-medium leading-snug text-[#3D2E42] sm:mt-1.5 sm:text-[0.82rem] md:text-[0.86rem]">
+            <p className="mt-1 text-[0.69rem] font-medium leading-snug text-[#3D2E42] sm:mt-1.5 sm:text-[0.82rem] md:text-[0.86rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
             <span className="mt-1.5 block h-[2px] w-10 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-12" aria-hidden="true" />
           </div>
-          <h1 className="max-w-[620px] text-[1.82rem] font-black leading-[1.07] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
+          <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
             <span className="block md:hidden">Aerotermia, solar y geotermia para ahorrar energía</span>
             <span className="hidden md:block">Aerotermia, fotovoltaica y geotermia para ahorrar energía</span>
           </h1>
-          <p className="mt-2.5 max-w-xl text-[0.9rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-3 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
+          <p className="mt-2.5 max-w-xl text-[0.88rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-3 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
-          <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2 lg:mt-3">
+          <div className="mt-3 hidden flex-wrap gap-1.5 sm:mt-4 sm:flex sm:gap-2 lg:mt-3">
             {heroSignals.map((signal) => (
               <span
                 key={signal}
@@ -440,7 +440,7 @@ function Hero() {
               <FileText className="h-4 w-4 transition duration-200 ease-out group-hover:-translate-y-0.5 sm:h-5 sm:w-5" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2 lg:mt-4">
+          <div className="mt-3 hidden flex-wrap gap-1.5 sm:mt-5 sm:flex sm:gap-2 lg:mt-4">
             {heroTrustLine.map((item) => (
               <span
                 key={item}
