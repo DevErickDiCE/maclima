@@ -39,7 +39,7 @@ const projectTypes = [
   "Fotovoltaica",
   "Geotermia",
   "ACS",
-  "Baterías / almacenamiento",
+  "BESS / baterías",
   "No lo tengo claro todavía",
   "Otro",
 ] as const;
@@ -59,17 +59,17 @@ const reviewItems = [
   {
     n: 2,
     title: "Consumo y necesidades energéticas",
-    text: "Valoramos el uso previsto, horarios, demanda de calefacción, refrigeración, ACS, consumo eléctrico y objetivos de ahorro para entender qué solución puede tener más sentido.",
+    text: "Valoramos uso previsto, perfil horario, demanda de calefacción, refrigeración, ACS, consumo eléctrico, posibles excedentes y si tiene sentido estudiar almacenamiento.",
   },
   {
     n: 3,
     title: "Espacio disponible y condiciones técnicas",
-    text: "Analizamos cubierta, orientación, sombras, sala técnica, ubicación de equipos, acceso, instalación existente y posibles condicionantes del inmueble.",
+    text: "Analizamos cubierta, orientación, sombras, sala técnica, espacio para baterías o equipos BESS, acceso, instalación existente y posibles condicionantes del inmueble.",
   },
   {
     n: 4,
     title: "Soluciones posibles y siguiente paso",
-    text: "Comparamos alternativas como aerotermia, fotovoltaica, geotermia, acumulación, baterías o soluciones combinadas, y te orientamos sobre la opción más viable antes de preparar una propuesta.",
+    text: "Comparamos alternativas como aerotermia, fotovoltaica, geotermia, acumulación, baterías / BESS o soluciones combinadas, y te orientamos sobre la opción más viable antes de preparar una propuesta.",
   },
 ] as const;
 
@@ -124,8 +124,8 @@ const solutions = [
   },
   {
     icon: BatteryCharging,
-    title: "Baterías y almacenamiento",
-    text: "Para aprovechar excedentes solares, mejorar autoconsumo, gestionar horarios de uso y reducir dependencia de la red según el perfil de consumo.",
+    title: "BESS y almacenamiento energético",
+    text: "Para instalaciones fotovoltaicas, empresas, comunidades o proyectos con consumos relevantes donde conviene estudiar baterías, optimización del consumo, mayor independencia energética o continuidad operativa.",
   },
   {
     icon: Building2,
@@ -138,7 +138,7 @@ const supportAreas = [
   {
     icon: TrendingDown,
     title: "Bonificaciones, ayudas y ahorro",
-    text: "Revisamos posibles bonificaciones de IBI, deducciones fiscales, subvenciones disponibles, incentivos autonómicos o municipales y estimación de ahorro según el tipo de instalación.",
+    text: "Revisamos posibles bonificaciones de IBI, deducciones fiscales, subvenciones e incentivos asociados a fotovoltaica, almacenamiento energético, eficiencia o mejora de instalaciones, siempre según convocatoria vigente, municipio y características del proyecto.",
   },
   {
     icon: Award,
@@ -198,11 +198,10 @@ export default function ConsultoriaGratuitaPage() {
                 Elige la solución energética adecuada para tu vivienda, negocio o instalación
               </h1>
               <p className="mt-3.5 text-[14px] leading-[1.6] text-[#5F5A66] sm:mt-5 sm:text-[15px] sm:leading-[1.7]">
-                En Maclima estudiamos tu caso antes de recomendar una solución.
-                Analizamos el tipo de inmueble, consumo, espacio disponible,
-                instalación existente y objetivos de ahorro para valorar si encaja
-                mejor aerotermia, fotovoltaica, geotermia, ACS, almacenamiento o
-                una solución combinada.
+                En Maclima analizamos tu vivienda, negocio o instalación para
+                valorar qué sistema encaja mejor: aerotermia, fotovoltaica,
+                geotermia, ACS, baterías, almacenamiento energético BESS o una
+                combinación de soluciones.
               </p>
               <div className="mt-3 flex items-start gap-2.5 sm:mt-4">
                 <span className="mt-2 h-0.5 w-6 shrink-0 rounded-full bg-[#850E88]" />
@@ -261,7 +260,7 @@ export default function ConsultoriaGratuitaPage() {
                 {/* Tag sutil arriba */}
                 <div className="absolute left-3 top-3 sm:left-4 sm:top-4">
                   <span className="inline-flex items-center rounded-full border border-white/25 bg-black/25 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-white backdrop-blur-md">
-                    Aerotermia · Fotovoltaica · Geotermia
+                    Aerotermia · Fotovoltaica · Geotermia · BESS
                   </span>
                 </div>
               </div>
@@ -495,10 +494,11 @@ export default function ConsultoriaGratuitaPage() {
                 También podemos revisar ayudas, trámites y viabilidad
               </h2>
               <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:text-[15px] sm:leading-[1.7]">
-                Además de la solución técnica, valoramos si el proyecto puede
-                beneficiarse de trámites, incentivos o requisitos administrativos
-                asociados, siempre según municipio, normativa vigente y
-                características de la instalación.
+                También revisamos si el proyecto puede beneficiarse de posibles
+                ayudas, subvenciones o incentivos asociados a fotovoltaica,
+                almacenamiento energético, eficiencia o mejora de instalaciones,
+                siempre según municipio, normativa vigente y características del
+                proyecto.
               </p>
             </motion.div>
             <div className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
