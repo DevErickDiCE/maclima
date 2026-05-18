@@ -108,106 +108,118 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#17111A] py-9 text-white sm:py-14">
-      <div className="mx-auto grid max-w-7xl gap-7 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr] lg:px-8">
-        <div>
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#850E88] text-white sm:h-11 sm:w-11">
-              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
-            </span>
-            <div>
-              <p className="text-base font-black leading-tight sm:text-lg">Maclima Soluciones Energéticas</p>
-              <p className="mt-0.5 text-xs font-semibold text-[#D9D9FF] sm:text-sm">
-                MACLIMA CALOR Y FRÍO S.L.
-              </p>
+    <footer className="bg-[#17111A] py-12 text-white sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-9 sm:gap-10 lg:grid-cols-[1.5fr_0.85fr_0.85fr_1fr] lg:gap-12">
+          <div className="lg:order-1">
+            <div className="flex items-center gap-3">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#850E88] text-white">
+                <Sparkles className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <div className="leading-tight">
+                <p className="text-base font-black sm:text-lg">Maclima Soluciones Energéticas</p>
+                <p className="mt-0.5 text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-[#B79DD9] sm:text-[11px]">
+                  {LEGAL_COMPANY.holder.toUpperCase()}
+                </p>
+              </div>
+            </div>
+            <p className="mt-5 max-w-sm text-sm leading-6 text-[#D9D9FF]/85">
+              Distribución, instalación y asesoramiento técnico en aerotermia,
+              fotovoltaica y geotermia para viviendas, negocios y profesionales.
+            </p>
+            <div className="mt-5 space-y-1 text-xs leading-5 text-[#D9D9FF]/65">
+              <p>CIF: {LEGAL_COMPANY.taxId}</p>
+              <p>{LEGAL_COMPANY.address}</p>
             </div>
           </div>
-          <p className="mt-4 max-w-md text-sm leading-6 text-[#D9D9FF] sm:mt-5">
-            Distribución, instalación y asesoramiento técnico en aerotermia,
-            fotovoltaica y geotermia para cliente final, negocio y profesional del sector.
-          </p>
-          <p className="mt-3 max-w-md text-xs leading-5 text-[#D9D9FF] sm:mt-4">
-            Maclima Soluciones Energéticas es el nombre comercial de {LEGAL_COMPANY.holder}
-          </p>
-          <p className="mt-3 max-w-md text-xs leading-5 text-[#D9D9FF]/80">
-            CIF: {LEGAL_COMPANY.taxId}<br />
-            {LEGAL_COMPANY.address}<br />
-            Tel: {CONTACT_INFO.phone}<br />
-            Email: {CONTACT_INFO.email}<br />
-            WhatsApp: {CONTACT_INFO.whatsapp}
-          </p>
-        </div>
 
-        <div>
-          <p className="font-black text-white">Enlaces</p>
-          <nav className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm font-semibold text-[#D9D9FF] sm:mt-4 sm:grid-cols-1 sm:gap-3">
-            {siteNavItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
+          <div className="lg:order-4">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-white">
+              Contacto
+            </p>
+            <div className="mt-4 grid gap-3 text-sm text-[#D9D9FF]">
+              <a
+                href={CONTACT_INFO.phoneHref}
+                className="group inline-flex items-center gap-2.5 transition duration-200 ease-out hover:text-white"
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div>
-          <p className="font-black text-white">Legal</p>
-          <nav className="mt-3 grid gap-2.5 text-sm font-semibold text-[#D9D9FF] sm:mt-4 sm:gap-3">
-            {legalNavItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
+                <Phone className="h-4 w-4 shrink-0 text-[#B79DD9] transition duration-200 ease-out group-hover:text-white" aria-hidden="true" />
+                {CONTACT_INFO.phone}
+              </a>
+              <a
+                href={CONTACT_INFO.emailHref}
+                className="group inline-flex items-center gap-2.5 break-all transition duration-200 ease-out hover:text-white"
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
+                <Mail className="h-4 w-4 shrink-0 text-[#B79DD9] transition duration-200 ease-out group-hover:text-white" aria-hidden="true" />
+                {CONTACT_INFO.email}
+              </a>
+              <a
+                href={CONTACT_INFO.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2.5 transition duration-200 ease-out hover:text-white"
+              >
+                <MessageCircle className="h-4 w-4 shrink-0 text-[#B79DD9] transition duration-200 ease-out group-hover:text-white" aria-hidden="true" />
+                WhatsApp · {CONTACT_INFO.whatsapp}
+              </a>
+            </div>
+          </div>
 
-        <div>
-          <p className="font-black text-white">Contacto</p>
-          <div className="mt-3 grid gap-2.5 text-sm font-semibold text-[#D9D9FF] sm:mt-4 sm:gap-3">
-            <a
-              className="flex items-center gap-2 transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
-              href={CONTACT_INFO.phoneHref}
-            >
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {CONTACT_INFO.phone}
-            </a>
-            <a
-              className="flex items-center gap-2 transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
-              href={CONTACT_INFO.emailHref}
-            >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              {CONTACT_INFO.email}
-            </a>
-            <a
-              className="flex items-center gap-2 transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
-              href={CONTACT_INFO.whatsappHref}
-            >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              WhatsApp · {CONTACT_INFO.whatsapp}
-            </a>
+          <div className="lg:order-2">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-white">
+              Enlaces
+            </p>
+            <nav className="mt-4 grid gap-3 text-sm font-medium text-[#D9D9FF]" aria-label="Enlaces de Maclima">
+              {siteNavItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="lg:order-3">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-white">
+              Legal
+            </p>
+            <nav className="mt-4 grid gap-3 text-sm font-medium text-[#D9D9FF]" aria-label="Enlaces legales">
+              {legalNavItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="transition duration-200 ease-out hover:translate-x-0.5 hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
 
-      </div>
-      <div className="mx-auto mt-7 max-w-7xl border-t border-white/10 px-4 pt-5 sm:mt-10 sm:px-6 sm:pt-6 lg:px-8">
-        <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center text-xs font-medium leading-5 text-[#D9D9FF]/70 sm:justify-start">
-          <span>Desarrollado por</span>
-          <a
-            href="https://www.potenciasoluciones.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whitespace-nowrap text-[#D9D9FF]/90 underline decoration-white/20 underline-offset-4 transition duration-200 ease-out hover:text-white hover:decoration-white/60"
-          >
-            PotencIA Soluciones
-          </a>
-        </p>
+        <div className="mt-10 border-t border-white/10 pt-6 sm:mt-12 sm:pt-7">
+          <p className="text-center text-[11px] leading-5 text-[#D9D9FF]/55 sm:text-left">
+            Maclima Soluciones Energéticas es el nombre comercial de {LEGAL_COMPANY.holder}.
+          </p>
+          <div className="mt-3 flex flex-col items-center gap-2 text-xs text-[#D9D9FF]/70 sm:mt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+            <p className="text-center sm:text-left">
+              © 2026 Maclima Soluciones Energéticas. Todos los derechos reservados.
+            </p>
+            <p className="text-center sm:text-right">
+              Desarrollado por{" "}
+              <a
+                href="https://www.potenciasoluciones.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap font-semibold text-[#D9D9FF] underline decoration-white/20 underline-offset-4 transition duration-200 ease-out hover:text-white hover:decoration-white/60"
+              >
+                PotencIA Soluciones
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );

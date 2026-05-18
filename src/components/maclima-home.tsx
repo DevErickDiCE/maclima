@@ -378,16 +378,16 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[70%_42%] md:object-[56%_center] lg:object-[54%_center] xl:object-[52%_center]"
+        className="absolute inset-0 z-0 object-cover object-[80%_45%] md:object-[58%_center] lg:object-[60%_center] xl:object-[58%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.38)_0%,rgba(234,234,255,0.06)_35%,rgba(23,17,26,0.10)_100%)]" />
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.18)_45%,transparent_70%)] md:hidden" />
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.62)_0%,rgba(255,255,255,0.22)_30%,transparent_55%,rgba(23,17,26,0.18)_100%)] md:hidden" />
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[500px] max-w-7xl items-start px-4 pt-5 pb-7 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
+      <div className="mx-auto flex min-h-[600px] max-w-7xl items-stretch px-4 pt-5 pb-8 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
@@ -395,16 +395,14 @@ function Hero() {
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
           <div className="mb-3 sm:mb-3 md:mb-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#850E88]/14 bg-white/78 px-3 py-1.5 shadow-[0_10px_26px_rgba(133,14,136,0.08)] backdrop-blur-sm sm:gap-2.5 sm:px-4 sm:py-2">
+            <p className="inline-flex items-center gap-2 text-[0.72rem] font-black uppercase leading-none tracking-[0.16em] text-[#850E88] sm:gap-2.5 sm:text-[1.05rem] sm:tracking-[0.18em] md:text-[1.125rem]">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
-              <span className="text-[0.68rem] font-extrabold uppercase leading-none tracking-[0.11em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
-                MACLIMA CALOR Y FRÍO S.L.
-              </span>
-            </div>
-            <p className="mt-2 text-[0.76rem] font-semibold leading-snug text-[#2E2334] sm:mt-1.5 sm:text-[0.9rem] md:text-[0.92rem]">
+              MACLIMA CALOR Y FRÍO S.L.
+            </p>
+            <p className="mt-2 text-[0.86rem] font-bold leading-snug text-[#1F1623] sm:mt-2 sm:text-[1rem] md:text-[1.05rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
-            <span className="mt-1.5 block h-[2px] w-10 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-12" aria-hidden="true" />
+            <span className="mt-2 block h-[2px] w-12 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-14" aria-hidden="true" />
           </div>
           <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
             Aerotermia, fotovoltaica y geotermia para ahorrar energía
@@ -423,7 +421,7 @@ function Hero() {
               </span>
             ))}
           </div>
-          <div className="mt-5 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3 lg:mt-6">
+          <div className="mt-auto flex flex-col gap-2.5 pt-6 sm:mt-7 sm:flex-row sm:gap-3 sm:pt-0 lg:mt-6">
             <Link
               href="/consultoria-gratuita#formulario"
               className="group inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-[0.9rem] font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
