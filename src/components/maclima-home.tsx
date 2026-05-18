@@ -378,7 +378,7 @@ function Hero() {
         src="/hero-maclima.png"
         alt="Vivienda moderna con placas solares y sistema energético integrado"
         fill
-        className="absolute inset-0 z-0 object-cover object-[72%_center] md:object-[56%_center] lg:object-[54%_center] xl:object-[52%_center]"
+        className="absolute inset-0 z-0 object-cover object-[70%_42%] md:object-[56%_center] lg:object-[54%_center] xl:object-[52%_center]"
         priority
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
@@ -387,28 +387,27 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[500px] max-w-7xl items-end px-4 py-6 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
+      <div className="mx-auto flex min-h-[500px] max-w-7xl items-start px-4 pt-5 pb-7 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-2 sm:mb-3 md:mb-4">
-            <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="mb-3 sm:mb-3 md:mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#850E88]/14 bg-white/78 px-3 py-1.5 shadow-[0_10px_26px_rgba(133,14,136,0.08)] backdrop-blur-sm sm:gap-2.5 sm:px-4 sm:py-2">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
-              <span className="text-[0.66rem] font-extrabold uppercase leading-none tracking-[0.09em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
+              <span className="text-[0.68rem] font-extrabold uppercase leading-none tracking-[0.11em] text-[#850E88] sm:text-[1.05rem] sm:tracking-[0.14em] md:text-[1.125rem]">
                 MACLIMA CALOR Y FRÍO S.L.
               </span>
             </div>
-            <p className="mt-1 text-[0.69rem] font-medium leading-snug text-[#3D2E42] sm:mt-1.5 sm:text-[0.82rem] md:text-[0.86rem]">
+            <p className="mt-2 text-[0.76rem] font-semibold leading-snug text-[#2E2334] sm:mt-1.5 sm:text-[0.9rem] md:text-[0.92rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
             <span className="mt-1.5 block h-[2px] w-10 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-12" aria-hidden="true" />
           </div>
           <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
-            <span className="block md:hidden">Aerotermia, solar y geotermia para ahorrar energía</span>
-            <span className="hidden md:block">Aerotermia, fotovoltaica y geotermia para ahorrar energía</span>
+            Aerotermia, fotovoltaica y geotermia para ahorrar energía
           </h1>
           <p className="mt-2.5 max-w-xl text-[0.88rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-3 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
