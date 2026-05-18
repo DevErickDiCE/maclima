@@ -135,17 +135,27 @@ const photovoltaicHighlights = [
 const bessFeatures = [
   {
     title: "Almacenamiento con baterías",
-    text: "Guarda excedentes para usarlos cuando los necesites.",
+    text: "Guarda excedentes o energía disponible para usarla cuando más conviene.",
     icon: BatteryCharging,
   },
   {
     title: "Integración con fotovoltaica",
-    text: "Compatible con instalaciones solares nuevas o existentes.",
+    text: "Permite aprovechar mejor una instalación solar nueva o existente.",
     icon: Sun,
   },
   {
-    title: "Optimización y continuidad",
-    text: "Ayuda a reducir dependencia de red y mejorar continuidad operativa.",
+    title: "Optimización del consumo",
+    text: "Ayuda a adaptar el uso de energía a horarios, hábitos y tarifas.",
+    icon: Gauge,
+  },
+  {
+    title: "Mayor independencia energética",
+    text: "Reduce la dependencia directa de la red eléctrica según el diseño del sistema.",
+    icon: Plug,
+  },
+  {
+    title: "Continuidad operativa",
+    text: "Puede aportar respaldo ante cortes, picos o necesidades críticas.",
     icon: ShieldCheck,
   },
 ] as const;
@@ -851,16 +861,27 @@ function EnergyStorage() {
                 BESS y baterías para aprovechar mejor tu energía
               </h2>
               <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">
-                Los sistemas de almacenamiento energético permiten guardar
-                excedentes, optimizar el consumo y mejorar la continuidad
-                operativa en viviendas, negocios y proyectos profesionales.
+                Los sistemas BESS permiten almacenar energía mediante baterías
+                para usarla cuando más conviene. Son una solución especialmente
+                interesante para instalaciones fotovoltaicas, negocios,
+                empresas, comunidades o proyectos con consumos relevantes que
+                buscan optimizar el uso de la energía y reducir la dependencia
+                de la red.
               </p>
               <p className="mt-3 text-sm font-semibold leading-6 text-[#17111A] sm:mt-4 sm:text-base sm:leading-7">
-                En Maclima estudiamos cada caso para valorar si una solución BESS
-                encaja con la instalación fotovoltaica, el perfil de consumo, la
-                potencia contratada y los objetivos de ahorro.
+                En Maclima estudiamos cada caso para valorar si una solución de
+                almacenamiento encaja con la instalación, el perfil de consumo,
+                la potencia contratada, los horarios de uso, el espacio
+                disponible y los objetivos de ahorro o continuidad operativa.
               </p>
-              <div className="mt-5 flex flex-col items-stretch gap-2.5 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
+              <div className="mt-4 rounded-[18px] border border-[#850E88]/12 bg-white/80 px-4 py-3 shadow-sm backdrop-blur sm:mt-5 sm:rounded-[22px] sm:px-5">
+                <p className="text-sm font-bold leading-6 text-[#17111A] sm:text-[0.95rem] sm:leading-7">
+                  No todos los proyectos necesitan baterías. Por eso analizamos
+                  primero la viabilidad técnica y económica antes de recomendar
+                  una solución BESS.
+                </p>
+              </div>
+              <div className="mt-5 flex flex-col items-stretch gap-2.5 sm:mt-6 lg:flex-row lg:items-center lg:gap-3">
                 <Link
                   href="/consultoria-gratuita#formulario"
                   className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
@@ -886,9 +907,9 @@ function EnergyStorage() {
                   alt="Sistema BESS con paneles solares y baterías integrados en una vivienda con conexiones energéticas"
                   fill
                   sizes="(min-width: 1024px) 90vw, 100vw"
-                  className="object-cover object-[center_72%] sm:object-[center_72%]"
+                  className="object-cover object-[center_58%] sm:object-[center_60%] lg:object-[center_57%]"
                 />
-                <div className="absolute left-3 top-3 max-w-[88%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:left-6 sm:top-6 sm:max-w-md sm:px-4 sm:py-3">
+                <div className="absolute bottom-3 left-3 max-w-[84%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:bottom-5 sm:left-5 sm:max-w-[22rem] sm:px-4 sm:py-3">
                   <p className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#850E88] sm:text-[11px]">
                     <BatteryCharging className="h-3.5 w-3.5" aria-hidden="true" />
                     BESS · Fotovoltaica · Autoconsumo
@@ -903,7 +924,7 @@ function EnergyStorage() {
             <div className="lg:col-start-2 lg:row-start-1">
               <div className="h-full rounded-[20px] border border-[#D9D9FF]/80 bg-white/85 p-4 shadow-[0_14px_34px_rgba(133,14,136,0.07)] backdrop-blur sm:rounded-[24px] sm:p-6 sm:shadow-[0_18px_44px_rgba(133,14,136,0.08)]">
                 <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
-                  Qué valoramos
+                  Qué podemos valorar
                 </p>
                 <motion.ul {...fadeUp} className="mt-3 grid gap-2.5">
                   {bessFeatures.map((item) => (
@@ -937,12 +958,10 @@ function EnergyStorage() {
                   Ayudas y subvenciones
                 </p>
                 <p className="mt-2 text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">
-                  También revisamos{" "}
-                  <span className="font-bold text-[#17111A]">
-                    posibles ayudas, subvenciones o incentivos
-                  </span>{" "}
-                  disponibles según ubicación, tipo de instalación y normativa
-                  vigente.
+                  También revisamos posibles ayudas, subvenciones o incentivos
+                  disponibles para proyectos de almacenamiento energético,
+                  siempre según ubicación, tipo de instalación, convocatoria
+                  vigente y requisitos técnicos aplicables.
                 </p>
               </div>
             </div>
@@ -963,7 +982,8 @@ function EnergyStorage() {
                 <p className="mt-2 text-xs leading-5 text-[#5F5A66]">
                   Trabajamos con soluciones fotovoltaicas y paneles de marcas
                   como Reaseen y Goodyear, valorando siempre la opción más
-                  adecuada para cada proyecto.
+                  adecuada según el proyecto, la instalación y las necesidades
+                  reales del cliente.
                 </p>
               </div>
             </div>
