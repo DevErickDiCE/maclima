@@ -19,7 +19,7 @@ type CatalogVertical = "aerotermia" | "fotovoltaica" | "geotermia";
 type ThumbnailType =
   | "ben"
   | "climer"
-  | "yekallor"
+  | "ekallor"
   | "acs"
   | "clima"
   | "tank"
@@ -58,8 +58,8 @@ type CatalogProduct = {
 const catalogNav = [
   { label: "Todos", href: "#catalogo-todos" },
   { label: "Aerotermia", href: "#aerotermia-catalogo" },
-  { label: "Fotovoltaica", href: "#fotovoltaica-catalogo" },
   { label: "Geotermia", href: "#geotermia-catalogo" },
+  { label: "Fotovoltaica", href: "#fotovoltaica-catalogo" },
   { label: "BEN Dual-Air", href: "#ben-dual-air-catalogo" },
 ] as const;
 
@@ -67,7 +67,7 @@ const aerothermalFilters = [
   "Todas",
   "BEN",
   "Climer",
-  "Yekallor",
+  "Ekallor",
   "ELNUR GABARRON",
   "ACS",
   "Calefacción y refrigeración",
@@ -89,9 +89,12 @@ const photovoltaicFilters = [
 
 const geothermalFilters = [
   "Todas",
+  "Ecoforest",
+  "R290",
+  "Inverter",
+  "ACS",
   "Climatización",
   "Captación",
-  "ACS",
   "Consultoría",
   "Combinada",
 ] as const;
@@ -177,50 +180,6 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "climer-calefaccion-refrigeracion",
-    vertical: "aerotermia",
-    brand: "Climer",
-    name: "Climer Calefacción y refrigeración",
-    category: "Climer · Calefacción y refrigeración",
-    thumbnailType: "clima",
-    image: "/imagen/climer-ai20pro.webp",
-    cardImageFit: "contain",
-    cardImageBg: "white",
-    modalImageFit: "contain",
-    shortDescription: "Sistema de bomba de calor aerotérmica para calefacción y refrigeración.",
-    description:
-      "Sistema de bomba de calor aerotérmica para aplicaciones domésticas y comerciales, preparado para calefacción y refrigeración según la demanda térmica del inmueble. Gracias a su compresor Inverter, ajusta la potencia en cada momento para mejorar el rendimiento y adaptarse a diferentes condiciones climáticas.",
-    tags: ["Calefacción", "Refrigeración", "Bajo consumo"],
-    applications: [
-      "Vivienda",
-      "Negocio",
-      "Reforma",
-      "Obra nueva",
-      "Instalaciones con necesidad de frío y calor",
-      "Proyectos con demanda térmica variable",
-    ],
-    features: [
-      "Calefacción y refrigeración",
-      "Sistema Inverter",
-      "Programación con curva climática integrada",
-      "Instalación rápida y sencilla",
-      "Solo requiere conexiones hidráulicas",
-      "Temperatura de impulsión hasta 70 ºC",
-      "Preparado para climas fríos y cálidos",
-    ],
-    compatibility: [
-      "Fancoils",
-      "Suelo radiante",
-      "Radiadores de agua",
-      "Sistemas hidráulicos existentes, según estudio técnico",
-    ],
-    fit: [
-      "Inmuebles que necesitan una solución de climatización eficiente durante todo el año",
-      "Proyectos que buscan calefacción y refrigeración con un sistema adaptable a la demanda real",
-      "Instalaciones preparadas para trabajar en distintos climas",
-    ],
-  },
-  {
     id: "climer-termoacumulador",
     vertical: "aerotermia",
     brand: "Climer",
@@ -268,13 +227,13 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "yekallor-bomba-calor",
+    id: "ekallor-bomba-calor",
     vertical: "aerotermia",
-    brand: "Yekallor",
-    name: "Yekallor Monobloco Inverter R290",
-    category: "Yekallor · Aerotermia",
-    thumbnailType: "yekallor",
-    image: "/imagen/yekallor-monobloco-r290.webp",
+    brand: "Ekallor",
+    name: "Ekallor Monobloco Inverter R290",
+    category: "Ekallor · Aerotermia",
+    thumbnailType: "ekallor",
+    image: "/imagen/ekallor-monobloco-r290.webp",
     cardImageFit: "contain",
     cardImageBg: "white",
     modalImageFit: "contain",
@@ -316,13 +275,13 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "yekallor-acs",
+    id: "ekallor-acs",
     vertical: "aerotermia",
-    brand: "Yekallor",
-    name: "Yekallor BC AQS",
-    category: "Yekallor · ACS",
+    brand: "Ekallor",
+    name: "Ekallor BC AQS",
+    category: "Ekallor · ACS",
     thumbnailType: "acs",
-    image: "/imagen/yekallor-bc-aqs.webp",
+    image: "/imagen/ekallor-bc-aqs.webp",
     cardImageFit: "contain",
     cardImageBg: "white",
     modalImageFit: "contain",
@@ -357,13 +316,13 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "yekallor-depositos-acumulacion",
+    id: "ekallor-depositos-acumulacion",
     vertical: "aerotermia",
-    brand: "Yekallor",
-    name: "Yekallor Termoacumuladores",
-    category: "Yekallor · Termoacumuladores",
+    brand: "Ekallor",
+    name: "Ekallor Termoacumuladores",
+    category: "Ekallor · Termoacumuladores",
     thumbnailType: "tank",
-    image: "/imagen/yekallor-termoacumuladores.webp",
+    image: "/imagen/ekallor-termoacumuladores.webp",
     cardImageFit: "contain",
     cardImageBg: "white",
     modalImageFit: "contain",
@@ -404,7 +363,7 @@ const catalogProducts: CatalogProduct[] = [
     name: "Thermira Monobloc",
     category: "Aerotermia · Monobloc",
     image: "/imagen/thermira-monobloc.jpg",
-    thumbnailType: "yekallor",
+    thumbnailType: "ekallor",
     cardImageFit: "contain",
     cardImageBg: "white",
     modalImageFit: "contain",
@@ -942,55 +901,6 @@ const catalogProducts: CatalogProduct[] = [
     ],
   },
   {
-    id: "bomba-calor-geotermica-premium",
-    vertical: "geotermia",
-    brand: "Geotermia",
-    name: "Bomba de calor geotérmica premium",
-    category: "Geotermia · Climatización y ACS",
-    image: "/imagen/S1155.png",
-    thumbnailType: "geo",
-    cardImageFit: "contain",
-    cardImageBg: "white",
-    modalImageFit: "contain",
-    shortDescription:
-      "Sistema geotérmico de alta eficiencia para calefacción, refrigeración y agua caliente sanitaria, pensado para viviendas con estudio técnico previo.",
-    description:
-      "Bomba de calor geotérmica interior para proyectos que buscan climatización eficiente, agua caliente sanitaria y confort estable durante todo el año. Aprovecha la temperatura estable del subsuelo para producir calefacción, refrigeración y ACS con consumo energético optimizado. Su compresor inverter adapta la potencia a la demanda real de la vivienda, mejorando el rendimiento frente a sistemas convencionales. La geotermia requiere estudio previo de viabilidad: terreno, demanda térmica, espacio disponible, permisos, captación y configuración hidráulica.",
-    tags: ["Geotermia", "ACS", "Alta eficiencia", "Bajo ruido"],
-    applications: [
-      "Viviendas unifamiliares",
-      "Obra nueva",
-      "Reformas energéticas",
-      "Proyectos con alta demanda térmica",
-      "Instalaciones con ACS",
-    ],
-    features: [
-      "Bomba de calor geotérmica interior",
-      "Compresor inverter",
-      "Alto rendimiento estacional",
-      "Calefacción, refrigeración y ACS",
-      "Bajo nivel sonoro",
-      "Conectividad y control avanzado",
-      "Compatible con acumulador de ACS externo",
-      "Diferentes potencias según demanda",
-    ],
-    compatibility: [
-      "Captación geotérmica vertical u horizontal según estudio",
-      "Suelo radiante",
-      "Fancoils",
-      "Acumulación de ACS",
-      "Sistemas de climatización eficientes",
-      "Viviendas con espacio técnico disponible",
-    ],
-    fit: [
-      "Clientes que buscan eficiencia y confort estable",
-      "Viviendas donde se pueda estudiar captación geotérmica",
-      "Proyectos que priorizan bajo consumo y solución duradera",
-      "Obra nueva o reformas con enfoque energético",
-      "Casos donde conviene valorar inversión inicial frente a ahorro a largo plazo",
-    ],
-  },
-  {
     id: "bomba-calor-geotermica-inverter",
     vertical: "geotermia",
     brand: "Geotermia",
@@ -1088,6 +998,205 @@ const catalogProducts: CatalogProduct[] = [
       "Obra nueva o reformas con enfoque energético",
     ],
   },
+  {
+    id: "ecoforest-ecogeo-lite-1-6-pro",
+    vertical: "geotermia",
+    brand: "Ecoforest",
+    name: "ecoGEO+ LITE 1-6 PRO",
+    category: "Geotermia · Bomba de calor geotérmica",
+    image: "/imagen/ecogeo_lite_1_6_PRO.png",
+    thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Bomba de calor geotérmica compacta con refrigerante natural R290 y tecnología inverter, para instalaciones que buscan eficiencia con espacio reducido.",
+    description:
+      "ecoGEO+ LITE 1-6 PRO es la versión compacta de la gama Ecoforest para viviendas con demanda térmica baja o moderada. Integra refrigerante natural R290 (GWP 3) y tecnología inverter con amplios rangos de modulación para adaptar la potencia a la demanda real. Produce calefacción, refrigeración activa y agua caliente sanitaria a partir de la temperatura estable del subsuelo, con una unidad interior pensada para ocupar poco espacio (59 × 80 × 56 cm). Cada instalación requiere estudio técnico previo de terreno, captación, demanda y configuración hidráulica.",
+    tags: ["Geotermia", "R290", "Inverter", "ACS", "Calefacción", "Refrigeración"],
+    applications: [
+      "Viviendas unifamiliares",
+      "Obra nueva",
+      "Reformas energéticas",
+      "Proyectos con demanda térmica baja o moderada",
+      "Instalaciones con espacio técnico reducido",
+    ],
+    features: [
+      "Rango de potencia 1-6 kW",
+      "Refrigerante natural R290 (GWP 3)",
+      "Tecnología inverter con amplio rango de modulación",
+      "Calefacción, refrigeración activa y ACS",
+      "Temperatura de impulsión hasta 70 ºC",
+      "Dimensiones compactas 59 × 80 × 56 cm",
+      "Bomba circuladora y vaso de expansión integrados",
+      "Alimentación monofásica 230 V",
+      "Compatible con hibridación fotovoltaica",
+      "Control por internet vía ecoSMART easynet",
+    ],
+    compatibility: [
+      "Captación geotérmica vertical u horizontal según estudio",
+      "Suelo radiante",
+      "Radiadores",
+      "Fancoils",
+      "Hibridación fotovoltaica",
+    ],
+    fit: [
+      "Viviendas con demanda térmica baja o moderada",
+      "Proyectos que priorizan refrigerante natural",
+      "Instalaciones con espacio técnico limitado",
+      "Clientes que buscan eficiencia y bajo impacto ambiental",
+    ],
+  },
+  {
+    id: "ecoforest-ecogeo-1-6-pro",
+    vertical: "geotermia",
+    brand: "Ecoforest",
+    name: "ecoGEO+ 1-6 PRO",
+    category: "Geotermia · Bomba de calor geotérmica",
+    image: "/imagen/ecoGEO-PRO-2-10.png",
+    thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Bomba de calor geotérmica con refrigerante natural R290, tecnología inverter y producción de calefacción, refrigeración activa/pasiva y ACS hasta 75 ºC.",
+    description:
+      "ecoGEO+ 1-6 PRO es la bomba de calor geotérmica Ecoforest para viviendas que buscan climatización integral con alto rendimiento. Trabaja con refrigerante natural R290 (GWP 3) y tecnología inverter de amplios rangos de modulación. Cubre calefacción, refrigeración activa y pasiva, ACS hasta 75 ºC y climatización de piscina. Disponible en versiones Basic y Compact (con depósito integrado de 165 L). Permite instalación en cascada de hasta 3 unidades. Cada instalación requiere estudio previo de terreno, captación, demanda y configuración hidráulica.",
+    tags: ["Geotermia", "R290", "Inverter", "ACS", "Alta eficiencia"],
+    applications: [
+      "Viviendas unifamiliares",
+      "Obra nueva",
+      "Reformas energéticas",
+      "Proyectos con ACS y refrigeración",
+      "Instalaciones con piscina",
+    ],
+    features: [
+      "Rango de potencia 1-6 kW",
+      "Refrigerante natural R290 (GWP 3)",
+      "Tecnología inverter con amplio rango de modulación",
+      "Calefacción, refrigeración activa y pasiva, ACS y piscina",
+      "ACS hasta 75 ºC, impulsión hasta 70 ºC",
+      "Versiones Basic y Compact (depósito ACS 165 L integrado)",
+      "Compatible con instalación en cascada (hasta 3 unidades)",
+      "Hibridación fotovoltaica de serie",
+    ],
+    compatibility: [
+      "Captación geotérmica vertical u horizontal según estudio",
+      "Suelo radiante",
+      "Radiadores (compatibles en rehabilitación)",
+      "Fancoils",
+      "Hibridación fotovoltaica",
+      "Climatización de piscina",
+    ],
+    fit: [
+      "Viviendas con demanda térmica media",
+      "Proyectos donde se busca alta eficiencia anual",
+      "Clientes que priorizan refrigerantes naturales",
+      "Obra nueva o reformas con enfoque energético",
+    ],
+  },
+  {
+    id: "ecoforest-ecogeo-2-10-pro",
+    vertical: "geotermia",
+    brand: "Ecoforest",
+    name: "ecoGEO+ 2-10 PRO",
+    category: "Geotermia · Bomba de calor geotérmica",
+    image: "/imagen/ecoGEO-PRO-2-10.png",
+    thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Bomba de calor geotérmica de gama media (2-10 kW) con R290, tecnología inverter y producción de calefacción, refrigeración y ACS hasta 75 ºC.",
+    description:
+      "ecoGEO+ 2-10 PRO amplía la gama Ecoforest para proyectos con mayor demanda térmica. Trabaja con refrigerante natural R290 (GWP 3) y tecnología inverter de amplios rangos de modulación, cubriendo calefacción, refrigeración activa y pasiva, ACS hasta 75 ºC y climatización de piscina. Disponible en versiones Basic y Compact (con depósito de ACS integrado), alimentación monofásica 230 V o trifásica 400 V y posibilidad de instalación en cascada de hasta 3 unidades (30 kW máximo). Compatible con sistema HTR de recuperación de calor.",
+    tags: ["Geotermia", "R290", "Inverter", "Calefacción", "Refrigeración", "ACS"],
+    applications: [
+      "Viviendas unifamiliares amplias",
+      "Pequeño terciario",
+      "Obra nueva",
+      "Reformas energéticas",
+      "Instalaciones con varios circuitos",
+    ],
+    features: [
+      "Rango de potencia 2-10 kW",
+      "Refrigerante natural R290 (GWP 3)",
+      "Tecnología inverter con amplio rango de modulación",
+      "Calefacción, refrigeración activa y pasiva, ACS y piscina",
+      "ACS hasta 75 ºC, impulsión hasta 70 ºC",
+      "Versiones Basic y Compact con depósito de ACS integrado",
+      "Alimentación monofásica 230 V o trifásica 400 V",
+      "Instalación en cascada hasta 3 unidades (30 kW)",
+      "Compatible con sistema HTR de recuperación de calor",
+      "Control por internet vía ecoSMART easynet",
+    ],
+    compatibility: [
+      "Captación geotérmica vertical u horizontal según estudio",
+      "Suelo radiante",
+      "Radiadores",
+      "Fancoils",
+      "Hibridación fotovoltaica",
+      "Climatización de piscina",
+      "Sistemas con múltiples circuitos",
+    ],
+    fit: [
+      "Viviendas amplias con demanda térmica significativa",
+      "Pequeños proyectos terciarios",
+      "Instalaciones que requieren potencia modulable",
+      "Clientes que priorizan refrigerantes naturales",
+    ],
+  },
+  {
+    id: "ecoforest-ecogeo-4-16-pro",
+    vertical: "geotermia",
+    brand: "Ecoforest",
+    name: "ecoGEO+ 4-16 PRO",
+    category: "Geotermia · Bomba de calor geotérmica",
+    image: "/imagen/ecoGEO-PRO-2-10.png",
+    thumbnailType: "geo",
+    cardImageFit: "contain",
+    cardImageBg: "white",
+    modalImageFit: "contain",
+    shortDescription:
+      "Bomba de calor geotérmica de alta potencia (4-16 kW) con R290, tecnología inverter y hibridación fotovoltaica de serie para proyectos con demanda superior.",
+    description:
+      "ecoGEO+ 4-16 PRO es la solución geotérmica de Ecoforest para proyectos con mayor demanda térmica: viviendas grandes, edificios multifamiliares o pequeño terciario. Trabaja con refrigerante natural R290 (GWP 3) y tecnología inverter de amplios rangos de modulación, cubriendo calefacción, refrigeración activa y pasiva, ACS hasta 75 ºC y climatización de piscina. Disponible en versiones Basic y Compact, monofásica 230 V o trifásica 400 V, con instalación en cascada de hasta 3 unidades (48 kW máximo) y sistema HTR de recuperación de calor compatible. Incluye hibridación fotovoltaica de serie.",
+    tags: ["Geotermia", "R290", "Inverter", "Alta potencia", "ACS"],
+    applications: [
+      "Viviendas unifamiliares grandes",
+      "Edificios multifamiliares",
+      "Pequeño terciario",
+      "Obra nueva con alta demanda",
+      "Reformas energéticas amplias",
+    ],
+    features: [
+      "Rango de potencia 4-16 kW",
+      "Refrigerante natural R290 (GWP 3)",
+      "Tecnología inverter con amplio rango de modulación",
+      "Calefacción, refrigeración activa y pasiva, ACS y piscina",
+      "ACS hasta 75 ºC, impulsión hasta 70 ºC",
+      "Versiones Basic y Compact con depósito de ACS integrado",
+      "Alimentación monofásica 230 V o trifásica 400 V",
+      "Instalación en cascada hasta 3 unidades (48 kW)",
+      "Compatible con sistema HTR de recuperación de calor",
+      "Hibridación fotovoltaica de serie",
+    ],
+    compatibility: [
+      "Captación geotérmica vertical u horizontal según estudio",
+      "Suelo radiante",
+      "Radiadores",
+      "Fancoils",
+      "Hibridación fotovoltaica",
+      "Climatización de piscina",
+      "Instalaciones en cascada según viabilidad",
+    ],
+    fit: [
+      "Viviendas grandes o edificios con alta demanda térmica",
+      "Pequeño terciario con necesidades estacionales fuertes",
+      "Proyectos que priorizan eficiencia a largo plazo",
+      "Instalaciones donde se pueda valorar configuración en cascada",
+    ],
+  },
 ];
 
 const fadeUp = {
@@ -1152,18 +1261,6 @@ export function CatalogoConsultivo() {
           onInfo={setSelectedProduct}
         />
         <CatalogSection
-          id="fotovoltaica-catalogo"
-          eyebrow="Catálogo fotovoltaico"
-          title="Fotovoltaica"
-          text="Soluciones para autoconsumo, paneles solares, inversores, baterías, kits y estructuras adaptadas a cada instalación."
-          products={visiblePhotovoltaicProducts}
-          filters={photovoltaicFilters}
-          activeFilter={photovoltaicFilter}
-          onFilterChange={setPhotovoltaicFilter}
-          onInfo={setSelectedProduct}
-          solar
-        />
-        <CatalogSection
           id="geotermia-catalogo"
           eyebrow="Catálogo de geotermia"
           title="Geotermia"
@@ -1174,6 +1271,18 @@ export function CatalogoConsultivo() {
           onFilterChange={setGeothermalFilter}
           onInfo={setSelectedProduct}
           geo
+        />
+        <CatalogSection
+          id="fotovoltaica-catalogo"
+          eyebrow="Catálogo fotovoltaico"
+          title="Fotovoltaica"
+          text="Soluciones para autoconsumo, paneles solares, inversores, baterías, kits y estructuras adaptadas a cada instalación."
+          products={visiblePhotovoltaicProducts}
+          filters={photovoltaicFilters}
+          activeFilter={photovoltaicFilter}
+          onFilterChange={setPhotovoltaicFilter}
+          onInfo={setSelectedProduct}
+          solar
         />
         <CatalogFinalCta />
       </main>
@@ -1255,16 +1364,16 @@ function CatalogHero() {
                 Aerotermia
               </Link>
               <Link
-                href="#fotovoltaica-catalogo"
-                className="inline-flex items-center rounded-full border border-[#D99A2B]/24 bg-[#FFF2D8] px-4 py-2 text-sm font-bold text-[#9A5B12] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF8EE]"
-              >
-                Fotovoltaica
-              </Link>
-              <Link
                 href="#geotermia-catalogo"
                 className="inline-flex items-center rounded-full border border-[#2F7D6D]/22 bg-[#E8F6F2] px-4 py-2 text-sm font-bold text-[#2F7D6D] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#D6EFE8]"
               >
                 Geotermia
+              </Link>
+              <Link
+                href="#fotovoltaica-catalogo"
+                className="inline-flex items-center rounded-full border border-[#D99A2B]/24 bg-[#FFF2D8] px-4 py-2 text-sm font-bold text-[#9A5B12] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF8EE]"
+              >
+                Fotovoltaica
               </Link>
             </div>
           </div>
@@ -1535,7 +1644,7 @@ const aeroBrandStyle: Record<
     badgeBorder: "border-[#6D28D9]/30",
     badgeText: "text-[#6D28D9]",
   },
-  Yekallor: {
+  Ekallor: {
     topBar: "bg-[#4F46E5]/60",
     badgeBg: "bg-[#EEEEFF]",
     badgeBorder: "border-[#4F46E5]/30",
@@ -1698,7 +1807,7 @@ function CatalogVisual({
           <div className="mt-1 h-4 w-1.5 rounded-full bg-[#10B981]/60" />
         </div>
       ) : null}
-      {type === "climer" || type === "yekallor" ? (
+      {type === "climer" || type === "ekallor" ? (
         <div className="absolute inset-6 flex items-center justify-center rounded-[28px] border border-white/80 bg-white/82 shadow-[0_18px_40px_rgba(23,17,26,0.08)] backdrop-blur">
           <span className="text-xl font-black uppercase tracking-[0.12em] text-[#850E88]">
             {label}

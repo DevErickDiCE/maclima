@@ -200,20 +200,29 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 sm:mt-12 sm:pt-7">
-          <p className="text-center text-[11px] leading-5 text-[#D9D9FF]/55 sm:text-left">
-            Maclima Soluciones Energéticas es el nombre comercial de {LEGAL_COMPANY.holder}.
-          </p>
-          <div className="mt-3 flex flex-col items-center gap-2 text-xs text-[#D9D9FF]/70 sm:mt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-            <p className="text-center sm:text-left">
-              © 2026 Maclima Soluciones Energéticas. Todos los derechos reservados.
-            </p>
-            <p className="text-center sm:text-right">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+            <div className="space-y-1 text-center sm:text-left">
+              <p className="text-xs font-semibold text-[#D9D9FF]/90 sm:text-[13px]">
+                © 2026 Maclima Soluciones Energéticas · Todos los derechos reservados
+              </p>
+              <p className="text-[11px] leading-5 text-[#D9D9FF]/55 sm:text-xs">
+                Nombre comercial de {LEGAL_COMPANY.holder}. CIF y datos registrales disponibles en el{" "}
+                <Link
+                  href="/aviso-legal"
+                  className="underline decoration-white/20 underline-offset-4 transition duration-200 ease-out hover:text-[#D9D9FF] hover:decoration-white/60"
+                >
+                  Aviso legal
+                </Link>
+                .
+              </p>
+            </div>
+            <p className="text-center text-xs text-[#D9D9FF]/70 sm:text-right sm:text-[13px]">
               Desarrollado por{" "}
               <a
                 href="https://www.potenciasoluciones.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whitespace-nowrap font-semibold text-[#D9D9FF] underline decoration-white/20 underline-offset-4 transition duration-200 ease-out hover:text-white hover:decoration-white/60"
+                className="whitespace-nowrap font-semibold text-[#D9D9FF] underline decoration-white/25 underline-offset-4 transition duration-200 ease-out hover:text-white hover:decoration-white/60"
               >
                 PotencIA Soluciones
               </a>

@@ -41,14 +41,14 @@ const heroTrustLine = [
 
 const heroSignals = [
   "Aerotermia",
-  "Fotovoltaica",
   "Geotermia",
+  "Fotovoltaica",
 ] as const;
 
 const aerothermalBenefits = [
-  "Calefacción",
-  "ACS",
+  "Climatización",
   "Refrigeración",
+  "ACS",
   "Bajo consumo",
 ] as const;
 
@@ -60,10 +60,10 @@ const photovoltaicBenefits = [
 ] as const;
 
 const geothermalBenefits = [
-  "Alta eficiencia",
-  "Climatización",
   "ACS",
-  "Energía renovable",
+  "Refrigeración",
+  "Climatización",
+  "Alta eficiencia",
 ] as const;
 
 const aerothermalAdvantages = [
@@ -190,15 +190,6 @@ const aerothermalCatalog = [
     thumbType: "acs",
   },
   {
-    name: "Climer Calefacción y refrigeración",
-    text: "Bomba de calor para climatización eficiente.",
-    href: "/catalogo#aerotermia-catalogo",
-    imageSrc: "/imagen/climer-ai20pro.webp",
-    badge: "Climatización",
-    kind: "product",
-    thumbType: "clima",
-  },
-  {
     name: "Elnur Gabarron Thermira Monobloc",
     text: "Aerotermia monobloc aire-agua para calefacción, refrigeración y ACS.",
     href: "/catalogo#aerotermia-catalogo",
@@ -286,29 +277,29 @@ const photovoltaicCatalog = [
 
 const geothermalCatalog = [
   {
-    name: "Bomba de calor geotérmica premium",
-    text: "Climatización, ACS y confort estable aprovechando el subsuelo.",
+    name: "Ecoforest ecoGEO+ LITE 1-6 PRO",
+    text: "Geotérmica compacta con refrigerante natural R290 e inverter.",
     href: "/catalogo#geotermia-catalogo",
-    imageSrc: "/imagen/S1155.png",
-    badge: "Alta eficiencia",
+    imageSrc: "/imagen/ecogeo_lite_1_6_PRO.png",
+    badge: "R290 · Compacta",
     kind: "product" as const,
     thumbType: "geo" as const,
   },
   {
-    name: "Bomba de calor geotérmica inverter",
-    text: "Sistema inverter para proyectos con alta demanda energética.",
+    name: "Ecoforest ecoGEO+ 2-10 PRO",
+    text: "Gama media 2-10 kW con R290, inverter, ACS y refrigeración.",
     href: "/catalogo#geotermia-catalogo",
-    imageSrc: "/imagen/f1355.png",
-    badge: "Inverter",
+    imageSrc: "/imagen/ecoGEO-PRO-2-10.png",
+    badge: "R290 · Inverter",
     kind: "product" as const,
     thumbType: "geo" as const,
   },
   {
-    name: "Bomba de calor geotérmica compacta",
-    text: "Solución compacta para calefacción, refrigeración y ACS.",
+    name: "Ecoforest ecoGEO+ 4-16 PRO",
+    text: "Alta potencia 4-16 kW con hibridación fotovoltaica de serie.",
     href: "/catalogo#geotermia-catalogo",
-    imageSrc: "/imagen/geo-bomba-calor.png",
-    badge: "Compacta",
+    imageSrc: "/imagen/ecoGEO-PRO-2-10.png",
+    badge: "Alta potencia",
     kind: "product" as const,
     thumbType: "geo" as const,
   },
@@ -357,9 +348,9 @@ export function MaclimaHome() {
         <Hero />
         <Verticals />
         <AerothermalEfficiency />
+        <GeothermalSection />
         <PhotovoltaicIntelligence />
         <EnergyStorage />
-        <GeothermalSection />
         <FeaturedSolutions />
         <ConsultiveCatalog />
         <FreeConsulting />
@@ -387,27 +378,42 @@ function Hero() {
       <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
 
-      <div className="mx-auto flex min-h-[600px] max-w-7xl items-stretch px-4 pt-5 pb-8 sm:min-h-[640px] sm:items-center sm:px-6 sm:py-14 md:items-center lg:min-h-[min(690px,calc(100svh-76px))] lg:px-8 lg:py-12 xl:min-h-[min(720px,calc(100svh-76px))] xl:py-14">
+      <div className="pointer-events-none absolute inset-x-0 top-8 z-20 hidden md:block lg:top-10 xl:top-12">
+        <div className="mx-auto flex max-w-7xl items-start justify-end px-4 sm:px-6 lg:px-8">
+          <div className="pointer-events-auto flex flex-col items-end text-right">
+            <p className="inline-flex items-center gap-2.5 text-[1.2rem] font-black uppercase leading-none tracking-[0.18em] text-[#850E88] lg:text-[1.35rem] lg:tracking-[0.2em] xl:text-[1.45rem]">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
+              MACLIMA CALOR Y FRÍO S.L.
+            </p>
+            <p className="mt-2.5 text-[1.05rem] font-bold leading-snug text-[#1F1623] lg:text-[1.15rem] xl:text-[1.2rem]">
+              Distribución · instalación · asesoramiento técnico
+            </p>
+            <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-[#850E88] lg:w-16" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto flex min-h-[620px] max-w-7xl items-stretch px-4 pt-5 pb-10 sm:min-h-[660px] sm:items-center sm:px-6 sm:py-14 md:items-start md:pt-10 md:pb-16 lg:min-h-[min(710px,calc(100svh-76px))] lg:px-8 lg:pt-14 lg:pb-20 xl:min-h-[min(740px,calc(100svh-76px))] xl:pt-16 xl:pb-24">
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-3 sm:mb-3 md:mb-4">
-            <p className="inline-flex items-center gap-2 text-[0.72rem] font-black uppercase leading-none tracking-[0.16em] text-[#850E88] sm:gap-2.5 sm:text-[1.05rem] sm:tracking-[0.18em] md:text-[1.125rem]">
+          <div className="mb-2.5 sm:mb-3 md:hidden">
+            <p className="inline-flex items-center gap-2 text-[0.82rem] font-black uppercase leading-none tracking-[0.16em] text-[#850E88] sm:gap-2.5 sm:text-[1.1rem] sm:tracking-[0.18em]">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
               MACLIMA CALOR Y FRÍO S.L.
             </p>
-            <p className="mt-2 text-[0.86rem] font-bold leading-snug text-[#1F1623] sm:mt-2 sm:text-[1rem] md:text-[1.05rem]">
+            <p className="mt-2 text-[0.95rem] font-bold leading-snug text-[#1F1623] sm:mt-2 sm:text-[1.05rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
             <span className="mt-2 block h-[2px] w-12 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-14" aria-hidden="true" />
           </div>
-          <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] lg:max-w-[600px] lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:text-[3.25rem]">
-            Aerotermia, fotovoltaica y geotermia para ahorrar energía
+          <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] md:mt-4 lg:max-w-[600px] lg:mt-6 lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:mt-8 xl:text-[3.25rem]">
+            Aerotermia, geotermia y fotovoltaica para ahorrar energía
           </h1>
-          <p className="mt-2.5 max-w-xl text-[0.88rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-3 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
+          <p className="mt-3 max-w-xl text-[0.88rem] leading-6 text-[#3D3748] sm:mt-4 sm:text-lg sm:leading-8 lg:mt-5 lg:max-w-[34rem] lg:text-[1.05rem] lg:leading-7">
             <span className="block md:hidden">Soluciones energéticas en Madrid con asesoramiento técnico gratuito.</span>
             <span className="hidden md:block">Distribuimos e instalamos soluciones de aerotermia, fotovoltaica y geotermia en Madrid para viviendas, negocios y profesionales del sector, con asesoramiento técnico gratuito para elegir el sistema más eficiente.</span>
           </p>
@@ -906,7 +912,7 @@ function EnergyStorage() {
                   sizes="(min-width: 1024px) 90vw, 100vw"
                   className="object-cover object-[center_58%] sm:object-[center_60%] lg:object-[center_57%]"
                 />
-                <div className="absolute bottom-3 left-3 max-w-[84%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:bottom-5 sm:left-5 sm:max-w-[22rem] sm:px-4 sm:py-3">
+                <div className="absolute top-3 left-3 max-w-[84%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:top-5 sm:left-5 sm:max-w-[22rem] sm:px-4 sm:py-3">
                   <p className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#850E88] sm:text-[11px]">
                     <BatteryCharging className="h-3.5 w-3.5" aria-hidden="true" />
                     BESS · Fotovoltaica · Autoconsumo
@@ -1019,6 +1025,14 @@ function GeothermalSection() {
                 apoyar sistemas de calefacción, refrigeración y agua caliente
                 sanitaria con un alto nivel de eficiencia.
               </p>
+              <div className="mt-3 flex items-start gap-2.5 rounded-xl border-l-[3px] border-[#2F7D6D] bg-[#F0F9F6]/70 px-3 py-2.5 sm:mt-4 sm:gap-3 sm:px-4 sm:py-3">
+                <Zap className="mt-0.5 h-4 w-4 shrink-0 text-[#2F7D6D] sm:h-5 sm:w-5" aria-hidden="true" />
+                <p className="max-w-2xl text-[0.88rem] font-semibold leading-6 text-[#17111A] sm:text-[1rem] sm:leading-7">
+                  Una de las tecnologías con mayor rendimiento energético para
+                  climatización, refrigeración y ACS, gracias al aprovechamiento
+                  de la temperatura estable del terreno.
+                </p>
+              </div>
               <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-[#17111A] sm:mt-5 sm:text-base sm:leading-7">
                 En Maclima estudiamos la viabilidad de cada instalación para
                 valorar si la geotermia encaja con el terreno, el inmueble y los
@@ -1070,11 +1084,127 @@ function GeothermalSection() {
               </div>
             </div>
           </div>
+
+          <div className="mt-7 border-t border-[#2F7D6D]/15 pt-6 sm:mt-10 sm:pt-9">
+            <div className="max-w-3xl">
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#2F7D6D] sm:text-xs">
+                Beneficios técnicos
+              </p>
+              <h3 className="mt-2 text-[1.2rem] font-black leading-tight text-[#17111A] sm:mt-2.5 sm:text-[1.65rem]">
+                Ventajas técnicas de <span className="text-[#2F7D6D]">ecoGeo</span> y la geotermia
+              </h3>
+              <p className="mt-2 text-[0.92rem] leading-6 text-[#5F5A66] sm:mt-3 sm:text-base sm:leading-7">
+                Tecnología eficiente para aprovechar la energía estable del
+                terreno en calefacción, refrigeración y agua caliente sanitaria.
+              </p>
+            </div>
+
+            <article className="relative mt-5 overflow-hidden rounded-[18px] border border-[#2F7D6D]/22 bg-[linear-gradient(120deg,#FFFFFF_0%,#F0F9F6_100%)] p-4 sm:mt-7 sm:rounded-[22px] sm:p-6">
+              <div className="flex items-start gap-3 sm:items-center sm:gap-4">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F7D6D]/14 text-[#2F7D6D] sm:h-12 sm:w-12">
+                  <Gauge className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
+                </span>
+                <div>
+                  <h4 className="text-[0.98rem] font-black text-[#17111A] sm:text-[1.15rem]">
+                    Alto COP y rendimiento estacional
+                  </h4>
+                  <p className="mt-1 text-[0.88rem] leading-6 text-[#5F5A66] sm:mt-1.5 sm:text-[0.95rem] sm:leading-7">
+                    La geotermia puede alcanzar altos niveles de eficiencia
+                    porque intercambia energía con el terreno, cuya temperatura
+                    es más estable que la del aire exterior.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div className="mt-3.5 grid gap-3.5 sm:mt-5 sm:gap-5 lg:grid-cols-2">
+              <article className="relative overflow-hidden rounded-[18px] border border-[#2F7D6D]/15 bg-white/80 p-4 backdrop-blur-sm sm:rounded-[22px] sm:p-6">
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-[#2F7D6D]" aria-hidden="true" />
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F7D6D]/12 text-[#2F7D6D] sm:h-11 sm:w-11">
+                    <Gauge className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden="true" />
+                  </span>
+                  <h4 className="text-base font-black text-[#17111A] sm:text-xl">
+                    Ventajas <span className="text-[#2F7D6D]">ecoGeo</span>
+                  </h4>
+                </div>
+                <ul className="mt-3.5 space-y-2 sm:mt-5 sm:space-y-2.5">
+                  {ecoGeoAdvantages.map(({ icon: Icon, text }) => (
+                    <li key={text} className="flex items-start gap-2.5">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#2F7D6D]/10 text-[#2F7D6D] sm:h-7 sm:w-7">
+                        <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
+                      </span>
+                      <span className="text-[0.9rem] leading-6 text-[#1F1623] sm:text-[0.95rem] sm:leading-7">
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="relative overflow-hidden rounded-[18px] border border-[#850E88]/15 bg-white/80 p-4 backdrop-blur-sm sm:rounded-[22px] sm:p-6">
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-[#850E88]" aria-hidden="true" />
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#850E88]/12 text-[#850E88] sm:h-11 sm:w-11">
+                    <Leaf className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden="true" />
+                  </span>
+                  <h4 className="text-base font-black text-[#17111A] sm:text-xl">
+                    Ventajas de la geotermia
+                  </h4>
+                </div>
+                <ul className="mt-3.5 space-y-2 sm:mt-5 sm:space-y-2.5">
+                  {geothermalAdvantages.map(({ icon: Icon, text }) => (
+                    <li key={text} className="flex items-start gap-2.5">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#850E88]/10 text-[#850E88] sm:h-7 sm:w-7">
+                        <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
+                      </span>
+                      <span className="text-[0.9rem] leading-6 text-[#1F1623] sm:text-[0.95rem] sm:leading-7">
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
+            <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+              <p className="max-w-2xl text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">
+                Estudiamos cada proyecto para comprobar si la geotermia es la
+                opción más eficiente y viable según terreno, inmueble y demanda
+                energética.
+              </p>
+              <Link
+                href="/consultoria-gratuita?tipo=Geotermia#formulario"
+                className="group inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl border border-[#2F7D6D]/25 bg-white px-4 py-2.5 text-[0.85rem] font-bold text-[#2F7D6D] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F0F9F6] sm:self-auto sm:px-5 sm:py-3 sm:text-[0.9rem]"
+              >
+                Solicitar estudio de geotermia
+                <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
+
+const ecoGeoAdvantages = [
+  { icon: Gauge, text: "Tecnología inverter y compresor de velocidad variable." },
+  { icon: ThermometerSun, text: "Sistema HTR de recuperación de calor." },
+  { icon: Snowflake, text: "Producción de frío y calor con el mismo equipo." },
+  { icon: AirVent, text: "Capacidad para producir frío y calor simultáneamente." },
+  { icon: Layers, text: "Instalación en cascada según las necesidades del proyecto." },
+  { icon: ShieldCheck, text: "Solución orientada a instalaciones eficientes y escalables." },
+] as const;
+
+const geothermalAdvantages = [
+  { icon: Leaf, text: "Fuente de energía renovable." },
+  { icon: Waves, text: "Sin emisiones directas de CO₂ durante el funcionamiento." },
+  { icon: ShieldCheck, text: "Equipos fiables y de alta durabilidad." },
+  { icon: HousePlug, text: "Calefacción, refrigeración y ACS en una misma solución." },
+  { icon: Gauge, text: "Bajo mantenimiento y costes de operación reducidos." },
+  { icon: ThermometerSun, text: "Alta estabilidad energética gracias a la temperatura constante del terreno." },
+] as const;
 
 function FeaturedSolutions() {
   return (
@@ -1621,13 +1751,13 @@ function SolutionCard({
         </div>
       </div>
       <p className="mt-2.5 max-w-xl text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">{text}</p>
-      <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
-        {benefits.slice(0, 2).map((benefit) => (
+      <div className="mt-3 flex flex-nowrap items-center gap-1 sm:mt-5 sm:gap-1.5">
+        {benefits.slice(0, 3).map((benefit) => (
           <span
             key={benefit}
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold text-[#17111A] ${cardAccent.chip}`}
+            className={`inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-bold text-[#17111A] sm:px-2.5 sm:py-1 sm:text-[11px] ${cardAccent.chip}`}
           >
-            <Check className="h-3 w-3 shrink-0 text-[#850E88]" aria-hidden="true" />
+            <Check className="h-2.5 w-2.5 shrink-0 text-[#850E88]" aria-hidden="true" />
             {benefit}
           </span>
         ))}
