@@ -1048,7 +1048,7 @@ function GeothermalSection() {
               </Link>
             </div>
 
-            <div className="relative min-h-[280px] overflow-hidden rounded-[22px] shadow-[0_22px_64px_rgba(23,17,26,0.18)] sm:min-h-[400px] sm:rounded-[28px] sm:shadow-[0_28px_84px_rgba(23,17,26,0.22)] lg:min-h-[500px]">
+            <div className="relative min-h-[340px] overflow-hidden rounded-[22px] shadow-[0_22px_64px_rgba(23,17,26,0.18)] sm:min-h-[400px] sm:rounded-[28px] sm:shadow-[0_28px_84px_rgba(23,17,26,0.22)] lg:min-h-[500px]">
               <Image
                 src="/geotermia.png"
                 alt="Sistema de geotermia con vivienda moderna, tubos enterrados y equipos técnicos"
@@ -1056,30 +1056,30 @@ function GeothermalSection() {
                 sizes="(min-width: 1024px) 44vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,30,25,0.04)_0%,transparent_22%,rgba(15,30,25,0.55)_55%,rgba(15,30,25,0.92)_100%)]" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/40 bg-black/40 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white backdrop-blur-sm">
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,30,25,0.03)_0%,transparent_30%,rgba(15,30,25,0.42)_62%,rgba(15,30,25,0.84)_100%)] sm:bg-[linear-gradient(180deg,rgba(15,30,25,0.04)_0%,transparent_22%,rgba(15,30,25,0.55)_55%,rgba(15,30,25,0.92)_100%)]" />
+              <span className="absolute left-5 top-5 rounded-full border border-white/40 bg-black/40 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white backdrop-blur-sm sm:left-4 sm:top-4">
                 Geotermia
               </span>
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+              <div className="absolute inset-x-0 bottom-0 px-6 pb-6 pt-7 sm:p-6">
                 <h3 className="text-base font-black text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] sm:text-lg">
                   Temperatura estable del subsuelo
                 </h3>
-                <p className="mt-1 text-sm font-semibold leading-5 text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+                <p className="mt-2 text-[0.82rem] font-medium leading-[1.5] text-white/88 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] sm:mt-1 sm:text-sm sm:font-semibold sm:leading-5 sm:text-white/90">
                   Aprovecha la estabilidad térmica del terreno para mejorar la
                   eficiencia del sistema.
                 </p>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2.5 sm:mt-3 sm:gap-2">
                   {["Alta eficiencia", "Climatización", "ACS"].map((chip) => (
                     <span
                       key={chip}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-black/35 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-black/35 px-3 py-2 text-xs font-bold text-white backdrop-blur-sm sm:py-1.5"
                     >
                       <Check className="h-3 w-3 text-[#A8D5C8]" aria-hidden="true" />
                       {chip}
                     </span>
                   ))}
                 </div>
-                <p className="mt-3 text-xs font-semibold text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                <p className="mt-4 text-xs font-semibold text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] sm:mt-3">
                   Requiere estudio previo según terreno e inmueble.
                 </p>
               </div>
