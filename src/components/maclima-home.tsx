@@ -374,21 +374,21 @@ function Hero() {
       />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(234,234,255,0.88)_24%,rgba(234,234,255,0.52)_42%,rgba(234,234,255,0.14)_60%,rgba(23,17,26,0.02)_100%)]" />
       <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.38)_0%,rgba(234,234,255,0.06)_35%,rgba(23,17,26,0.10)_100%)]" />
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.62)_0%,rgba(255,255,255,0.22)_30%,transparent_55%,rgba(23,17,26,0.18)_100%)] md:hidden" />
-      <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(133,14,136,0.12),transparent_30%)]" />
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(255,255,255,0.42)_28%,rgba(255,255,255,0.12)_50%,rgba(23,17,26,0.20)_100%)] md:hidden" />
+      <div className="absolute inset-0 z-0 opacity-55 [background-image:linear-gradient(rgba(149,18,160,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.09)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_22%,rgba(217,217,255,0.28),transparent_34%),radial-gradient(circle_at_12%_82%,rgba(149,18,160,0.12),transparent_30%)]" />
 
       <div className="pointer-events-none absolute inset-x-0 top-8 z-20 hidden md:block lg:top-10 xl:top-12">
         <div className="mx-auto flex max-w-7xl items-start justify-end px-4 sm:px-6 lg:px-8">
           <div className="pointer-events-auto flex flex-col items-end text-right">
-            <p className="inline-flex items-center gap-2.5 text-[1.2rem] font-black uppercase leading-none tracking-[0.18em] text-[#850E88] lg:text-[1.35rem] lg:tracking-[0.2em] xl:text-[1.45rem]">
-              <span className="h-2 w-2 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
+            <p className="inline-flex items-center gap-2.5 text-[1.2rem] font-black uppercase leading-none tracking-[0.18em] text-[#9512A0] lg:text-[1.35rem] lg:tracking-[0.2em] xl:text-[1.45rem]">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#9512A0]" aria-hidden="true" />
               MACLIMA CALOR Y FRÍO S.L.
             </p>
             <p className="mt-2.5 text-[1.05rem] font-bold leading-snug text-[#1F1623] lg:text-[1.15rem] xl:text-[1.2rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
-            <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-[#850E88] lg:w-16" aria-hidden="true" />
+            <span className="mt-2.5 block h-[3px] w-14 rounded-full bg-[#9512A0] lg:w-16" aria-hidden="true" />
           </div>
         </div>
       </div>
@@ -400,15 +400,16 @@ function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative z-10 flex w-full flex-col max-w-[640px] lg:max-w-[680px]"
         >
-          <div className="mb-2.5 sm:mb-3 md:hidden">
-            <p className="inline-flex items-center gap-2 text-[0.82rem] font-black uppercase leading-none tracking-[0.16em] text-[#850E88] sm:gap-2.5 sm:text-[1.1rem] sm:tracking-[0.18em]">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#850E88]" aria-hidden="true" />
+          <div className="mb-6 flex flex-col items-center text-center md:hidden">
+            <p className="inline-flex items-center gap-2.5 text-[0.95rem] font-black uppercase leading-none tracking-[0.18em] text-[#9512A0] sm:gap-3 sm:text-[1.05rem] sm:tracking-[0.2em]">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#9512A0]" aria-hidden="true" />
               MACLIMA CALOR Y FRÍO S.L.
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#9512A0]" aria-hidden="true" />
             </p>
-            <p className="mt-2 text-[0.95rem] font-bold leading-snug text-[#1F1623] sm:mt-2 sm:text-[1.05rem]">
+            <p className="mt-3 text-[0.95rem] font-semibold leading-snug text-[#1F1623] sm:mt-3.5 sm:text-[1rem]">
               Distribución · instalación · asesoramiento técnico
             </p>
-            <span className="mt-2 block h-[2px] w-12 rounded-full bg-[#850E88] sm:mt-2 sm:h-[3px] sm:w-14" aria-hidden="true" />
+            <span className="mt-4 block h-[2px] w-14 rounded-full bg-[#9512A0] sm:h-[3px] sm:w-16" aria-hidden="true" />
           </div>
           <h1 className="max-w-[620px] text-[1.74rem] font-black leading-[1.06] text-[#17111A] sm:text-[2.6rem] md:text-[3rem] md:mt-4 lg:max-w-[600px] lg:mt-6 lg:text-[3rem] lg:leading-[1.04] xl:max-w-[620px] xl:mt-8 xl:text-[3.25rem]">
             Aerotermia, geotermia y fotovoltaica para ahorrar energía
@@ -421,7 +422,7 @@ function Hero() {
             {heroSignals.map((signal) => (
               <span
                 key={signal}
-                className="rounded-lg border border-[#850E88]/15 bg-white/[0.74] px-2.5 py-1.5 text-[11px] font-bold text-[#17111A] backdrop-blur sm:px-3 sm:py-2 sm:text-sm lg:py-1.5"
+                className="rounded-lg border border-[#9512A0]/25 bg-white/[0.74] px-2.5 py-1.5 text-[11px] font-bold text-[#17111A] backdrop-blur sm:px-3 sm:py-2 sm:text-sm lg:py-1.5"
               >
                 {signal}
               </span>
@@ -430,14 +431,14 @@ function Hero() {
           <div className="mt-auto flex flex-col gap-2.5 pt-6 sm:mt-7 sm:flex-row sm:gap-3 sm:pt-0 lg:mt-6">
             <Link
               href="/consultoria-gratuita#formulario"
-              className="group inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-[0.9rem] font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_46px_rgba(133,14,136,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
+              className="group inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-[0.9rem] font-bold text-white shadow-[0_14px_36px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_20px_46px_rgba(149,18,160,0.30)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Solicitar consultoría gratuita
               <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1 sm:h-5 sm:w-5" aria-hidden="true" />
             </Link>
             <Link
               href="/catalogo"
-              className="group inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white/[0.84] px-5 py-3 text-[0.9rem] font-bold text-[#850E88] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
+              className="group inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl border border-[#9512A0]/30 bg-white/[0.84] px-5 py-3 text-[0.9rem] font-bold text-[#9512A0] shadow-sm backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_14px_34px_rgba(149,18,160,0.10)] sm:min-h-[52px] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
             >
               Ver catálogo
               <FileText className="h-4 w-4 transition duration-200 ease-out group-hover:-translate-y-0.5 sm:h-5 sm:w-5" aria-hidden="true" />
@@ -449,7 +450,7 @@ function Hero() {
                 key={item}
                 className="inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/[0.52] px-2.5 py-1 text-[11px] font-semibold text-[#17111A] backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-sm lg:py-1"
               >
-                <Check className="h-3.5 w-3.5 text-[#850E88]" aria-hidden="true" />
+                <Check className="h-3.5 w-3.5 text-[#9512A0]" aria-hidden="true" />
                 {item}
               </span>
             ))}
@@ -467,13 +468,13 @@ function Verticals() {
       <div className="absolute bottom-6 right-[-10%] h-64 w-64 rounded-full bg-[#F2B84B]/14 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div {...fadeUp} className="relative mx-auto max-w-3xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#850E88]">
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#9512A0]">
             SOLUCIONES PRINCIPALES
           </p>
           <h2 className="mt-2.5 text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
             Tres tecnologías, un mismo objetivo: ahorrar energía
           </h2>
-          <p className="mt-3 text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+          <p className="mt-3 text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
             Integramos aerotermia, fotovoltaica y geotermia para mejorar el
             confort, reducir el consumo y adaptar cada instalación a viviendas,
             negocios o proyectos profesionales.
@@ -515,7 +516,7 @@ function Verticals() {
 
         <motion.div
           {...fadeUp}
-          className="relative mt-6 overflow-hidden rounded-[22px] border border-[#850E88]/15 bg-[#17111A] px-4 py-4 text-white shadow-[0_18px_54px_rgba(23,17,26,0.14)] sm:rounded-[28px] sm:px-7 sm:py-5 sm:shadow-[0_24px_70px_rgba(23,17,26,0.16)]"
+          className="relative mt-6 overflow-hidden rounded-[22px] border border-[#9512A0]/25 bg-[#17111A] px-4 py-4 text-white shadow-[0_18px_54px_rgba(23,17,26,0.14)] sm:rounded-[28px] sm:px-7 sm:py-5 sm:shadow-[0_24px_70px_rgba(23,17,26,0.16)]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(217,217,255,0.24),transparent_34%),radial-gradient(circle_at_80%_50%,rgba(242,184,75,0.18),transparent_30%)]" />
           <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -545,20 +546,20 @@ function AerothermalEfficiency() {
       id="aerotermia"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_42%,#EAEAFF_100%)] py-10 sm:py-20"
     >
-      <div className="absolute inset-0 opacity-55 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="absolute inset-0 opacity-55 [background-image:linear-gradient(rgba(149,18,160,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.06)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="absolute right-[-14%] top-10 h-72 w-72 rounded-full bg-[#D9D9FF] blur-3xl" />
-      <div className="absolute bottom-[-18%] left-[-10%] h-80 w-80 rounded-full bg-[#850E88]/10 blur-3xl" />
+      <div className="absolute bottom-[-18%] left-[-10%] h-80 w-80 rounded-full bg-[#9512A0]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-8">
           <motion.div {...fadeUp}>
-            <p className="text-sm font-black uppercase text-[#850E88]">
+            <p className="text-sm font-black uppercase text-[#9512A0]">
               Aerotermia eficiente
             </p>
             <h2 className="mt-2.5 max-w-3xl text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
               Energía renovable del aire para climatizar tu vivienda o negocio
             </h2>
-            <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+            <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
               La aerotermia aprovecha la energía presente en el aire exterior
               para generar calefacción, refrigeración y agua caliente sanitaria
               con un consumo eléctrico reducido. Es una solución limpia,
@@ -572,7 +573,7 @@ function AerothermalEfficiency() {
             </p>
             <Link
               href="/consultoria-gratuita?tipo=Aerotermia#formulario"
-              className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
+              className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(149,18,160,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_24px_54px_rgba(149,18,160,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
             >
               Solicitar asesoramiento en aerotermia
               <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -581,26 +582,26 @@ function AerothermalEfficiency() {
 
           <motion.article
             {...fadeUp}
-            className="relative overflow-hidden rounded-[24px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#FFF2D8_34%,#EAEAFF_100%)] p-4 shadow-[0_20px_62px_rgba(133,14,136,0.14)] backdrop-blur-xl sm:rounded-[30px] sm:p-8 sm:shadow-[0_30px_90px_rgba(133,14,136,0.18)]"
+            className="relative overflow-hidden rounded-[24px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#FFF2D8_34%,#EAEAFF_100%)] p-4 shadow-[0_20px_62px_rgba(149,18,160,0.14)] backdrop-blur-xl sm:rounded-[30px] sm:p-8 sm:shadow-[0_30px_90px_rgba(149,18,160,0.18)]"
           >
-            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#850E88,transparent)]" />
+            <div className="absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,#9512A0,transparent)]" />
             <div className="absolute right-[-42px] top-[-42px] h-40 w-40 rounded-full bg-[#F2B84B]/28 blur-3xl" />
-            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#850E88]/12 blur-3xl" />
+            <div className="absolute bottom-[-48px] left-[-38px] h-44 w-44 rounded-full bg-[#9512A0]/12 blur-3xl" />
             <div className="relative">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <p className="inline-flex rounded-full border border-[#850E88]/15 bg-white/[0.72] px-2.5 py-1.5 text-[10px] font-black uppercase tracking-wide text-[#850E88] shadow-sm backdrop-blur sm:px-3 sm:py-2 sm:text-xs">
+                  <p className="inline-flex rounded-full border border-[#9512A0]/25 bg-white/[0.72] px-2.5 py-1.5 text-[10px] font-black uppercase tracking-wide text-[#9512A0] shadow-sm backdrop-blur sm:px-3 sm:py-2 sm:text-xs">
                     ENERGÍA AMBIENTAL
                   </p>
                   <h3 className="mt-2 text-xl font-black leading-tight text-[#17111A] sm:text-2xl">
                     Hasta un 80% de energía aprovechada del aire
                   </h3>
                 </div>
-                <span className="rounded-[18px] bg-[linear-gradient(135deg,#850E88_0%,#A018A4_48%,#F2B84B_145%)] px-4 py-3 text-3xl font-black leading-none text-white shadow-[0_16px_34px_rgba(133,14,136,0.22)] sm:rounded-[24px] sm:px-5 sm:py-4 sm:text-4xl sm:shadow-[0_20px_46px_rgba(133,14,136,0.28)]">
+                <span className="rounded-[18px] bg-[linear-gradient(135deg,#9512A0_0%,#A018A4_48%,#F2B84B_145%)] px-4 py-3 text-3xl font-black leading-none text-white shadow-[0_16px_34px_rgba(149,18,160,0.22)] sm:rounded-[24px] sm:px-5 sm:py-4 sm:text-4xl sm:shadow-[0_20px_46px_rgba(149,18,160,0.28)]">
                   80%
                 </span>
               </div>
-              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">
+              <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-4 sm:text-base sm:leading-7">
                 La aerotermia aprovecha energía ambiental del aire exterior y
                 utiliza electricidad para mover el sistema.
               </p>
@@ -623,7 +624,7 @@ function AerothermalEfficiency() {
                       >
                         <span className="absolute right-[-18px] top-[-18px] h-14 w-14 rounded-full bg-[#F2B84B]/32 blur-xl transition duration-200 ease-out group-hover/energy:scale-125" />
                         <AirVent
-                          className="relative h-6 w-6 text-[#850E88]"
+                          className="relative h-6 w-6 text-[#9512A0]"
                           aria-hidden="true"
                         />
                         <span className="relative mt-2 block text-sm font-black text-[#17111A]">
@@ -634,32 +635,32 @@ function AerothermalEfficiency() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center py-1 text-[#850E88] sm:px-1">
+                <div className="flex items-center justify-center py-1 text-[#9512A0] sm:px-1">
                   <ArrowRight
                     className="hidden h-7 w-7 sm:block"
                     aria-hidden="true"
                   />
-                  <span className="h-px w-full bg-[linear-gradient(90deg,transparent,#850E88,transparent)] sm:hidden" />
+                  <span className="h-px w-full bg-[linear-gradient(90deg,transparent,#9512A0,transparent)] sm:hidden" />
                 </div>
 
                 <div className="grid gap-3">
                   <div className="relative overflow-hidden rounded-2xl border border-[#38BDF8]/20 bg-[linear-gradient(135deg,#F1FBFF_0%,#F4F0FF_100%)] p-4 shadow-[0_12px_28px_rgba(56,189,248,0.12)]">
                     <span className="absolute right-[-18px] top-[-18px] h-14 w-14 rounded-full bg-[#38BDF8]/20 blur-xl" />
                     <div className="flex items-start gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#850E88] shadow-sm sm:h-11 sm:w-11 sm:rounded-2xl">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#9512A0] shadow-sm sm:h-11 sm:w-11 sm:rounded-2xl">
                         <Zap className="h-5 w-5" aria-hidden="true" />
                       </span>
                       <div>
                         <p className="text-sm font-black text-[#17111A]">
                           1 parte eléctrica
                         </p>
-                        <p className="mt-1 text-xs font-bold text-[#5F5A66]">
+                        <p className="mt-1 text-xs font-bold text-[#4A4552]">
                           Electricidad
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-2xl border border-[#850E88]/18 bg-[#17111A] p-4 text-white shadow-[0_16px_34px_rgba(23,17,26,0.18)]">
+                  <div className="relative overflow-hidden rounded-2xl border border-[#9512A0]/28 bg-[#17111A] p-4 text-white shadow-[0_16px_34px_rgba(23,17,26,0.18)]">
                     <span className="absolute inset-x-4 top-0 h-px bg-[linear-gradient(90deg,transparent,#F2B84B,transparent)]" />
                     <div className="flex items-start gap-3">
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-[#F2B84B] sm:h-11 sm:w-11 sm:rounded-2xl">
@@ -679,9 +680,9 @@ function AerothermalEfficiency() {
               </div>
 
               <div className="mt-5 overflow-hidden rounded-full border border-white/80 bg-white/[0.72] p-1 shadow-inner">
-                <div className="h-2.5 w-4/5 rounded-full bg-[linear-gradient(90deg,#850E88_0%,#A018A4_52%,#F2B84B_100%)] shadow-[0_0_24px_rgba(242,184,75,0.34)]" />
+                <div className="h-2.5 w-4/5 rounded-full bg-[linear-gradient(90deg,#9512A0_0%,#A018A4_52%,#F2B84B_100%)] shadow-[0_0_24px_rgba(242,184,75,0.34)]" />
               </div>
-              <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-3.5 py-3 text-xs font-semibold leading-5 text-[#5F5A66] sm:mt-5 sm:px-4 sm:text-sm sm:leading-6">
+              <div className="mt-4 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] px-3.5 py-3 text-xs font-semibold leading-5 text-[#4A4552] sm:mt-5 sm:px-4 sm:text-sm sm:leading-6">
                 Representación orientativa según tecnología, rendimiento del
                 equipo y condiciones de instalación.
               </div>
@@ -695,13 +696,13 @@ function AerothermalEfficiency() {
             <h3 className="text-[1.45rem] font-black text-[#17111A] sm:text-3xl">
               Ventajas de instalar aerotermia
             </h3>
-            <p className="mt-3 text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">
+            <p className="mt-3 text-[0.95rem] leading-6 text-[#4A4552] sm:mt-4 sm:text-lg sm:leading-8">
               Una sola tecnología puede cubrir gran parte de las necesidades
               térmicas de una vivienda o negocio, mejorando el confort durante
               todo el año y reduciendo el consumo energético.
             </p>
             </div>
-            <span className="inline-flex w-fit rounded-full border border-[#850E88]/15 bg-white/[0.72] px-4 py-2 text-xs font-black uppercase text-[#850E88] shadow-sm backdrop-blur">
+            <span className="inline-flex w-fit rounded-full border border-[#9512A0]/25 bg-white/[0.72] px-4 py-2 text-xs font-black uppercase text-[#9512A0] shadow-sm backdrop-blur">
               Banda de beneficios
             </span>
           </div>
@@ -719,8 +720,8 @@ function AerothermalEfficiency() {
             ))}
           </div>
 
-          <p className="mt-5 text-sm font-semibold leading-6 text-[#5F5A66]">
-            <span className="font-black text-[#850E88]">Compatible con:</span>{" "}
+          <p className="mt-5 text-sm font-semibold leading-6 text-[#4A4552]">
+            <span className="font-black text-[#9512A0]">Compatible con:</span>{" "}
             suelo radiante · techo radiante · fancoils · radiadores de agua ·
             ACS
           </p>
@@ -736,24 +737,24 @@ function PhotovoltaicIntelligence() {
       id="fotovoltaica"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-10 sm:py-20"
     >
-      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(149,18,160,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute left-[-12%] top-12 h-80 w-80 rounded-full bg-[#F2B84B]/18 blur-3xl" />
-      <div className="absolute right-[-14%] bottom-[-16%] h-96 w-96 rounded-full bg-[#850E88]/10 blur-3xl" />
+      <div className="absolute right-[-14%] bottom-[-16%] h-96 w-96 rounded-full bg-[#9512A0]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
-          className="overflow-hidden rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_74%_18%,rgba(242,184,75,0.2),transparent_26%),linear-gradient(135deg,#FFFFFF_0%,#FFF8EE_38%,#EAEAFF_100%)] p-4 shadow-[0_24px_72px_rgba(133,14,136,0.12)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_32px_100px_rgba(133,14,136,0.16)] lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_74%_18%,rgba(242,184,75,0.2),transparent_26%),linear-gradient(135deg,#FFFFFF_0%,#FFF8EE_38%,#EAEAFF_100%)] p-4 shadow-[0_24px_72px_rgba(149,18,160,0.12)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_32px_100px_rgba(149,18,160,0.16)] lg:p-9"
         >
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.08fr)] lg:items-center lg:gap-8">
             <div>
-              <p className="text-sm font-black uppercase text-[#850E88]">
+              <p className="text-sm font-black uppercase text-[#9512A0]">
                 FOTOVOLTAICA INTELIGENTE
               </p>
               <h2 className="mt-2.5 max-w-3xl text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
                 Produce tu propia energía solar y reduce tu consumo de red
               </h2>
-              <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+              <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
                 La energía fotovoltaica transforma la luz del sol en
                 electricidad para cubrir parte del consumo de tu vivienda,
                 negocio o instalación profesional. Una solución eficiente,
@@ -766,7 +767,7 @@ function PhotovoltaicIntelligence() {
               </p>
               <Link
                 href="/consultoria-gratuita?tipo=Fotovoltaica#formulario"
-                className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
+                className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(149,18,160,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_24px_54px_rgba(149,18,160,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
               >
                 Solicitar asesoramiento fotovoltaico
                 <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -786,24 +787,24 @@ function PhotovoltaicIntelligence() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-8 rounded-full bg-[#850E88]/14 blur-3xl" />
+              <div className="absolute inset-8 rounded-full bg-[#9512A0]/14 blur-3xl" />
               <div className="relative min-h-[300px] overflow-hidden rounded-[22px] border border-white/80 bg-[linear-gradient(145deg,#FFFFFF_0%,#F7F3FF_58%,#EAEAFF_100%)] p-4 shadow-[0_22px_64px_rgba(23,17,26,0.14)] sm:min-h-[520px] sm:rounded-[32px] sm:shadow-[0_30px_90px_rgba(23,17,26,0.16)] lg:min-h-[650px]">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_68%_16%,rgba(242,184,75,0.16),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(133,14,136,0.1)_100%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_68%_16%,rgba(242,184,75,0.16),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(149,18,160,0.1)_100%)]" />
                 <Image
                   src="/fotovoltaica.png"
                   alt="Sistema fotovoltaico con paneles solares, inversor y batería para autoconsumo"
                   width={1450}
                   height={1024}
                   sizes="(min-width: 1024px) 54vw, 100vw"
-                  className="absolute left-1/2 top-1/2 h-auto w-[138%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_26px_48px_rgba(133,14,136,0.18)] sm:w-[118%] sm:drop-shadow-[0_32px_58px_rgba(133,14,136,0.2)] lg:w-[126%]"
+                  className="absolute left-1/2 top-1/2 h-auto w-[138%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_26px_48px_rgba(149,18,160,0.18)] sm:w-[118%] sm:drop-shadow-[0_32px_58px_rgba(149,18,160,0.2)] lg:w-[126%]"
                 />
-                <span className="absolute left-3 top-3 rounded-full border border-white/60 bg-white/90 px-2.5 py-1.5 text-[10px] font-black uppercase text-[#850E88] shadow-sm backdrop-blur sm:left-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
+                <span className="absolute left-3 top-3 rounded-full border border-white/60 bg-white/90 px-2.5 py-1.5 text-[10px] font-black uppercase text-[#9512A0] shadow-sm backdrop-blur sm:left-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
                   Autoconsumo solar
                 </span>
                 <span className="absolute left-3 top-12 rounded-full border border-white/60 bg-white/90 px-2.5 py-1.5 text-[10px] font-black text-[#17111A] shadow-sm backdrop-blur sm:left-auto sm:right-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
                   Paneles · Inversor · Batería
                 </span>
-                <span className="absolute bottom-3 left-3 rounded-full border border-white/60 bg-white/90 px-2.5 py-1.5 text-[10px] font-black text-[#850E88] shadow-sm backdrop-blur sm:bottom-5 sm:left-5 sm:px-3 sm:py-2 sm:text-xs">
+                <span className="absolute bottom-3 left-3 rounded-full border border-white/60 bg-white/90 px-2.5 py-1.5 text-[10px] font-black text-[#9512A0] shadow-sm backdrop-blur sm:bottom-5 sm:left-5 sm:px-3 sm:py-2 sm:text-xs">
                   Compatible con aerotermia
                 </span>
               </div>
@@ -827,7 +828,7 @@ function PhotovoltaicIntelligence() {
               </div>
               <Link
                 href="/consultoria-gratuita#formulario"
-                className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#850E88] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8] sm:w-auto"
+                className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#9512A0] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF2D8] sm:w-auto"
               >
                 Consultar solución combinada
                 <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -846,24 +847,24 @@ function EnergyStorage() {
       id="bess"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#F8F7FF_0%,#FFFFFF_55%,#EAEAFF_100%)] py-10 sm:py-16"
     >
-      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
-      <div className="absolute right-[-10%] top-12 h-80 w-80 rounded-full bg-[#850E88]/12 blur-3xl" />
+      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(149,18,160,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.055)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute right-[-10%] top-12 h-80 w-80 rounded-full bg-[#9512A0]/12 blur-3xl" />
       <div className="absolute left-[-12%] bottom-[-14%] h-80 w-80 rounded-full bg-[#F2B84B]/12 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
-          className="overflow-hidden rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_76%_18%,rgba(133,14,136,0.12),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(133,14,136,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_30px_96px_rgba(133,14,136,0.13)] lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_76%_18%,rgba(149,18,160,0.12),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(149,18,160,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_30px_96px_rgba(149,18,160,0.13)] lg:p-9"
         >
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start lg:gap-x-8 lg:gap-y-8">
             <div className="lg:col-start-1 lg:row-start-1">
-              <p className="text-sm font-black uppercase tracking-[0.14em] text-[#850E88]">
+              <p className="text-sm font-black uppercase tracking-[0.14em] text-[#9512A0]">
                 Almacenamiento energético
               </p>
               <h2 className="mt-2.5 text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
                 BESS y baterías para aprovechar mejor tu energía
               </h2>
-              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">
+              <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-4 sm:text-lg sm:leading-8">
                 Los sistemas BESS permiten almacenar energía mediante baterías
                 para usarla cuando más conviene. Son una solución especialmente
                 interesante para instalaciones fotovoltaicas, negocios,
@@ -877,7 +878,7 @@ function EnergyStorage() {
                 la potencia contratada, los horarios de uso, el espacio
                 disponible y los objetivos de ahorro o continuidad operativa.
               </p>
-              <div className="mt-4 rounded-[18px] border border-[#850E88]/12 bg-white/80 px-4 py-3 shadow-sm backdrop-blur sm:mt-5 sm:rounded-[22px] sm:px-5">
+              <div className="mt-4 rounded-[18px] border border-[#9512A0]/12 bg-white/80 px-4 py-3 shadow-sm backdrop-blur sm:mt-5 sm:rounded-[22px] sm:px-5">
                 <p className="text-sm font-bold leading-6 text-[#17111A] sm:text-[0.95rem] sm:leading-7">
                   No todos los proyectos necesitan baterías. Por eso analizamos
                   primero la viabilidad técnica y económica antes de recomendar
@@ -887,14 +888,14 @@ function EnergyStorage() {
               <div className="mt-5 flex flex-col items-stretch gap-2.5 sm:mt-6 lg:flex-row lg:items-center lg:gap-3">
                 <Link
                   href="/consultoria-gratuita#formulario"
-                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
                 >
                   Solicitar consultoría sobre BESS
                   <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1 sm:h-5 sm:w-5" aria-hidden="true" />
                 </Link>
                 <Link
                   href="/catalogo#fotovoltaica-catalogo"
-                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#9512A0]/30 bg-white px-5 py-3 text-sm font-bold text-[#9512A0] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] sm:min-h-14 sm:px-5 sm:py-3.5 sm:text-[0.95rem]"
                 >
                   Ver catálogo fotovoltaico
                   <FileText className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
@@ -903,7 +904,7 @@ function EnergyStorage() {
             </div>
 
             <div className="relative lg:col-span-2 lg:col-start-1 lg:row-start-2">
-              <div className="absolute -inset-6 rounded-[40px] bg-[#850E88]/10 blur-3xl" aria-hidden="true" />
+              <div className="absolute -inset-6 rounded-[40px] bg-[#9512A0]/10 blur-3xl" aria-hidden="true" />
               <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_22px_64px_rgba(23,17,26,0.14)] sm:aspect-[16/10] sm:rounded-[32px] sm:shadow-[0_30px_90px_rgba(23,17,26,0.16)] lg:aspect-[16/9] xl:aspect-[16/8]">
                 <Image
                   src="/bess.png"
@@ -913,7 +914,7 @@ function EnergyStorage() {
                   className="object-cover object-[center_58%] sm:object-[center_60%] lg:object-[center_57%]"
                 />
                 <div className="absolute top-3 left-3 max-w-[84%] rounded-2xl border border-white/60 bg-white/92 px-3.5 py-2.5 shadow-sm backdrop-blur sm:top-5 sm:left-5 sm:max-w-[22rem] sm:px-4 sm:py-3">
-                  <p className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#850E88] sm:text-[11px]">
+                  <p className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#9512A0] sm:text-[11px]">
                     <BatteryCharging className="h-3.5 w-3.5" aria-hidden="true" />
                     BESS · Fotovoltaica · Autoconsumo
                   </p>
@@ -925,8 +926,8 @@ function EnergyStorage() {
             </div>
 
             <div className="lg:col-start-2 lg:row-start-1">
-              <div className="h-full rounded-[20px] border border-[#D9D9FF]/80 bg-white/85 p-4 shadow-[0_14px_34px_rgba(133,14,136,0.07)] backdrop-blur sm:rounded-[24px] sm:p-6 sm:shadow-[0_18px_44px_rgba(133,14,136,0.08)]">
-                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+              <div className="h-full rounded-[20px] border border-[#D9D9FF]/80 bg-white/85 p-4 shadow-[0_14px_34px_rgba(149,18,160,0.07)] backdrop-blur sm:rounded-[24px] sm:p-6 sm:shadow-[0_18px_44px_rgba(149,18,160,0.08)]">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#9512A0]">
                   Qué podemos valorar
                 </p>
                 <motion.ul {...fadeUp} className="mt-3 grid gap-2.5">
@@ -936,7 +937,7 @@ function EnergyStorage() {
                       className="flex items-start gap-3 rounded-2xl border border-[#D9D9FF]/70 bg-white px-3.5 py-3"
                     >
                       <span
-                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F8F7FF] text-[#850E88]"
+                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F8F7FF] text-[#9512A0]"
                         aria-hidden="true"
                       >
                         <item.icon className="h-4 w-4" />
@@ -945,7 +946,7 @@ function EnergyStorage() {
                         <p className="text-sm font-black leading-5 text-[#17111A]">
                           {item.title}
                         </p>
-                        <p className="mt-0.5 text-xs leading-5 text-[#5F5A66]">
+                        <p className="mt-0.5 text-xs leading-5 text-[#4A4552]">
                           {item.text}
                         </p>
                       </div>
@@ -957,10 +958,10 @@ function EnergyStorage() {
 
             <div className="lg:col-start-1 lg:row-start-3">
               <div className="h-full rounded-[20px] border border-[#D9D9FF] bg-[#F8F7FF] px-4 py-4 sm:px-5 sm:py-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#9512A0]">
                   Ayudas y subvenciones
                 </p>
-                <p className="mt-2 text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">
+                <p className="mt-2 text-xs leading-5 text-[#4A4552] sm:text-sm sm:leading-6">
                   También revisamos posibles ayudas, subvenciones o incentivos
                   disponibles para proyectos de almacenamiento energético,
                   siempre según ubicación, tipo de instalación, convocatoria
@@ -971,18 +972,18 @@ function EnergyStorage() {
 
             <div className="lg:col-start-2 lg:row-start-3">
               <div className="h-full rounded-[20px] border border-[#D9D9FF] bg-white/85 px-4 py-4 backdrop-blur sm:px-5 sm:py-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#850E88]">
+                <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#9512A0]">
                   Marcas con las que trabajamos
                 </p>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center rounded-full border border-[#850E88]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#850E88]">
+                  <span className="inline-flex items-center rounded-full border border-[#9512A0]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#9512A0]">
                     Reaseen
                   </span>
-                  <span className="inline-flex items-center rounded-full border border-[#850E88]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#850E88]">
+                  <span className="inline-flex items-center rounded-full border border-[#9512A0]/25 bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[#9512A0]">
                     Goodyear
                   </span>
                 </div>
-                <p className="mt-2 text-xs leading-5 text-[#5F5A66]">
+                <p className="mt-2 text-xs leading-5 text-[#4A4552]">
                   Trabajamos con soluciones fotovoltaicas y paneles de marcas
                   como Reaseen y Goodyear, valorando siempre la opción más
                   adecuada según el proyecto, la instalación y las necesidades
@@ -1003,14 +1004,14 @@ function GeothermalSection() {
       id="geotermia"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#EAEAFF_0%,#FFFFFF_48%,#F8F7FF_100%)] py-10 sm:py-20"
     >
-      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(133,14,136,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(149,18,160,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.055)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="absolute right-[-8%] top-[-4%] h-[55%] w-[42%] rounded-full bg-[#2F7D6D]/10 blur-3xl" />
-      <div className="absolute bottom-[-10%] left-[-8%] h-64 w-64 rounded-full bg-[#850E88]/10 blur-3xl" />
+      <div className="absolute bottom-[-10%] left-[-8%] h-64 w-64 rounded-full bg-[#9512A0]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
-          className="overflow-hidden rounded-[24px] border border-[#D6EFE8]/50 bg-[radial-gradient(circle_at_76%_18%,rgba(47,125,109,0.10),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F0F9F6_26%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(133,14,136,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_32px_100px_rgba(133,14,136,0.13)] lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-[#D6EFE8]/50 bg-[radial-gradient(circle_at_76%_18%,rgba(47,125,109,0.10),transparent_40%),linear-gradient(135deg,#FFFFFF_0%,#F0F9F6_26%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(149,18,160,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_32px_100px_rgba(149,18,160,0.13)] lg:p-9"
         >
           <div className="grid gap-6 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-8">
             <div>
@@ -1020,7 +1021,7 @@ function GeothermalSection() {
               <h2 className="mt-2.5 max-w-3xl text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
                 Energía estable del terreno para climatizar tu vivienda o negocio
               </h2>
-              <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+              <p className="mt-3 max-w-2xl text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
                 La geotermia aprovecha la temperatura constante del subsuelo para
                 apoyar sistemas de calefacción, refrigeración y agua caliente
                 sanitaria con un alto nivel de eficiencia.
@@ -1040,7 +1041,7 @@ function GeothermalSection() {
               </p>
               <Link
                 href="/consultoria-gratuita?tipo=Geotermia#formulario"
-                className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
+                className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(149,18,160,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_24px_54px_rgba(149,18,160,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
               >
                 Solicitar asesoramiento en geotermia
                 <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1055,15 +1056,15 @@ function GeothermalSection() {
                 sizes="(min-width: 1024px) 44vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,30,25,0.06)_0%,transparent_28%,rgba(15,30,25,0.72)_100%)]" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/15 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white backdrop-blur-sm">
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,30,25,0.04)_0%,transparent_22%,rgba(15,30,25,0.55)_55%,rgba(15,30,25,0.92)_100%)]" />
+              <span className="absolute left-4 top-4 rounded-full border border-white/40 bg-black/40 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white backdrop-blur-sm">
                 Geotermia
               </span>
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                <h3 className="text-base font-black text-white sm:text-lg">
+                <h3 className="text-base font-black text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] sm:text-lg">
                   Temperatura estable del subsuelo
                 </h3>
-                <p className="mt-1 text-sm font-semibold leading-5 text-white/75">
+                <p className="mt-1 text-sm font-semibold leading-5 text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
                   Aprovecha la estabilidad térmica del terreno para mejorar la
                   eficiencia del sistema.
                 </p>
@@ -1071,14 +1072,14 @@ function GeothermalSection() {
                   {["Alta eficiencia", "Climatización", "ACS"].map((chip) => (
                     <span
                       key={chip}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-black/35 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm"
                     >
                       <Check className="h-3 w-3 text-[#A8D5C8]" aria-hidden="true" />
                       {chip}
                     </span>
                   ))}
                 </div>
-                <p className="mt-3 text-xs font-semibold text-white/45">
+                <p className="mt-3 text-xs font-semibold text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                   Requiere estudio previo según terreno e inmueble.
                 </p>
               </div>
@@ -1093,7 +1094,7 @@ function GeothermalSection() {
               <h3 className="mt-2 text-[1.2rem] font-black leading-tight text-[#17111A] sm:mt-2.5 sm:text-[1.65rem]">
                 Ventajas técnicas de <span className="text-[#2F7D6D]">ecoGeo</span> y la geotermia
               </h3>
-              <p className="mt-2 text-[0.92rem] leading-6 text-[#5F5A66] sm:mt-3 sm:text-base sm:leading-7">
+              <p className="mt-2 text-[0.92rem] leading-6 text-[#4A4552] sm:mt-3 sm:text-base sm:leading-7">
                 Tecnología eficiente para aprovechar la energía estable del
                 terreno en calefacción, refrigeración y agua caliente sanitaria.
               </p>
@@ -1108,7 +1109,7 @@ function GeothermalSection() {
                   <h4 className="text-[0.98rem] font-black text-[#17111A] sm:text-[1.15rem]">
                     Alto COP y rendimiento estacional
                   </h4>
-                  <p className="mt-1 text-[0.88rem] leading-6 text-[#5F5A66] sm:mt-1.5 sm:text-[0.95rem] sm:leading-7">
+                  <p className="mt-1 text-[0.88rem] leading-6 text-[#4A4552] sm:mt-1.5 sm:text-[0.95rem] sm:leading-7">
                     La geotermia puede alcanzar altos niveles de eficiencia
                     porque intercambia energía con el terreno, cuya temperatura
                     es más estable que la del aire exterior.
@@ -1142,10 +1143,10 @@ function GeothermalSection() {
                 </ul>
               </article>
 
-              <article className="relative overflow-hidden rounded-[18px] border border-[#850E88]/15 bg-white/80 p-4 backdrop-blur-sm sm:rounded-[22px] sm:p-6">
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-[#850E88]" aria-hidden="true" />
+              <article className="relative overflow-hidden rounded-[18px] border border-[#9512A0]/25 bg-white/80 p-4 backdrop-blur-sm sm:rounded-[22px] sm:p-6">
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-[#9512A0]" aria-hidden="true" />
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#850E88]/12 text-[#850E88] sm:h-11 sm:w-11">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#9512A0]/12 text-[#9512A0] sm:h-11 sm:w-11">
                     <Leaf className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden="true" />
                   </span>
                   <h4 className="text-base font-black text-[#17111A] sm:text-xl">
@@ -1155,7 +1156,7 @@ function GeothermalSection() {
                 <ul className="mt-3.5 space-y-2 sm:mt-5 sm:space-y-2.5">
                   {geothermalAdvantages.map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-2.5">
-                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#850E88]/10 text-[#850E88] sm:h-7 sm:w-7">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#9512A0]/10 text-[#9512A0] sm:h-7 sm:w-7">
                         <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                       </span>
                       <span className="text-[0.9rem] leading-6 text-[#1F1623] sm:text-[0.95rem] sm:leading-7">
@@ -1168,7 +1169,7 @@ function GeothermalSection() {
             </div>
 
             <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-              <p className="max-w-2xl text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">
+              <p className="max-w-2xl text-xs leading-5 text-[#4A4552] sm:text-sm sm:leading-6">
                 Estudiamos cada proyecto para comprobar si la geotermia es la
                 opción más eficiente y viable según terreno, inmueble y demanda
                 energética.
@@ -1212,17 +1213,17 @@ function FeaturedSolutions() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           {...fadeUp}
-          className="overflow-hidden rounded-[24px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_18%_10%,rgba(217,217,255,0.82),transparent_26%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(133,14,136,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_30px_96px_rgba(133,14,136,0.13)] lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_18%_10%,rgba(217,217,255,0.82),transparent_26%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_46%,#EAEAFF_100%)] p-4 shadow-[0_22px_68px_rgba(149,18,160,0.11)] sm:rounded-[36px] sm:p-7 sm:shadow-[0_30px_96px_rgba(149,18,160,0.13)] lg:p-9"
         >
           <div className="max-w-4xl">
-            <p className="text-sm font-black uppercase text-[#850E88]">
+            <p className="text-sm font-black uppercase text-[#9512A0]">
               PRODUCTO ESTRELLA EN AEROTERMIA
             </p>
             <h2 className="mt-2.5 text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
               BEN Dual-Air: aerotermia compacta para climatización,
               ventilación y ACS
             </h2>
-            <p className="mt-3 max-w-3xl text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+            <p className="mt-3 max-w-3xl text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
               BEN Dual-Air integra calefacción, refrigeración, ventilación y
               agua caliente sanitaria en una solución compacta de instalación
               interior. Está pensada para pisos, viviendas unifamiliares, obra
@@ -1231,7 +1232,7 @@ function FeaturedSolutions() {
             </p>
             <Link
               href="/consultoria-gratuita?tipo=Aerotermia#formulario"
-              className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_24px_54px_rgba(133,14,136,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
+              className="group mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_44px_rgba(149,18,160,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_24px_54px_rgba(149,18,160,0.28)] sm:mt-8 sm:min-h-14 sm:w-auto sm:px-6 sm:py-4 sm:text-base"
             >
               Solicitar asesoramiento sobre BEN Dual-Air
               <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1248,28 +1249,28 @@ function FeaturedSolutions() {
                 className="object-cover object-[56%_center]"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,17,26,0.02)_0%,rgba(23,17,26,0.36)_100%)]" />
-              <div className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/88 px-3 py-2 text-xs font-black uppercase text-[#850E88] shadow-sm backdrop-blur">
+              <div className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/88 px-3 py-2 text-xs font-black uppercase text-[#9512A0] shadow-sm backdrop-blur">
                 BEN Dual-Air
               </div>
               <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/25 bg-white/88 p-4 shadow-[0_16px_38px_rgba(23,17,26,0.18)] backdrop-blur">
                 <p className="text-sm font-black text-[#17111A]">
                   Sistema interior compacto
                 </p>
-                <p className="mt-1 text-xs font-bold leading-5 text-[#5F5A66]">
+                <p className="mt-1 text-xs font-bold leading-5 text-[#4A4552]">
                   Climatización, ventilación y ACS según configuración del
                   proyecto.
                 </p>
               </div>
             </div>
 
-            <div className="rounded-[22px] border border-white/80 bg-white/[0.78] p-4 shadow-[0_16px_46px_rgba(133,14,136,0.08)] backdrop-blur sm:rounded-[32px] sm:p-8 sm:shadow-[0_22px_70px_rgba(133,14,136,0.1)]">
-              <p className="text-sm font-black uppercase text-[#850E88]">
+            <div className="rounded-[22px] border border-white/80 bg-white/[0.78] p-4 shadow-[0_16px_46px_rgba(149,18,160,0.08)] backdrop-blur sm:rounded-[32px] sm:p-8 sm:shadow-[0_22px_70px_rgba(149,18,160,0.1)]">
+              <p className="text-sm font-black uppercase text-[#9512A0]">
                 Todo eléctrico, compacto y preparado para viviendas modernas
               </p>
               <h3 className="mt-2.5 text-[1.45rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-3xl">
                 Aerotermia interior sin unidad exterior
               </h3>
-              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-5 sm:text-base sm:leading-7">
+              <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-5 sm:text-base sm:leading-7">
                 BEN Dual-Air es una bomba de calor interior que puede integrar
                 ventilación, calefacción, refrigeración y agua caliente sanitaria
                 en una unidad compacta. Su diseño permite resolver la instalación
@@ -1286,7 +1287,7 @@ function FeaturedSolutions() {
 
               <div className="mt-5 grid gap-2.5 sm:mt-7 sm:grid-cols-2 sm:gap-3">
                 <div className="rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] p-4">
-                  <p className="text-xs font-black uppercase text-[#850E88]">
+                  <p className="text-xs font-black uppercase text-[#9512A0]">
                     Formato
                   </p>
                   <p className="mt-2 text-sm font-bold text-[#17111A]">
@@ -1294,7 +1295,7 @@ function FeaturedSolutions() {
                   </p>
                 </div>
                 <div className="rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] p-4">
-                  <p className="text-xs font-black uppercase text-[#850E88]">
+                  <p className="text-xs font-black uppercase text-[#9512A0]">
                     Enfoque
                   </p>
                   <p className="mt-2 text-sm font-bold text-[#17111A]">
@@ -1302,7 +1303,7 @@ function FeaturedSolutions() {
                   </p>
                 </div>
               </div>
-              <p className="mt-2 text-[11px] leading-4 text-[#5F5A66]">
+              <p className="mt-2 text-[11px] leading-4 text-[#4A4552]">
                 *Aproximadamente 3 horas según condiciones de instalación y
                 viabilidad técnica.
               </p>
@@ -1338,7 +1339,7 @@ function FeaturedSolutions() {
                 key={benefit}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-[#F8F7FF]/80 px-2.5 py-1.5 text-xs font-bold text-[#4A4352]"
               >
-                <Check className="h-3.5 w-3.5 text-[#850E88]" aria-hidden="true" />
+                <Check className="h-3.5 w-3.5 text-[#9512A0]" aria-hidden="true" />
                 {benefit}
               </span>
             ))}
@@ -1358,7 +1359,7 @@ function FeaturedSolutions() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/consultoria-gratuita#formulario"
-                  className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#850E88] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF7FF]"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-[#9512A0] shadow-[0_16px_34px_rgba(255,255,255,0.12)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FFF7FF]"
                 >
                   Solicitar asesoramiento
                   <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1388,7 +1389,7 @@ function ConsultiveCatalog() {
           title="Catálogo consultivo de soluciones energéticas"
           text="Consulta algunas de las soluciones con las que trabaja Maclima en aerotermia, fotovoltaica y geotermia. El catálogo es orientativo: cada instalación se estudia antes de recomendar un equipo, combinación de sistemas o propuesta técnica."
         />
-        <div className="mx-auto mt-4 max-w-2xl rounded-2xl border border-[#850E88]/12 bg-white/[0.8] px-4 py-3 text-center text-xs font-semibold leading-5 text-[#5F5A66] shadow-sm backdrop-blur sm:mt-5 sm:text-sm sm:leading-6">
+        <div className="mx-auto mt-4 max-w-2xl rounded-2xl border border-[#9512A0]/12 bg-white/[0.8] px-4 py-3 text-center text-xs font-semibold leading-5 text-[#4A4552] shadow-sm backdrop-blur sm:mt-5 sm:text-sm sm:leading-6">
           No vendemos productos de forma automática. Analizamos cada caso antes de recomendar.
         </div>
         <div className="mt-6 grid items-stretch gap-4 sm:mt-10 sm:gap-6 lg:grid-cols-3">
@@ -1425,13 +1426,13 @@ function FreeConsulting() {
     <section className="bg-white py-9 sm:py-12 lg:py-14">
       <div className="mx-auto grid max-w-7xl items-center gap-6 px-4 sm:px-6 lg:grid-cols-[0.42fr_0.58fr] lg:gap-8 lg:px-8">
         <motion.div {...fadeUp}>
-          <p className="text-xs font-black uppercase tracking-wider text-[#850E88]">
+          <p className="text-xs font-black uppercase tracking-wider text-[#9512A0]">
             Consultoría gratuita
           </p>
           <h2 className="mt-2 max-w-2xl text-2xl font-black leading-tight text-[#17111A] sm:text-3xl lg:text-4xl">
             Consulta gratuita para elegir la solución adecuada
           </h2>
-          <p className="mt-3 max-w-xl text-base leading-7 text-[#5F5A66]">
+          <p className="mt-3 max-w-xl text-base leading-7 text-[#4A4552]">
             Analizamos tu vivienda, negocio o proyecto profesional para orientarte entre aerotermia, fotovoltaica, geotermia o una solución combinada.
           </p>
           <p className="mt-3 max-w-xl text-sm font-semibold leading-6 text-[#17111A]">
@@ -1440,7 +1441,7 @@ function FreeConsulting() {
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/consultoria-gratuita#formulario"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81]"
             >
               Solicitar consultoría gratuita
               <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1449,7 +1450,7 @@ function FreeConsulting() {
               href={CONTACT_INFO.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-bold text-[#850E88] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FAF4FF] hover:shadow-[0_14px_34px_rgba(133,14,136,0.10)]"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#9512A0]/30 bg-white px-5 py-3 text-sm font-bold text-[#9512A0] shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FAF4FF] hover:shadow-[0_14px_34px_rgba(149,18,160,0.10)]"
             >
               Contactar por WhatsApp
               <MessageCircle className="h-4 w-4 transition duration-200 ease-out group-hover:scale-105" aria-hidden="true" />
@@ -1459,20 +1460,20 @@ function FreeConsulting() {
 
         <motion.div
           {...fadeUp}
-          className="rounded-2xl border border-[#D9D9FF] bg-[#EAEAFF] p-3.5 shadow-[0_14px_38px_rgba(133,14,136,0.08)] sm:p-5 sm:shadow-[0_16px_48px_rgba(133,14,136,0.10)]"
+          className="rounded-2xl border border-[#D9D9FF] bg-[#EAEAFF] p-3.5 shadow-[0_14px_38px_rgba(149,18,160,0.08)] sm:p-5 sm:shadow-[0_16px_48px_rgba(149,18,160,0.10)]"
         >
-          <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88]">
+          <p className="text-xs font-black uppercase tracking-[0.14em] text-[#9512A0]">
             Así funciona la consulta
           </p>
           <div className="mt-3 grid gap-2">
             {consultingSteps.map((step, index) => (
-              <div key={step.title} className="flex items-center gap-3 rounded-xl border border-white/70 bg-white p-3 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#850E88] text-xs font-black text-white shadow-[0_8px_18px_rgba(133,14,136,0.16)]">
+              <div key={step.title} className="flex items-center gap-3 rounded-xl border border-white/70 bg-white p-3 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(149,18,160,0.06)]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#9512A0] text-xs font-black text-white shadow-[0_8px_18px_rgba(149,18,160,0.16)]">
                   {index + 1}
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-black text-[#17111A]">{step.title}</p>
-                  <p className="text-xs leading-5 text-[#5F5A66]">
+                  <p className="text-xs leading-5 text-[#4A4552]">
                     {step.description}
                   </p>
                 </div>
@@ -1523,7 +1524,7 @@ function FinalCta() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/consultoria-gratuita#formulario"
-              className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-bold text-[#850E88] shadow-[0_18px_44px_rgba(23,17,26,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_24px_48px_rgba(23,17,26,0.24)]"
+              className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-bold text-[#9512A0] shadow-[0_18px_44px_rgba(23,17,26,0.18)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_24px_48px_rgba(23,17,26,0.24)]"
             >
               Solicitar consultoría
               <ArrowRight className="h-5 w-5 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1553,11 +1554,11 @@ function SectionIntro({
 }) {
   return (
     <motion.div {...fadeUp} className="mx-auto max-w-3xl text-center">
-      <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:text-sm sm:tracking-normal">{eyebrow}</p>
+      <p className="text-xs font-black uppercase tracking-[0.14em] text-[#9512A0] sm:text-sm sm:tracking-normal">{eyebrow}</p>
       <h2 className="mt-2.5 text-[1.55rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
         {title}
       </h2>
-      <p className="mt-3 text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">{text}</p>
+      <p className="mt-3 text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">{text}</p>
     </motion.div>
   );
 }
@@ -1577,9 +1578,9 @@ function PhotovoltaicHighlight({
 }) {
   const accents = {
     violet: {
-      shell: "border-[#850E88]/18 bg-[#F5F0FF]",
-      icon: "text-[#850E88]",
-      glow: "bg-[#850E88]/12",
+      shell: "border-[#9512A0]/28 bg-[#F5F0FF]",
+      icon: "text-[#9512A0]",
+      glow: "bg-[#9512A0]/12",
     },
     solar: {
       shell: "border-[#D99A2B]/28 bg-[#FFF2D8]",
@@ -1594,7 +1595,7 @@ function PhotovoltaicHighlight({
   }[accent];
 
   return (
-    <article className="group flex gap-3 rounded-[18px] border border-white/80 bg-white/[0.74] p-3.5 shadow-[0_12px_30px_rgba(133,14,136,0.07)] backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_20px_52px_rgba(133,14,136,0.12)] sm:gap-4 sm:rounded-[22px] sm:p-4">
+    <article className="group flex gap-3 rounded-[18px] border border-white/80 bg-white/[0.74] p-3.5 shadow-[0_12px_30px_rgba(149,18,160,0.07)] backdrop-blur transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_20px_52px_rgba(149,18,160,0.12)] sm:gap-4 sm:rounded-[22px] sm:p-4">
       <span
         className={`relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border shadow-sm transition duration-200 ease-out group-hover:scale-105 sm:h-14 sm:w-14 sm:rounded-2xl ${accents.shell}`}
       >
@@ -1608,7 +1609,7 @@ function PhotovoltaicHighlight({
         <h3 className="text-base font-black leading-tight text-[#17111A]">
           {title}
         </h3>
-        <p className="mt-1 text-xs leading-5 text-[#5F5A66] sm:text-sm sm:leading-6">{text}</p>
+        <p className="mt-1 text-xs leading-5 text-[#4A4552] sm:text-sm sm:leading-6">{text}</p>
       </div>
     </article>
   );
@@ -1639,9 +1640,9 @@ function EnergyAdvantageCard({
       glow: "bg-[#38BDF8]/18",
     },
     violet: {
-      shell: "border-[#850E88]/18 bg-[#F5F0FF]",
-      icon: "text-[#850E88]",
-      glow: "bg-[#850E88]/12",
+      shell: "border-[#9512A0]/28 bg-[#F5F0FF]",
+      icon: "text-[#9512A0]",
+      glow: "bg-[#9512A0]/12",
     },
     solar: {
       shell: "border-[#D99A2B]/24 bg-[#FFF2D8]",
@@ -1661,7 +1662,7 @@ function EnergyAdvantageCard({
   }[accent];
 
   return (
-    <article className="group flex min-h-0 flex-row items-center gap-3 rounded-[18px] border border-white/80 bg-white p-3.5 shadow-[0_12px_30px_rgba(133,14,136,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_22px_58px_rgba(133,14,136,0.12)] sm:min-h-[205px] sm:flex-col sm:items-start sm:gap-0 sm:rounded-[22px] sm:p-5 xl:min-h-[230px]">
+    <article className="group flex min-h-0 flex-row items-center gap-3 rounded-[18px] border border-white/80 bg-white p-3.5 shadow-[0_12px_30px_rgba(149,18,160,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_22px_58px_rgba(149,18,160,0.12)] sm:min-h-[205px] sm:flex-col sm:items-start sm:gap-0 sm:rounded-[22px] sm:p-5 xl:min-h-[230px]">
       <span
         className={`relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border transition duration-200 ease-out group-hover:scale-105 group-hover:shadow-[0_14px_32px_rgba(23,17,26,0.1)] sm:h-[72px] sm:w-[72px] sm:rounded-[24px] ${accents.shell}`}
       >
@@ -1675,10 +1676,10 @@ function EnergyAdvantageCard({
         <h4 className="text-sm font-black leading-tight text-[#17111A] sm:mt-5 sm:text-lg">
           {title}
         </h4>
-        <p className="mt-1 text-xs leading-5 text-[#5F5A66] sm:mt-2 sm:text-sm">{text}</p>
+        <p className="mt-1 text-xs leading-5 text-[#4A4552] sm:mt-2 sm:text-sm">{text}</p>
         <div className="mt-2 sm:mt-auto sm:pt-5">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-[#F8F7FF] px-2.5 py-1 text-[10px] font-bold leading-none text-[#4A4352] sm:py-1.5 sm:text-[11px]">
-            <Check className="h-3 w-3 text-[#850E88]" aria-hidden="true" />
+            <Check className="h-3 w-3 text-[#9512A0]" aria-hidden="true" />
             {chip}
           </span>
         </div>
@@ -1726,15 +1727,15 @@ function SolutionCard({
         : {
             glow: "bg-[#D9D9FF]/70",
             iconShell: "border-[#D9D9FF] bg-[#EAEAFF]",
-            icon: "text-[#850E88]",
+            icon: "text-[#9512A0]",
             chip: "border-[#D9D9FF]/80 bg-[#F8F7FF]",
-            line: "from-transparent via-[#850E88] to-transparent",
+            line: "from-transparent via-[#9512A0] to-transparent",
           };
 
   return (
     <motion.article
       {...fadeUp}
-      className="group relative flex min-h-full flex-col overflow-hidden rounded-[20px] border border-[#D9D9FF]/90 bg-white p-4 shadow-[0_16px_48px_rgba(23,17,26,0.06)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)] sm:rounded-[30px] sm:p-7 sm:shadow-[0_22px_70px_rgba(23,17,26,0.07)] lg:p-8"
+      className="group relative flex min-h-full flex-col overflow-hidden rounded-[20px] border border-[#D9D9FF]/90 bg-white p-4 shadow-[0_16px_48px_rgba(23,17,26,0.06)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(149,18,160,0.12)] sm:rounded-[30px] sm:p-7 sm:shadow-[0_22px_70px_rgba(23,17,26,0.07)] lg:p-8"
     >
       <div className={`absolute inset-x-8 top-0 h-px bg-gradient-to-r ${cardAccent.line} opacity-70`} />
       <div className={`absolute right-[-22px] top-8 h-32 w-32 rounded-full ${cardAccent.glow} blur-2xl transition duration-300 ease-out group-hover:scale-110`} />
@@ -1744,27 +1745,27 @@ function SolutionCard({
           <span className={`relative flex h-11 w-11 items-center justify-center rounded-xl border sm:h-16 sm:w-16 sm:rounded-[22px] ${cardAccent.iconShell} transition duration-200 ease-out group-hover:shadow-[0_14px_34px_rgba(23,17,26,0.1)]`}>
             <Icon className={`h-6 w-6 transition duration-200 ease-out group-hover:scale-105 sm:h-8 sm:w-8 ${cardAccent.icon}`} aria-hidden="true" />
           </span>
-          <p className="mt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#850E88] sm:mt-6 sm:text-sm">
+          <p className="mt-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#9512A0] sm:mt-6 sm:text-sm">
             {subtitle}
           </p>
           <h3 className="mt-1.5 text-xl font-black text-[#17111A] sm:mt-2 sm:text-3xl">{title}</h3>
         </div>
       </div>
-      <p className="mt-2.5 max-w-xl text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">{text}</p>
+      <p className="mt-2.5 max-w-xl text-sm leading-6 text-[#4A4552] sm:mt-4 sm:text-base sm:leading-7">{text}</p>
       <div className="mt-3 flex flex-nowrap items-center gap-1 sm:mt-5 sm:gap-1.5">
         {benefits.slice(0, 3).map((benefit) => (
           <span
             key={benefit}
             className={`inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-bold text-[#17111A] sm:px-2.5 sm:py-1 sm:text-[11px] ${cardAccent.chip}`}
           >
-            <Check className="h-2.5 w-2.5 shrink-0 text-[#850E88]" aria-hidden="true" />
+            <Check className="h-2.5 w-2.5 shrink-0 text-[#9512A0]" aria-hidden="true" />
             {benefit}
           </span>
         ))}
       </div>
       <Link
         href={href}
-        className="relative mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/15 bg-[#F8F7FF] px-4 py-2.5 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:text-[#6f0b72] sm:mt-auto sm:min-h-0 sm:w-fit sm:justify-start sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-7"
+        className="relative mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-[#9512A0]/25 bg-[#F8F7FF] px-4 py-2.5 text-sm font-black text-[#9512A0] transition duration-200 ease-out hover:text-[#7B0C81] sm:mt-auto sm:min-h-0 sm:w-fit sm:justify-start sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-7"
       >
         {cta}
         <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1783,17 +1784,17 @@ function BenFeatureBandCard({
   text: string;
 }) {
   return (
-    <article className="group rounded-[22px] bg-[linear-gradient(135deg,#850E88_0%,#D9D9FF_52%,#F8F7FF_100%)] p-px transition duration-200 ease-out hover:-translate-y-0.5 sm:rounded-[30px]">
+    <article className="group rounded-[22px] bg-[linear-gradient(135deg,#9512A0_0%,#D9D9FF_52%,#F8F7FF_100%)] p-px transition duration-200 ease-out hover:-translate-y-0.5 sm:rounded-[30px]">
       <div className="flex min-h-0 items-center gap-4 rounded-[21px] bg-white px-4 py-4 text-left transition duration-200 ease-out group-hover:bg-[linear-gradient(180deg,#FFFFFF_0%,#FBFAFF_100%)] sm:min-h-[260px] sm:flex-col sm:justify-center sm:rounded-[29px] sm:px-6 sm:py-8 sm:text-center md:min-h-[320px]">
         <Icon
-          className="h-10 w-10 shrink-0 stroke-[1.5] text-[#850E88] transition duration-200 ease-out group-hover:-translate-y-1 sm:h-16 sm:w-16"
+          className="h-10 w-10 shrink-0 stroke-[1.5] text-[#9512A0] transition duration-200 ease-out group-hover:-translate-y-1 sm:h-16 sm:w-16"
           aria-hidden="true"
         />
         <div>
           <h3 className="max-w-[13rem] text-base font-black leading-snug text-[#17111A] sm:mt-8 sm:text-xl">
             {title}
           </h3>
-          <p className="mt-1.5 max-w-[15rem] text-xs font-semibold leading-5 text-[#5F5A66] sm:mt-4 sm:text-sm sm:leading-6">
+          <p className="mt-1.5 max-w-[15rem] text-xs font-semibold leading-5 text-[#4A4552] sm:mt-4 sm:text-sm sm:leading-6">
             {text}
           </p>
         </div>
@@ -1846,10 +1847,10 @@ function CatalogColumn({
   return (
     <motion.article
       {...fadeUp}
-      className="flex h-full flex-col rounded-[22px] border border-white/80 bg-white p-4 shadow-[0_16px_48px_rgba(133,14,136,0.08)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(133,14,136,0.14)] sm:rounded-[28px] sm:p-7 sm:shadow-[0_22px_70px_rgba(133,14,136,0.1)]"
+      className="flex h-full flex-col rounded-[22px] border border-white/80 bg-white p-4 shadow-[0_16px_48px_rgba(149,18,160,0.08)] transition duration-200 ease-out hover:-translate-y-1 hover:shadow-[0_28px_82px_rgba(149,18,160,0.14)] sm:rounded-[28px] sm:p-7 sm:shadow-[0_22px_70px_rgba(149,18,160,0.1)]"
     >
       <div className="flex min-h-[52px] items-center gap-3.5">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#850E88]">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EAEAFF] text-[#9512A0]">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
         <h3 className="text-xl font-black text-[#17111A]">{title}</h3>
@@ -1860,13 +1861,13 @@ function CatalogColumn({
         ))}
       </div>
       {moreItemsNote ? (
-        <p className="mt-3 rounded-xl border border-[#D9D9FF]/70 bg-[#F8F7FF] px-3 py-2 text-center text-xs font-semibold leading-5 text-[#5F5A66]">
+        <p className="mt-3 rounded-xl border border-[#D9D9FF]/70 bg-[#F8F7FF] px-3 py-2 text-center text-xs font-semibold leading-5 text-[#4A4552]">
           {moreItemsNote}
         </p>
       ) : null}
       <Link
         href={href}
-        className="group mt-4 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white transition duration-200 ease-out hover:bg-[#6f0b72] hover:shadow-[0_18px_40px_rgba(133,14,136,0.22)] sm:mt-5 sm:min-h-12"
+        className="group mt-4 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white transition duration-200 ease-out hover:bg-[#7B0C81] hover:shadow-[0_18px_40px_rgba(149,18,160,0.22)] sm:mt-5 sm:min-h-12"
       >
         {cta}
         <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -1906,8 +1907,8 @@ function CatalogPreviewItem({
 }) {
   const className = `group flex flex-1 items-center gap-2.5 rounded-[16px] border p-2.5 text-left transition duration-200 ease-out sm:gap-3.5 sm:rounded-[18px] sm:p-3.5 ${
     item.featured
-      ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(133,14,136,0.08)]"
-      : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#850E88]/20 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(133,14,136,0.06)]"
+      ? "border-[#9512A0]/28 bg-[linear-gradient(135deg,#FFFFFF_0%,#F9F7FF_56%,#EAEAFF_100%)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(149,18,160,0.08)]"
+      : "border-[#D9D9FF]/65 bg-[#FDFDFF] hover:-translate-y-0.5 hover:border-[#9512A0]/30 hover:bg-[#FAF9FF] hover:shadow-[0_10px_24px_rgba(149,18,160,0.06)]"
   }`;
 
   const content = (
@@ -1917,11 +1918,11 @@ function CatalogPreviewItem({
         <p className="line-clamp-2 text-sm font-black leading-snug text-[#17111A]">
           {item.name}
         </p>
-        <p className="mt-0.5 line-clamp-2 text-xs font-medium leading-5 text-[#5F5A66]">
+        <p className="mt-0.5 line-clamp-2 text-xs font-medium leading-5 text-[#4A4552]">
           {item.text}
         </p>
       </div>
-      <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#850E88]">
+      <span className="shrink-0 text-[#B7AEC3] transition duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-[#9512A0]">
         <ChevronRight className="h-4 w-4" aria-hidden="true" />
       </span>
     </>
@@ -1968,11 +1969,11 @@ function CatalogThumbnail({
     item.thumbType === "geo"
       ? "border-[#2F7D6D]/20 bg-[linear-gradient(135deg,#FFFFFF_0%,#E8F6F2_100%)] text-[#2F7D6D]"
       : item.kind === "brand"
-        ? "border-[#D9D9FF]/80 bg-[linear-gradient(135deg,#FFFFFF_0%,#F3EEFF_100%)] text-[#850E88]"
+        ? "border-[#D9D9FF]/80 bg-[linear-gradient(135deg,#FFFFFF_0%,#F3EEFF_100%)] text-[#9512A0]"
         : item.kind === "family"
           ? "border-[#D99A2B]/16 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF2D8_100%)] text-[#9A5B12]"
           : item.featured
-            ? "border-[#850E88]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F1FF_66%,#EAEAFF_100%)] text-[#850E88]"
+            ? "border-[#9512A0]/28 bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F1FF_66%,#EAEAFF_100%)] text-[#9512A0]"
             : "border-[#D99A2B]/18 bg-[linear-gradient(135deg,#FFFFFF_0%,#FFF5E2_100%)] text-[#9A5B12]";
 
   return (
@@ -2028,7 +2029,7 @@ function CatalogMockup({
       <div className="relative h-full w-full">
         <div className="absolute inset-x-3 top-3 h-4 rounded-lg border border-[#2F7D6D]/22 bg-[#E8F6F2]" />
         <div className="absolute inset-x-5 top-9 h-3 rounded-lg border border-[#2F7D6D]/16 bg-[linear-gradient(90deg,#E8F6F2_0%,#EAEAFF_100%)]" />
-        <div className="absolute inset-x-7 top-14 h-2.5 rounded-lg border border-[#D9D9FF]/60 bg-[#EAEAFF]" />
+        <div className="absolute inset-x-7 top-14 h-2.5 rounded-lg border border-[#D9D9FF]/80 bg-[#EAEAFF]" />
         <div className="absolute left-1/2 bottom-3 h-5 w-1 -translate-x-1/2 rounded-full bg-[#2F7D6D]/40" />
       </div>
     );
@@ -2037,7 +2038,7 @@ function CatalogMockup({
     return (
       <div className="relative h-full w-full">
         <div className="absolute inset-x-[32%] bottom-3 top-3 rounded-[999px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#EEE7FF_100%)] shadow-[0_8px_18px_rgba(23,17,26,0.08)]" />
-        <div className="absolute left-1/2 top-4 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[#850E88]/35" />
+        <div className="absolute left-1/2 top-4 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[#9512A0]/35" />
         <div className="absolute inset-x-[38%] bottom-2 h-1 rounded-full bg-[#D99A2B]/35" />
       </div>
     );
@@ -2065,7 +2066,7 @@ function CatalogMockup({
       <div className="relative h-full w-full">
         <div className="absolute inset-x-[28%] inset-y-[18%] rounded-[18px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#F7F1FF_100%)] shadow-[0_10px_20px_rgba(23,17,26,0.08)]" />
         <div className="absolute left-1/2 top-[32%] h-3 w-3 -translate-x-1/2 rounded-full bg-[#D99A2B]/65" />
-        <div className="absolute inset-x-[36%] bottom-[24%] h-1.5 rounded-full bg-[#850E88]/22" />
+        <div className="absolute inset-x-[36%] bottom-[24%] h-1.5 rounded-full bg-[#9512A0]/22" />
       </div>
     );
   }
@@ -2075,7 +2076,7 @@ function CatalogMockup({
       <div className="relative h-full w-full">
         <div className="absolute inset-x-[30%] inset-y-[18%] rounded-[16px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF2D8_100%)] shadow-[0_10px_20px_rgba(23,17,26,0.08)]" />
         <div className="absolute inset-x-[40%] top-[20%] h-1.5 rounded-full bg-[#9A5B12]/40" />
-        <div className="absolute inset-x-[38%] top-[42%] h-2 rounded-full bg-[linear-gradient(90deg,#850E88_0%,#F2B84B_100%)]" />
+        <div className="absolute inset-x-[38%] top-[42%] h-2 rounded-full bg-[linear-gradient(90deg,#9512A0_0%,#F2B84B_100%)]" />
         <div className="absolute inset-x-[38%] top-[52%] h-2 rounded-full bg-[#F2B84B]/35" />
       </div>
     );
@@ -2084,7 +2085,7 @@ function CatalogMockup({
   if (type === "clima") {
     return (
       <div className="relative h-full w-full">
-        <div className="absolute left-3 right-3 top-4 h-4 rounded-full border border-[#850E88]/14 bg-white/85" />
+        <div className="absolute left-3 right-3 top-4 h-4 rounded-full border border-[#9512A0]/14 bg-white/85" />
         <div className="absolute left-4 right-4 top-10 h-[2px] rounded-full bg-[#38BDF8]/50" />
         <div className="absolute left-4 right-4 top-[46px] h-[2px] rounded-full bg-[#FB923C]/45" />
       </div>
@@ -2096,7 +2097,7 @@ function CatalogMockup({
       <div className="relative h-full w-full">
         <div className="absolute left-2.5 right-2.5 top-4 h-6 rounded-xl border border-[#D99A2B]/22 bg-[linear-gradient(180deg,#FFF7EA_0%,#F4EEFF_100%)]" />
         <div className="absolute left-1/2 top-2.5 h-3 w-3 -translate-x-1/2 rounded-full bg-[#F2B84B]/70" />
-        <div className="absolute left-4 right-4 top-12 h-1.5 rounded-full bg-[#850E88]/20" />
+        <div className="absolute left-4 right-4 top-12 h-1.5 rounded-full bg-[#9512A0]/20" />
       </div>
     );
   }
@@ -2106,7 +2107,7 @@ function CatalogMockup({
       <div className="relative h-full w-full">
         <div className="absolute left-2.5 top-4 h-7 w-7 rounded-xl border border-white/80 bg-white/90 shadow-sm" />
         <div className="absolute right-2.5 top-4 h-7 w-7 rounded-xl border border-[#D99A2B]/20 bg-[#FFF2D8]" />
-        <div className="absolute bottom-4 left-1/2 h-7 w-10 -translate-x-1/2 rounded-xl border border-[#850E88]/14 bg-[#F5F0FF]" />
+        <div className="absolute bottom-4 left-1/2 h-7 w-10 -translate-x-1/2 rounded-xl border border-[#9512A0]/14 bg-[#F5F0FF]" />
       </div>
     );
   }
@@ -2127,8 +2128,8 @@ function CatalogMockup({
     return (
       <div className="relative h-full w-full">
         <div className="absolute left-3 top-4 h-7 w-7 rounded-xl border border-[#D99A2B]/22 bg-[#FFF2D8]" />
-        <div className="absolute right-3 top-4 h-7 w-7 rounded-xl border border-[#850E88]/16 bg-[#F5F0FF]" />
-        <div className="absolute left-1/2 top-7 h-px w-6 -translate-x-1/2 bg-[linear-gradient(90deg,#D99A2B_0%,#850E88_100%)]" />
+        <div className="absolute right-3 top-4 h-7 w-7 rounded-xl border border-[#9512A0]/16 bg-[#F5F0FF]" />
+        <div className="absolute left-1/2 top-7 h-px w-6 -translate-x-1/2 bg-[linear-gradient(90deg,#D99A2B_0%,#9512A0_100%)]" />
         <div className="absolute inset-x-5 bottom-4 h-2 rounded-full bg-[#17111A]/10" />
       </div>
     );
@@ -2137,9 +2138,9 @@ function CatalogMockup({
   return (
     <div className="relative h-full w-full">
       <div className="absolute left-3 right-3 top-3 h-8 rounded-2xl border border-white/80 bg-white/90 shadow-sm" />
-      <div className="absolute left-4 right-4 top-5 h-1.5 rounded-full bg-[#850E88]/16" />
+      <div className="absolute left-4 right-4 top-5 h-1.5 rounded-full bg-[#9512A0]/16" />
       <div className="absolute left-4 right-8 top-9 h-1.5 rounded-full bg-[#D99A2B]/22" />
-      <div className="absolute bottom-3 left-3 right-3 rounded-full bg-[#F5F0FF] px-2 py-1 text-center text-[0.52rem] font-black uppercase tracking-[0.08em] text-[#850E88]">
+      <div className="absolute bottom-3 left-3 right-3 rounded-full bg-[#F5F0FF] px-2 py-1 text-center text-[0.52rem] font-black uppercase tracking-[0.08em] text-[#9512A0]">
         {label ?? "PROYECTO"}
       </div>
     </div>
@@ -2150,9 +2151,9 @@ function TrustCard({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
   return (
     <motion.article
       {...fadeUp}
-      className="group flex items-center gap-3 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] p-4 transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F0EDFF] hover:shadow-[0_14px_34px_rgba(133,14,136,0.08)] sm:block sm:p-5"
+      className="group flex items-center gap-3 rounded-2xl border border-[#D9D9FF] bg-[#F8F7FF] p-4 transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F0EDFF] hover:shadow-[0_14px_34px_rgba(149,18,160,0.08)] sm:block sm:p-5"
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D9D9FF] text-[#850E88] transition duration-200 ease-out group-hover:scale-105 sm:h-11 sm:w-11">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D9D9FF] text-[#9512A0] transition duration-200 ease-out group-hover:scale-105 sm:h-11 sm:w-11">
         <Icon className="h-5 w-5 transition duration-200 ease-out group-hover:-translate-y-0.5" aria-hidden="true" />
       </span>
       <h3 className="text-base font-black text-[#17111A] sm:mt-4 sm:text-lg">{title}</h3>

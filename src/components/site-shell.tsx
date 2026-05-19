@@ -29,14 +29,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[#D9D9FF]/80 bg-white/[0.9] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 sm:py-4 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="Maclima inicio">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#850E88] text-white shadow-[0_10px_26px_rgba(133,14,136,0.22)] sm:h-11 sm:w-11 sm:shadow-[0_12px_32px_rgba(133,14,136,0.25)]">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#9512A0] text-white shadow-[0_10px_26px_rgba(149,18,160,0.22)] sm:h-11 sm:w-11 sm:shadow-[0_12px_32px_rgba(149,18,160,0.25)]">
             <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
           </span>
           <span className="min-w-0 flex-1 leading-tight">
             <span className="block text-[0.95rem] font-bold text-[#17111A] sm:text-lg">
               Maclima
             </span>
-            <span className="block whitespace-nowrap text-[0.58rem] font-semibold uppercase leading-tight tracking-[0.01em] text-[#850E88] sm:max-w-none sm:text-xs sm:tracking-normal">
+            <span className="block whitespace-nowrap text-[0.58rem] font-semibold uppercase leading-tight tracking-[0.01em] text-[#9512A0] sm:max-w-none sm:text-xs sm:tracking-normal">
               Soluciones Energéticas
             </span>
           </span>
@@ -47,7 +47,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-xl px-3 py-2 text-sm font-semibold text-[#5F5A66] transition duration-200 ease-out hover:bg-[#EAEAFF] hover:text-[#850E88]"
+              className="rounded-xl px-3 py-2 text-sm font-semibold text-[#4A4552] transition duration-200 ease-out hover:bg-[#EAEAFF] hover:text-[#9512A0]"
             >
               {item.label}
             </Link>
@@ -57,7 +57,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/consultoria-gratuita"
-            className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] hover:shadow-[0_20px_42px_rgba(133,14,136,0.3)]"
+            className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] hover:shadow-[0_20px_42px_rgba(149,18,160,0.3)]"
           >
             Solicitar consultoría
             <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" aria-hidden="true" />
@@ -66,7 +66,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#D9D9FF] text-[#850E88] transition duration-200 ease-out hover:bg-[#F8F7FF] sm:h-11 sm:w-11 lg:hidden"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#D9D9FF] text-[#9512A0] transition duration-200 ease-out hover:bg-[#F8F7FF] sm:h-11 sm:w-11 lg:hidden"
           aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -85,7 +85,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-3.5 py-2.5 text-[0.95rem] font-semibold text-[#17111A] transition duration-200 ease-out hover:bg-[#EAEAFF] hover:text-[#850E88] sm:px-4 sm:py-3 sm:text-base"
+                className="rounded-xl px-3.5 py-2.5 text-[0.95rem] font-semibold text-[#17111A] transition duration-200 ease-out hover:bg-[#EAEAFF] hover:text-[#9512A0] sm:px-4 sm:py-3 sm:text-base"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
@@ -93,7 +93,7 @@ export function SiteHeader() {
             ))}
             <Link
               href="/consultoria-gratuita"
-              className="group mt-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-[0.95rem] font-bold text-white sm:py-4 sm:text-base"
+              className="group mt-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-[0.95rem] font-bold text-white sm:py-4 sm:text-base"
               onClick={() => setMobileOpen(false)}
             >
               Solicitar consultoría
@@ -113,7 +113,7 @@ export function SiteFooter() {
         <div className="grid gap-9 sm:gap-10 lg:grid-cols-[1.5fr_0.85fr_0.85fr_1fr] lg:gap-12">
           <div className="lg:order-1">
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#850E88] text-white">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#9512A0] text-white">
                 <Sparkles className="h-5 w-5" aria-hidden="true" />
               </span>
               <div className="leading-tight">
@@ -123,11 +123,11 @@ export function SiteFooter() {
                 </p>
               </div>
             </div>
-            <p className="mt-5 max-w-sm text-sm leading-6 text-[#D9D9FF]/85">
+            <p className="mt-5 max-w-sm text-sm leading-6 text-[#E6E6FF]">
               Distribución, instalación y asesoramiento técnico en aerotermia,
               fotovoltaica y geotermia para viviendas, negocios y profesionales.
             </p>
-            <div className="mt-5 space-y-1 text-xs leading-5 text-[#D9D9FF]/65">
+            <div className="mt-5 space-y-1 text-xs leading-5 text-[#D9D9FF]/85">
               <p>CIF: {LEGAL_COMPANY.taxId}</p>
               <p>{LEGAL_COMPANY.address}</p>
             </div>
@@ -202,10 +202,10 @@ export function SiteFooter() {
         <div className="mt-10 border-t border-white/10 pt-6 sm:mt-12 sm:pt-7">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
             <div className="space-y-1 text-center sm:text-left">
-              <p className="text-xs font-semibold text-[#D9D9FF]/90 sm:text-[13px]">
+              <p className="text-xs font-semibold text-[#E6E6FF] sm:text-[13px]">
                 © 2026 Maclima Soluciones Energéticas · Todos los derechos reservados
               </p>
-              <p className="text-[11px] leading-5 text-[#D9D9FF]/55 sm:text-xs">
+              <p className="text-[11px] leading-5 text-[#D9D9FF]/80 sm:text-xs">
                 Nombre comercial de {LEGAL_COMPANY.holder}. CIF y datos registrales disponibles en el{" "}
                 <Link
                   href="/aviso-legal"
@@ -216,7 +216,7 @@ export function SiteFooter() {
                 .
               </p>
             </div>
-            <p className="text-center text-xs text-[#D9D9FF]/70 sm:text-right sm:text-[13px]">
+            <p className="text-center text-xs text-[#D9D9FF]/90 sm:text-right sm:text-[13px]">
               Desarrollado por{" "}
               <a
                 href="https://www.potenciasoluciones.com/"

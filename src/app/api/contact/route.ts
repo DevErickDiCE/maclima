@@ -55,17 +55,17 @@ export async function POST(request: NextRequest) {
     // ── Email interno para Maclima ─────────────────────────────
     const internalHtml = `
       <div style="font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#17111A;max-width:640px;margin:0 auto;padding:32px 24px;border:1px solid #EAEAFF;border-radius:16px;">
-        <h2 style="margin:0 0 16px;font-size:20px;color:#850E88;">Nueva consulta desde la web de Maclima</h2>
+        <h2 style="margin:0 0 16px;font-size:20px;color:#9512A0;">Nueva consulta desde la web de Maclima</h2>
         <table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;">
-          <tr><td style="padding:6px 0;color:#5F5A66;width:140px;"><strong>Nombre</strong></td><td style="padding:6px 0;">${safe(nombre)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;"><strong>Email</strong></td><td style="padding:6px 0;">${safe(email)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;"><strong>Teléfono</strong></td><td style="padding:6px 0;">${safe(telefono)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;"><strong>Tipo de proyecto</strong></td><td style="padding:6px 0;">${safe(tipo)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;vertical-align:top;"><strong>Mensaje</strong></td><td style="padding:6px 0;white-space:pre-wrap;">${safe(mensaje)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;"><strong>Página de origen</strong></td><td style="padding:6px 0;">${safe(origen)}</td></tr>
-          <tr><td style="padding:6px 0;color:#5F5A66;"><strong>Fecha y hora</strong></td><td style="padding:6px 0;">${fecha}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;width:140px;"><strong>Nombre</strong></td><td style="padding:6px 0;">${safe(nombre)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;"><strong>Email</strong></td><td style="padding:6px 0;">${safe(email)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;"><strong>Teléfono</strong></td><td style="padding:6px 0;">${safe(telefono)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;"><strong>Tipo de proyecto</strong></td><td style="padding:6px 0;">${safe(tipo)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;vertical-align:top;"><strong>Mensaje</strong></td><td style="padding:6px 0;white-space:pre-wrap;">${safe(mensaje)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;"><strong>Página de origen</strong></td><td style="padding:6px 0;">${safe(origen)}</td></tr>
+          <tr><td style="padding:6px 0;color:#4A4552;"><strong>Fecha y hora</strong></td><td style="padding:6px 0;">${fecha}</td></tr>
         </table>
-        <p style="margin-top:24px;font-size:13px;color:#9C97A5;">Enviado automáticamente desde maclimasolucionesenergeticas.com</p>
+        <p style="margin-top:24px;font-size:13px;color:#7A7484;">Enviado automáticamente desde maclimasolucionesenergeticas.com</p>
       </div>
     `;
 
@@ -84,24 +84,24 @@ Fecha y hora: ${fecha}
     // ── Email de confirmación para el usuario ──────────────────
     const confirmHtml = `
       <div style="font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#17111A;max-width:600px;margin:0 auto;padding:40px 28px;">
-        <div style="border-bottom:3px solid #850E88;padding-bottom:20px;margin-bottom:28px;">
-          <p style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#850E88;">Maclima Soluciones Energéticas</p>
+        <div style="border-bottom:3px solid #9512A0;padding-bottom:20px;margin-bottom:28px;">
+          <p style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9512A0;">Maclima Soluciones Energéticas</p>
         </div>
         <h1 style="margin:0 0 16px;font-size:22px;font-weight:900;line-height:1.3;color:#17111A;">Hemos recibido tu solicitud</h1>
-        <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#5F5A66;">
+        <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4A4552;">
           Hola ${safe(nombre)},
         </p>
-        <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#5F5A66;">
+        <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4A4552;">
           Hemos recibido tu consulta sobre <strong style="color:#17111A;">${safe(tipo)}</strong>. Revisaremos la información y nos pondremos en contacto contigo lo antes posible para orientarte sobre la solución más adecuada para tu proyecto.
         </p>
-        <p style="margin:0 0 28px;font-size:15px;line-height:1.7;color:#5F5A66;">
+        <p style="margin:0 0 28px;font-size:15px;line-height:1.7;color:#4A4552;">
           Si necesitas atención más rápida, puedes contactarnos directamente:
         </p>
         <div style="background:#F8F7FF;border:1px solid #EAEAFF;border-radius:12px;padding:20px 24px;margin-bottom:32px;">
-          <p style="margin:0 0 8px;font-size:14px;color:#5F5A66;"><strong style="color:#17111A;">Teléfono:</strong> 919 91 44 91</p>
-          <p style="margin:0;font-size:14px;color:#5F5A66;"><strong style="color:#17111A;">Email:</strong> info@maclimasolucionesenergeticas.com</p>
+          <p style="margin:0 0 8px;font-size:14px;color:#4A4552;"><strong style="color:#17111A;">Teléfono:</strong> 919 91 44 91</p>
+          <p style="margin:0;font-size:14px;color:#4A4552;"><strong style="color:#17111A;">Email:</strong> info@maclimasolucionesenergeticas.com</p>
         </div>
-        <p style="margin:0 0 4px;font-size:13px;color:#9C97A5;">Maclima Calor y Frío S.L.</p>
+        <p style="margin:0 0 4px;font-size:13px;color:#7A7484;">Maclima Calor y Frío S.L.</p>
         <p style="margin:0;font-size:13px;color:#C4BFD0;">Este es un mensaje automático. No respondas directamente a este correo.</p>
       </div>
     `;

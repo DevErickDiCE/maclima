@@ -1328,19 +1328,19 @@ function CatalogHero() {
       id="catalogo-todos"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] py-10 sm:py-16"
     >
-      <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(133,14,136,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(133,14,136,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
+      <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(rgba(149,18,160,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(149,18,160,0.06)_1px,transparent_1px)] [background-size:46px_46px]" />
       <div className="absolute right-[-12%] top-10 h-80 w-80 rounded-full bg-[#D9D9FF]/80 blur-3xl" />
       <div className="absolute bottom-[-18%] left-[-10%] h-72 w-72 rounded-full bg-[#F2B84B]/14 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-center lg:px-8">
         <motion.div {...fadeUp}>
-          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#850E88] sm:text-sm sm:tracking-[0.18em]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#9512A0] sm:text-sm sm:tracking-[0.18em]">
             CATÁLOGO CONSULTIVO
           </p>
           <h1 className="mt-3 max-w-3xl text-[1.65rem] font-black leading-[1.1] text-[#17111A] sm:text-4xl lg:text-5xl">
             Catálogo consultivo de soluciones energéticas
           </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#5F5A66] sm:mt-5 sm:text-base sm:leading-7">
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4A4552] sm:mt-5 sm:text-base sm:leading-7">
             Consulta las principales soluciones con las que trabaja Maclima.
             Tras analizar cada caso, recomendamos la opción más adecuada según
             consumo, inmueble y viabilidad técnica.
@@ -1348,18 +1348,18 @@ function CatalogHero() {
           <div className="mt-7 flex flex-col gap-3">
             <Link
               href="/consultoria-gratuita"
-              className="group inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#850E88] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_14px_36px_rgba(133,14,136,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72] sm:w-auto"
+              className="group inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-6 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_14px_36px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81] sm:w-auto"
             >
               Solicitar asesoramiento
               <ArrowRight className="h-4 w-4 transition duration-200 ease-out group-hover:translate-x-1" />
             </Link>
             <div className="flex items-center gap-2.5 flex-wrap">
-              <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#9C97A5]">
+              <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#7A7484]">
                 Explorar:
               </span>
               <Link
                 href="#aerotermia-catalogo"
-                className="inline-flex items-center rounded-full border border-[#D9D9FF] bg-[#EAEAFF] px-4 py-2 text-sm font-bold text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#850E88]/30 hover:bg-white"
+                className="inline-flex items-center rounded-full border border-[#D9D9FF] bg-[#EAEAFF] px-4 py-2 text-sm font-bold text-[#9512A0] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#9512A0]/30 hover:bg-white"
               >
                 Aerotermia
               </Link>
@@ -1381,16 +1381,16 @@ function CatalogHero() {
 
         <motion.aside
           {...fadeUp}
-          className="rounded-[22px] border border-white/80 bg-white/82 p-4 shadow-[0_20px_60px_rgba(133,14,136,0.10)] backdrop-blur-xl sm:rounded-[30px] sm:p-6 sm:shadow-[0_26px_80px_rgba(133,14,136,0.14)]"
+          className="rounded-[22px] border border-white/80 bg-white/82 p-4 shadow-[0_20px_60px_rgba(149,18,160,0.10)] backdrop-blur-xl sm:rounded-[30px] sm:p-6 sm:shadow-[0_26px_80px_rgba(149,18,160,0.14)]"
         >
-          <div className="rounded-[18px] border border-[#850E88]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-4 sm:rounded-[22px] sm:p-5">
-            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:text-xs sm:tracking-[0.14em]">
+          <div className="rounded-[18px] border border-[#9512A0]/12 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_62%,#EAEAFF_100%)] p-4 sm:rounded-[22px] sm:p-5">
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#9512A0] sm:text-xs sm:tracking-[0.14em]">
               ENFOQUE MACLIMA
             </p>
             <p className="mt-2 text-base font-black leading-snug text-[#17111A] sm:mt-2.5 sm:text-lg">
               No vendemos productos de forma automática.
             </p>
-            <p className="mt-1.5 text-xs font-semibold leading-5 text-[#5F5A66] sm:mt-2.5 sm:text-sm sm:leading-6">
+            <p className="mt-1.5 text-xs font-semibold leading-5 text-[#4A4552] sm:mt-2.5 sm:text-sm sm:leading-6">
               Analizamos cada caso antes de recomendar una solución.
             </p>
           </div>
@@ -1400,7 +1400,7 @@ function CatalogHero() {
                 key={item}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#D9D9FF]/80 bg-white px-2.5 py-1 text-[11px] font-bold text-[#17111A] shadow-sm"
               >
-                <Check className="h-3 w-3 text-[#850E88]" aria-hidden="true" />
+                <Check className="h-3 w-3 text-[#9512A0]" aria-hidden="true" />
                 {item}
               </span>
             ))}
@@ -1415,12 +1415,12 @@ function CatalogHero() {
                 key={item.label}
                 className="flex items-center gap-3 rounded-2xl border border-[#D9D9FF]/80 bg-white px-4 py-3 shadow-sm"
               >
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#EAEAFF] text-[#850E88]">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#EAEAFF] text-[#9512A0]">
                   <ChevronRight className="h-3.5 w-3.5" />
                 </span>
                 <div>
                   <p className="text-sm font-black text-[#17111A]">{item.label}</p>
-                  <p className="text-[11px] font-medium text-[#5F5A66]">{item.desc}</p>
+                  <p className="text-[11px] font-medium text-[#4A4552]">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -1440,7 +1440,7 @@ function CatalogNav() {
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap rounded-full border border-[#D9D9FF] bg-white px-3 py-1.5 text-[11px] font-black text-[#5F5A66] transition duration-200 ease-out hover:border-[#850E88]/30 hover:bg-[#F8F7FF] hover:text-[#850E88] sm:px-4 sm:py-2 sm:text-sm"
+              className="whitespace-nowrap rounded-full border border-[#D9D9FF] bg-white px-3 py-1.5 text-[11px] font-black text-[#4A4552] transition duration-200 ease-out hover:border-[#9512A0]/30 hover:bg-[#F8F7FF] hover:text-[#9512A0] sm:px-4 sm:py-2 sm:text-sm"
             >
               {item.label}
             </Link>
@@ -1464,7 +1464,7 @@ function FeaturedBen({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.article
           {...fadeUp}
-          className="overflow-hidden rounded-[24px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_12%_12%,rgba(217,217,255,0.9),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] p-4 shadow-[0_30px_96px_rgba(133,14,136,0.13)] sm:rounded-[36px] sm:p-7 lg:p-9"
+          className="overflow-hidden rounded-[24px] border border-[#D9D9FF]/80 bg-[radial-gradient(circle_at_12%_12%,rgba(217,217,255,0.9),transparent_30%),linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_54%,#EAEAFF_100%)] p-4 shadow-[0_30px_96px_rgba(149,18,160,0.13)] sm:rounded-[36px] sm:p-7 lg:p-9"
         >
           <div className="grid gap-5 sm:gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
             <div className="relative min-h-[240px] overflow-hidden rounded-[20px] border border-white/80 bg-[#17111A] shadow-[0_22px_64px_rgba(23,17,26,0.14)] sm:min-h-[500px] sm:rounded-[32px] sm:shadow-[0_28px_84px_rgba(23,17,26,0.16)]">
@@ -1476,20 +1476,20 @@ function FeaturedBen({
                 className="object-cover object-[56%_center]"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,17,26,0)_0%,rgba(23,17,26,0.38)_100%)]" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-white/90 px-2.5 py-1.5 text-[10px] font-black uppercase text-[#850E88] shadow-sm backdrop-blur sm:left-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
+              <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-white/90 px-2.5 py-1.5 text-[10px] font-black uppercase text-[#9512A0] shadow-sm backdrop-blur sm:left-5 sm:top-5 sm:px-3 sm:py-2 sm:text-xs">
                 Producto estrella
               </span>
             </div>
 
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:text-sm sm:tracking-[0.16em]">
+              <p className="text-xs font-black uppercase tracking-[0.14em] text-[#9512A0] sm:text-sm sm:tracking-[0.16em]">
                 PRODUCTO ESTRELLA EN AEROTERMIA
               </p>
               <h2 className="mt-2 text-2xl font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
                 BEN Dual-Air: aerotermia compacta para climatización,
                 ventilación y ACS
               </h2>
-              <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+              <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
                 Sistema compacto de aerotermia interior para integrar
                 calefacción, refrigeración, ventilación y ACS en una única
                 solución.
@@ -1497,14 +1497,14 @@ function FeaturedBen({
               <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-row">
                 <Link
                   href={product.fullPageHref ?? "/catalogo/ben-dual-air"}
-                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#850E88] px-5 py-3 text-sm font-black text-white shadow-[0_16px_36px_rgba(133,14,136,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#6f0b72]"
+                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-black text-white shadow-[0_16px_36px_rgba(149,18,160,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81]"
                 >
                   Ver ficha completa
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/consultoria-gratuita"
-                  className="inline-flex min-h-13 items-center justify-center rounded-xl border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
+                  className="inline-flex min-h-13 items-center justify-center rounded-xl border border-[#9512A0]/30 bg-white px-5 py-3 text-sm font-black text-[#9512A0] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
                 >
                   Solicitar asesoramiento sobre BEN
                 </Link>
@@ -1556,15 +1556,15 @@ function CatalogSection({
           className="flex flex-col gap-3 sm:gap-5 lg:flex-row lg:items-end lg:justify-between"
         >
           <div className="max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#850E88] sm:text-sm sm:tracking-[0.16em]">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-[#9512A0] sm:text-sm sm:tracking-[0.16em]">
               {eyebrow}
             </p>
             <h2 className="mt-2 text-2xl font-black leading-tight text-[#17111A] sm:mt-3 sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-lg sm:leading-8">{text}</p>
+            <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-4 sm:text-lg sm:leading-8">{text}</p>
           </div>
-          <p className="self-start rounded-full border border-[#D9D9FF]/80 bg-white px-3 py-1.5 text-[10px] font-black uppercase text-[#5F5A66] shadow-sm sm:self-auto sm:px-4 sm:py-2 sm:text-xs">
+          <p className="self-start rounded-full border border-[#D9D9FF]/80 bg-white px-3 py-1.5 text-[10px] font-black uppercase text-[#4A4552] shadow-sm sm:self-auto sm:px-4 sm:py-2 sm:text-xs">
             {products.length} soluciones visibles
           </p>
         </motion.div>
@@ -1578,12 +1578,12 @@ function CatalogSection({
                 onClick={() => onFilterChange(filter)}
                 className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-black transition duration-200 ease-out sm:px-4 sm:py-2 sm:text-sm ${
                   activeFilter === filter
-                    ? "border-[#850E88] bg-[#850E88] text-white shadow-[0_10px_24px_rgba(133,14,136,0.18)]"
+                    ? "border-[#9512A0] bg-[#9512A0] text-white shadow-[0_10px_24px_rgba(149,18,160,0.18)]"
                     : geo
                       ? "border-[#10B981]/20 bg-white text-[#065F46] hover:bg-[#ECFDF5]"
                       : solar
                         ? "border-[#D99A2B]/18 bg-white text-[#9A5B12] hover:bg-[#FFF2D8]"
-                        : "border-[#D9D9FF] bg-white text-[#5F5A66] hover:bg-[#F8F7FF] hover:text-[#850E88]"
+                        : "border-[#D9D9FF] bg-white text-[#4A4552] hover:bg-[#F8F7FF] hover:text-[#9512A0]"
                 }`}
               >
                 {filter}
@@ -1607,7 +1607,7 @@ function CatalogSection({
           className="mt-8 rounded-[20px] border border-[#D9D9FF]/70 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8F7FF_100%)] px-4 py-4 shadow-sm sm:mt-10 sm:rounded-[24px] sm:px-8 sm:py-6"
         >
           <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-6">
-            <span className="inline-flex shrink-0 self-start rounded-full border border-[#850E88]/15 bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.10em] text-[#850E88] shadow-sm sm:px-3 sm:py-1.5 sm:text-[11px] sm:tracking-[0.12em]">
+            <span className="inline-flex shrink-0 self-start rounded-full border border-[#9512A0]/25 bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.10em] text-[#9512A0] shadow-sm sm:px-3 sm:py-1.5 sm:text-[11px] sm:tracking-[0.12em]">
               Catálogo orientativo
             </span>
             <div>
@@ -1615,7 +1615,7 @@ function CatalogSection({
                 Las soluciones mostradas sirven como referencia del alcance de
                 los sistemas con los que trabaja Maclima.
               </p>
-              <p className="mt-1 text-xs leading-5 text-[#5F5A66] sm:mt-1.5 sm:text-sm sm:leading-6">
+              <p className="mt-1 text-xs leading-5 text-[#4A4552] sm:mt-1.5 sm:text-sm sm:leading-6">
                 Tras una consulta previa, analizamos cada caso y recomendamos
                 la opción más adecuada según necesidades reales de eficiencia,
                 confort y viabilidad técnica.
@@ -1633,10 +1633,10 @@ const aeroBrandStyle: Record<
   { topBar: string; badgeBg: string; badgeBorder: string; badgeText: string }
 > = {
   BEN: {
-    topBar: "bg-[#850E88]/60",
+    topBar: "bg-[#9512A0]/60",
     badgeBg: "bg-[#FCF0FC]",
-    badgeBorder: "border-[#850E88]/30",
-    badgeText: "text-[#850E88]",
+    badgeBorder: "border-[#9512A0]/30",
+    badgeText: "text-[#9512A0]",
   },
   Climer: {
     topBar: "bg-[#6D28D9]/60",
@@ -1659,10 +1659,10 @@ const aeroBrandStyle: Record<
 };
 
 const aeroBrandDefault = {
-  topBar: "bg-[#850E88]/60",
+  topBar: "bg-[#9512A0]/60",
   badgeBg: "bg-[#FCF0FC]",
-  badgeBorder: "border-[#850E88]/30",
-  badgeText: "text-[#850E88]",
+  badgeBorder: "border-[#9512A0]/30",
+  badgeText: "text-[#9512A0]",
 };
 
 function ProductCard({
@@ -1682,7 +1682,7 @@ function ProductCard({
   return (
     <motion.article
       {...fadeUp}
-      className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(133,14,136,0.12)]"
+      className="group flex min-h-full flex-col overflow-hidden rounded-[26px] border border-[#D9D9FF]/80 bg-white shadow-[0_20px_60px_rgba(23,17,26,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_28px_82px_rgba(149,18,160,0.12)]"
     >
       {aero && brandStyle && (
         <div className={`h-[3px] w-full ${brandStyle.topBar} sm:h-[2px]`} aria-hidden="true" />
@@ -1723,17 +1723,17 @@ function ProductCard({
             {product.brand}
           </span>
         ) : (
-          <p className="text-[11px] font-black uppercase tracking-[0.10em] text-[#850E88] sm:text-xs sm:tracking-[0.12em]">
+          <p className="text-[11px] font-black uppercase tracking-[0.10em] text-[#9512A0] sm:text-xs sm:tracking-[0.12em]">
             {product.brand}
           </p>
         )}
         <h3 className="mt-1.5 line-clamp-2 text-[0.98rem] font-black leading-tight text-[#17111A] sm:mt-2 sm:text-xl">
           {product.name}
         </h3>
-        <p className="mt-1 text-xs font-bold text-[#5F5A66] sm:text-sm">
+        <p className="mt-1 text-xs font-bold text-[#4A4552] sm:text-sm">
           {product.category}
         </p>
-        <p className="mt-2.5 line-clamp-2 text-xs leading-5 text-[#5F5A66] sm:mt-4 sm:text-sm sm:leading-6 sm:line-clamp-none">
+        <p className="mt-2.5 line-clamp-2 text-xs leading-5 text-[#4A4552] sm:mt-4 sm:text-sm sm:leading-6 sm:line-clamp-none">
           {product.shortDescription}
         </p>
         <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
@@ -1771,7 +1771,7 @@ function ProductCard({
         <button
           type="button"
           onClick={onInfo}
-          className="group/button mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#850E88]/20 bg-white px-4 py-2.5 text-xs font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(133,14,136,0.1)] sm:mt-auto sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm"
+          className="group/button mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#9512A0]/30 bg-white px-4 py-2.5 text-xs font-black text-[#9512A0] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF] hover:shadow-[0_14px_30px_rgba(149,18,160,0.1)] sm:mt-auto sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm"
         >
           Ver información
           <ChevronRight className="h-4 w-4 transition duration-200 ease-out group-hover/button:translate-x-1" />
@@ -1790,7 +1790,7 @@ function CatalogVisual({
 }) {
   return (
     <div className="relative h-full w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(242,184,75,0.22),transparent_30%),radial-gradient(circle_at_18%_78%,rgba(133,14,136,0.16),transparent_34%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(242,184,75,0.22),transparent_30%),radial-gradient(circle_at_18%_78%,rgba(149,18,160,0.16),transparent_34%)]" />
 
       {type === "geo" ? (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 px-6">
@@ -1809,7 +1809,7 @@ function CatalogVisual({
       ) : null}
       {type === "climer" || type === "ekallor" ? (
         <div className="absolute inset-6 flex items-center justify-center rounded-[28px] border border-white/80 bg-white/82 shadow-[0_18px_40px_rgba(23,17,26,0.08)] backdrop-blur">
-          <span className="text-xl font-black uppercase tracking-[0.12em] text-[#850E88]">
+          <span className="text-xl font-black uppercase tracking-[0.12em] text-[#9512A0]">
             {label}
           </span>
         </div>
@@ -1818,7 +1818,7 @@ function CatalogVisual({
       {type === "acs" || type === "tank" ? (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="h-32 w-20 rounded-[999px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#EAEAFF_100%)] shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
-          <div className="absolute h-3 w-3 rounded-full bg-[#850E88]/35" />
+          <div className="absolute h-3 w-3 rounded-full bg-[#9512A0]/35" />
         </div>
       ) : null}
 
@@ -1844,14 +1844,14 @@ function CatalogVisual({
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="h-32 w-24 rounded-[28px] border border-white/80 bg-white shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
           <div className="absolute top-[43%] h-5 w-5 rounded-full bg-[#D99A2B]/70" />
-          <div className="absolute top-[56%] h-2 w-12 rounded-full bg-[#850E88]/18" />
+          <div className="absolute top-[56%] h-2 w-12 rounded-full bg-[#9512A0]/18" />
         </div>
       ) : null}
 
       {type === "battery" ? (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="h-32 w-24 rounded-[26px] border border-white/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF2D8_100%)] shadow-[0_18px_44px_rgba(23,17,26,0.1)]" />
-          <div className="absolute h-3 w-12 rounded-full bg-[linear-gradient(90deg,#850E88_0%,#F2B84B_100%)]" />
+          <div className="absolute h-3 w-12 rounded-full bg-[linear-gradient(90deg,#9512A0_0%,#F2B84B_100%)]" />
           <div className="absolute mt-8 h-3 w-12 rounded-full bg-[#F2B84B]/35" />
         </div>
       ) : null}
@@ -1860,7 +1860,7 @@ function CatalogVisual({
         <div className="absolute inset-8 grid grid-cols-2 gap-4">
           <div className="rounded-[24px] border border-white/80 bg-white/86 shadow-[0_14px_34px_rgba(23,17,26,0.08)]" />
           <div className="rounded-[24px] border border-[#D99A2B]/20 bg-[#FFF2D8]" />
-          <div className="col-span-2 rounded-[24px] border border-[#850E88]/14 bg-[#F5F0FF]" />
+          <div className="col-span-2 rounded-[24px] border border-[#9512A0]/14 bg-[#F5F0FF]" />
         </div>
       ) : null}
 
@@ -1879,7 +1879,7 @@ function CatalogVisual({
 
       {type === "project" ? (
         <div className="absolute inset-8 rounded-[28px] border border-white/80 bg-white/82 p-6 shadow-[0_18px_44px_rgba(23,17,26,0.08)]">
-          <div className="h-5 rounded-full bg-[#850E88]/16" />
+          <div className="h-5 rounded-full bg-[#9512A0]/16" />
           <div className="mt-5 h-4 w-3/4 rounded-full bg-[#D99A2B]/20" />
           <div className="mt-5 grid grid-cols-3 gap-3">
             <span className="h-12 rounded-2xl bg-[#EAEAFF]" />
@@ -1950,7 +1950,7 @@ function ProductModal({
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          className="fixed right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-[#D9D9FF] bg-white text-[#850E88] shadow-md transition duration-200 ease-out hover:bg-[#F8F7FF] sm:absolute sm:h-11 sm:w-11 sm:rounded-2xl sm:bg-white/90 sm:shadow-sm sm:backdrop-blur"
+          className="fixed right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-[#D9D9FF] bg-white text-[#9512A0] shadow-md transition duration-200 ease-out hover:bg-[#F8F7FF] sm:absolute sm:h-11 sm:w-11 sm:rounded-2xl sm:bg-white/90 sm:shadow-sm sm:backdrop-blur"
           aria-label="Cerrar información"
         >
           <X className="h-5 w-5" />
@@ -1980,7 +1980,7 @@ function ProductModal({
           </div>
 
           <div className="p-4 pb-6 sm:p-6 lg:p-7">
-            <p className="pr-12 text-[11px] font-black uppercase tracking-[0.12em] text-[#850E88] sm:pr-0 sm:text-xs sm:tracking-[0.14em]">
+            <p className="pr-12 text-[11px] font-black uppercase tracking-[0.12em] text-[#9512A0] sm:pr-0 sm:text-xs sm:tracking-[0.14em]">
               {product.category}
             </p>
             <h2
@@ -1989,7 +1989,7 @@ function ProductModal({
             >
               {product.name}
             </h2>
-            <p className="mt-2 text-sm leading-[1.4rem] text-[#5F5A66]">
+            <p className="mt-2 text-sm leading-[1.4rem] text-[#4A4552]">
               {product.description}
             </p>
 
@@ -2020,13 +2020,13 @@ function ModalInfoBlock({
   items: string[];
 }) {
   return (
-    <div className="rounded-xl border border-[#D9D9FF]/60 bg-white p-2.5">
+    <div className="rounded-xl border border-[#D9D9FF]/80 bg-white p-2.5">
       <p className="text-[11px] font-black uppercase tracking-wide text-[#17111A]">{title}</p>
       <ul className="mt-1.5 grid gap-0.5">
         {items.map((item) => (
           <li
             key={item}
-            className="text-[11px] font-medium leading-5 text-[#5F5A66]"
+            className="text-[11px] font-medium leading-5 text-[#4A4552]"
           >
             {item}
           </li>
@@ -2044,7 +2044,7 @@ function CatalogFinalCta() {
     >
       <motion.div
         {...fadeUp}
-        className="mx-auto max-w-6xl overflow-hidden rounded-[26px] border border-white/20 bg-[radial-gradient(circle_at_82%_20%,rgba(217,217,255,0.24),transparent_28%),linear-gradient(135deg,#17111A_0%,#2A1830_70%,#850E88_100%)] p-5 text-white shadow-[0_30px_100px_rgba(23,17,26,0.22)] sm:rounded-[34px] sm:p-8 lg:p-10"
+        className="mx-auto max-w-6xl overflow-hidden rounded-[26px] border border-white/20 bg-[radial-gradient(circle_at_82%_20%,rgba(217,217,255,0.24),transparent_28%),linear-gradient(135deg,#17111A_0%,#2A1830_70%,#9512A0_100%)] p-5 text-white shadow-[0_30px_100px_rgba(23,17,26,0.22)] sm:rounded-[34px] sm:p-8 lg:p-10"
       >
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
@@ -2062,7 +2062,7 @@ function CatalogFinalCta() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Link
               href="/consultoria-gratuita"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-black text-[#850E88] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-black text-[#9512A0] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#F8F7FF]"
             >
               Solicitar consultoría gratuita
               <ArrowRight className="h-5 w-5" />

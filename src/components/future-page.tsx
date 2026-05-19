@@ -69,23 +69,23 @@ export function FuturePage({
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
           <Link
             href="/"
-            className="mb-4 inline-flex w-fit items-center gap-2 rounded-lg border border-[#850E88]/20 bg-white/[0.8] px-3.5 py-2.5 text-sm font-bold text-[#850E88] shadow-sm backdrop-blur transition hover:bg-white sm:mb-8 sm:px-4 sm:py-3"
+            className="mb-4 inline-flex w-fit items-center gap-2 rounded-lg border border-[#9512A0]/30 bg-white/[0.8] px-3.5 py-2.5 text-sm font-bold text-[#9512A0] shadow-sm backdrop-blur transition hover:bg-white sm:mb-8 sm:px-4 sm:py-3"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Volver al inicio
           </Link>
 
-          <section className="rounded-[24px] border border-white/80 bg-white/[0.8] p-4 shadow-[0_22px_68px_rgba(133,14,136,0.12)] backdrop-blur-xl sm:rounded-[32px] sm:p-8 sm:shadow-[0_28px_90px_rgba(133,14,136,0.16)] lg:p-10">
+          <section className="rounded-[24px] border border-white/80 bg-white/[0.8] p-4 shadow-[0_22px_68px_rgba(149,18,160,0.12)] backdrop-blur-xl sm:rounded-[32px] sm:p-8 sm:shadow-[0_28px_90px_rgba(149,18,160,0.16)] lg:p-10">
             <div className="grid gap-6 sm:gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-lg bg-[#EAEAFF] px-3 py-1.5 text-xs font-black uppercase text-[#850E88] sm:px-4 sm:py-2 sm:text-sm">
+                <div className="inline-flex items-center gap-2 rounded-lg bg-[#EAEAFF] px-3 py-1.5 text-xs font-black uppercase text-[#9512A0] sm:px-4 sm:py-2 sm:text-sm">
                   <Sparkles className="h-4 w-4" aria-hidden="true" />
                   {eyebrow}
                 </div>
                 <h1 className="mt-4 max-w-4xl text-[1.95rem] font-black leading-tight sm:mt-6 sm:text-5xl">
                   {title}
                 </h1>
-                <p className="mt-3 max-w-3xl text-[0.95rem] leading-6 text-[#5F5A66] sm:mt-5 sm:text-lg sm:leading-8">
+                <p className="mt-3 max-w-3xl text-[0.95rem] leading-6 text-[#4A4552] sm:mt-5 sm:text-lg sm:leading-8">
                   {description}
                 </p>
                 {heroImageSrc ? (
@@ -103,14 +103,14 @@ export function FuturePage({
                 <div className="mt-5 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
                   <Link
                     href={heroHref}
-                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#850E88] px-5 py-3 text-sm font-bold text-white shadow-[0_16px_38px_rgba(133,14,136,0.23)] transition hover:bg-[#6f0b72] sm:min-h-14 sm:px-6 sm:py-4 sm:text-base sm:shadow-[0_18px_44px_rgba(133,14,136,0.26)]"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_16px_38px_rgba(149,18,160,0.23)] transition hover:bg-[#7B0C81] sm:min-h-14 sm:px-6 sm:py-4 sm:text-base sm:shadow-[0_18px_44px_rgba(149,18,160,0.26)]"
                   >
                     {heroCtaLabel}
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </Link>
                   <a
                     href={supportHref}
-                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-[#850E88]/20 bg-white px-5 py-3 text-sm font-bold text-[#850E88] transition hover:bg-[#EAEAFF] sm:min-h-14 sm:px-6 sm:py-4 sm:text-base"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-[#9512A0]/30 bg-white px-5 py-3 text-sm font-bold text-[#9512A0] transition hover:bg-[#EAEAFF] sm:min-h-14 sm:px-6 sm:py-4 sm:text-base"
                   >
                     {supportLabel}
                     <MessageCircle className="h-5 w-5" aria-hidden="true" />
@@ -121,14 +121,14 @@ export function FuturePage({
               <div className="rounded-[22px] border border-[#D9D9FF] bg-[linear-gradient(135deg,#FFFFFF_0%,#F7F3FF_100%)] p-4 sm:rounded-[28px] sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-black uppercase text-[#850E88]">
+                    <p className="text-xs font-black uppercase text-[#9512A0]">
                       Vista general
                     </p>
                     <p className="mt-1 text-lg font-black text-[#17111A]">
                       Contenido base preparado
                     </p>
                   </div>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#850E88] text-white">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#9512A0] text-white">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export function FuturePage({
                       className="rounded-xl border border-[#D9D9FF] bg-white p-3.5 sm:rounded-2xl sm:p-4"
                     >
                       <p className="font-black text-[#17111A]">{card.title}</p>
-                      <p className="mt-2 text-sm leading-6 text-[#5F5A66]">
+                      <p className="mt-2 text-sm leading-6 text-[#4A4552]">
                         {card.text}
                       </p>
                     </div>
@@ -151,14 +151,14 @@ export function FuturePage({
 
           <section className="mt-6 grid gap-5 sm:mt-8 sm:gap-8 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="rounded-[22px] border border-[#D9D9FF] bg-white p-4 shadow-[0_16px_48px_rgba(23,17,26,0.06)] sm:rounded-[28px] sm:p-8 sm:shadow-[0_22px_70px_rgba(23,17,26,0.08)]">
-              <p className="text-sm font-black uppercase text-[#850E88]">{roadmapTitle}</p>
+              <p className="text-sm font-black uppercase text-[#9512A0]">{roadmapTitle}</p>
               <div className="mt-4 grid gap-2.5 sm:mt-6 sm:gap-3">
                 {roadmap.map((item, index) => (
                   <div
                     key={item}
                     className="flex gap-3 rounded-xl border border-[#D9D9FF] bg-[#FDFDFF] p-3.5 sm:gap-4 sm:rounded-2xl sm:p-4"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#850E88] text-sm font-black text-white">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#9512A0] text-sm font-black text-white">
                       {index + 1}
                     </span>
                     <p className="text-sm font-bold leading-6 text-[#17111A]">{item}</p>
@@ -173,8 +173,8 @@ export function FuturePage({
             </div>
           </section>
 
-          <section className="mt-6 rounded-[22px] border border-[#850E88]/15 bg-white/[0.82] p-4 text-center shadow-sm backdrop-blur sm:mt-8 sm:rounded-[28px] sm:p-8">
-            <p className="mx-auto max-w-4xl text-sm font-semibold leading-6 text-[#5F5A66] sm:text-base sm:leading-7">
+          <section className="mt-6 rounded-[22px] border border-[#9512A0]/25 bg-white/[0.82] p-4 text-center shadow-sm backdrop-blur sm:mt-8 sm:rounded-[28px] sm:p-8">
+            <p className="mx-auto max-w-4xl text-sm font-semibold leading-6 text-[#4A4552] sm:text-base sm:leading-7">
               {consultiveNote}
             </p>
           </section>
@@ -200,22 +200,22 @@ function PagePanel({
           : "border-[#D9D9FF] bg-white"
       }`}
     >
-      <p className="text-sm font-black uppercase text-[#850E88]">{panel.eyebrow}</p>
+      <p className="text-sm font-black uppercase text-[#9512A0]">{panel.eyebrow}</p>
       <h2 className="mt-2.5 text-[1.4rem] font-black leading-tight text-[#17111A] sm:mt-3 sm:text-3xl">
         {panel.title}
       </h2>
-      <p className="mt-3 text-sm leading-6 text-[#5F5A66] sm:mt-4 sm:text-base sm:leading-7">{panel.text}</p>
+      <p className="mt-3 text-sm leading-6 text-[#4A4552] sm:mt-4 sm:text-base sm:leading-7">{panel.text}</p>
       <ul className="mt-4 grid gap-2.5 sm:mt-6 sm:gap-3">
         {panel.bullets.map((bullet) => (
           <li key={bullet} className="flex items-center gap-3 text-sm font-bold text-[#17111A]">
-            <Check className="h-4 w-4 shrink-0 text-[#850E88]" aria-hidden="true" />
+            <Check className="h-4 w-4 shrink-0 text-[#9512A0]" aria-hidden="true" />
             {bullet}
           </li>
         ))}
       </ul>
       <Link
         href={panel.href}
-        className="mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#850E88] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#6f0b72] sm:mt-8 sm:min-h-12 sm:w-auto"
+        className="mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#9512A0] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#7B0C81] sm:mt-8 sm:min-h-12 sm:w-auto"
       >
         {panel.cta}
         <ArrowRight className="h-4 w-4" aria-hidden="true" />
