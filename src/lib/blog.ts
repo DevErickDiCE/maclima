@@ -188,6 +188,56 @@ export function renderMarkdown(markdown: string): string {
       continue;
     }
 
+    // Bloque stats: tarjetas con cifras clave en grid.
+    //   :::stats
+    //   stat: Valor | Etiqueta
+    //   ...
+    //   :::
+    if (line.trim() === ":::stats") {
+      const items: { value: string; label: string }[] = [];
+      i += 1;
+      while (i < lines.length && lines[i].trim() !== ":::") {
+        const raw = lines[i].trim();
+        const m = raw.match(/^stat\s*:\s*(.+)$/);
+        if (m) {
+          const [value, ...rest] = m[1].split("|").map((s) => s.trim());
+          items.push({ value, label: rest.join(" | ") });
+        }
+        i += 1;
+      }
+      if (i < lines.length) i += 1;
+
+      if (items.length > 0) {
+        const cards = items
+          .map(
+            ({ value, label }) =>
+              `<div class="rounded-xl border border-[#E6E0F5] bg-white p-4 text-center shadow-[0_8px_24px_rgba(23,17,26,0.04)] sm:p-5"><p class="text-2xl font-black leading-tight text-[#9512A0] sm:text-3xl">${escapeHtml(value)}</p><p class="mt-2 text-xs font-semibold leading-5 text-[#4A4552] sm:text-sm">${escapeHtml(label)}</p></div>`,
+          )
+          .join("");
+        const cols = items.length >= 4 ? "sm:grid-cols-4" : items.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
+        out.push(
+          `<div class="not-prose my-8 grid grid-cols-2 gap-3 ${cols} sm:gap-4">${cards}</div>`,
+        );
+      }
+      continue;
+    }
+
+    // Imagen como figura: ![alt](src) o ![alt](src "caption")
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)\s*$/);
+    if (imgMatch) {
+      const [, alt, src, caption] = imgMatch;
+      const safeAlt = escapeHtml(alt);
+      const safeSrc = encodeURI(src);
+      const captionHtml = caption
+        ? `<figcaption class="mt-3 text-center text-xs italic leading-5 text-[#6B6275] sm:text-sm">${escapeHtml(caption)}</figcaption>`
+        : "";
+      out.push(
+        `<figure class="not-prose my-10"><div class="relative overflow-hidden rounded-2xl border border-[#E6E0F5] bg-[#F7F5FB] shadow-[0_14px_40px_rgba(23,17,26,0.07)]"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" decoding="async" class="block h-auto w-full object-cover" /></div>${captionHtml}</figure>`,
+      );
+      i += 1;
+      continue;
+    }
+
     // Headings
     const h1 = line.match(/^#\s+(.*)$/);
     if (h1) {

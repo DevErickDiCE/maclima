@@ -28,11 +28,20 @@ cta_href: /consultoria-gratuita
 disclaimer: Precio sujeto a valoración técnica, condiciones de la vivienda y configuración necesaria.
 :::
 
+:::stats
+stat: Sin unidad exterior | Compacta y discreta
+stat: Hasta 90 m² | Sujeto a estudio técnico
+stat: 3 en 1 | Calefacción · Frío · Ventilación
+stat: Desde 350 € | Instalación de lanzamiento
+:::
+
 ## ¿Qué es BEN Dual-Air?
 
 BEN Dual-Air es una **bomba de calor interior sin unidad exterior**. Toda la maquinaria queda dentro de la vivienda, en un equipo compacto.
 
 Esto cambia las reglas del juego en muchos casos: ya no hace falta ocupar la fachada, la terraza ni la cubierta, ni pelearse con la comunidad de vecinos para colocar una máquina exterior.
+
+![Unidad interior BEN Dual-Air instalada en una estancia moderna](/blog/ben-dual-air-unidad-interior.webp "La unidad interior de BEN Dual-Air se integra en la vivienda sin necesidad de máquina exterior visible.")
 
 Es una solución pensada para:
 
@@ -61,6 +70,8 @@ BEN Dual-Air está preparada para cubrir las tres necesidades principales de con
 Funciona en viviendas de hasta **90 m²**, siempre sujeto a estudio técnico previo.
 
 Cada caso es diferente, por eso antes de proponer cualquier instalación revisamos el inmueble: aislamiento, distribución, demanda térmica y configuración necesaria.
+
+![Termostato BEN mostrando la temperatura ambiente en pantalla](/blog/ben-dual-air-termostato.webp "Control sencillo desde el termostato: temperatura objetivo, modo activo y estado del sistema a la vista.")
 
 ## Sin unidad exterior: por qué importa
 
