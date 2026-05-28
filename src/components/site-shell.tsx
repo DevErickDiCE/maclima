@@ -12,7 +12,6 @@ export const siteNavItems = [
   { label: "Fotovoltaica", href: "/#fotovoltaica" },
   { label: "Geotermia", href: "/#geotermia" },
   { label: "Catálogo", href: "/catalogo" },
-  { label: "Blog", href: "/blog" },
   { label: "Consultoría gratuita", href: "/consultoria-gratuita" },
   { label: "Contacto", href: "/contacto" },
 ] as const;
