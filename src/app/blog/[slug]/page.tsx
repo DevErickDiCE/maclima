@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, MessageCircle, Tag } from "lucide-react";
+import { BenDualLaunchSection } from "@/components/blog/ben-dual-launch-section";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { CONTACT_INFO } from "@/lib/contact-info";
+
+const BEN_DUAL_SLUG = "ben-dual-air-aerotermia-sin-unidad-exterior";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 import {
   formatDateEs,
@@ -144,6 +147,13 @@ export default async function BlogPostPage({ params }: Props) {
                   className="object-cover"
                 />
               </div>
+            </div>
+          ) : null}
+
+          {/* Sección de lanzamiento (solo BEN Dual-Air) */}
+          {post.slug === BEN_DUAL_SLUG ? (
+            <div className="mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+              <BenDualLaunchSection />
             </div>
           ) : null}
 

@@ -18,30 +18,11 @@ Pero eso empieza a cambiar.
 
 Una alternativa compacta para quienes quieren mejorar el confort de su vivienda con calefacción, refrigeración y ventilación, sin depender de una máquina exterior convencional.
 
-:::promo
-eyebrow: Lanzamiento especial
-title: BEN Dual-Air
-price: Instalación y mano de obra desde 350 € por lanzamiento.
-body: Una oportunidad para valorar una solución eficiente y diferente si tienes un piso, ático o vivienda unifamiliar. Consúltanos y te informamos sin compromiso.
-cta_text: Consúltanos sin compromiso
-cta_href: /consultoria-gratuita
-disclaimer: Precio sujeto a valoración técnica, condiciones de la vivienda y configuración necesaria.
-:::
-
-:::stats
-stat: Sin unidad exterior | Compacta y discreta
-stat: Hasta 90 m² | Sujeto a estudio técnico
-stat: 3 en 1 | Calefacción · Frío · Ventilación
-stat: Desde 350 € | Instalación de lanzamiento
-:::
-
 ## ¿Qué es BEN Dual-Air?
 
 BEN Dual-Air es una **bomba de calor interior sin unidad exterior**. Toda la maquinaria queda dentro de la vivienda, en un equipo compacto.
 
 Esto cambia las reglas del juego en muchos casos: ya no hace falta ocupar la fachada, la terraza ni la cubierta, ni pelearse con la comunidad de vecinos para colocar una máquina exterior.
-
-![Unidad interior BEN Dual-Air instalada en una estancia moderna](/blog/ben-dual-air-unidad-interior.webp "La unidad interior de BEN Dual-Air se integra en la vivienda sin necesidad de máquina exterior visible.")
 
 Es una solución pensada para:
 
