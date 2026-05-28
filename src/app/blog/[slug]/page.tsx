@@ -32,12 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const url = `${SITE_URL}/blog/${post.slug}`;
   const imageUrl = post.image ? `${SITE_URL}${post.image}` : DEFAULT_OG_IMAGE.url;
+  const metaTitle = post.seoTitle ?? post.title;
   return {
-    title: post.title,
+    title: metaTitle,
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
-      title: post.title,
+      title: metaTitle,
       description: post.description,
       url,
       locale: "es_ES",
@@ -48,13 +49,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: metaTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metaTitle,
       description: post.description,
       images: [imageUrl],
     },

@@ -3,7 +3,8 @@ import path from "node:path";
 
 export type BlogPost = {
   slug: string;
-  title: string;
+  title: string;       // H1 visible
+  seoTitle?: string;   // <title> SEO si difiere del H1 visible
   description: string;
   date: string;        // ISO YYYY-MM-DD
   category: string;
@@ -51,6 +52,7 @@ function readPost(filename: string): BlogPost | null {
   return {
     slug,
     title: meta.title,
+    seoTitle: meta.seoTitle && meta.seoTitle.length > 0 ? meta.seoTitle : undefined,
     description: meta.description ?? "",
     date: meta.date,
     category: meta.category ?? "Maclima",
@@ -117,6 +119,72 @@ export function renderMarkdown(markdown: string): string {
     // Separador horizontal (puede aparecer tras frontmatter en algunos archivos)
     if (/^---+\s*$/.test(line.trim())) {
       i += 1;
+      continue;
+    }
+
+    // Bloque promo (callout premium): :::promo … :::
+    // Estructura por pares clave: valor. Claves soportadas:
+    //   title, eyebrow, price, body, cta_text, cta_href, disclaimer
+    if (line.trim() === ":::promo") {
+      const fields: Record<string, string> = {};
+      i += 1;
+      while (i < lines.length && lines[i].trim() !== ":::") {
+        const raw = lines[i];
+        const colonIdx = raw.indexOf(":");
+        if (colonIdx > 0) {
+          const key = raw.slice(0, colonIdx).trim();
+          const value = raw.slice(colonIdx + 1).trim();
+          if (key && value) fields[key] = value;
+        }
+        i += 1;
+      }
+      // Saltar el cierre ":::"
+      if (i < lines.length) i += 1;
+
+      const eyebrow = fields.eyebrow || "Oferta de lanzamiento";
+      const title = fields.title || "";
+      const price = fields.price || "";
+      const body = fields.body || "";
+      const ctaText = fields.cta_text || "";
+      const ctaHref = fields.cta_href || "";
+      const disclaimer = fields.disclaimer || "";
+
+      const isExternalCta = /^https?:\/\//.test(ctaHref);
+      const ctaRel = isExternalCta ? ' target="_blank" rel="noopener noreferrer"' : "";
+
+      const parts: string[] = [];
+      parts.push(
+        `<p class="text-[11px] font-black uppercase tracking-[0.16em] text-[#9512A0]">${escapeHtml(eyebrow)}</p>`,
+      );
+      if (title) {
+        parts.push(
+          `<p class="mt-2 text-2xl font-bold leading-tight text-[#17111A] sm:text-3xl">${escapeHtml(title)}</p>`,
+        );
+      }
+      if (price) {
+        parts.push(
+          `<p class="mt-4 text-lg font-bold text-[#17111A] sm:text-xl">${inline(price)}</p>`,
+        );
+      }
+      if (body) {
+        parts.push(
+          `<p class="mt-3 text-sm leading-6 text-[#4A4552] sm:text-base">${inline(body)}</p>`,
+        );
+      }
+      if (ctaText && ctaHref) {
+        parts.push(
+          `<div class="mt-6"><a href="${ctaHref}" class="inline-flex items-center gap-2 rounded-xl bg-[#9512A0] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_34px_rgba(149,18,160,0.26)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#7B0C81]"${ctaRel}>${escapeHtml(ctaText)}<span aria-hidden="true">→</span></a></div>`,
+        );
+      }
+      if (disclaimer) {
+        parts.push(
+          `<p class="mt-5 text-xs italic leading-5 text-[#6B6275]">${escapeHtml(disclaimer)}</p>`,
+        );
+      }
+
+      out.push(
+        `<aside class="not-prose my-8 overflow-hidden rounded-2xl border border-[#D3C5E5] bg-gradient-to-br from-[#FAF5FF] via-[#F7F5FB] to-white shadow-[0_18px_44px_rgba(149,18,160,0.10)]"><div class="border-l-4 border-[#9512A0] p-6 sm:p-8">${parts.join("")}</div></aside>`,
+      );
       continue;
     }
 

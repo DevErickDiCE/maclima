@@ -1,106 +1,111 @@
 ---
-title: "BEN Dual-Air: aerotermia sin unidad exterior para pisos y viviendas"
+title: "¿Aerotermia en un piso sin unidad exterior? Ahora es posible con BEN Dual-Air"
+seoTitle: "BEN Dual-Air: aerotermia sin unidad exterior para pisos y áticos"
 slug: "ben-dual-air-aerotermia-sin-unidad-exterior"
-description: "Descubre BEN Dual-Air, una solución de aerotermia interior sin unidad exterior para pisos, áticos y viviendas unifamiliares."
+description: "Instala aerotermia sin unidad exterior con BEN Dual-Air. Una solución para pisos, áticos y viviendas de hasta 90 m². Lanzamiento desde 350 €."
 date: "2026-05-28"
 category: "Aerotermia"
 image: "/blog/ben-dual-air-aerotermia-sin-unidad-exterior.webp"
 ---
 
-# BEN Dual-Air: la aerotermia sin unidad exterior que también puedes instalar en un piso
+Hasta hace poco, instalar aerotermia en un piso, ático o vivienda con poco espacio exterior podía parecer complicado.
 
-Durante mucho tiempo, muchas personas han asociado la aerotermia con instalaciones complejas, unidades exteriores en fachada, terrazas ocupadas o dificultades en comunidades de vecinos.
+La unidad exterior, la fachada, la terraza, la comunidad de vecinos o la falta de espacio eran algunos de los principales obstáculos.
 
-Pero el mercado está cambiando.
+Pero eso empieza a cambiar.
 
-**Por fin llega al mercado una aerotermia pensada para viviendas donde no siempre es viable colocar una unidad exterior: pisos, áticos y viviendas unifamiliares.**
+**BEN Dual-Air llega como una solución de aerotermia interior, sin unidad exterior visible, pensada para viviendas donde una instalación tradicional no siempre encaja.**
 
-Hablamos de **BEN Dual-Air**, una solución de aerotermia interior compacta que permite avanzar hacia una vivienda más eficiente sin necesidad de instalar una unidad exterior visible.
+Una alternativa compacta para quienes quieren mejorar el confort de su vivienda con calefacción, refrigeración y ventilación, sin depender de una máquina exterior convencional.
+
+:::promo
+eyebrow: Lanzamiento especial
+title: BEN Dual-Air
+price: Instalación y mano de obra desde 350 € por lanzamiento.
+body: Una oportunidad para valorar una solución eficiente y diferente si tienes un piso, ático o vivienda unifamiliar. Consúltanos y te informamos sin compromiso.
+cta_text: Consúltanos sin compromiso
+cta_href: /consultoria-gratuita
+disclaimer: Precio sujeto a valoración técnica, condiciones de la vivienda y configuración necesaria.
+:::
 
 ## ¿Qué es BEN Dual-Air?
 
-**BEN Dual-Air es una bomba de calor interior sin unidad exterior**, diseñada para aportar confort térmico y mejorar la eficiencia energética de la vivienda desde una solución compacta.
+BEN Dual-Air es una **bomba de calor interior sin unidad exterior**. Toda la maquinaria queda dentro de la vivienda, en un equipo compacto.
 
-A diferencia de otros sistemas de aerotermia tradicionales, BEN Dual-Air concentra el sistema en una unidad interior. Esto puede ser una ventaja importante en viviendas donde no se quiere o no se puede ocupar fachada, terraza o cubierta con una máquina exterior.
+Esto cambia las reglas del juego en muchos casos: ya no hace falta ocupar la fachada, la terraza ni la cubierta, ni pelearse con la comunidad de vecinos para colocar una máquina exterior.
 
-Es una solución especialmente interesante para:
+Es una solución pensada para:
 
 - Pisos.
 - Áticos.
-- Viviendas unifamiliares.
+- Viviendas unifamiliares con limitaciones de espacio.
 - Reformas energéticas.
-- Viviendas con limitaciones de fachada.
-- Comunidades donde instalar una unidad exterior puede ser complicado.
+- Comunidades donde instalar una unidad exterior es complicado o no se permite.
 
-## Aerotermia para viviendas donde antes parecía difícil
+## La aerotermia que faltaba en pisos y áticos
 
-Uno de los grandes puntos fuertes de BEN Dual-Air es que abre la puerta a instalar aerotermia en viviendas donde hasta ahora podía parecer complicado.
+Si vives en un piso o ático, lo habrás pensado: ¿dónde se pondría la unidad exterior?
 
-En muchos pisos o áticos, el principal problema no es solo elegir un sistema eficiente, sino encontrar una solución que encaje con el espacio disponible, la normativa de la comunidad, la estética del edificio y las necesidades reales de la vivienda.
+Ese es el motivo por el que mucha gente descarta la aerotermia antes incluso de pedir presupuesto. Y es lógico.
 
-BEN Dual-Air está pensado precisamente para ese tipo de situaciones: una solución interior, compacta y discreta.
+BEN Dual-Air resuelve precisamente eso. Al no necesitar unidad exterior, abre la puerta a instalar aerotermia en viviendas donde antes ni se planteaba.
 
-## Calefacción, refrigeración y ventilación en una misma solución
+## Calefacción, refrigeración y ventilación en un solo equipo
 
-BEN Dual-Air está preparada para dar **calefacción, refrigeración y ventilación** en viviendas de hasta **90 metros cuadrados**, siempre sujeto a estudio técnico previo y condiciones reales de cada inmueble.
+BEN Dual-Air está preparada para cubrir las tres necesidades principales de confort en una vivienda:
 
-Esto permite mejorar el confort de la vivienda durante todo el año:
+- **En invierno**, calefacción eficiente.
+- **En verano**, refrigeración.
+- **Todo el año**, ventilación y renovación del aire interior.
 
-- En invierno, aportando calefacción.
-- En verano, apoyando la refrigeración.
-- Durante todo el año, ayudando a renovar y gestionar el aire interior.
+Funciona en viviendas de hasta **90 m²**, siempre sujeto a estudio técnico previo.
 
-Cada vivienda es diferente, por eso desde Maclima Soluciones Energéticas revisamos previamente las condiciones del inmueble antes de recomendar una instalación.
+Cada caso es diferente, por eso antes de proponer cualquier instalación revisamos el inmueble: aislamiento, distribución, demanda térmica y configuración necesaria.
 
-## Sin unidad exterior: una ventaja clave
+## Sin unidad exterior: por qué importa
 
-La ausencia de unidad exterior es uno de los aspectos más llamativos de BEN Dual-Air.
+Quitar la unidad exterior no es solo una cuestión estética. Resuelve problemas reales:
 
-Esto puede ayudar a evitar algunos problemas habituales:
+- Sin máquina visible en fachada o terraza.
+- Sin permisos de comunidad complicados.
+- Sin perder espacio útil en exteriores.
+- Sin obras ni anclajes en zonas comunes.
 
-- Ocupación de terraza o cubierta.
-- Impacto visual en fachada.
-- Limitaciones en comunidades de vecinos.
-- Dificultad para encontrar una ubicación exterior adecuada.
-- Necesidad de una instalación más visible.
+En muchos pisos, esto marca la diferencia entre poder instalar aerotermia o no.
 
-Gracias a su diseño interior, BEN Dual-Air puede ser una alternativa muy interesante para quienes buscan aerotermia, pero no quieren una instalación exterior convencional.
+## ¿Para quién encaja BEN Dual-Air?
 
-## Instalación y mano de obra desde 350 € por lanzamiento
+Puede ser una buena opción si:
 
-En Maclima Soluciones Energéticas lanzamos una promoción inicial para BEN Dual-Air:
+- Tienes un piso, ático o vivienda unifamiliar de hasta 90 m².
+- No puedes (o no quieres) instalar una unidad exterior.
+- Quieres mejorar la eficiencia y el confort de tu vivienda.
+- Buscas calefacción, refrigeración y ventilación en un único sistema.
+- Prefieres una solución compacta y discreta.
 
-**Instalación y mano de obra desde 350 € por lanzamiento. Consúltanos.**
+No es la solución para todo el mundo, y por eso siempre hacemos una valoración previa antes de recomendarla.
 
-*Precio sujeto a valoración técnica, condiciones de la vivienda y configuración necesaria.*
+[Ver ficha técnica completa de BEN Dual-Air →](/catalogo/ben-dual-air)
 
-Antes de confirmar la instalación realizamos siempre una valoración del caso concreto: estado del inmueble, accesos, trabajos previos y configuración técnica necesaria.
+## Antes de instalar: la valoración técnica
 
-## ¿Para quién puede ser interesante BEN Dual-Air?
+Una aerotermia sin estudio previo es una mala aerotermia. Por sencilla que parezca la instalación, conviene revisar:
 
-BEN Dual-Air puede ser una buena opción si buscas:
+- El estado del inmueble.
+- El aislamiento y la demanda térmica.
+- Los espacios disponibles para el equipo interior.
+- La compatibilidad con instalaciones existentes.
 
-- Mejorar la eficiencia energética de tu vivienda.
-- Instalar aerotermia sin unidad exterior visible.
-- Ganar confort en calefacción y refrigeración.
-- Renovar o mejorar el sistema actual de climatización.
-- Encontrar una solución viable para un piso, ático o vivienda con poco espacio exterior.
-- Recibir asesoramiento técnico antes de decidir.
-
-No todas las viviendas tienen las mismas necesidades, por eso lo recomendable es revisar cada caso de forma personalizada.
+Una valoración bien hecha evita sobredimensionar el equipo, quedarse corto o pagar de más.
 
 ## ¿Cuándo conviene pedir asesoramiento profesional?
 
-Antes de elegir un sistema de aerotermia conviene revisar el inmueble: aislamiento, distribución, demanda térmica, espacios disponibles y compatibilidad con instalaciones existentes. Una buena valoración previa evita sobredimensionar el equipo o quedarse corto.
+Antes de elegir un sistema de aerotermia conviene revisar el inmueble con calma. En Maclima Soluciones Energéticas estudiamos cada caso antes de proponer una solución: tu vivienda no es un cálculo genérico.
 
-En Maclima Soluciones Energéticas estudiamos cada caso antes de proponer una solución, para que la inversión encaje con la vivienda real, no con un cálculo genérico.
+Si tienes un piso, ático o vivienda unifamiliar y quieres valorar BEN Dual-Air, revisamos contigo si encaja y cómo sería la instalación.
 
-## ¿Quieres saber si BEN Dual-Air encaja en tu vivienda?
+## ¿Hablamos de tu caso?
 
-Si tienes un piso, ático o vivienda unifamiliar y quieres valorar una solución de aerotermia sin unidad exterior, en Maclima Soluciones Energéticas podemos ayudarte.
-
-**BEN Dual-Air puede ser una alternativa muy interesante para mejorar el confort de tu vivienda sin recurrir a una unidad exterior convencional.**
-
-[Ver ficha técnica de BEN Dual-Air](/catalogo/ben-dual-air) · [Pide tu consultoría gratuita](/consultoria-gratuita) · [Contáctanos](/contacto)
+[Pide tu consultoría gratuita](/consultoria-gratuita) · [Contáctanos](/contacto) · [Escríbenos por WhatsApp](https://wa.me/34664447444?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20BEN%20Dual-Air.)
 
 **¿Quieres saber si puedes instalar BEN Dual-Air en tu vivienda? Contacta con Maclima Soluciones Energéticas y revisamos tu caso sin compromiso.**
