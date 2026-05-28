@@ -123,20 +123,20 @@ export function BenDualLaunchSection() {
         </div>
       </div>
 
-      {/* Cards inferiores */}
-      <ul className="mt-6 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Cards inferiores — auto-rows-min + items-start para que cada card mida según su contenido */}
+      <ul className="m-0 mt-6 grid list-none auto-rows-min grid-cols-1 items-start gap-3 p-0 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {STATS.map(({ icon: Icon, title, body }) => (
           <li
             key={title}
-            className="group relative overflow-hidden rounded-2xl border border-[#E6D6F0] bg-white p-5 shadow-[0_10px_28px_-8px_rgba(23,17,26,0.08)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#9512A0]/40 hover:shadow-[0_18px_38px_-10px_rgba(149,18,160,0.18)] sm:p-6"
+            className="group relative rounded-2xl border border-[#E6D6F0] bg-white p-5 text-left shadow-[0_10px_28px_-8px_rgba(23,17,26,0.08)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#9512A0]/40 hover:shadow-[0_18px_38px_-10px_rgba(149,18,160,0.18)] sm:p-6"
           >
-            <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#FAF5FF] to-[#F4ECFB] text-[#9512A0] ring-1 ring-inset ring-[#E6D6F0]">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#FAF5FF] to-[#F4ECFB] text-[#9512A0] ring-1 ring-inset ring-[#E6D6F0]">
               <Icon className="h-5 w-5" aria-hidden="true" />
             </div>
-            <p className="mt-4 text-lg font-black leading-tight text-[#9512A0] sm:text-xl">
+            <p className="mt-3.5 text-lg font-black leading-tight text-[#9512A0] sm:text-xl">
               {title}
             </p>
-            <p className="mt-1.5 text-sm leading-5 text-[#6B6275]">{body}</p>
+            <p className="mt-1 text-sm leading-snug text-[#6B6275]">{body}</p>
           </li>
         ))}
       </ul>
