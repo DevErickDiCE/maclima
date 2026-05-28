@@ -123,20 +123,24 @@ export function BenDualLaunchSection() {
         </div>
       </div>
 
-      {/* Cards inferiores — auto-rows-min + items-start para que cada card mida según su contenido */}
-      <ul className="m-0 mt-6 grid list-none auto-rows-min grid-cols-1 items-start gap-3 p-0 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+      {/* Cards inferiores — lista horizontal compacta en móvil/tablet, grid premium vertical en desktop */}
+      <ul className="m-0 mt-6 grid list-none auto-rows-min items-start gap-3 p-0 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {STATS.map(({ icon: Icon, title, body }) => (
           <li
             key={title}
-            className="group relative rounded-2xl border border-[#E6D6F0] bg-white p-5 text-left shadow-[0_10px_28px_-8px_rgba(23,17,26,0.08)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#9512A0]/40 hover:shadow-[0_18px_38px_-10px_rgba(149,18,160,0.18)] sm:p-6"
+            className="group relative flex items-center gap-4 rounded-2xl border border-[#E6D6F0] bg-white px-4 py-4 text-left shadow-[0_10px_28px_-8px_rgba(23,17,26,0.08)] transition duration-200 ease-out hover:border-[#9512A0]/40 hover:shadow-[0_18px_38px_-10px_rgba(149,18,160,0.18)] lg:block lg:p-7 lg:text-center lg:hover:-translate-y-1"
           >
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#FAF5FF] to-[#F4ECFB] text-[#9512A0] ring-1 ring-inset ring-[#E6D6F0]">
-              <Icon className="h-5 w-5" aria-hidden="true" />
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FAF5FF] to-[#F4ECFB] text-[#9512A0] ring-1 ring-inset ring-[#E6D6F0] lg:mx-auto lg:h-16 lg:w-16 lg:rounded-2xl">
+              <Icon className="h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true" />
             </div>
-            <p className="mt-3.5 text-lg font-black leading-tight text-[#9512A0] sm:text-xl">
-              {title}
-            </p>
-            <p className="mt-1 text-sm leading-snug text-[#6B6275]">{body}</p>
+            <div className="min-w-0">
+              <p className="text-base font-bold leading-tight text-[#9512A0] sm:text-lg lg:mt-5 lg:text-2xl lg:font-black">
+                {title}
+              </p>
+              <p className="mt-1 text-sm leading-snug text-[#6B6275] lg:mt-3 lg:text-base">
+                {body}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
