@@ -70,7 +70,7 @@ export default function BlogIndexPage() {
                           alt={post.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-cover transition duration-300 ease-out group-hover:scale-[1.02]"
+                          className="object-contain transition duration-300 ease-out group-hover:scale-[1.02]"
                         />
                       </div>
                     ) : (
