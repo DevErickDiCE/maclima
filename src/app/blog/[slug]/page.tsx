@@ -77,8 +77,13 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: imageUrl,
+    image: {
+      "@type": "ImageObject",
+      url: imageUrl,
+      caption: post.title,
+    },
     datePublished: post.date,
+    dateModified: post.date,
     author: {
       "@type": "Organization",
       name: "Maclima Soluciones Energéticas",
@@ -93,6 +98,7 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "WebPage",
       "@id": url,
     },
+    isAccessibleForFree: true,
   };
 
   return (
@@ -138,7 +144,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="relative -mt-1 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[#E6E0F5] bg-[#EAEAFF] shadow-[0_14px_40px_rgba(23,17,26,0.07)] sm:-mt-2">
                 <Image
                   src={post.image}
-                  alt="BEN Dual-Air sistema de aerotermia interior sin unidad exterior"
+                  alt={post.title}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 768px"

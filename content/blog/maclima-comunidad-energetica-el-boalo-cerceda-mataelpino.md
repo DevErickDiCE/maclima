@@ -1,8 +1,8 @@
 ---
 title: "Maclima participa en la charla informativa sobre comunidad energética en El Boalo, Cerceda y Mataelpino"
-seoTitle: "Maclima participa en la jornada sobre comunidad energética en El Boalo"
+seoTitle: "Maclima en la charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino (Sierra de Madrid)"
 slug: "maclima-comunidad-energetica-el-boalo-cerceda-mataelpino"
-description: "Maclima Calor y Frío participó en la charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino, dentro de la XII Feria de Medio Ambiente."
+description: "Maclima Calor y Frío en la charla sobre comunidad energética de El Boalo, Cerceda y Mataelpino (Sierra de Madrid), durante la XII Feria de Medio Ambiente."
 date: "2026-06-10"
 category: "Ahorro energético"
 image: "/blog/charla/charla.png"
@@ -10,7 +10,7 @@ image: "/blog/charla/charla.png"
 
 El pasado 5 de junio de 2026, Maclima Calor y Frío S.L. participó en la charla informativa sobre la creación de una comunidad energética en el municipio, organizada por el Ayuntamiento de El Boalo, Cerceda y Mataelpino dentro de la [XII Feria de Medio Ambiente de Mataelpino](https://elboalo-cerceda-mataelpino.org/charla-informativa-creacion-de-una-comunidad-energetic/).
 
-Una jornada pensada para acercar la eficiencia energética a vecinos, comercios y empresas locales, en la que se abordaron las oportunidades que ofrecen las comunidades energéticas para el municipio.
+Una jornada pensada para acercar la eficiencia energética a vecinos, comercios y empresas de la Sierra de Madrid, en la que se abordaron las oportunidades que ofrecen las comunidades energéticas para municipios como El Boalo, Cerceda y Mataelpino.
 
 **Desde Maclima agradecemos al Ayuntamiento de El Boalo, Cerceda y Mataelpino la invitación y la oportunidad de participar en una jornada tan necesaria para acercar la eficiencia energética a vecinos, comercios y empresas locales.**
 
@@ -29,7 +29,7 @@ Entre sus principales ventajas destacan:
 
 No se trata de soluciones mágicas ni de promesas genéricas: cada comunidad energética parte de un estudio específico del territorio, del consumo y de las posibilidades reales de cada zona.
 
-En municipios como El Boalo, Cerceda y Mataelpino, donde el compromiso con el medio ambiente ya es una seña de identidad, este tipo de iniciativas cobran un sentido especial.
+En municipios de la Sierra de Madrid como El Boalo, Cerceda y Mataelpino, donde el compromiso con el medio ambiente ya es una seña de identidad, este tipo de iniciativas cobran un sentido especial.
 
 ## La aportación de Maclima en la jornada
 
@@ -52,11 +52,11 @@ Nuestro objetivo fue aportar claridad y ayudar a los asistentes a entender qué 
 
 Cada una de estas tecnologías puede contribuir de forma distinta a mejorar la eficiencia energética de una vivienda, un negocio o una comunidad.
 
-**Aerotermia**: sistema eficiente para calefacción, refrigeración y agua caliente sanitaria que aprovecha la energía contenida en el aire exterior. Es una opción cada vez más habitual en viviendas unifamiliares y proyectos de obra nueva.
+**Aerotermia**: sistema eficiente para calefacción, refrigeración y agua caliente sanitaria que aprovecha la energía contenida en el aire exterior. Una opción cada vez más habitual en viviendas unifamiliares de la Sierra de Madrid y en proyectos de obra nueva.
 
 **Fotovoltaica**: producción de electricidad a partir de energía solar para reducir el consumo de red y aprovechar mejor la energía disponible. En una comunidad energética, la fotovoltaica compartida puede ser una de las piezas clave.
 
-**Geotermia**: aprovechamiento de la temperatura estable del terreno para climatización, refrigeración y agua caliente sanitaria. Es una solución que requiere un estudio del terreno, pero ofrece un rendimiento estable durante todo el año.
+**Geotermia**: aprovechamiento de la temperatura estable del terreno para climatización, refrigeración y agua caliente sanitaria. Requiere un estudio previo del terreno, pero ofrece un rendimiento estable durante todo el año, también en viviendas situadas en la Sierra de Guadarrama.
 
 En muchos casos, la combinación de aerotermia y fotovoltaica puede ser una opción interesante para optimizar el consumo energético de una vivienda, aunque cada caso debe valorarse con un estudio técnico previo que analice el perfil de consumo, el aislamiento y las características del inmueble.
 
@@ -69,17 +69,17 @@ body: La transición energética empieza con información clara, soluciones efic
 
 ## Compromiso con la transición energética local
 
-Para Maclima Calor y Frío, participar en este tipo de iniciativas forma parte de nuestro compromiso con la eficiencia energética, la sostenibilidad y el asesoramiento cercano.
+Para Maclima Calor y Frío, participar en este tipo de iniciativas forma parte de nuestro compromiso con la eficiencia energética, la sostenibilidad y el asesoramiento cercano en toda la Sierra de Madrid.
 
-Creemos que la transición energética se construye desde lo local, escuchando a vecinos, comercios y administraciones, y ofreciendo soluciones reales adaptadas a cada situación.
+Creemos que la transición energética se construye desde lo local, escuchando a vecinos, comercios y administraciones de la Sierra, y ofreciendo soluciones reales adaptadas a cada situación.
 
-Seguiremos colaborando con ayuntamientos, asociaciones y comunidades de vecinos para acercar la eficiencia energética a quienes quieran dar el paso.
+Seguiremos colaborando con ayuntamientos, asociaciones y comunidades de vecinos de la Sierra de Guadarrama para acercar la eficiencia energética a quienes quieran dar el paso.
 
 ## ¿Hablamos de tu proyecto?
 
-¿Estás valorando una solución energética para tu vivienda, negocio o comunidad?
+¿Vives en la Sierra de Madrid y estás valorando una solución energética para tu vivienda, negocio o comunidad?
 
-En Maclima Calor y Frío S.L. estudiamos tu caso y te ayudamos a elegir la solución más adecuada según tus necesidades.
+En Maclima Calor y Frío S.L. estudiamos tu caso y te ayudamos a elegir la solución más adecuada según tus necesidades, tanto en El Boalo, Cerceda y Mataelpino como en el resto de municipios de la Sierra.
 
 - [Solicita asesoramiento técnico](/consultoria-gratuita) y valoraremos tu proyecto sin compromiso.
 - [Contacta con nosotros](/contacto) si prefieres hablarlo directamente.
