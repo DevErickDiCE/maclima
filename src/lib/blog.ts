@@ -9,6 +9,7 @@ export type BlogPost = {
   date: string;        // ISO YYYY-MM-DD
   category: string;
   image?: string;
+  imageAlt?: string;   // Alt de la imagen destacada
   contentMd: string;   // body markdown sin frontmatter
 };
 
@@ -57,6 +58,7 @@ function readPost(filename: string): BlogPost | null {
     date: meta.date,
     category: meta.category ?? "Maclima",
     image: meta.image && meta.image.length > 0 ? meta.image : undefined,
+    imageAlt: meta.imageAlt && meta.imageAlt.length > 0 ? meta.imageAlt : undefined,
     contentMd: body.trim(),
   };
 }
@@ -115,6 +117,19 @@ export function renderMarkdown(markdown: string): string {
 
   while (i < lines.length) {
     const line = lines[i];
+
+    // Bloque raw HTML: :::html … :::
+    if (line.trim() === ":::html") {
+      const htmlLines: string[] = [];
+      i += 1;
+      while (i < lines.length && lines[i].trim() !== ":::") {
+        htmlLines.push(lines[i]);
+        i += 1;
+      }
+      if (i < lines.length) i += 1;
+      out.push(htmlLines.join("\n"));
+      continue;
+    }
 
     // Separador horizontal (puede aparecer tras frontmatter en algunos archivos)
     if (/^---+\s*$/.test(line.trim())) {

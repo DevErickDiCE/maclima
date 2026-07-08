@@ -67,7 +67,7 @@ export default function BlogIndexPage() {
                       <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#EAEAFF]">
                         <Image
                           src={post.image}
-                          alt={post.title}
+                          alt={post.imageAlt || post.title}
                           fill
                           sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain transition duration-300 ease-out group-hover:scale-[1.02]"

@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: imageUrl,
-          alt: metaTitle,
+          alt: post.imageAlt || metaTitle,
         },
       ],
     },
@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="relative -mt-1 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[#E6E0F5] bg-[#EAEAFF] shadow-[0_14px_40px_rgba(23,17,26,0.07)] sm:-mt-2">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={post.imageAlt || post.title}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 768px"
