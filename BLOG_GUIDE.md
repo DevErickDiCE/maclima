@@ -186,24 +186,24 @@ Si no hay imagen disponible, dejar `image: ""` o eliminar la línea.
 
 ---
 
-## 8. Proceso para publicar un nuevo artículo
+## 8. Proceso para publicar un nuevo artículo (Flujo SEO Escalable)
 
-1. Redactar el contenido siguiendo la estructura del apartado 4.
-2. Crear el archivo en `/content/blog/<slug>.md`.
-3. Verificar que el `slug` es único (ningún otro archivo con ese nombre).
-4. Verificar que la fecha está en formato `YYYY-MM-DD`.
-5. Si hay imagen destacada, guardarla en `/public/blog/<slug>.webp` y referenciarla en el frontmatter.
-6. Revisar ortografía y enlaces internos.
-7. Probar localmente (`npm run dev`) y comprobar que el listado del blog y la página individual cargan bien.
-8. Revisar la versión móvil.
-9. Hacer commit con un mensaje claro.
+1. **Consultar el registro ligero**: Leer `docs/seo/calendario-publicaciones.csv` y `docs/seo/registro-publicaciones.csv`. No cargar toda la biblioteca de artículos.
+2. **Seleccionar candidatos**: Comparar título, slug, descripción, keyword y clúster. Usar `grep_search` si es necesario. Seleccionar como máximo 5 artículos relacionados y la página pilar correspondiente para leer completos. Si hay riesgo de canibalización no resoluble entre estos 5, detenerse y pedir autorización.
+3. **Redactar el contenido**: Siguiendo la estructura del apartado 4.
+4. **Crear el archivo**: Guardar en `/content/blog/<slug>.md`.
+5. **Verificar metadatos**: Asegurar que `slug`, `title`, `description`, `category` y `date` están definidos en el frontmatter.
+6. **Imagen destacada**: Si corresponde, guardar en `/public/blog/<slug>.webp` y referenciar en el frontmatter.
+7. **Reconstruir el índice SEO**: Ejecutar `npm run seo:index` para actualizar `docs/seo/registro-publicaciones.csv` sin procesar cuerpos completos con LLM.
+8. **Probar localmente**: Probar con `npm run dev` o validar build.
+9. **Hacer commit**: Guardar cambios con mensaje claro.
 
 Ejemplo de commit:
 
 ```bash
-git add content/blog/ventajas-de-la-aerotermia.md public/blog/ventajas-de-la-aerotermia.webp
+npm run seo:index
+git add content/blog/ventajas-de-la-aerotermia.md docs/seo/registro-publicaciones.csv public/blog/ventajas-de-la-aerotermia.webp
 git commit -m "Add blog article: ventajas de la aerotermia"
-git push
 ```
 
 ---
@@ -222,19 +222,19 @@ category: ""
 image: ""
 ---
 
-#
+# 
 
 Introducción del artículo.
 
-##
+## 
 
 Contenido del primer apartado.
 
-##
+## 
 
 Contenido del segundo apartado.
 
-##
+## 
 
 Contenido del tercer apartado.
 
@@ -258,7 +258,7 @@ Resumen final del artículo.
 Cuando se quiera subir un nuevo artículo al blog, usar este prompt:
 
 ```txt
-Quiero que subas un nuevo artículo al blog de Maclima Soluciones Energéticas siguiendo exactamente las instrucciones del archivo BLOG_GUIDE.md.
+Quiero que subas un nuevo artículo al blog de Maclima Soluciones Energéticas siguiendo exactamente las instrucciones del archivo BLOG_GUIDE.md y el flujo SEO escalable.
 
 Te paso el tema, frases obligatorias y contenido base:
 
@@ -272,15 +272,16 @@ INFORMACIÓN BASE:
 [Pegar aquí notas, enlaces, ideas o texto del cliente]
 
 Instrucciones:
-1. Redacta el artículo con tono profesional, cercano y claro.
-2. Respeta las frases obligatorias sin cambiarlas.
-3. Optimiza el artículo para SEO.
-4. Crea el slug correcto y úsalo como nombre del archivo.
-5. Añade frontmatter completo según BLOG_GUIDE.md.
-6. Guarda el artículo en /content/blog/<slug>.md.
-7. Si hace falta imagen destacada, deja indicado el nombre recomendado en /public/blog/<slug>.webp.
-8. Revisa responsive móvil.
-9. Haz commit con un mensaje claro.
+1. Aplica el MODO SEO SIGUIENTE ARTÍCULO: Lee primero /docs/seo/registro-publicaciones.csv y /docs/seo/calendario-publicaciones.csv.
+2. Selecciona como máximo los 5 artículos más relacionados e inspecciona sus cuerpos sólo si es necesario. No leas toda la biblioteca.
+3. Redacta el artículo con tono profesional, cercano y claro.
+4. Respeta las frases obligatorias sin cambiarlas.
+5. Optimiza el artículo para SEO.
+6. Crea el slug correcto y úsalo como nombre del archivo.
+7. Añade frontmatter completo según BLOG_GUIDE.md.
+8. Guarda el artículo en /content/blog/<slug>.md.
+9. Ejecuta `npm run seo:index` para regenerar el registro ligero.
+10. Si hace falta imagen destacada, deja indicado el nombre recomendado en /public/blog/<slug>.webp.
 ```
 
 ---

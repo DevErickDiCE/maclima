@@ -129,25 +129,23 @@ nombre-del-articulo.webp
 /public/blog/aerotermia-y-fotovoltaica.webp
 ```
 
-## Proceso para subir un nuevo artículo
+## Proceso para subir un nuevo artículo (Flujo SEO Escalable)
 
-1. Crear el contenido siguiendo la estructura anterior.
-2. Guardar el artículo en la carpeta de posts/blog que tenga el proyecto.
-3. Revisar que el `slug` sea único.
-4. Revisar que la fecha esté en formato `YYYY-MM-DD`.
-5. Añadir imagen destacada si corresponde.
-6. Comprobar que el artículo aparece correctamente en la página del blog.
-7. Comprobar que la página individual del artículo carga bien.
-8. Revisar versión móvil.
-9. Revisar enlaces, llamadas a la acción y textos finales.
-10. Hacer commit con un mensaje claro.
+1. **Consultar registro ligero**: Leer `docs/seo/calendario-publicaciones.csv` y `docs/seo/registro-publicaciones.csv`. No cargar toda la biblioteca de artículos.
+2. **Seleccionar candidatos**: Comparar título, slug, descripción, keyword y clúster. Usar `grep_search` si es necesario. Seleccionar máximo 5 artículos relacionados y la página pilar para leer completos. Si hay riesgo de canibalización no resoluble, pedir autorización.
+3. **Crear el contenido**: Siguiendo la estructura.
+4. **Guardar el artículo**: En `/content/blog/<slug>.md`.
+5. **Reconstruir el índice SEO**: Ejecutar `npm run seo:index`.
+6. **Añadir imagen destacada**: Si corresponde, en `/public/blog/<slug>.webp`.
+7. **Probar localmente**: Comprobar carga y build.
+8. **Hacer commit**: Con mensaje claro.
 
 Ejemplo de commit:
 
 ```bash
-git add .
-git commit -m "Add new blog article about aerotermia and fotovoltaica"
-git push
+npm run seo:index
+git add content/blog/<slug>.md docs/seo/registro-publicaciones.csv
+git commit -m "Add new blog article: <slug>"
 ```
 
 ## Plantilla base de artículo
@@ -162,19 +160,19 @@ category: ""
 image: ""
 ---
 
-#
+# 
 
 Introducción del artículo.
 
-##
+## 
 
 Contenido del primer apartado.
 
-##
+## 
 
 Contenido del segundo apartado.
 
-##
+## 
 
 Contenido del tercer apartado.
 
@@ -196,7 +194,7 @@ Resumen final del artículo.
 Cuando se quiera subir un nuevo artículo al blog, usar este prompt:
 
 ```txt
-Quiero que subas un nuevo artículo al blog de Maclima Soluciones Energéticas siguiendo exactamente las instrucciones del archivo BLOG_GUIDE.md.
+Quiero que subas un nuevo artículo al blog de Maclima Soluciones Energéticas siguiendo exactamente las instrucciones del archivo BLOG_GUIDE.md y el flujo SEO escalable.
 
 Te paso el tema, frases obligatorias y contenido base:
 
@@ -210,15 +208,15 @@ INFORMACIÓN BASE:
 [Pegar aquí notas, enlaces, ideas o texto del cliente]
 
 Instrucciones:
-1. Redacta el artículo con tono profesional, cercano y claro.
-2. Respeta las frases obligatorias sin cambiarlas.
-3. Optimiza el artículo para SEO.
-4. Crea el slug correcto.
-5. Añade frontmatter completo.
-6. Guarda el artículo en la carpeta correcta del blog.
-7. Si hace falta imagen destacada, deja indicado el nombre recomendado.
-8. Comprueba que el artículo aparece en el listado del blog y en su página individual.
-9. Revisa responsive móvil.
+1. Aplica el MODO SEO SIGUIENTE ARTÍCULO: Lee primero /docs/seo/registro-publicaciones.csv y /docs/seo/calendario-publicaciones.csv.
+2. Selecciona como máximo los 5 artículos más relacionados e inspecciona sus cuerpos sólo si es necesario. No leas toda la biblioteca.
+3. Redacta el artículo con tono profesional, cercano y claro.
+4. Respeta las frases obligatorias sin cambiarlas.
+5. Optimiza el artículo para SEO.
+6. Crea el slug correcto.
+7. Añade frontmatter completo.
+8. Guarda el artículo en /content/blog/<slug>.md.
+9. Ejecuta `npm run seo:index` para actualizar el índice ligero.
 10. Haz commit con un mensaje claro.
 ```
 
