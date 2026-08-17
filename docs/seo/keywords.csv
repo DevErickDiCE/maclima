@@ -1,0 +1,50 @@
+cluster,keyword,intencion,pagina_objetivo,prioridad,alcance,tipo,estado,observaciones
+Aerotermia,aerotermia Madrid,transaccional,/aerotermia,alta,Comunidad de Madrid,pagina_pilar,objetivo,Reforzar servicio proceso experiencia y CTA
+Aerotermia,instalación aerotermia Madrid,transaccional,/aerotermia,alta,Comunidad de Madrid,pagina_pilar,objetivo,Sin crear páginas municipales duplicadas
+Aerotermia,empresa aerotermia Madrid,comercial,/aerotermia,alta,Comunidad de Madrid,pagina_pilar,objetivo,Apoyar con credenciales y casos reales
+Aerotermia,aerotermia Sierra de Madrid,comercial,/blog/aerotermia-sierra-de-madrid-guia-chalets,alta,Sierra de Madrid,articulo,calendarizado,Guía local única y sustancial
+Aerotermia,precio aerotermia Madrid 2026,comercial,/blog/precio-aerotermia-madrid-2026,alta,Comunidad de Madrid,articulo,calendarizado,Usar rangos solo con presupuestos reales validados
+Aerotermia,aerotermia con radiadores,comercial,/blog/aerotermia-con-radiadores,alta,España,articulo,calendarizado,Diferenciar radiador convencional y baja temperatura
+Aerotermia,aerotermia vs gas natural,comercial,/blog/aerotermia-vs-gas-natural-madrid,alta,Comunidad de Madrid,articulo,calendarizado,Comparación sin promesas universales
+Aerotermia,cambiar caldera gasoil por aerotermia,comercial,/blog/cambiar-caldera-gasoil-por-aerotermia,alta,España,articulo,calendarizado,Alta afinidad con chalets
+Aerotermia,potencia aerotermia vivienda,informacional,/blog/como-calcular-potencia-aerotermia-vivienda,alta,España,articulo,calendarizado,Explicar cálculo de cargas y límites de reglas por m2
+Aerotermia,mantenimiento aerotermia,informacional,/blog/mantenimiento-aerotermia-revisiones,media,España,articulo,calendarizado,CTA de revisión técnica
+Aerotermia,aerotermia piso sin unidad exterior,comercial,/blog/ben-dual-air-aerotermia-sin-unidad-exterior,alta,España,articulo,publicado,No crear otro artículo con la misma intención
+Aerotermia,BEN Dual-Air,navegacional,/catalogo/ben-dual-air,alta,España,producto,objetivo,Producto específico
+Aerotermia,ayudas aerotermia Madrid 2026,informacional,/blog/ayudas-aerotermia-madrid-2026,alta,Comunidad de Madrid,articulo,publicado,Actualizar cuando cambien convocatorias o fiscalidad
+Aerotermia,preparar aerotermia invierno,informacional,/blog/preparar-aerotermia-para-el-invierno,media,España,articulo,calendarizado,Estacional septiembre a noviembre
+Emisores,suelo radiante o fancoils con aerotermia,comercial,/blog/suelo-radiante-o-fancoils-con-aerotermia,alta,España,articulo,calendarizado,Comparar confort coste obra y refrigeración
+Emisores,aerotermia con suelo radiante,comercial,/blog/suelo-radiante-o-fancoils-con-aerotermia,media,España,keyword_secundaria,asignado,No crear URL separada en el primer ciclo
+Emisores,aerotermia con fancoils,comercial,/blog/suelo-radiante-o-fancoils-con-aerotermia,media,España,keyword_secundaria,asignado,No crear URL separada en el primer ciclo
+Fotovoltaica,placas solares Madrid,transaccional,/fotovoltaica,alta,Comunidad de Madrid,pagina_pilar,objetivo,Reforzar instalación legalización y garantías
+Fotovoltaica,instalación placas solares Madrid,transaccional,/fotovoltaica,alta,Comunidad de Madrid,pagina_pilar,objetivo,Keyword comercial principal
+Fotovoltaica,empresa placas solares Madrid,comercial,/fotovoltaica,alta,Comunidad de Madrid,pagina_pilar,objetivo,Apoyar con casos y reseñas
+Fotovoltaica,precio placas solares Madrid 2026,comercial,/blog/precio-placas-solares-madrid-2026,alta,Comunidad de Madrid,articulo,calendarizado,Validar precios y componentes con Maclima
+Fotovoltaica,cuántas placas solares necesito,informacional,/blog/cuantas-placas-solares-necesita-una-vivienda,alta,España,articulo,calendarizado,Explicar consumo orientación y potencia
+Fotovoltaica,merece la pena batería solar,comercial,/blog/merece-la-pena-una-bateria-solar,alta,España,articulo,calendarizado,Segmentar por perfil de consumo
+Fotovoltaica,compensación excedentes o batería virtual,comercial,/blog/compensacion-excedentes-o-bateria-virtual,alta,España,articulo,calendarizado,Revisión tarifaria obligatoria
+Fotovoltaica,mantenimiento placas solares,informacional,/blog/mantenimiento-placas-solares,media,España,articulo,calendarizado,Evitar recomendar limpiezas peligrosas
+Fotovoltaica,placas solares comunidad propietarios Madrid,comercial,/blog/placas-solares-comunidades-propietarios-madrid,alta,Comunidad de Madrid,articulo,calendarizado,Usar fuentes oficiales y revisar acuerdos
+Fotovoltaica,autoconsumo colectivo Madrid,comercial,/blog/autoconsumo-colectivo-o-comunidad-energetica,alta,Comunidad de Madrid,articulo,calendarizado,Enlazar artículo local existente
+Fotovoltaica,comunidad energética Madrid,informacional,/blog/autoconsumo-colectivo-o-comunidad-energetica,media,Comunidad de Madrid,keyword_secundaria,asignado,Diferenciar figuras y alcance
+Fotovoltaica,aerotermia y placas solares,comercial,/blog/aerotermia-y-placas-solares,alta,España,articulo,calendarizado,Sistema combinado y autoconsumo
+Geotermia,geotermia Madrid,transaccional,/geotermia,alta,Comunidad de Madrid,pagina_pilar,bloqueado,Crear la página antes del clúster
+Geotermia,instalación geotermia Madrid,transaccional,/geotermia,alta,Comunidad de Madrid,pagina_pilar,bloqueado,Explicar estudio captación y permisos
+Geotermia,precio geotermia Madrid,comercial,/blog/precio-geotermia-madrid,alta,Comunidad de Madrid,articulo,calendarizado,Publicar solo después de crear el pilar
+Geotermia,geotermia vs aerotermia,comercial,/blog/geotermia-vs-aerotermia,alta,España,articulo,calendarizado,Comparar terreno inversión y demanda
+Geotermia,geotermia vivienda obra nueva,comercial,/blog/geotermia-vivienda-obra-nueva,media,España,articulo,calendarizado,Enfocar en viabilidad temprana del proyecto
+Geotermia,perforación geotermia vivienda,informacional,/blog/geotermia-vivienda-obra-nueva,media,España,keyword_secundaria,asignado,No separar todavía
+Geotermia,bomba de calor geotérmica,informacional,/geotermia,media,España,pagina_pilar,bloqueado,Integrar en explicación del pilar
+Integración,aerotermia fotovoltaica autoconsumo,comercial,/blog/aerotermia-y-placas-solares,alta,España,keyword_secundaria,asignado,Evitar competir con keyword principal
+Integración,bomba de calor ACS vs termo eléctrico,comercial,/blog/bomba-calor-acs-vs-termo-electrico,alta,España,articulo,calendarizado,Comparar consumo espacio y uso
+Integración,estudio energético vivienda Madrid,comercial,/blog/estudio-energetico-vivienda-madrid,media,Comunidad de Madrid,articulo,calendarizado,Conducir a consultoría
+Integración,qué sistema de calefacción elegir,comercial,/consultoria-gratuita,media,Comunidad de Madrid,pagina_conversion,objetivo,Resolver desde diagnóstico no desde ranking genérico
+Integración,aislamiento antes de aerotermia,informacional,/blog/estudio-energetico-vivienda-madrid,media,España,keyword_secundaria,asignado,Integrar orden de decisiones
+BESS,BESS para empresas,comercial,/blog/bess-para-empresas,alta,España,articulo,calendarizado,Crear pilar propio cuando exista oferta cerrada
+BESS,baterías industriales autoconsumo,comercial,/blog/bess-para-empresas,alta,España,keyword_secundaria,asignado,Incluir picos horarios y continuidad
+BESS,batería solar para cortes de luz,comercial,/blog/bateria-solar-respaldo-cortes-luz,media,España,articulo,calendarizado,Aclarar que no toda batería ofrece backup
+BESS,sistema respaldo fotovoltaico,informacional,/blog/bateria-solar-respaldo-cortes-luz,media,España,keyword_secundaria,asignado,Explicar inversor y circuito de cargas críticas
+BESS,almacenamiento energético Madrid,comercial,/consultoria-gratuita,media,Comunidad de Madrid,pagina_conversion,objetivo,Validar demanda antes de crear página pilar
+Marca,Maclima Soluciones Energéticas,navegacional,/,alta,España,home,objetivo,Entidad y marca principal
+Marca,Maclima Calor y Frío,navegacional,/,alta,España,home,objetivo,Unificar nombre comercial y razón social
+Local,comunidad energética El Boalo Cerceda Mataelpino,navegacional,/blog/maclima-comunidad-energetica-el-boalo-cerceda-mataelpino,media,Sierra de Madrid,articulo,publicado,Contenido de autoridad local

@@ -71,6 +71,8 @@ function generateIndex() {
     const description = meta.description?.trim() || '';
     const keyword = meta.keyword_principal?.trim() || meta.keyword?.trim() || '';
     const cluster = meta.cluster?.trim() || meta.category?.trim() || '';
+    const intencion = meta.intencion?.trim() || '';
+    const zona = meta.zona?.trim() || '';
     const paginaPilar = meta.pagina_pilar?.trim() || meta.pillar_page?.trim() || '';
     const status = meta.status?.trim() || 'publicado';
     const fechaPub = meta.date?.trim() || meta.fecha_publicacion?.trim() || '';
@@ -100,6 +102,8 @@ function generateIndex() {
       descripcion: description,
       keyword_principal: keyword,
       cluster,
+      intencion,
+      zona,
       pagina_pilar: paginaPilar,
       status,
       fecha_publicacion: fechaPub,
@@ -125,6 +129,8 @@ function generateIndex() {
     'descripcion',
     'keyword_principal',
     'cluster',
+    'intencion',
+    'zona',
     'pagina_pilar',
     'status',
     'fecha_publicacion',

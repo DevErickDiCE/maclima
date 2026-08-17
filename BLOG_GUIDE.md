@@ -81,12 +81,22 @@ Cada artículo debe seguir esta estructura exacta. El frontmatter va arriba, ent
 
 ```md
 ---
+id: "url-del-articulo"
 title: "Título del artículo"
+seoTitle: "Título SEO"
 slug: "url-del-articulo"
 description: "Descripción SEO breve del artículo (máx. 155 caracteres)."
 date: "YYYY-MM-DD"
+updated_at: "YYYY-MM-DD"
 category: "Aerotermia"
+cluster: "Aerotermia"
+keyword_principal: "palabra clave principal"
+intencion: "informacional | comercial | transaccional | navegacional"
+zona: "España | Comunidad de Madrid | Sierra de Madrid"
+pagina_pilar: "/aerotermia"
+status: "borrador | revision | publicado"
 image: "/blog/nombre-imagen.webp"
+imageAlt: "Descripción útil de la imagen"
 ---
 
 # Título del artículo
@@ -124,8 +134,16 @@ Resumen final del artículo y llamada a la acción.
 | `slug`        | Sí          | En kebab-case, sin tildes, sin caracteres especiales. Único en todo el blog.     |
 | `description` | Sí          | Máximo 155 caracteres. Resume el artículo para SEO.                              |
 | `date`        | Sí          | Formato `YYYY-MM-DD`.                                                            |
+| `updated_at`  | Sí          | Última revisión real en formato `YYYY-MM-DD`.                                    |
 | `category`    | Sí          | Una de: `Aerotermia`, `Fotovoltaica`, `Climatización`, `Geotermia`, `BESS`, `Ahorro energético`, `Consejos`. |
+| `cluster`     | Sí          | Clúster definido en `docs/seo/keywords.csv`.                                     |
+| `keyword_principal` | Sí    | Una intención dominante por URL.                                                 |
+| `intencion`   | Sí          | `informacional`, `comercial`, `transaccional` o `navegacional`.                  |
+| `zona`        | Sí          | Alcance territorial real del contenido.                                          |
+| `pagina_pilar` | Sí         | Ruta comercial a la que apoya el artículo.                                       |
+| `status`      | Sí          | `borrador`, `revision` o `publicado`.                                             |
 | `image`       | Opcional    | Ruta desde la web (sin `public`). Ej.: `/blog/aerotermia.webp`.                  |
+| `imageAlt`    | Si hay imagen | Descripción concreta de lo visible.                                             |
 
 ---
 
@@ -305,9 +323,6 @@ Antes de finalizar, comprobar:
 
 ## 12. Estado actual del blog
 
-A día de hoy, la web de Maclima **todavía no tiene página de blog implementada**. Esta guía y la estructura de carpetas (`/content/blog/` y `/public/blog/`) quedan preparadas para que:
+El blog está implementado en `/blog` y las páginas individuales en `/blog/[slug]`. Los archivos Markdown de `/content/blog/` son la fuente de verdad editorial.
 
-- Los artículos puedan empezar a redactarse y almacenarse desde ya con el formato definitivo.
-- Cuando se implemente la página `/blog` y la página individual `/blog/[slug]`, los artículos existentes se rendericen sin necesidad de cambiar nada.
-
-Mientras el listado y la página individual no estén implementados, los archivos Markdown se mantienen en `/content/blog/` como fuente de verdad del contenido.
+La estrategia, mapa de keywords, calendario, checklists y prompts operativos viven en `docs/seo/`. La cadencia activa es de dos publicaciones semanales, martes y viernes.
