@@ -63,6 +63,8 @@ El archivo `docs/seo/registro-publicaciones.csv` es la fuente de verdad ligera p
 | `descripcion` | Meta descripción SEO (máx 155 caracteres) | `Descubre las ayudas, deducciones IRPF...` |
 | `keyword_principal` | Palabra clave principal objetivo | `ayudas aerotermia madrid 2026` |
 | `cluster` | Clúster temático / categoría | `Aerotermia` |
+| `intencion` | Intención dominante | `comercial` |
+| `zona` | Alcance territorial | `Comunidad de Madrid` |
 | `pagina_pilar` | Slug o URL de la página pilar | `/aerotermia` |
 | `status` | Estado (`publicado`, `borrador`, `revision`) | `publicado` |
 | `fecha_publicacion` | Fecha de publicación (`YYYY-MM-DD`) | `2026-07-08` |

@@ -1,5 +1,7 @@
 # Guía para subir artículos al blog de Maclima
 
+> Documento legado. La fuente canónica es `BLOG_GUIDE.md` junto con el centro de control `docs/seo/`. No usar este archivo para crear o publicar artículos nuevos.
+
 Este documento explica cómo crear y subir nuevos artículos al blog de Maclima Soluciones Energéticas manteniendo siempre la misma estructura, tono, formato y calidad.
 
 ## Objetivo del blog

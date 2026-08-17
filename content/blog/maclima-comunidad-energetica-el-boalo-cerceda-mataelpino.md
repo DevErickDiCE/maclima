@@ -1,11 +1,20 @@
 ---
+id: "maclima-comunidad-energetica-el-boalo-cerceda-mataelpino"
 title: "Maclima participa en la charla informativa sobre comunidad energética en El Boalo, Cerceda y Mataelpino"
 seoTitle: "Maclima en la charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino (Sierra de Madrid)"
 slug: "maclima-comunidad-energetica-el-boalo-cerceda-mataelpino"
-description: "Maclima Calor y Frío en la charla sobre comunidad energética de El Boalo, Cerceda y Mataelpino (Sierra de Madrid), durante la XII Feria de Medio Ambiente."
+description: "Maclima participa en una charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino durante la Feria de Medio Ambiente."
 date: "2026-06-10"
+updated_at: "2026-08-17"
 category: "Ahorro energético"
+cluster: "Marca y comunidad local"
+keyword_principal: "comunidad energética El Boalo Cerceda Mataelpino"
+intencion: "navegacional"
+zona: "Sierra de Madrid"
+pagina_pilar: "/fotovoltaica"
+status: "publicado"
 image: "/blog/charla/charla.webp"
+imageAlt: "Charla de Maclima sobre comunidad energética en la Sierra de Madrid"
 ---
 
 El pasado 5 de junio de 2026, Maclima Calor y Frío S.L. participó en la charla informativa sobre la creación de una comunidad energética en el municipio, organizada por el Ayuntamiento de El Boalo, Cerceda y Mataelpino dentro de la [XII Feria de Medio Ambiente de Mataelpino](https://elboalo-cerceda-mataelpino.org/charla-informativa-creacion-de-una-comunidad-energetic/).

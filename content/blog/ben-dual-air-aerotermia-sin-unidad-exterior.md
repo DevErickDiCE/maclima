@@ -1,11 +1,20 @@
 ---
+id: "ben-dual-air-aerotermia-sin-unidad-exterior"
 title: "¿Aerotermia en un piso sin unidad exterior? Ahora es posible con BEN Dual-Air"
 seoTitle: "BEN Dual-Air: aerotermia sin unidad exterior para pisos y áticos"
 slug: "ben-dual-air-aerotermia-sin-unidad-exterior"
 description: "Instala aerotermia sin unidad exterior con BEN Dual-Air. Una solución para pisos, áticos y viviendas de hasta 90 m². Lanzamiento desde 350 €."
 date: "2026-05-28"
+updated_at: "2026-08-17"
 category: "Aerotermia"
+cluster: "Aerotermia"
+keyword_principal: "aerotermia piso sin unidad exterior"
+intencion: "comercial"
+zona: "España"
+pagina_pilar: "/aerotermia"
+status: "publicado"
 image: "/blog/ben-dual-air-aerotermia-sin-unidad-exterior.webp"
+imageAlt: "Equipo interior BEN Dual-Air para aerotermia sin unidad exterior"
 ---
 
 Hasta hace poco, instalar aerotermia en un piso, ático o vivienda con poco espacio exterior podía parecer complicado.
