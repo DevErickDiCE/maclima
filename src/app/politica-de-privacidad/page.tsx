@@ -5,6 +5,7 @@ import { LEGAL_COMPANY } from "@/lib/legal-content";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "Politica de privacidad",
   description:
     "Informacion sobre que datos personales puede tratar Maclima, para que finalidades, con que base legal y como puede ejercer el usuario sus derechos.",

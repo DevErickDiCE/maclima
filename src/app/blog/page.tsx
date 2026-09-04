@@ -7,7 +7,7 @@ import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 import { formatDateEs, getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Aerotermia, fotovoltaica y eficiencia energética",
+  title: "Blog de aerotermia y eficiencia energética",
   description:
     "Consejos sobre aerotermia, fotovoltaica, climatización y eficiencia energética para viviendas y negocios.",
   alternates: {

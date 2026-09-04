@@ -1,7 +1,7 @@
 ---
 id: "precio-aerotermia-madrid-2026"
 title: "Precio de instalar aerotermia en Madrid en 2026: qué incluye un presupuesto"
-seoTitle: "Precio de aerotermia en Madrid en 2026 | Maclima"
+seoTitle: "Precio de aerotermia en Madrid en 2026"
 slug: "precio-aerotermia-madrid-2026"
 description: "Descubre qué determina el precio de instalar aerotermia en Madrid y cómo comparar presupuestos completos sin fijarte solo en la máquina."
 date: "2026-08-17"

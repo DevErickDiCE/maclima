@@ -5,16 +5,17 @@ import { LEGAL_COMPANY } from "@/lib/legal-content";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "Politica de cookies",
   description:
-    "Politica de cookies de Maclima sobre el uso actual de cookies tecnicas y el criterio de actualizacion futura si se incorporan herramientas de analitica o marketing.",
+    "Política de cookies de Maclima: uso actual de cookies técnicas y criterio de actualización si se incorporan herramientas de analítica.",
   alternates: {
     canonical: `${SITE_URL}/politica-de-cookies`,
   },
   openGraph: {
     title: "Politica de cookies | Maclima Soluciones Energeticas",
     description:
-      "Politica de cookies de Maclima sobre el uso actual de cookies tecnicas y el criterio de actualizacion futura si se incorporan herramientas de analitica o marketing.",
+      "Política de cookies de Maclima: uso actual de cookies técnicas y criterio de actualización si se incorporan herramientas de analítica.",
     url: `${SITE_URL}/politica-de-cookies`,
     locale: "es_ES",
     type: "website",

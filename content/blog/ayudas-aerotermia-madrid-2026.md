@@ -1,7 +1,7 @@
 ---
 id: "ayudas-aerotermia-madrid-2026"
 title: "Ayudas para aerotermia en Madrid en 2026: subvenciones, deducciones y soluciones eficientes"
-seoTitle: "Ayudas para aerotermia en Madrid 2026 | Maclima"
+seoTitle: "Ayudas para aerotermia en Madrid 2026"
 slug: "ayudas-aerotermia-madrid-2026"
 description: "Consulta las ayudas y deducciones para aerotermia en Madrid en 2026 y qué debes verificar antes de instalar."
 date: "2026-07-08"

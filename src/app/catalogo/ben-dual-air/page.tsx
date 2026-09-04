@@ -21,9 +21,9 @@ import { CONTACT_INFO } from "@/lib/contact-info";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "BEN Dual-Air — Aerotermia interior sin unidad exterior",
+  title: "BEN Dual-Air — Aerotermia sin unidad exterior",
   description:
-    "BEN Dual-Air es una solución de aerotermia interior compacta para climatización, ventilación y ACS, ideal para pisos, viviendas unifamiliares, obra nueva y reformas sin unidad exterior visible.",
+    "BEN Dual-Air es una solución de aerotermia interior compacta para climatización, ventilación y ACS, ideal para pisos y reformas sin unidad exterior.",
   alternates: {
     canonical: `${SITE_URL}/catalogo/ben-dual-air`,
   },

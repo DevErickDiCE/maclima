@@ -1,7 +1,7 @@
 ---
 id: "aerotermia-con-radiadores"
 title: "Aerotermia con radiadores: cuándo funciona y qué revisar antes de cambiar la caldera"
-seoTitle: "Aerotermia con radiadores: compatibilidad y claves | Maclima"
+seoTitle: "Aerotermia con radiadores: compatibilidad y claves"
 slug: "aerotermia-con-radiadores"
 description: "La aerotermia puede funcionar con radiadores, pero exige revisar temperaturas, potencia, aislamiento e hidráulica antes de cambiar la caldera."
 date: "2026-08-17"

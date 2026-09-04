@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Consultoría gratuita en aerotermia, fotovoltaica y geotermia",
+  title: "Consultoría gratuita en aerotermia y fotovoltaica",
   description:
-    "Solicita tu consultoría técnica gratuita con Maclima. Analizamos tu vivienda, negocio o instalación para orientarte sobre la solución energética más adecuada sin compromiso.",
+    "Solicita tu consultoría técnica gratuita con Maclima. Analizamos tu vivienda o negocio para orientarte sobre la solución energética más adecuada.",
   alternates: {
     canonical: `${SITE_URL}/consultoria-gratuita`,
   },
   openGraph: {
     title: "Consultoría gratuita en aerotermia, fotovoltaica y geotermia | Maclima",
     description:
-      "Solicita tu consultoría técnica gratuita con Maclima. Analizamos tu vivienda, negocio o instalación para orientarte sobre la solución energética más adecuada sin compromiso.",
+      "Solicita tu consultoría técnica gratuita con Maclima. Analizamos tu vivienda o negocio para orientarte sobre la solución energética más adecuada.",
     url: `${SITE_URL}/consultoria-gratuita`,
     locale: "es_ES",
     type: "website",

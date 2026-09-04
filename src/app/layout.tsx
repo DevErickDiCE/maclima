@@ -17,9 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Maclima Soluciones Energéticas | Aerotermia, fotovoltaica y geotermia en Madrid",
-    template: "%s | Maclima Soluciones Energéticas",
+    default: "Maclima | Soluciones energéticas y aerotermia en Madrid",
+    // El sufijo de marca ocupa el espacio que Google muestra (~60 caracteres).
+    // Con "Maclima Soluciones Energéticas" casi ningún título cabía entero.
+    template: "%s | Maclima",
   },
   description:
     "Distribución, instalación y asesoramiento técnico en aerotermia, fotovoltaica y geotermia para viviendas, negocios y profesionales del sector en Madrid.",

@@ -5,6 +5,7 @@ import { LEGAL_COMPANY } from "@/lib/legal-content";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "Aviso legal",
   description:
     "Informacion general sobre la titularidad, uso del sitio web, responsabilidad, propiedad intelectual y marco legal de Maclima Soluciones Energeticas.",

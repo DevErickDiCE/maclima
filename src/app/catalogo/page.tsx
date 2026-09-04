@@ -3,7 +3,7 @@ import { CatalogoConsultivo } from "@/components/catalogo-consultivo";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Catálogo consultivo — Aerotermia, fotovoltaica y geotermia",
+  title: "Catálogo: aerotermia, fotovoltaica y geotermia",
   description:
     "Consulta el catálogo de soluciones de aerotermia, fotovoltaica y geotermia de Maclima. Cada instalación se estudia antes de recomendar el equipo más adecuado.",
   alternates: {

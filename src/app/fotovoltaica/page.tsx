@@ -4,9 +4,9 @@ import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 import { PanelTop } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fotovoltaica en Madrid — Autoconsumo solar para viviendas y negocios",
+  title: "Fotovoltaica en Madrid — Autoconsumo solar",
   description:
-    "Instalaciones fotovoltaicas para autoconsumo con paneles solares, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid para viviendas, negocios y profesionales.",
+    "Instalaciones fotovoltaicas de autoconsumo con paneles, inversores, baterías y kits. Asesoramiento técnico gratuito en Madrid.",
   alternates: {
     canonical: `${SITE_URL}/fotovoltaica`,
   },

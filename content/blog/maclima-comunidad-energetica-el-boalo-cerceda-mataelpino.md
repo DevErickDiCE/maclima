@@ -1,7 +1,7 @@
 ---
 id: "maclima-comunidad-energetica-el-boalo-cerceda-mataelpino"
 title: "Maclima participa en la charla informativa sobre comunidad energética en El Boalo, Cerceda y Mataelpino"
-seoTitle: "Maclima en la charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino (Sierra de Madrid)"
+seoTitle: "Comunidad energética El Boalo-Cerceda-Mataelpino"
 slug: "maclima-comunidad-energetica-el-boalo-cerceda-mataelpino"
 description: "Maclima participa en una charla sobre comunidad energética en El Boalo, Cerceda y Mataelpino durante la Feria de Medio Ambiente."
 date: "2026-06-10"

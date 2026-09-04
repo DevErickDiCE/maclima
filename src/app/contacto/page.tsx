@@ -3,7 +3,7 @@ import { ContactoPage } from "@/components/contacto-page";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contacto — Asesoramiento en aerotermia, fotovoltaica y geotermia",
+  title: "Contacto",
   description:
     "Contacta con Maclima para asesoramiento técnico gratuito en aerotermia, fotovoltaica y geotermia. Respondemos por teléfono, WhatsApp o formulario.",
   alternates: {

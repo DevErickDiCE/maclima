@@ -1,7 +1,7 @@
 ---
 id: "suelo-radiante-o-fancoils-con-aerotermia"
 title: "Suelo radiante o fancoils con aerotermia: diferencias de confort instalación y uso"
-seoTitle: "Suelo radiante o fancoils con aerotermia: cómo elegir"
+seoTitle: "Suelo radiante o fancoils con aerotermia"
 slug: "suelo-radiante-o-fancoils-con-aerotermia"
 description: "Suelo radiante o fancoils con aerotermia: compara temperatura de agua, confort, refrigeración, obra, inercia y mantenimiento antes de decidir."
 date: "2026-09-04"

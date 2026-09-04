@@ -1,7 +1,7 @@
 ---
 id: "cuantas-placas-solares-necesita-una-vivienda"
 title: "¿Cuántas placas solares necesita una vivienda? Cómo hacer un cálculo orientativo"
-seoTitle: "¿Cuántas placas solares necesito? Cálculo orientativo"
+seoTitle: "¿Cuántas placas solares necesito? Cálculo rápido"
 slug: "cuantas-placas-solares-necesita-una-vivienda"
 description: "Calcula cuántas placas solares puede necesitar una vivienda según su consumo anual, la orientación, las sombras y la potencia de cada panel."
 date: "2026-08-26"

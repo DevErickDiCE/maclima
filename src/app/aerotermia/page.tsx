@@ -4,9 +4,9 @@ import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site-config";
 import { ThermometerSun } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Aerotermia en Madrid — Climatización, calefacción y ACS",
+  title: "Aerotermia en Madrid: calefacción, frío y ACS",
   description:
-    "Soluciones de aerotermia para viviendas, negocios, reformas y obra nueva. Instalación y asesoramiento técnico en Madrid. Consulta gratuita antes de presupuestar.",
+    "Soluciones de aerotermia para viviendas, negocios, reformas y obra nueva. Instalación y asesoramiento técnico en Madrid. Consulta gratuita.",
   alternates: {
     canonical: `${SITE_URL}/aerotermia`,
   },
