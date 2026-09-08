@@ -15,13 +15,13 @@ Maclima trabaja con un enfoque consultivo: antes de recomendar una solución, an
 
 ## Páginas principales
 
-- [Inicio](https://www.maclimasolucionesenergeticas.com/): presentación general del proyecto y servicios
-- [Catálogo consultivo](https://www.maclimasolucionesenergeticas.com/catalogo): soluciones de aerotermia, fotovoltaica y geotermia disponibles
-- [Aerotermia](https://www.maclimasolucionesenergeticas.com/aerotermia): información sobre soluciones de aerotermia
-- [Fotovoltaica](https://www.maclimasolucionesenergeticas.com/fotovoltaica): información sobre autoconsumo solar fotovoltaico
-- [BEN Dual-Air](https://www.maclimasolucionesenergeticas.com/catalogo/ben-dual-air): ficha del producto estrella de aerotermia interior sin unidad exterior
-- [Consultoría gratuita](https://www.maclimasolucionesenergeticas.com/consultoria-gratuita): solicitud de asesoramiento técnico sin compromiso
-- [Contacto](https://www.maclimasolucionesenergeticas.com/contacto): formas de contacto directo
+- [Inicio](https://maclimasolucionesenergeticas.com/): presentación general del proyecto y servicios
+- [Catálogo consultivo](https://maclimasolucionesenergeticas.com/catalogo): soluciones de aerotermia, fotovoltaica y geotermia disponibles
+- [Aerotermia](https://maclimasolucionesenergeticas.com/aerotermia): información sobre soluciones de aerotermia
+- [Fotovoltaica](https://maclimasolucionesenergeticas.com/fotovoltaica): información sobre autoconsumo solar fotovoltaico
+- [BEN Dual-Air](https://maclimasolucionesenergeticas.com/catalogo/ben-dual-air): ficha del producto estrella de aerotermia interior sin unidad exterior
+- [Consultoría gratuita](https://maclimasolucionesenergeticas.com/consultoria-gratuita): solicitud de asesoramiento técnico sin compromiso
+- [Contacto](https://maclimasolucionesenergeticas.com/contacto): formas de contacto directo
 
 ## Enfoque comercial
 
