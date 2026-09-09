@@ -287,6 +287,20 @@ export function renderMarkdown(markdown: string): string {
       continue;
     }
 
+    // Listas numeradas (no anidadas)
+    if (/^\d+\.\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^\d+\.\s+/.test(lines[i])) {
+        const item = lines[i].replace(/^\d+\.\s+/, "");
+        items.push(`<li class="leading-relaxed">${inline(item)}</li>`);
+        i += 1;
+      }
+      out.push(
+        `<ol class="my-4 list-decimal space-y-2 pl-6 text-[#4A4552]">${items.join("")}</ol>`,
+      );
+      continue;
+    }
+
     // Línea en blanco → separador entre párrafos
     if (line.trim() === "") {
       i += 1;
@@ -301,6 +315,7 @@ export function renderMarkdown(markdown: string): string {
       lines[i].trim() !== "" &&
       !/^#{1,6}\s/.test(lines[i]) &&
       !/^[-*]\s+/.test(lines[i]) &&
+      !/^\d+\.\s+/.test(lines[i]) &&
       !/^---+\s*$/.test(lines[i].trim())
     ) {
       buf.push(lines[i]);
