@@ -7,6 +7,7 @@ export type BlogPost = {
   seoTitle?: string;   // <title> SEO si difiere del H1 visible
   description: string;
   date: string;        // ISO YYYY-MM-DD
+  updatedAt?: string;  // ISO YYYY-MM-DD de la última revisión, si difiere de date
   category: string;
   image?: string;
   imageAlt?: string;   // Alt de la imagen destacada
@@ -56,6 +57,8 @@ function readPost(filename: string): BlogPost | null {
     seoTitle: meta.seoTitle && meta.seoTitle.length > 0 ? meta.seoTitle : undefined,
     description: meta.description ?? "",
     date: meta.date,
+    updatedAt:
+      meta.updated_at && meta.updated_at.length > 0 ? meta.updated_at : undefined,
     category: meta.category ?? "Maclima",
     image: meta.image && meta.image.length > 0 ? meta.image : undefined,
     imageAlt: meta.imageAlt && meta.imageAlt.length > 0 ? meta.imageAlt : undefined,

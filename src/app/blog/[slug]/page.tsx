@@ -83,7 +83,9 @@ export default async function BlogPostPage({ params }: Props) {
       caption: post.title,
     },
     datePublished: post.date,
-    dateModified: post.date,
+    // El frontmatter registra las revisiones; publicar siempre la fecha
+    // original decía que el artículo no se había tocado nunca.
+    dateModified: post.updatedAt ?? post.date,
     author: {
       "@type": "Organization",
       name: "Maclima Soluciones Energéticas",
