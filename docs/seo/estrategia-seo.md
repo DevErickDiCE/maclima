@@ -18,7 +18,7 @@ El mapa inicial no incluye volúmenes ni dificultad inventados. La fuente de mé
 
 - Publicar 24 contenidos nuevos: dos por semana durante 12 semanas.
 - Completar keyword, intención, clúster, pilar y enlaces de cada contenido.
-- Resolver la ruta inexistente de Geotermia y automatizar el sitemap.
+- Resolver la ruta inexistente de Geotermia. Sitemap automatizado en `src/app/sitemap.ts`.
 - Añadir medición de formulario, WhatsApp, teléfono y CTA editorial.
 - Revisar los tres contenidos existentes y programar actualizaciones cuando cambie la información.
 
@@ -180,7 +180,7 @@ Registrar por clúster: artículos publicados, URLs indexadas, clics orgánicos,
 ### Semana 0 — base técnica
 
 - Crear la ruta `/geotermia`.
-- Sustituir sitemap manual por generación automática.
+- ~~Sustituir sitemap manual por generación automática.~~ Hecho: `src/app/sitemap.ts`.
 - Verificar Search Console, sitemap y dominio canónico.
 - Definir medición de conversiones y consentimiento.
 - Completar metadatos editoriales existentes.

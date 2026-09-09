@@ -35,7 +35,7 @@
 - [ ] Ejecutar `npm run seo:index`.
 - [ ] Ejecutar `npm run lint`.
 - [ ] Ejecutar `npm run build`.
-- [ ] Confirmar que la URL aparece en el sitemap.
+- [ ] Confirmar que la URL aparece en el sitemap (se genera sola desde el frontmatter; basta con comprobarla tras el build).
 - [ ] Confirmar canonical, título, descripción, OG y schema.
 - [ ] Probar móvil, enlaces y CTA.
 - [ ] Completar `fecha_publicacion` y `url` del calendario.

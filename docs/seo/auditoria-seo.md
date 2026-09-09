@@ -19,7 +19,7 @@ Alcance: repositorio `DevErickDiCE/maclima` y comprobación de la web pública. 
 ## Bloqueante / prioridad P0
 
 1. **La ruta `/geotermia` no existe en el repositorio**, aunque aparece enlazada desde navegación y contenido. Debe crearse o retirarse el enlace hasta que esté disponible.
-2. **El sitemap es estático**. Con dos artículos semanales quedará desactualizado si no se modifica manualmente. Debe generarse desde las rutas y el frontmatter.
+2. ~~**El sitemap es estático**. Con dos artículos semanales quedará desactualizado si no se modifica manualmente. Debe generarse desde las rutas y el frontmatter.~~ **Resuelto**: `src/app/sitemap.ts` lo genera desde las rutas y el frontmatter, con `lastmod` tomado de `updated_at`. El fallo llegó a producirse: `precio-placas-solares-madrid-2026` se publicó fuera del sitemap.
 3. **No hay medición orgánica y de conversiones visible en el código**. Antes de evaluar resultados deben verificarse Search Console y una analítica respetuosa con el consentimiento.
 
 ## Mejorable / prioridad P1
