@@ -23,7 +23,7 @@ Una jornada pensada para acercar la eficiencia energética a vecinos, comercios 
 
 **Desde Maclima agradecemos al Ayuntamiento de El Boalo, Cerceda y Mataelpino la invitación y la oportunidad de participar en una jornada tan necesaria para acercar la eficiencia energética a vecinos, comercios y empresas locales.**
 
-![Cartel de la comunidad energética de El Boalo, Cerceda y Mataelpino](/blog/charla/comunidad-energetica.png "Cartel oficial de la comunidad energética de El Boalo, Cerceda y Mataelpino")
+![Cartel de la comunidad energética de El Boalo, Cerceda y Mataelpino](/blog/charla/comunidad-energetica.webp "Cartel oficial de la comunidad energética de El Boalo, Cerceda y Mataelpino")
 
 ## Energía, ahorro y sostenibilidad desde lo local
 
@@ -44,7 +44,7 @@ En municipios de la Sierra de Madrid como El Boalo, Cerceda y Mataelpino, donde 
 
 Durante la charla, el equipo de Maclima Calor y Frío compartió su experiencia en soluciones energéticas eficientes para viviendas unifamiliares, negocios y comunidades.
 
-![Equipo de Maclima Calor y Frío participando en la jornada de medio ambiente](/blog/charla/equipo-maclima-1.png "El equipo de Maclima Calor y Frío durante la charla informativa sobre comunidad energética")
+![Equipo de Maclima Calor y Frío participando en la jornada de medio ambiente](/blog/charla/equipo-maclima-1.webp "El equipo de Maclima Calor y Frío durante la charla informativa sobre comunidad energética")
 
 Nuestra intervención se centró en trasladar información práctica sobre las tecnologías que pueden integrarse en una comunidad energética y en proyectos particulares:
 
@@ -69,7 +69,7 @@ Cada una de estas tecnologías puede contribuir de forma distinta a mejorar la e
 
 En muchos casos, la combinación de aerotermia y fotovoltaica puede ser una opción interesante para optimizar el consumo energético de una vivienda, aunque cada caso debe valorarse con un estudio técnico previo que analice el perfil de consumo, el aislamiento y las características del inmueble.
 
-![Charla informativa sobre comunidad energética con participación de Maclima](/blog/charla/equipo-maclima-2.png "Momento de la charla informativa sobre comunidad energética en la XII Feria de Medio Ambiente de Mataelpino")
+![Charla informativa sobre comunidad energética con participación de Maclima](/blog/charla/equipo-maclima-2.webp "Momento de la charla informativa sobre comunidad energética en la XII Feria de Medio Ambiente de Mataelpino")
 
 :::promo
 eyebrow: Cita destacada
