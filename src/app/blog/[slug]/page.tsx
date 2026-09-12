@@ -86,13 +86,16 @@ export default async function BlogPostPage({ params }: Props) {
     // El frontmatter registra las revisiones; publicar siempre la fecha
     // original decía que el artículo no se había tocado nunca.
     dateModified: post.updatedAt ?? post.date,
+    // Firma el equipo: mismo @id que el ProfessionalService del layout.
     author: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Maclima Soluciones Energéticas",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Maclima Soluciones Energéticas",
       url: SITE_URL,
     },
@@ -128,6 +131,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <Calendar className="h-3 w-3" aria-hidden="true" />
                   <time dateTime={post.date}>{formatDateEs(post.date)}</time>
                 </span>
+                <span className="text-[#6B6275]">Por el equipo de Maclima Soluciones Energéticas</span>
               </div>
               <h1 className="mt-4 text-3xl font-bold leading-tight text-[#17111A] sm:text-4xl lg:text-5xl">
                 {post.title}

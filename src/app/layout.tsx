@@ -54,12 +54,16 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: "Maclima Soluciones Energéticas",
     url: SITE_URL,
+    publisher: { "@id": `${SITE_URL}/#organization` },
   },
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    // Mismo @id que usan como autor y editor los artículos del blog.
+    "@id": `${SITE_URL}/#organization`,
     name: "Maclima Soluciones Energéticas",
     url: SITE_URL,
     telephone: CONTACT_INFO.phone,

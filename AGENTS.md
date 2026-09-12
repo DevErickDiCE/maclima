@@ -16,3 +16,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
    - **SEO REVISIÓN EDITORIAL**: Programado cada 25 artículos o 3 meses.
    - **SEO AUDITORÍA COMPLETA**: Revisa toda la biblioteca ÚNICAMENTE bajo orden explícita del usuario.
 7. **Publicación**: Crear o revisar contenido no autoriza commit, push, despliegue ni publicación social. Esas acciones requieren una orden explícita.
+8. **Firma y visibilidad en IA** (decisión de Erick, 2026-09-12): firma siempre el equipo de Maclima; no atribuyas ningún artículo ni ninguna revisión a una persona con nombre. Responde en las primeras frases de cada bloque y enlaza la fuente primaria (IDAE, BOE, ficha del fabricante) dentro del texto, junto a la afirmación. Nada de este punto puede impedir que una pieza del flujo diario se publique.
