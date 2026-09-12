@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { DEFAULT_OG_IMAGE, OG_IMAGE_URL, SITE_URL } from "@/lib/site-config";
 import { CONTACT_INFO } from "@/lib/contact-info";
+import { LEGAL_COMPANY } from "@/lib/legal-content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -65,6 +66,10 @@ const jsonLd = [
     // Mismo @id que usan como autor y editor los artículos del blog.
     "@id": `${SITE_URL}/#organization`,
     name: "Maclima Soluciones Energéticas",
+    // Titular, CIF y domicilio: los mismos que publican el aviso legal y el contacto.
+    legalName: LEGAL_COMPANY.holder,
+    taxID: LEGAL_COMPANY.taxId,
+    address: { "@type": "PostalAddress", ...LEGAL_COMPANY.postalAddress },
     url: SITE_URL,
     telephone: CONTACT_INFO.phone,
     email: CONTACT_INFO.email,

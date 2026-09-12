@@ -7,6 +7,15 @@ export const LEGAL_COMPANY = {
   email: "maclimacaloryfriosl@gmail.com",
   phone: "919 91 44 91",
   address: "C/ CobaÑera 2 7 1 B, 28450 Collado Mediano, Madrid",
+  // La misma dirección, por partes, para los datos estructurados. Si cambia
+  // `address`, cambia también aquí.
+  postalAddress: {
+    streetAddress: "C/ CobaÑera 2 7 1 B",
+    postalCode: "28450",
+    addressLocality: "Collado Mediano",
+    addressRegion: "Madrid",
+    addressCountry: "ES",
+  },
   taxId: "B-06877641",
   lastUpdated: "13 de mayo de 2026",
 } as const;

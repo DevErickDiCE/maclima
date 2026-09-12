@@ -17,6 +17,12 @@ export const siteNavItems = [
   { label: "Contacto", href: "/contacto" },
 ] as const;
 
+// El pie enlaza además «Sobre nosotros»; la cabecera se queda como estaba.
+export const footerNavItems = [
+  ...siteNavItems,
+  { label: "Sobre nosotros", href: "/sobre-nosotros" },
+] as const;
+
 export const legalNavItems = [
   { label: "Aviso legal", href: "/aviso-legal" },
   { label: "Politica de privacidad", href: "/politica-de-privacidad" },
@@ -170,7 +176,7 @@ export function SiteFooter() {
               Enlaces
             </p>
             <nav className="mt-4 grid gap-3 text-sm font-medium text-[#D9D9FF]" aria-label="Enlaces de Maclima">
-              {siteNavItems.map((item) => (
+              {footerNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

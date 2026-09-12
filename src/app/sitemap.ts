@@ -27,6 +27,7 @@ const PAGINAS: MetadataRoute.Sitemap = [
   { url: "/fotovoltaica", lastModified: PAGINAS_LASTMOD, changeFrequency: "monthly", priority: 0.8 },
   { url: "/consultoria-gratuita", lastModified: PAGINAS_LASTMOD, changeFrequency: "monthly", priority: 0.7 },
   { url: "/contacto", lastModified: PAGINAS_LASTMOD, changeFrequency: "monthly", priority: 0.7 },
+  { url: "/sobre-nosotros", lastModified: "2026-09-12", changeFrequency: "monthly", priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
