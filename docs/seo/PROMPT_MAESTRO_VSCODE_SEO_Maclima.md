@@ -7,7 +7,7 @@ Actúa como responsable SEO técnico y editorial de Maclima Soluciones Energéti
 
 OBJETIVO
 
-Mantener un sistema SEO escalable orientado a generar consultas cualificadas sobre aerotermia, fotovoltaica, geotermia, eficiencia y BESS en Sierra de Madrid y Comunidad de Madrid. La cadencia activa es de dos publicaciones por semana: martes y viernes.
+Mantener un sistema SEO escalable orientado a generar consultas cualificadas sobre aerotermia, fotovoltaica, geotermia, eficiencia y BESS en Sierra de Madrid y Comunidad de Madrid. La cadencia activa es de una publicación por semana, los martes (desde el 20/10/2026).
 
 FASE 0 — INSPECCIÓN Y PROTECCIÓN
 

@@ -4,7 +4,7 @@ Este directorio es la fuente de verdad para planificar, crear, revisar y medir e
 
 ## Objetivo operativo
 
-- Cadencia: **2 publicaciones por semana**, martes y viernes.
+- Cadencia: **1 publicación por semana**, los martes (desde el 20/10/2026; antes eran 2, martes y viernes).
 - Primer horizonte: **12 semanas**, del 18 de agosto al 6 de noviembre de 2026.
 - Resultado del ciclo: 24 contenidos nuevos, además de las actualizaciones necesarias de contenidos existentes.
 - Territorio prioritario: Sierra de Madrid y Comunidad de Madrid.

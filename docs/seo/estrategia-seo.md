@@ -91,7 +91,7 @@ Pilar provisional: `/fotovoltaica` o `/consultoria-gratuita`. Crear `/bess` cuan
 
 ## 6. Estrategia editorial
 
-Cadencia: martes y viernes.
+Cadencia: martes y viernes hasta el 16/10/2026. **Desde el 20/10/2026, una pieza por semana, los martes**, alternando los dos tipos de abajo según el orden del calendario.
 
 - Martes: pieza de alta intención comercial o comparación.
 - Viernes: guía práctica, mantenimiento, tecnología combinada o pieza distribuible en redes.
