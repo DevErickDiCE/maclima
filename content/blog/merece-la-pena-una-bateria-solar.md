@@ -95,7 +95,7 @@ La comparación debe utilizar las condiciones actuales del suministro y evitar a
 
 El respaldo es una función distinta del almacenamiento habitual. **No toda batería solar mantiene la vivienda alimentada cuando falla la red.** Para ello se necesita una arquitectura compatible, capacidad de aislamiento, equipos preparados para funcionamiento de respaldo y una selección de cargas adecuada.
 
-Este artículo no sustituye el diseño de un sistema de emergencia. Si la continuidad de suministro es prioritaria, debe declararse desde el principio para que el profesional estudie inversor, protecciones, potencia disponible y circuitos que se quieren mantener.
+Este artículo no sustituye el diseño de un sistema de emergencia. Si la continuidad de suministro es prioritaria, debe declararse desde el principio para que el profesional estudie inversor, protecciones, potencia disponible y circuitos que se quieren mantener. Qué piezas necesita ese sistema lo explicamos en [batería solar para cortes de luz](/blog/bateria-solar-respaldo-cortes-luz).
 
 El [MITECO recuerda que los elementos de almacenamiento deben cumplir las protecciones y condiciones técnicas aplicables](https://www.miteco.gob.es/es/energia/energia-electrica/electricidad/autoconsumo-electrico/preguntas-frecuentes-autoconsumo.html). La compatibilidad no debe darse por supuesta ni resolverse añadiendo una batería después sin revisar el conjunto.
 

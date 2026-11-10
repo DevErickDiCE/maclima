@@ -63,7 +63,7 @@ Algunas empresas quieren añadir consumos, como cargadores de vehículos o equip
 
 ### Continuidad de procesos críticos
 
-Algunos negocios valoran el almacenamiento para mantener cargas críticas durante un corte de red. **Esta función no viene incluida por defecto**: requiere una arquitectura preparada para funcionar aislada de la red, protecciones específicas y una selección de los circuitos que se quieren mantener. Si la continuidad es el objetivo principal, hay que decirlo desde el inicio del estudio.
+Algunos negocios valoran el almacenamiento para mantener cargas críticas durante un corte de red. **Esta función no viene incluida por defecto**: requiere una arquitectura preparada para funcionar aislada de la red, protecciones específicas y una selección de los circuitos que se quieren mantener. Si la continuidad es el objetivo principal, hay que decirlo desde el inicio del estudio. Las piezas que necesita un sistema de respaldo las detallamos en [batería solar para cortes de luz](/blog/bateria-solar-respaldo-cortes-luz).
 
 ## Cuándo no suele compensar
 
